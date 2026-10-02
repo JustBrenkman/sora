@@ -2,7 +2,8 @@
 #
 # Each entry is: id, file (path under reference/), url, sha256.
 # Keep one key per line; fetch.sh reads this file line by line.
-# An empty sha256 skips verification.
+# An empty sha256 skips verification; it is left empty for sources that are
+# regenerated on every download (live documentation pages, spreadsheet exports).
 
 # --- Pixhawk open standards (pixhawk/Pixhawk-Standards @ a97a915) ---
 
@@ -21,64 +22,314 @@
   url: https://raw.githubusercontent.com/pixhawk/Pixhawk-Standards/a97a915bfb6e20d6c8a41a86c5673350a3e51ceb/DS-010%20Pixhawk%20Autopilot%20Bus%20Standard.pdf
   sha256: 8fc3883e1aeade93efd15de1d2f9c3e75d3609eee9bd2ed279621ede4eb538cf
 
+# --- Holybro Pixhawk 6C (docs.holybro.com) ---
+# Holybro's Pixhawk 6C is the FMUv6C reference implementation.
+
+- id: holybro-stm32-pinout
+  file: holybro/FMUv6C-stm32-pinout-v1.pdf
+  url: https://2367252986-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FLIgtGDAvVGkCKGOJb1bR%2Fuploads%2Fqs4rbPHib6Lx9Z04Tbpn%2FFMUv6C_stm32_pinout_v1.pdf?alt=media&token=40ba0a57-8fb9-4a47-9b3b-fc5b1b55b4d4
+  sha256: 2d1e841a413e16a3eb00305977bf1be5cfd982c8d81eceab083476a86ff79251
+
+- id: holybro-system-diagram
+  file: holybro/FMUv6C-system-diagram.jpg
+  url: https://2367252986-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FLIgtGDAvVGkCKGOJb1bR%2Fuploads%2FR090DE6WXlafZZjNt2Cx%2FFMUv6C_Diagram.jpg?alt=media&token=9c1017d5-cf1a-4d73-b112-edee2790625c
+  sha256: 2bc368ed858b3e436d26372f2c99704cc6b392d4123046de8803ebf29ac656f0
+
+- id: holybro-port-pinout
+  file: holybro/pixhawk6c-port-pinout.png
+  url: https://2367252986-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FLIgtGDAvVGkCKGOJb1bR%2Fuploads%2FJQ7Q5YFg1sjt65XCdtnt%2FPixhawk6C%20Pinout.png?alt=media&token=a09fe20b-c339-4458-b680-0ad4111fdac3
+  sha256: 7df1f3e9d70eeed765d0653097f4f63395ac9372dea22d27f259f27c30a0649f
+
+- id: holybro-pin-order
+  file: holybro/pixhawk6c-pin-order.jpg
+  url: https://2367252986-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FLIgtGDAvVGkCKGOJb1bR%2Fuploads%2FoUfIkAIADuuZRcSTj2Cr%2FPin%20Order.jpg?alt=media&token=e18c4309-6ba7-4db2-8d74-aca454a912f7
+  sha256: 0580c9380828e28c69da21babd17d201e978337a8fac11e627b6bb4db6979dfb
+
+- id: holybro-dimensions
+  file: holybro/pixhawk6c-dimensions.jpg
+  url: https://2367252986-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FLIgtGDAvVGkCKGOJb1bR%2Fuploads%2FTSZv37WZa9H2o0bo9hL3%2F6C_dimension.jpg?alt=media&token=a0abcfce-9c99-4ec9-889c-b856aa4731b4
+  sha256: 34ae05ebaa517aebcea4b1df0f885f084ac906bf2f9aec7f7982e91e35d9b7bd
+
+- id: holybro-wiring-diagram
+  file: holybro/pixhawk6c-sample-wiring-diagram.jpg
+  url: https://2367252986-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FLIgtGDAvVGkCKGOJb1bR%2Fuploads%2FvBXchgRXzI4MMvoSBEbP%2FPixhawk6C%20Sample%20Wiring%20Diagram.jpg?alt=media&token=067243d5-7a9e-4fbb-a569-56fd543f3f1e
+  sha256: 230f5b59c5150a6da8691bf6e88f803bb691310e3bb94330822473a5c4cc9fde
+
+- id: holybro-pcb-rc12-bottom
+  file: holybro/pixhawk6c-pcb-rc12-bottom.png
+  url: https://2367252986-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FLIgtGDAvVGkCKGOJb1bR%2Fuploads%2Ff9ITihWHv2iIjaaqI8iM%2FHF-A005-RC12_Bottom.png?alt=media&token=814c2081-6528-4abe-aacf-ce5362387f7c
+  sha256: 674598c62f0dbd57d67d2aa5fffe300ee651d70da484bbcc7d0a7b9bd8fbe842
+
+- id: holybro-pcb-rc09-pwm-pads
+  file: holybro/pixhawk6c-pcb-rc09-pwm-pads.png
+  url: https://2367252986-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FLIgtGDAvVGkCKGOJb1bR%2Fuploads%2FnFrtrLLuHjJXkHnY1Z3f%2Fimage.png?alt=media&token=d7767671-2598-4524-8352-ed4f49892e20
+  sha256: 61e6d0fa0f9c1e8d73e7541dd2c30758ea3b32fd88678b5d00d6c51813082af6
+
+- id: holybro-case-cad
+  file: holybro/Pixhawk6C-3D-CAD.stp
+  url: https://2367252986-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FLIgtGDAvVGkCKGOJb1bR%2Fuploads%2FItfITFbxZGmWw9YQzLIP%2FPixhawk6C-3D-CAD.stp?alt=media&token=44a0b33c-baf9-46fb-8403-193264db5db3
+  sha256: 05b838910fd49ec61347a6a18061da2b30fd116fa68c9acae84644b8851f1ef0
+
+- id: holybro-pwm-adapter-cad
+  file: holybro/EXT-8P-V5.step
+  url: https://2367252986-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FLIgtGDAvVGkCKGOJb1bR%2Fuploads%2FBYO58UNSwMnUMtuE0z1E%2FEXT-8P-V5.STEP?alt=media&token=cecdebb9-fbbf-4d11-aaa5-5045a87c55dd
+  sha256: 7ffc90de60f86310c4dd25483f93c1a3b812e7f7fd2e88d46678ca8b058a02ce
+
+- id: holybro-page-overview
+  file: holybro/pages/overview.md
+  url: https://docs.holybro.com/autopilot/pixhawk-6c/overview.md
+  sha256:
+
+- id: holybro-page-technical-specification
+  file: holybro/pages/technical-specification.md
+  url: https://docs.holybro.com/autopilot/pixhawk-6c/technical-specification.md
+  sha256:
+
+- id: holybro-page-pixhawk-6c-ports
+  file: holybro/pages/pixhawk-6c-ports.md
+  url: https://docs.holybro.com/autopilot/pixhawk-6c/pixhawk-6c-ports.md
+  sha256:
+
+- id: holybro-page-system-diagram-and-pinout
+  file: holybro/pages/system-diagram-and-pinout.md
+  url: https://docs.holybro.com/autopilot/pixhawk-6c/system-diagram-and-pinout.md
+  sha256:
+
+- id: holybro-page-pwm-signal-voltage-mod
+  file: holybro/pages/pwm-signal-voltage-mod.md
+  url: https://docs.holybro.com/autopilot/pixhawk-6c/pwm-signal-voltage-mod.md
+  sha256:
+
+- id: holybro-page-supported-firmware
+  file: holybro/pages/supported-firmware.md
+  url: https://docs.holybro.com/autopilot/pixhawk-6c/supported-firmware.md
+  sha256:
+
 # --- PX4 px4/fmu-v6c board support (PX4-Autopilot v1.17.0) ---
-# The authoritative pin, bus and timer assignments for the FMUv6C.
+# The complete board directory: the authoritative pin, bus and timer assignments.
 
-- id: px4-v6c-board-h
-  file: px4-fmu-v6c/nuttx-config/include/board.h
-  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/nuttx-config/include/board.h
-  sha256: c982ea614423dadb02010b21f661d454fbc5a13d35df96cd939defeb9acd77e2
+- id: px4-v6c-bootloader-px4board
+  file: px4-fmu-v6c/bootloader.px4board
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/bootloader.px4board
+  sha256: 07568c427d4ec629849132f3c716482f0dba677a36e9ce2e4d8ac8e2751cbcc8
 
-- id: px4-v6c-board-dma-map
-  file: px4-fmu-v6c/nuttx-config/include/board_dma_map.h
-  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/nuttx-config/include/board_dma_map.h
-  sha256: 735542d31d22467ab7ef7cd805a919fe3d86ccaf660dc7d7221fd33aabdd4ea3
-
-- id: px4-v6c-defconfig
-  file: px4-fmu-v6c/nuttx-config/nsh/defconfig
-  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/nuttx-config/nsh/defconfig
-  sha256: c1bab9c0e7921efbbbf03e7df52614fd385cbfbcd51bd74e99712465d2ace9e1
-
-- id: px4-v6c-board-config
-  file: px4-fmu-v6c/src/board_config.h
-  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/src/board_config.h
-  sha256: 0030006348055714bfe6b3be0627677a13fae4d95ed6f5ad8263db6f3d6ae7fd
-
-- id: px4-v6c-hw-config
-  file: px4-fmu-v6c/src/hw_config.h
-  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/src/hw_config.h
-  sha256: 85fa471940e6e6c6e6040cc2fb165298bfd8c71cf67e5f31d6fdedca3318401f
-
-- id: px4-v6c-spi
-  file: px4-fmu-v6c/src/spi.cpp
-  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/src/spi.cpp
-  sha256: 3955d1f87457a4c6a72665f5fa6d1cf28eb3c8d4f7d46f0c66aefd593ae3c1f2
-
-- id: px4-v6c-i2c
-  file: px4-fmu-v6c/src/i2c.cpp
-  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/src/i2c.cpp
-  sha256: 98820d607835870df0e918ba8f969f268752be2016b44753c40a1f1d506341b3
-
-- id: px4-v6c-timer-config
-  file: px4-fmu-v6c/src/timer_config.cpp
-  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/src/timer_config.cpp
-  sha256: c6006ad088439ce16cc958f8f1cd8b7ba31c533223612cb4dfe4777e4f430e0a
-
-- id: px4-v6c-px4board
+- id: px4-v6c-default-px4board
   file: px4-fmu-v6c/default.px4board
   url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/default.px4board
   sha256: f1868603374a234e61e84f4f2bc84cbc3adb095bcf6d2d34f1f5066912c987d9
 
-- id: px4-v6c-rc-board-sensors
+- id: px4-v6c-extras-px4-fmu-v6c-bootloader-bin
+  file: px4-fmu-v6c/extras/px4_fmu-v6c_bootloader.bin
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/extras/px4_fmu-v6c_bootloader.bin
+  sha256: 97d52d87133ebd46883b0f5b431afead25018bd32a2bcb2884532d7689483680
+
+- id: px4-v6c-extras-px4-io-v2-default-bin
+  file: px4-fmu-v6c/extras/px4_io-v2_default.bin
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/extras/px4_io-v2_default.bin
+  sha256: dd92e04c2b5f1f591f7943df4aaf318dabe6fef027156c92adae6096a0beccb5
+
+- id: px4-v6c-firmware-prototype
+  file: px4-fmu-v6c/firmware.prototype
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/firmware.prototype
+  sha256: b6464b6ff2a421f4d3527501e50e5881a268afa6f86425a75ee29377beaaad60
+
+- id: px4-v6c-init-rc-board-defaults
+  file: px4-fmu-v6c/init/rc.board_defaults
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/init/rc.board_defaults
+  sha256: 85d05a142bb684cf4e8982df837bd925df82a72c7725ff3ccc3a8a1fd5fe38e9
+
+- id: px4-v6c-init-rc-board-sensors
   file: px4-fmu-v6c/init/rc.board_sensors
   url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/init/rc.board_sensors
   sha256: 0ae07b25e8c342b9b346800ff2b0a948e8a760fd1ca8df807d7bd2d92f531165
 
-# --- Silicon vendor documents ---
-# TI serves the latest revision at this URL, so the checksum changes when the
-# datasheet is revised. Recorded revision: SPRSPA1B.
+- id: px4-v6c-neural-px4board
+  file: px4-fmu-v6c/neural.px4board
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/neural.px4board
+  sha256: 997ff485894f73d121b13f529ca24f04ef0bfaaaf1a36f831198867aab1b2aad
+
+- id: px4-v6c-nuttx-config-kconfig
+  file: px4-fmu-v6c/nuttx-config/Kconfig
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/nuttx-config/Kconfig
+  sha256: c5be3dcce206e20286ac375e3a998dba718beb3c208bf650a13203da0360d336
+
+- id: px4-v6c-nuttx-config-bootloader-defconfig
+  file: px4-fmu-v6c/nuttx-config/bootloader/defconfig
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/nuttx-config/bootloader/defconfig
+  sha256: 2a841de8b6a614d7977c98321d95f0e417426acaed76f7d09233ea336359d2e5
+
+- id: px4-v6c-nuttx-config-include-board-h
+  file: px4-fmu-v6c/nuttx-config/include/board.h
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/nuttx-config/include/board.h
+  sha256: c982ea614423dadb02010b21f661d454fbc5a13d35df96cd939defeb9acd77e2
+
+- id: px4-v6c-nuttx-config-include-board-dma-map-h
+  file: px4-fmu-v6c/nuttx-config/include/board_dma_map.h
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/nuttx-config/include/board_dma_map.h
+  sha256: 735542d31d22467ab7ef7cd805a919fe3d86ccaf660dc7d7221fd33aabdd4ea3
+
+- id: px4-v6c-nuttx-config-nsh-defconfig
+  file: px4-fmu-v6c/nuttx-config/nsh/defconfig
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/nuttx-config/nsh/defconfig
+  sha256: c1bab9c0e7921efbbbf03e7df52614fd385cbfbcd51bd74e99712465d2ace9e1
+
+- id: px4-v6c-nuttx-config-scripts-bootloader-script-ld
+  file: px4-fmu-v6c/nuttx-config/scripts/bootloader_script.ld
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/nuttx-config/scripts/bootloader_script.ld
+  sha256: 9716628452225eb9443accad2a6359b349342922855c35172e574ac160950461
+
+- id: px4-v6c-nuttx-config-scripts-script-ld
+  file: px4-fmu-v6c/nuttx-config/scripts/script.ld
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/nuttx-config/scripts/script.ld
+  sha256: 7f3bb59c76960f295693f97576823e25d50f21e26b4d65acc09f520498fa3f08
+
+- id: px4-v6c-rover-px4board
+  file: px4-fmu-v6c/rover.px4board
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/rover.px4board
+  sha256: ae7569662c260272cfa46c2830ed55c3d9c80926b791957725d28a729d3c63b3
+
+- id: px4-v6c-src-cmakelists-txt
+  file: px4-fmu-v6c/src/CMakeLists.txt
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/src/CMakeLists.txt
+  sha256: 6e94b74abc528f9b09d8cde14af83fccbd6c87faed4f7ddc25529fbd6a62a78d
+
+- id: px4-v6c-src-board-config-h
+  file: px4-fmu-v6c/src/board_config.h
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/src/board_config.h
+  sha256: 0030006348055714bfe6b3be0627677a13fae4d95ed6f5ad8263db6f3d6ae7fd
+
+- id: px4-v6c-src-bootloader-main-c
+  file: px4-fmu-v6c/src/bootloader_main.c
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/src/bootloader_main.c
+  sha256: 40c1e1f844380ff87f3fff03f88d887017e9994a041ba1009129ae970039328b
+
+- id: px4-v6c-src-can-c
+  file: px4-fmu-v6c/src/can.c
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/src/can.c
+  sha256: 1ddf4dc1b3b7dec251e46e352e2c37f7a92b983c7a8ce2f36f7b76850d98e205
+
+- id: px4-v6c-src-hw-config-h
+  file: px4-fmu-v6c/src/hw_config.h
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/src/hw_config.h
+  sha256: 85fa471940e6e6c6e6040cc2fb165298bfd8c71cf67e5f31d6fdedca3318401f
+
+- id: px4-v6c-src-i2c-cpp
+  file: px4-fmu-v6c/src/i2c.cpp
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/src/i2c.cpp
+  sha256: 98820d607835870df0e918ba8f969f268752be2016b44753c40a1f1d506341b3
+
+- id: px4-v6c-src-init-c
+  file: px4-fmu-v6c/src/init.c
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/src/init.c
+  sha256: b52988410adfe083d2420f87583e22710b28a6096706e4685c1b93323e8acf5a
+
+- id: px4-v6c-src-led-c
+  file: px4-fmu-v6c/src/led.c
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/src/led.c
+  sha256: 77e8ae14c46003fdeceebb2138d5ff33eab5da22b212ec8502d7ba9dbd49114f
+
+- id: px4-v6c-src-manifest-c
+  file: px4-fmu-v6c/src/manifest.c
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/src/manifest.c
+  sha256: e084e08065b008e02f3ad5ec515b21809d011f0e06779bdb9a05cbf73a710176
+
+- id: px4-v6c-src-mtd-cpp
+  file: px4-fmu-v6c/src/mtd.cpp
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/src/mtd.cpp
+  sha256: 81e9d6972642f5325687111ab685d5c7f4265684d48a3ef5e556e2f0c3b7aeea
+
+- id: px4-v6c-src-sdio-c
+  file: px4-fmu-v6c/src/sdio.c
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/src/sdio.c
+  sha256: 4c97fd0e8ccdfb2981da8f860e09eae6cd16b34aff282c7a8a315bc3bb365b3b
+
+- id: px4-v6c-src-spi-cpp
+  file: px4-fmu-v6c/src/spi.cpp
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/src/spi.cpp
+  sha256: 3955d1f87457a4c6a72665f5fa6d1cf28eb3c8d4f7d46f0c66aefd593ae3c1f2
+
+- id: px4-v6c-src-timer-config-cpp
+  file: px4-fmu-v6c/src/timer_config.cpp
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/src/timer_config.cpp
+  sha256: c6006ad088439ce16cc958f8f1cd8b7ba31c533223612cb4dfe4777e4f430e0a
+
+- id: px4-v6c-src-usb-c
+  file: px4-fmu-v6c/src/usb.c
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/src/usb.c
+  sha256: 82497b4a395f6d95d013ca14d8b57f43e31168699313129785fb14fde3452ab1
+
+# --- PX4 documentation (PX4-Autopilot v1.17.0) ---
+
+- id: px4-doc-pixhawk6c
+  file: px4-docs/pixhawk6c.md
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/docs/en/flight_controller/pixhawk6c.md
+  sha256: 989f529f967306c28f7b4c973c39296e5f59b3dc010460e30d84647500663e17
+
+- id: px4-doc-quick-start
+  file: px4-docs/quick_start_pixhawk6c.md
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/docs/en/assembly/quick_start_pixhawk6c.md
+  sha256: 025fbd969838b212e1be4c5beefbd753baa8261a28560d9ba889da3e00f38373
+
+- id: px4-doc-pinout-sheet
+  file: px4-docs/fmuv6c-pinout.xlsx
+  url: https://docs.google.com/spreadsheets/d/1FcmWRKd6zjdz3-cnjEDYEmANKZOFzNSc/export?format=xlsx
+  sha256:
+
+# --- ArduPilot Pixhawk6C hardware definition (ardupilot Copter-4.7.1) ---
+# A second, compact statement of the same pin assignments.
+
+- id: ardupilot-hwdef-dat
+  file: ardupilot-pixhawk6c/hwdef.dat
+  url: https://raw.githubusercontent.com/ArduPilot/ardupilot/Copter-4.7.1/libraries/AP_HAL_ChibiOS/hwdef/Pixhawk6C/hwdef.dat
+  sha256: 1678e64fa2435bb8c0442be159e8e77135b9c548db98abca5ecc918a188df690
+
+- id: ardupilot-hwdef-bl-dat
+  file: ardupilot-pixhawk6c/hwdef-bl.dat
+  url: https://raw.githubusercontent.com/ArduPilot/ardupilot/Copter-4.7.1/libraries/AP_HAL_ChibiOS/hwdef/Pixhawk6C/hwdef-bl.dat
+  sha256: 3deab4e0367ffda56b63794ba2c5e0e9126475a4f8b5001fc8c5c139e766fae5
+
+- id: ardupilot-defaults-parm
+  file: ardupilot-pixhawk6c/defaults.parm
+  url: https://raw.githubusercontent.com/ArduPilot/ardupilot/Copter-4.7.1/libraries/AP_HAL_ChibiOS/hwdef/Pixhawk6C/defaults.parm
+  sha256: 7b8ee35464e34cdbba112271cd1152f2e70829a04861caec0952c7d0fbb64dd8
+
+# --- FMUv6C part datasheets ---
+
+- id: bmi088-datasheet
+  file: parts/bmi088-datasheet.pdf
+  url: https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmi088-ds001.pdf
+  sha256: 53ab734dba49ac202fa6182fc2b545df6c6d7459c9fec6e851a1209e6bac417e
+
+# --- TI AM62L ---
+# The datasheet URL always serves the latest revision, so its checksum changes
+# when TI revises it. Recorded revision: SPRSPA1B.
 
 - id: am62l-datasheet
   file: ti/am62l-datasheet.pdf
   url: https://www.ti.com/lit/ds/symlink/am62l.pdf
   sha256: 7816552b4e10525d048d66686d3e881c330a106cde0294b9606ce2030e3e5277
+
+- id: am62l-trm
+  file: ti/sprujb4a-am62l-technical-reference-manual.pdf
+  url: https://www.ti.com/lit/ug/sprujb4a/sprujb4a.pdf
+  sha256: e4a31f15d1bb263302162c2b4d5756e8cfc53a8eebf57541ebfd15abe69578f7
+
+- id: am62l-evm-guide
+  file: ti/sprujg8b-am62l-evm-users-guide.pdf
+  url: https://www.ti.com/lit/ug/sprujg8b/sprujg8b.pdf
+  sha256: 867126ad966ddf1d3c23651cdf920d3490fa8da0fe4e8e192492ce738b8a3aae
+
+- id: am62-ddr-layout
+  file: ti/sprad06c-am62x-am62lx-ddr-board-design-and-layout.pdf
+  url: https://www.ti.com/lit/an/sprad06c/sprad06c.pdf
+  sha256: cfb8615c463d79ce2b8b2d7d011b502c8a1f08b4e5d2d1294ae97c62249d7e72
+
+- id: ti-high-speed-layout
+  file: ti/spraar7j-high-speed-interface-layout-guidelines.pdf
+  url: https://www.ti.com/lit/an/spraar7j/spraar7j.pdf
+  sha256: 4a14e9b00afc174f336386cf0097f3a5e7a6a367840331fbb22070053ec36f41
+
+- id: sitara-pdn
+  file: ti/sprac76h-sitara-power-distribution-networks.pdf
+  url: https://www.ti.com/lit/an/sprac76h/sprac76h.pdf
+  sha256: d10921add953c8b8be4c91201d82019afaaf4f1ea230689f14cc59a1618d4fbe

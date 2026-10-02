@@ -10,6 +10,7 @@ manifest=sources.yaml
 dest=reference
 mode=${1:-}
 failed=0
+missing=()
 
 process() {
 	local id=$1 file=$2 url=$3 sum=$4
@@ -19,7 +20,8 @@ process() {
 		mkdir -p "$(dirname "$path")"
 		if ! curl -fsSL -A 'Mozilla/5.0' -o "$path.part" "$url"; then
 			rm -f "$path.part"
-			echo "FAIL  $id: download failed ($url)"
+			echo "FAIL  $id: download failed"
+			missing+=("$path"$'\t'"$url")
 			failed=1
 			return
 		fi
@@ -56,5 +58,15 @@ while IFS= read -r line || [[ -n $line ]]; do
 	esac
 done <"$manifest"
 [[ -n $id ]] && process "$id" "$file" "$url" "$sum"
+
+if ((${#missing[@]})); then
+	echo
+	echo "${#missing[@]} file(s) could not be downloaded. Download each one manually and save it as:"
+	for entry in "${missing[@]}"; do
+		echo
+		echo "  $(pwd)/${entry%%$'\t'*}"
+		echo "    ${entry#*$'\t'}"
+	done
+fi
 
 exit $failed

@@ -25,22 +25,39 @@ and paste the checksum into the entry.
 
 ## What is in the manifest
 
-- **Pixhawk standards:** DS-018 (Autopilot v6C), DS-009 (connectors) and DS-010
-  (autopilot bus), pinned to a commit of `pixhawk/Pixhawk-Standards`.
-- **PX4 `px4/fmu-v6c` board support at v1.17.0:** `board.h`, `board_config.h`,
-  the DMA map, SPI, I2C and timer configuration, `defconfig` and the sensor
-  start-up script. These are the authoritative FMUv6C pin and bus assignments.
-- **TI AM62L datasheet** (SPRSPA1B).
+Paths are relative to `reference/`.
+
+| Folder                 | Source                                   | Contents |
+| ---------------------- | ---------------------------------------- | -------- |
+| `pixhawk/`             | `pixhawk/Pixhawk-Standards`, pinned commit | DS-018 (Autopilot v6C), DS-009 (connectors), DS-010 (autopilot bus) |
+| `holybro/`             | docs.holybro.com, Pixhawk 6C             | STM32 pinout PDF, FMUv6C system diagram, port pinout, pin order, dimensions, sample wiring diagram, PCB photos (RC09, RC12), case and PWM adapter STEP models |
+| `holybro/pages/`       | docs.holybro.com, Pixhawk 6C             | Overview, technical specification, port pin tables, system diagram, PWM voltage mod and supported firmware pages as Markdown |
+| `px4-fmu-v6c/`         | PX4-Autopilot v1.17.0                    | The complete `boards/px4/fmu-v6c` directory: all `.px4board` variants, `nuttx-config/`, `src/`, `init/`, `extras/` |
+| `px4-docs/`            | PX4-Autopilot v1.17.0 and its linked sheet | Pixhawk 6C hardware page, quick start, and the FMUv6C pinout spreadsheet (pinout, sensor assignment, UART assignment, hardware revision IDs) |
+| `ardupilot-pixhawk6c/` | ArduPilot Copter-4.7.1                   | `hwdef.dat`, `hwdef-bl.dat`, `defaults.parm`: a compact second statement of the pin assignments |
+| `parts/`               | Bosch Sensortec                          | BMI088 datasheet |
+| `ti/`                  | ti.com                                   | AM62L datasheet (SPRSPA1B), technical reference manual (SPRUJB4A), EVM user's guide (SPRUJG8B), DDR board design and layout (SPRAD06C), high-speed interface layout (SPRAAR7J), Sitara power distribution networks (SPRAC76H) |
+
+The full download is about 150 MB, most of it the AM62L technical reference
+manual.
+
+The Holybro pages and the pinout spreadsheet have no checksum recorded, because
+they are regenerated on every download.
 
 ## Documents to add by hand
 
-These could not be downloaded by script or do not have a confirmed URL yet.
-Save them into `reference/` under the given name.
+These could not be downloaded by script. Save them into `reference/` under the
+given name.
 
-| Document                                   | Save as                               | Note                                   |
-| ------------------------------------------ | ------------------------------------- | -------------------------------------- |
-| STM32H743 datasheet (DS12110)              | `st/stm32h743-datasheet.pdf`          | st.com does not respond to scripted downloads |
-| STM32H7 reference manual (RM0433)          | `st/rm0433-reference-manual.pdf`      | st.com does not respond to scripted downloads |
-| AM62L technical reference manual           | `ti/am62l-trm.pdf`                    | URL not confirmed                      |
-| FMUv6C schematic, if one is published      | `pixhawk/fmuv6c-schematic.pdf`        | No public source confirmed             |
-| Datasheets for the FMUv6C sensors and PMIC | `parts/<part-number>.pdf`             | Part list comes from DS-018 and `rc.board_sensors` |
+| Document                              | Save as                           | Note                                          |
+| ------------------------------------- | --------------------------------- | --------------------------------------------- |
+| STM32H743 datasheet (DS12110)         | `st/stm32h743-datasheet.pdf`      | st.com does not respond to scripted downloads |
+| STM32H7 reference manual (RM0433)     | `st/rm0433-reference-manual.pdf`  | st.com does not respond to scripted downloads |
+| STM32F103 datasheet (IO processor)    | `st/stm32f103-datasheet.pdf`      | st.com does not respond to scripted downloads |
+| ICM-42688-P datasheet                 | `parts/icm-42688-p-datasheet.pdf` | TDK serves it through a download page         |
+| MS5611 datasheet                      | `parts/ms5611-datasheet.pdf`      | te.com refuses scripted downloads             |
+| IST8310 datasheet                     | `parts/ist8310-datasheet.pdf`     | No working URL found                          |
+
+No FMUv6C schematic was found: Holybro's documentation and the Pixhawk standards
+provide the pinout, system diagram and interface standard, but not the
+schematic itself.
