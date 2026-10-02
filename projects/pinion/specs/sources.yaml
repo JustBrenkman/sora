@@ -1,0 +1,84 @@
+# Reference documents for pinion. Run ./fetch.sh to download them into reference/.
+#
+# Each entry is: id, file (path under reference/), url, sha256.
+# Keep one key per line; fetch.sh reads this file line by line.
+# An empty sha256 skips verification.
+
+# --- Pixhawk open standards (pixhawk/Pixhawk-Standards @ a97a915) ---
+
+- id: ds-018-fmuv6c
+  file: pixhawk/DS-018-pixhawk-autopilot-v6c-standard.pdf
+  url: https://raw.githubusercontent.com/pixhawk/Pixhawk-Standards/a97a915bfb6e20d6c8a41a86c5673350a3e51ceb/DS-018%20Pixhawk%20Autopilot%20v6C%20Standard.pdf
+  sha256: 58bc16209fac47fe02800aff0324d454244191a675341ca55f9b6d33aafc1998
+
+- id: ds-009-connectors
+  file: pixhawk/DS-009-pixhawk-connector-standard.pdf
+  url: https://raw.githubusercontent.com/pixhawk/Pixhawk-Standards/a97a915bfb6e20d6c8a41a86c5673350a3e51ceb/DS-009%20Pixhawk%20Connector%20Standard.pdf
+  sha256: dbc6b94e0367ef0700f3ae2ed5958fd00e8938435a12c7cf528a772ec1a5bbdb
+
+- id: ds-010-autopilot-bus
+  file: pixhawk/DS-010-pixhawk-autopilot-bus-standard.pdf
+  url: https://raw.githubusercontent.com/pixhawk/Pixhawk-Standards/a97a915bfb6e20d6c8a41a86c5673350a3e51ceb/DS-010%20Pixhawk%20Autopilot%20Bus%20Standard.pdf
+  sha256: 8fc3883e1aeade93efd15de1d2f9c3e75d3609eee9bd2ed279621ede4eb538cf
+
+# --- PX4 px4/fmu-v6c board support (PX4-Autopilot v1.17.0) ---
+# The authoritative pin, bus and timer assignments for the FMUv6C.
+
+- id: px4-v6c-board-h
+  file: px4-fmu-v6c/nuttx-config/include/board.h
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/nuttx-config/include/board.h
+  sha256: c982ea614423dadb02010b21f661d454fbc5a13d35df96cd939defeb9acd77e2
+
+- id: px4-v6c-board-dma-map
+  file: px4-fmu-v6c/nuttx-config/include/board_dma_map.h
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/nuttx-config/include/board_dma_map.h
+  sha256: 735542d31d22467ab7ef7cd805a919fe3d86ccaf660dc7d7221fd33aabdd4ea3
+
+- id: px4-v6c-defconfig
+  file: px4-fmu-v6c/nuttx-config/nsh/defconfig
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/nuttx-config/nsh/defconfig
+  sha256: c1bab9c0e7921efbbbf03e7df52614fd385cbfbcd51bd74e99712465d2ace9e1
+
+- id: px4-v6c-board-config
+  file: px4-fmu-v6c/src/board_config.h
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/src/board_config.h
+  sha256: 0030006348055714bfe6b3be0627677a13fae4d95ed6f5ad8263db6f3d6ae7fd
+
+- id: px4-v6c-hw-config
+  file: px4-fmu-v6c/src/hw_config.h
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/src/hw_config.h
+  sha256: 85fa471940e6e6c6e6040cc2fb165298bfd8c71cf67e5f31d6fdedca3318401f
+
+- id: px4-v6c-spi
+  file: px4-fmu-v6c/src/spi.cpp
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/src/spi.cpp
+  sha256: 3955d1f87457a4c6a72665f5fa6d1cf28eb3c8d4f7d46f0c66aefd593ae3c1f2
+
+- id: px4-v6c-i2c
+  file: px4-fmu-v6c/src/i2c.cpp
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/src/i2c.cpp
+  sha256: 98820d607835870df0e918ba8f969f268752be2016b44753c40a1f1d506341b3
+
+- id: px4-v6c-timer-config
+  file: px4-fmu-v6c/src/timer_config.cpp
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/src/timer_config.cpp
+  sha256: c6006ad088439ce16cc958f8f1cd8b7ba31c533223612cb4dfe4777e4f430e0a
+
+- id: px4-v6c-px4board
+  file: px4-fmu-v6c/default.px4board
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/default.px4board
+  sha256: f1868603374a234e61e84f4f2bc84cbc3adb095bcf6d2d34f1f5066912c987d9
+
+- id: px4-v6c-rc-board-sensors
+  file: px4-fmu-v6c/init/rc.board_sensors
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/fmu-v6c/init/rc.board_sensors
+  sha256: 0ae07b25e8c342b9b346800ff2b0a948e8a760fd1ca8df807d7bd2d92f531165
+
+# --- Silicon vendor documents ---
+# TI serves the latest revision at this URL, so the checksum changes when the
+# datasheet is revised. Recorded revision: SPRSPA1B.
+
+- id: am62l-datasheet
+  file: ti/am62l-datasheet.pdf
+  url: https://www.ti.com/lit/ds/symlink/am62l.pdf
+  sha256: 7816552b4e10525d048d66686d3e881c330a106cde0294b9606ce2030e3e5277

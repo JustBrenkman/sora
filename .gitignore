@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+
+# KiCad
+*-backups/
+*.kicad_prl
+*.lck
+*-bak
+~*
+_autosave-*
+fp-info-cache
+\#auto_saved_files#
+
+# Fetched reference documents (see projects/*/specs/sources.yaml)
+projects/*/specs/reference/*
+!projects/*/specs/reference/.gitkeep
+
+# Upstream checkouts and build output
+projects/*/firmware/build/
+projects/*/linux/build/
