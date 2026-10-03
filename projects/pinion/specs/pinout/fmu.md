@@ -9,7 +9,7 @@
 | PB7 | A5 | I2C1.SDA | AF4 | FMU_I2C1_SDA_GPS1 | drive=open_drain |  |
 | PB4 | A6 |  |  |  |  |  |
 | PB3 | A7 |  |  |  |  |  |
-| PA15 | A8 | gpio_in |  | N_BRICK1_VALID | bias=pull_up | DEVIATION: driven low by the on-board 5 V buck's power-good, not by a power-brick selector. |
+| PA15 | A8 | gpio_in |  | N_BRICK1_VALID | bias=pull_up | Power selector: POWER1 is the active 5 V source, active low. FMUv6C. |
 | PA14 | A9 | DEBUG.JTCK-SWCLK | AF0 | FMU_SWCLK |  |  |
 | PA13 | A10 | DEBUG.JTMS-SWDIO | AF0 | FMU_SWDIO |  |  |
 | PC15 | B1 | gpio_out |  | FMU_SPI1_CS1_BMI088_ACC | initial=high | FMUv6C (BMI055 on early revisions). |
@@ -78,12 +78,12 @@
 | PC5 | H4 | ADC1.INP8 | analog | FMU_BAT1_V |  |  |
 | PE7 | H5 | UART7.RX | AF7 | FMU_UART7_RX_TEL1 |  |  |
 | PE11 | H6 | TIM1.CH2 | AF1 | FMU_CH2 |  |  |
-| PE15 | H7 | gpio_in |  | N_USB_VBUS_VALID | bias=pull_up | DEVIATION: the FMU is never USB-powered; left pulled up (invalid). Open: reuse or free the pin. |
+| PE15 | H7 | gpio_in |  | N_USB_VBUS_VALID | bias=pull_up | Power selector: USB VBUS is the active 5 V source, active low. FMUv6C; on pinion the VBUS is the AM62L's USB-C port. |
 | PD14 | H8 | TIM4.CH3 | AF2 | FMU_CH5 |  |  |
 | PD10 | H9 | gpio_out |  | N_FMU_LED_RED | initial=high | Status LED, active low, open drain. FMUv6C. |
 | PB14 | H10 |  |  |  |  |  |
 | VSS_J1 | J1 | reserved |  | GND |  |  |
-| PA2 | J2 |  |  |  |  |  |
+| PA2 | J2 | ADC1.INP14 | analog | FMU_BAT2_I |  |  |
 | PA6 | J3 | SPI1.MISO | AF5 | FMU_SPI1_MISO_SENSOR | speed=very_high |  |
 | PB0 | J4 | TIM3.CH3 | AF2 | FMU_BUZZER |  |  |
 | PE8 | J5 | UART7.TX | AF7 | FMU_UART7_TX_TEL1 |  |  |
@@ -95,11 +95,11 @@
 | VDD_K1 | K1 | reserved |  | FMU_VDD_3V3 |  |  |
 | PA3 | K2 | USART2.RX | AF7 | FMU_USART2_RX_TEL3 |  |  |
 | PA7 | K3 | SPI1.MOSI | AF5 | FMU_SPI1_MOSI_SENSOR | speed=very_high |  |
-| PB1 | K4 |  |  |  |  |  |
+| PB1 | K4 | ADC1.INP5 | analog | FMU_BAT2_V |  |  |
 | PE9 | K5 | UART7.RTS | AF7 | FMU_UART7_RTS_TEL1 |  |  |
 | PE13 | K6 | TIM1.CH3 | AF1 | FMU_CH3 |  |  |
 | PB11 | K7 | I2C2.SDA | AF4 | FMU_I2C2_SDA_GPS2 | drive=open_drain |  |
-| PB12 | K8 | gpio_in |  | N_BRICK2_VALID | bias=pull_up | DEVIATION: no second supply; left pulled up (invalid). Open: reuse or free the pin. |
+| PB12 | K8 | gpio_in |  | N_BRICK2_VALID | bias=pull_up | Power selector: POWER2 is the active 5 V source, active low. FMUv6C. |
 | PD8 | K9 | USART3.TX | AF7 | FMU_USART3_TX_DEBUG |  |  |
 | PD12 | K10 | I2C4.SCL | AF4 | FMU_I2C4_SCL | drive=open_drain |  |
 
@@ -150,13 +150,15 @@ IMU heater MOSFET gate. FMUv6C; PX4 drives it as a GPIO.
 
 ## ADC1
 
-Battery current and voltage, and the 5 V rail (divider 2:1). DEVIATION: BAT1 comes from the on-board input shunt amplifier and divider, not a power-brick connector; the FMUv6C BAT2 inputs (PA2, PB1) are unused.
+Power module 1 and 2 current and voltage from the POWER1/POWER2 connectors, and the 5 V rail (divider 2:1). FMUv6C.
 
 | Signal | Pin | Net |
 |---|---|---|
 | INP4 | PC4 | FMU_BAT1_I |
 | INP8 | PC5 | FMU_BAT1_V |
 | INP18 | PA4 | FMU_SCALED_V5 |
+| INP14 | PA2 | FMU_BAT2_I |
+| INP5 | PB1 | FMU_BAT2_V |
 
 ## ADC3
 

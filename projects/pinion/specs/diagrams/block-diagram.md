@@ -13,7 +13,7 @@ Parts marked *(select)* are not chosen yet; see
 ```mermaid
 %%{init: {"flowchart": {"curve": "step"}}}%%
 flowchart LR
-    BAT([Battery input]) --> PWR[Power: protection, sense,<br/>5 V buck, rails]
+    BAT([POWER1, POWER2<br/>power modules]) --> PWR[Power selector,<br/>rails]
     PWR -.-> SOC
     PWR -.-> FMU
     PWR -.-> IO
@@ -102,7 +102,8 @@ flowchart LR
     IO <-->|safety switch PB5,<br/>LED PB13| G1
     IO <-->|USART1 TX, SWD, SWO, NRST| IODBG([IO debug])
 
-    ADC[Battery V/I, 5 V,<br/>HW version] -->|PC5, PC4, PA4,<br/>PC0, PC1| FMU
+    ADC[Battery 1 and 2 V/I, 5 V,<br/>HW version] -->|PC5, PC4, PB1, PA2,<br/>PA4, PC0, PC1| FMU
+    SEL[Power selector] -.->|valid: PA15, PB12, PE15| FMU
     FMU -.->|PE2, PC10 enable<br/>PE3, PC11 fault| SW[5 V port switches]
     FMU -.->|PB2| SSW[Sensor rail switch]
 ```
@@ -146,15 +147,17 @@ flowchart LR
 
 ## 4. Power tree
 
-Proposed; currents and the input range are open (see the decisions note).
+The input side follows the FMUv6C. The Linux side is proposed; the 5 V budget
+is open (see the decisions note).
 
 ```mermaid
 %%{init: {"flowchart": {"curve": "step"}}}%%
 flowchart LR
-    BAT([Battery]) --> PROT[Reverse-polarity and<br/>transient protection] --> SH[Shunt + amplifier<br/>FMU_BAT1_I]
-    PROT --> DIV[Divider<br/>FMU_BAT1_V]
-    SH --> BUCK5[Wide-input buck<br/>VDD_5V]
-    BUCK5 -.->|power-good| VAL[N_BRICK1_VALID]
+    PM1([POWER1<br/>5 V, FMU_BAT1_V, FMU_BAT1_I]) --> SEL[Power selector<br/>ideal diodes]
+    PM2([POWER2<br/>5 V, FMU_BAT2_V, FMU_BAT2_I]) --> SEL
+    USBV([USB-C VBUS]) --> SEL
+    SEL --> BUCK5[VDD_5V]
+    SEL -.->|N_BRICK1_VALID, N_BRICK2_VALID,<br/>N_USB_VBUS_VALID| VAL[FMU]
 
     BUCK5 --> P5[Switch, 1.5 A<br/>VDD_5V_PERIPH]
     BUCK5 --> H5[Switch, 1.5 A<br/>VDD_5V_HIPOWER]
@@ -209,7 +212,7 @@ flowchart LR
 
 | Connector | Type | Signals |
 |---|---|---|
-| Battery | *(select)* | VBAT, GND |
+| POWER1, POWER2 | JST-GH 6 | 5 V, 5 V, CURRENT, VOLTAGE, GND, GND |
 | TELEM1 | JST-GH 6 | VDD_5V_HIPOWER, UART7 TX, RX, CTS, RTS, GND |
 | TELEM3 | JST-GH 6 | VDD_5V_PERIPH, USART2 TX, RX, NC, NC, GND |
 | GPS1 | JST-GH 10 | VDD_5V_PERIPH, USART1 TX, RX, I2C1 SCL, SDA, safety switch, safety LED, 3V3, buzzer, GND |

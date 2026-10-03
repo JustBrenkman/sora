@@ -46,9 +46,9 @@ the main board.
 | 5 V load switch, 1.5 A limit | `VDD_5V_HIPOWER`: TELEM1 and GPS2 | EN PC10, OC PC11 (both active low) | keep (part not named) |
 | 3.3 V sensor rail switch | `VDD_3V3_SENSORS` | EN PB2 | keep |
 | 3.3 V Spektrum switch | Satellite receiver power and bind | EN PC13 of the F103 | keep |
-| Power selector (2 bricks + USB) | Picks the 5 V source, reports `N_BRICKx_VALID`, `N_USB_VBUS_VALID` | PA15, PB12, PE15 | drop: replaced by the on-board buck |
+| Power selector (2 bricks + USB) | Picks the 5 V source, reports `N_BRICKx_VALID`, `N_USB_VBUS_VALID` | PA15, PB12, PE15 | keep; the USB input is the AM62L USB-C port's VBUS |
 | 5 V rail divider | `FMU_SCALED_V5` | PA4 | keep |
-| Battery sense inputs | Voltage and current from the power bricks | PC5/PC4 (BAT1), PB1/PA2 (BAT2) | change: BAT1 from an on-board shunt amplifier and divider; BAT2 unused |
+| Battery sense inputs | Voltage and current from the power bricks | PC5/PC4 (BAT1), PB1/PA2 (BAT2) | keep |
 | Version/revision dividers | Two resistor pairs read at boot | drive PE12, sense PC0/PC1 | keep, with pinion's own values |
 | PWM level buffers | 3.3 V or 5 V PWM signal level (solder option) | FMU_CH1..8, IO_CH1..8 | keep (buffer with selectable VCC) |
 | S.BUS inverters | Invert S.BUS in and out | F103 PB11, PB10, enable PB4 | keep |
@@ -63,7 +63,7 @@ JST-GH 1.25 mm unless noted; pin 1 first.
 
 | Port | Pins | Signals | pinion |
 |---|---|---|---|
-| POWER1, POWER2 | 6 | 5 V, 5 V, CURRENT, VOLTAGE, GND, GND | drop |
+| POWER1, POWER2 | 6 | 5 V, 5 V, CURRENT, VOLTAGE, GND, GND | keep |
 | TELEM1 | 6 | 5 V (HIPOWER), UART7 TX, RX, CTS, RTS, GND | keep |
 | TELEM2 | 6 | 5 V, UART5 TX, RX, CTS, RTS, GND | drop: UART5 goes to the AM62L |
 | TELEM3 | 6 | 5 V, USART2 TX, RX, NC, NC, GND | keep |
@@ -123,7 +123,7 @@ sections 2.6 to 2.12), `reference/linux-dts/k3-am62l3-evm.dts`.
 
 | Part | Function | pinion |
 |---|---|---|
-| TPS630702 buck-boost | 5 V from the PD output | drop: the on-board buck makes 5 V |
+| TPS630702 buck-boost | 5 V from the PD output | drop: 5 V comes from the power module |
 | LM5141 buck | 3.3 V main, feeds the PMIC | change: 3.3 V buck from 5 V (part to select) |
 | TPS6521401 PMIC | Buck1 0.75 V core, Buck2 1.8 V I/O, Buck3 1.1 V DDR, LDO1 1.8 V analog, LDO2 3.3 V I/O; I2C 0x30 on WKUP_I2C0 | change: TPS6521402, Buck3 at 1.2 V |
 | TPS74501 LDO x2 | `VDD_RTC` 0.75 V and `VDDS_RTC` 1.8 V | keep if RTC-only low-power mode is wanted, else fed from the PMIC rails |

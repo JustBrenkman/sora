@@ -87,8 +87,16 @@
                     pin: "PA4",
                     net: "FMU_SCALED_V5",
                 ),
+                "INP14": (
+                    pin: "PA2",
+                    net: "FMU_BAT2_I",
+                ),
+                "INP5": (
+                    pin: "PB1",
+                    net: "FMU_BAT2_V",
+                ),
             },
-            note: "Battery current and voltage, and the 5 V rail (divider 2:1). DEVIATION: BAT1 comes from the on-board input shunt amplifier and divider, not a power-brick connector; the FMUv6C BAT2 inputs (PA2, PB1) are unused.",
+            note: "Power module 1 and 2 current and voltage from the POWER1/POWER2 connectors, and the 5 V rail (divider 2:1). FMUv6C.",
         ),
         "ADC3": (
             signals: {
@@ -434,19 +442,19 @@
             mode: gpio_in,
             bias: pull_up,
             net: "N_BRICK1_VALID",
-            note: "DEVIATION: driven low by the on-board 5 V buck\'s power-good, not by a power-brick selector.",
+            note: "Power selector: POWER1 is the active 5 V source, active low. FMUv6C.",
         ),
         "PB12": (
             mode: gpio_in,
             bias: pull_up,
             net: "N_BRICK2_VALID",
-            note: "DEVIATION: no second supply; left pulled up (invalid). Open: reuse or free the pin.",
+            note: "Power selector: POWER2 is the active 5 V source, active low. FMUv6C.",
         ),
         "PE15": (
             mode: gpio_in,
             bias: pull_up,
             net: "N_USB_VBUS_VALID",
-            note: "DEVIATION: the FMU is never USB-powered; left pulled up (invalid). Open: reuse or free the pin.",
+            note: "Power selector: USB VBUS is the active 5 V source, active low. FMUv6C; on pinion the VBUS is the AM62L\'s USB-C port.",
         ),
         "PD10": (
             mode: gpio_out,

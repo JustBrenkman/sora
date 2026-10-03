@@ -8,7 +8,7 @@ and the TI AM62L computer, plus the design documents derived from it.
 | `reference/` | no        | Third-party documents downloaded by `fetch.sh`                        |
 | `pinout/`    | yes       | pinmap pin definitions and assignments for the STM32H743, STM32F103 and AM62L |
 | `diagrams/`  | yes       | Block diagram, power tree, bus topology                               |
-| `notes/`     | yes       | Design decisions, reference inventory, AM62L I/O supply groups        |
+| `notes/`     | yes       | Design decisions, reference inventory, mechanical spec, AM62L I/O supply groups |
 | `tools/`     | yes       | Scripts that generate the pin definitions and check nets across chips |
 
 Start with `notes/decisions.md` (what pinion keeps and changes),
