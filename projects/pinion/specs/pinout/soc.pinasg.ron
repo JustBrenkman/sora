@@ -1,0 +1,1443 @@
+#![enable(implicit_some)]
+(
+    schema: "pinmap/v1",
+    kind: pinasg,
+    device: "am62l32",
+    target: (
+        package: "ANB",
+        refdes: "U3",
+    ),
+    peripherals: {
+        "DDR0": (
+            signals: {
+                "A0": (
+                    pin: "DDR0_A0",
+                    net: "DDR_A0",
+                ),
+                "A1": (
+                    pin: "DDR0_A1",
+                    net: "DDR_A1",
+                ),
+                "A2": (
+                    pin: "DDR0_A2",
+                    net: "DDR_A2",
+                ),
+                "A3": (
+                    pin: "DDR0_A3",
+                    net: "DDR_A3",
+                ),
+                "A4": (
+                    pin: "DDR0_A4",
+                    net: "DDR_A4",
+                ),
+                "A5": (
+                    pin: "DDR0_A5",
+                    net: "DDR_A5",
+                ),
+                "A6": (
+                    pin: "DDR0_A6",
+                    net: "DDR_A6",
+                ),
+                "A7": (
+                    pin: "DDR0_A7",
+                    net: "DDR_A7",
+                ),
+                "A8": (
+                    pin: "DDR0_A8",
+                    net: "DDR_A8",
+                ),
+                "A9": (
+                    pin: "DDR0_A9",
+                    net: "DDR_A9",
+                ),
+                "A10": (
+                    pin: "DDR0_A10",
+                    net: "DDR_A10",
+                ),
+                "A11": (
+                    pin: "DDR0_A11",
+                    net: "DDR_A11",
+                ),
+                "A12": (
+                    pin: "DDR0_A12",
+                    net: "DDR_A12",
+                ),
+                "A13": (
+                    pin: "DDR0_A13",
+                    net: "DDR_A13",
+                ),
+                "ACT_n": (
+                    pin: "DDR0_ACT_n",
+                    net: "DDR_ACT_N",
+                ),
+                "BA0": (
+                    pin: "DDR0_BA0",
+                    net: "DDR_BA0",
+                ),
+                "BA1": (
+                    pin: "DDR0_BA1",
+                    net: "DDR_BA1",
+                ),
+                "BG0": (
+                    pin: "DDR0_BG0",
+                    net: "DDR_BG0",
+                ),
+                "CAS_n": (
+                    pin: "DDR0_CAS_n",
+                    net: "DDR_CAS_N",
+                ),
+                "CK0": (
+                    pin: "DDR0_CK0",
+                    net: "DDR_CK0",
+                ),
+                "CK0_n": (
+                    pin: "DDR0_CK0_n",
+                    net: "DDR_CK0_N",
+                ),
+                "CKE0": (
+                    pin: "DDR0_CKE0",
+                    net: "DDR_CKE0",
+                ),
+                "CS0_n": (
+                    pin: "DDR0_CS0_n",
+                    net: "DDR_CS0_N",
+                ),
+                "DM0": (
+                    pin: "DDR0_DM0",
+                    net: "DDR_DM0",
+                ),
+                "DM1": (
+                    pin: "DDR0_DM1",
+                    net: "DDR_DM1",
+                ),
+                "DQ0": (
+                    pin: "DDR0_DQ0",
+                    net: "DDR_DQ0",
+                ),
+                "DQ1": (
+                    pin: "DDR0_DQ1",
+                    net: "DDR_DQ1",
+                ),
+                "DQ2": (
+                    pin: "DDR0_DQ2",
+                    net: "DDR_DQ2",
+                ),
+                "DQ3": (
+                    pin: "DDR0_DQ3",
+                    net: "DDR_DQ3",
+                ),
+                "DQ4": (
+                    pin: "DDR0_DQ4",
+                    net: "DDR_DQ4",
+                ),
+                "DQ5": (
+                    pin: "DDR0_DQ5",
+                    net: "DDR_DQ5",
+                ),
+                "DQ6": (
+                    pin: "DDR0_DQ6",
+                    net: "DDR_DQ6",
+                ),
+                "DQ7": (
+                    pin: "DDR0_DQ7",
+                    net: "DDR_DQ7",
+                ),
+                "DQ8": (
+                    pin: "DDR0_DQ8",
+                    net: "DDR_DQ8",
+                ),
+                "DQ9": (
+                    pin: "DDR0_DQ9",
+                    net: "DDR_DQ9",
+                ),
+                "DQ10": (
+                    pin: "DDR0_DQ10",
+                    net: "DDR_DQ10",
+                ),
+                "DQ11": (
+                    pin: "DDR0_DQ11",
+                    net: "DDR_DQ11",
+                ),
+                "DQ12": (
+                    pin: "DDR0_DQ12",
+                    net: "DDR_DQ12",
+                ),
+                "DQ13": (
+                    pin: "DDR0_DQ13",
+                    net: "DDR_DQ13",
+                ),
+                "DQ14": (
+                    pin: "DDR0_DQ14",
+                    net: "DDR_DQ14",
+                ),
+                "DQ15": (
+                    pin: "DDR0_DQ15",
+                    net: "DDR_DQ15",
+                ),
+                "DQS0": (
+                    pin: "DDR0_DQS0",
+                    net: "DDR_DQS0",
+                ),
+                "DQS0_n": (
+                    pin: "DDR0_DQS0_n",
+                    net: "DDR_DQS0_N",
+                ),
+                "DQS1": (
+                    pin: "DDR0_DQS1",
+                    net: "DDR_DQS1",
+                ),
+                "DQS1_n": (
+                    pin: "DDR0_DQS1_n",
+                    net: "DDR_DQS1_N",
+                ),
+                "ODT0": (
+                    pin: "DDR0_ODT0",
+                    net: "DDR_ODT0",
+                ),
+                "RAS_n": (
+                    pin: "DDR0_RAS_n",
+                    net: "DDR_RAS_N",
+                ),
+                "RESET0_n": (
+                    pin: "DDR0_RESET0_n",
+                    net: "DDR_RESET0_N",
+                ),
+                "WE_n": (
+                    pin: "DDR0_WE_n",
+                    net: "DDR_WE_N",
+                ),
+                "CAL0": (
+                    pin: "DDR0_CAL0",
+                    net: "DDR_CAL0",
+                ),
+            },
+            note: "DDR4, one x16 device (EVM: LPDDR4, so this section follows SPRAD06 Figure 2-1, not the EVM). WE_n/CAS_n/RAS_n are A14/A15/A16. BG1 is unused with an x16 device. CAL0 takes 240R 1% to GND. Data bits may be swapped within a byte lane, and byte lanes swapped, during layout; update the nets here when they are.",
+        ),
+        "MMC0": (
+            signals: {
+                "CLK": (
+                    pin: "MMC0_CLK",
+                    net: "EMMC_CLK",
+                ),
+                "CMD": (
+                    pin: "MMC0_CMD",
+                    net: "EMMC_CMD",
+                ),
+                "DAT0": (
+                    pin: "MMC0_DAT0",
+                    net: "EMMC_DAT0",
+                ),
+                "DAT1": (
+                    pin: "MMC0_DAT1",
+                    net: "EMMC_DAT1",
+                ),
+                "DAT2": (
+                    pin: "MMC0_DAT2",
+                    net: "EMMC_DAT2",
+                ),
+                "DAT3": (
+                    pin: "MMC0_DAT3",
+                    net: "EMMC_DAT3",
+                ),
+                "DAT4": (
+                    pin: "MMC0_DAT4",
+                    net: "EMMC_DAT4",
+                ),
+                "DAT5": (
+                    pin: "MMC0_DAT5",
+                    net: "EMMC_DAT5",
+                ),
+                "DAT6": (
+                    pin: "MMC0_DAT6",
+                    net: "EMMC_DAT6",
+                ),
+                "DAT7": (
+                    pin: "MMC0_DAT7",
+                    net: "EMMC_DAT7",
+                ),
+            },
+            note: "eMMC, 8-bit HS200, VDDSHV2 at 1.8 V. As the EVM.",
+        ),
+        "MMC1": (
+            signals: {
+                "CLK": (
+                    pin: "MMC1_CLK",
+                    net: "SD_CLK",
+                ),
+                "CMD": (
+                    pin: "MMC1_CMD",
+                    net: "SD_CMD",
+                ),
+                "DAT0": (
+                    pin: "MMC1_DAT0",
+                    net: "SD_DAT0",
+                ),
+                "DAT1": (
+                    pin: "MMC1_DAT1",
+                    net: "SD_DAT1",
+                ),
+                "DAT2": (
+                    pin: "MMC1_DAT2",
+                    net: "SD_DAT2",
+                ),
+                "DAT3": (
+                    pin: "MMC1_DAT3",
+                    net: "SD_DAT3",
+                ),
+                "SDCD": (
+                    pin: "MMC1_SDCD",
+                    net: "SD_CD",
+                ),
+            },
+            note: "microSD, UHS-I. VDDSHV3 comes from the SoC\'s internal SDIO LDO (CAP_VDDSHV_MMC), which switches 3.3 V / 1.8 V. As the EVM.",
+        ),
+        "RGMII1": (
+            signals: {
+                "TXC": (
+                    pin: "RGMII1_TXC",
+                    net: "ETH_TXC",
+                ),
+                "TX_CTL": (
+                    pin: "RGMII1_TX_CTL",
+                    net: "ETH_TX_CTL",
+                ),
+                "TD0": (
+                    pin: "RGMII1_TD0",
+                    net: "ETH_TD0",
+                ),
+                "TD1": (
+                    pin: "RGMII1_TD1",
+                    net: "ETH_TD1",
+                ),
+                "TD2": (
+                    pin: "RGMII1_TD2",
+                    net: "ETH_TD2",
+                ),
+                "TD3": (
+                    pin: "RGMII1_TD3",
+                    net: "ETH_TD3",
+                ),
+                "RXC": (
+                    pin: "RGMII1_RXC",
+                    net: "ETH_RXC",
+                ),
+                "RX_CTL": (
+                    pin: "RGMII1_RX_CTL",
+                    net: "ETH_RX_CTL",
+                ),
+                "RD0": (
+                    pin: "RGMII1_RD0",
+                    net: "ETH_RD0",
+                ),
+                "RD1": (
+                    pin: "RGMII1_RD1",
+                    net: "ETH_RD1",
+                ),
+                "RD2": (
+                    pin: "RGMII1_RD2",
+                    net: "ETH_RD2",
+                ),
+                "RD3": (
+                    pin: "RGMII1_RD3",
+                    net: "ETH_RD3",
+                ),
+            },
+            note: "Gigabit Ethernet PHY (EVM: DP83867), 1.8 V I/O on VDDS0. As the EVM\'s first port; the second port is dropped.",
+        ),
+        "MDIO0": (
+            signals: {
+                "MDC": (
+                    pin: "MDIO0_MDC",
+                    net: "ETH_MDC",
+                ),
+                "MDIO": (
+                    pin: "MDIO0_MDIO",
+                    net: "ETH_MDIO",
+                ),
+            },
+            note: "PHY management, 1.8 V. As the EVM.",
+        ),
+        "MMC2": (
+            signals: {
+                "CLK": (
+                    pin: "MMC2_CLK",
+                    net: "WLAN_SDIO_CLK",
+                ),
+                "CMD": (
+                    pin: "MMC2_CMD",
+                    net: "WLAN_SDIO_CMD",
+                ),
+                "DAT0": (
+                    pin: "MMC2_DAT0",
+                    net: "WLAN_SDIO_D0",
+                ),
+                "DAT1": (
+                    pin: "MMC2_DAT1",
+                    net: "WLAN_SDIO_D1",
+                ),
+                "DAT2": (
+                    pin: "MMC2_DAT2",
+                    net: "WLAN_SDIO_D2",
+                ),
+                "DAT3": (
+                    pin: "MMC2_DAT3",
+                    net: "WLAN_SDIO_D3",
+                ),
+            },
+            note: "Wi-Fi SDIO, VDDSHV4 at 1.8 V. As the EVM\'s M.2 Key E slot; the module is not chosen yet.",
+        ),
+        "UART5": (
+            signals: {
+                "RXD": (
+                    pin: "OSPI0_CSn2",
+                    net: "BT_UART_TX",
+                ),
+                "TXD": (
+                    pin: "OSPI0_CSn3",
+                    net: "BT_UART_RX",
+                ),
+                "RTSn": (
+                    pin: "OSPI0_LBCLKO",
+                    net: "BT_UART_CTS",
+                ),
+                "CTSn": (
+                    pin: "OSPI0_DQS",
+                    net: "BT_UART_RTS",
+                ),
+            },
+            note: "Bluetooth HCI, 1.8 V on VDDS1. Nets are named from the module\'s side. DEVIATION: the EVM runs HCI on UART1 through buffers; pinion puts it on the unused OSPI balls, in a 1.8 V domain, and UART1 goes to the FMU.",
+        ),
+        "WKUP": (
+            signals: {
+                "CLKOUT0": (
+                    pin: "WKUP_CLKOUT0",
+                    net: "WLAN_SLOW_CLK",
+                ),
+            },
+            note: "32.768 kHz slow clock to the Wi-Fi/BT module, 1.8 V. As the EVM.",
+        ),
+        "UART1": (
+            signals: {
+                "TXD": (
+                    pin: "MCASP0_ACLKR",
+                    net: "FMU_UART5_RX_SOC",
+                ),
+                "RXD": (
+                    pin: "MCASP0_AFSR",
+                    net: "FMU_UART5_TX_SOC",
+                ),
+                "RTSn": (
+                    pin: "MCASP0_AXR2",
+                    net: "FMU_UART5_CTS_SOC",
+                ),
+                "CTSn": (
+                    pin: "MCASP0_AXR3",
+                    net: "FMU_UART5_RTS_SOC",
+                ),
+            },
+            note: "MAVLink / uXRCE-DDS link to the FMU\'s UART5, 3.3 V on VDDSHV1, direct connection. Not on the EVM.",
+        ),
+        "MCAN0": (
+            signals: {
+                "TX": (
+                    pin: "MCAN0_TX",
+                    net: "SOC_CAN_TX",
+                ),
+                "RX": (
+                    pin: "MCAN0_RX",
+                    net: "SOC_CAN_RX",
+                ),
+            },
+            note: "Own transceiver on the FMU CAN1 bus, 3.3 V. EVM: MCAN header.",
+        ),
+        "USB1": (
+            signals: {
+                "DP": (
+                    pin: "USB1_DP",
+                    net: "FMU_USB_DP",
+                ),
+                "DM": (
+                    pin: "USB1_DM",
+                    net: "FMU_USB_DM",
+                ),
+                "DRVVBUS": (
+                    pin: "USB1_DRVVBUS",
+                    net: "FMU_USB_VBUS_EN",
+                ),
+                "VBUS": (
+                    pin: "USB1_VBUS",
+                    net: "SOC_USB1_VBUS",
+                ),
+                "RCALIB": (
+                    pin: "USB1_RCALIB",
+                    net: "SOC_USB1_RCALIB",
+                ),
+            },
+            note: "Host port wired on-board to the FMU\'s USB (PX4 bootloader upload, MAVLink). DRVVBUS enables the 5 V that feeds FMU_VBUS_SENSE and, divided, USB1_VBUS. RCALIB takes 499R 1% to GND. EVM: Type-A host port.",
+        ),
+        "USB0": (
+            signals: {
+                "DP": (
+                    pin: "USB0_DP",
+                    net: "USBC_DP",
+                ),
+                "DM": (
+                    pin: "USB0_DM",
+                    net: "USBC_DM",
+                ),
+                "DRVVBUS": (
+                    pin: "USB0_DRVVBUS",
+                    net: "USBC_VBUS_EN",
+                ),
+                "VBUS": (
+                    pin: "USB0_VBUS",
+                    net: "SOC_USB0_VBUS",
+                ),
+                "RCALIB": (
+                    pin: "USB0_RCALIB",
+                    net: "SOC_USB0_RCALIB",
+                ),
+            },
+            note: "External USB-C, dual role; also the USB DFU boot port. VBUS through the datasheet divider. EVM: Type-C with a TPS65988 PD controller, which pinion does not need for power.",
+        ),
+        "UART0": (
+            signals: {
+                "TXD": (
+                    pin: "UART0_TXD",
+                    net: "SOC_UART0_TX",
+                ),
+                "RXD": (
+                    pin: "UART0_RXD",
+                    net: "SOC_UART0_RX",
+                ),
+            },
+            note: "Linux and bootloader console on a debug connector, 3.3 V; also the UART boot port. EVM: FT4232 bridge.",
+        ),
+        "WKUP_UART0": (
+            signals: {
+                "TXD": (
+                    pin: "WKUP_UART0_TXD",
+                    net: "SOC_WKUP_UART0_TX",
+                ),
+                "RXD": (
+                    pin: "WKUP_UART0_RXD",
+                    net: "SOC_WKUP_UART0_RX",
+                ),
+            },
+            note: "WKUP-domain UART, 1.8 V, on test pads. EVM: FT4232 bridge.",
+        ),
+        "I2C0": (
+            signals: {
+                "SCL": (
+                    pin: "I2C0_SCL",
+                    net: "SOC_I2C0_SCL",
+                    drive: open_drain,
+                ),
+                "SDA": (
+                    pin: "I2C0_SDA",
+                    net: "SOC_I2C0_SDA",
+                    drive: open_drain,
+                ),
+            },
+            note: "3.3 V: board ID EEPROM 0x51. As the EVM.",
+        ),
+        "I2C1": (
+            signals: {
+                "SCL": (
+                    pin: "I2C1_SCL",
+                    net: "SOC_I2C1_SCL",
+                    drive: open_drain,
+                ),
+                "SDA": (
+                    pin: "I2C1_SDA",
+                    net: "SOC_I2C1_SDA",
+                    drive: open_drain,
+                ),
+            },
+            note: "3.3 V: expansion / on-board monitors. The EVM hangs its port expanders, INA228s and temperature sensors here.",
+        ),
+        "WKUP_I2C0": (
+            signals: {
+                "SCL": (
+                    pin: "WKUP_I2C0_SCL",
+                    net: "PMIC_I2C_SCL",
+                    drive: open_drain,
+                ),
+                "SDA": (
+                    pin: "WKUP_I2C0_SDA",
+                    net: "PMIC_I2C_SDA",
+                    drive: open_drain,
+                ),
+            },
+            note: "1.8 V: PMIC at 0x30. As the EVM.",
+        ),
+        "SYS": (
+            signals: {
+                "PORz": (
+                    pin: "PORz",
+                    net: "SOC_PORZ",
+                ),
+                "RESETz": (
+                    pin: "RESETz",
+                    net: "SOC_RESETZ",
+                ),
+                "RESETSTATz": (
+                    pin: "RESETSTATz",
+                    net: "SOC_RESETSTATZ",
+                ),
+                "EXTINTn": (
+                    pin: "EXTINTn",
+                    net: "N_PMIC_INT",
+                ),
+                "TCK": (
+                    pin: "TCK",
+                    net: "SOC_JTAG_TCK",
+                ),
+                "TMS": (
+                    pin: "TMS",
+                    net: "SOC_JTAG_TMS",
+                ),
+                "TDI": (
+                    pin: "TDI",
+                    net: "SOC_JTAG_TDI",
+                ),
+                "TDO": (
+                    pin: "TDO",
+                    net: "SOC_JTAG_TDO",
+                ),
+                "TRSTn": (
+                    pin: "TRSTn",
+                    net: "SOC_JTAG_TRSTN",
+                ),
+                "EMU0": (
+                    pin: "EMU0",
+                    net: "SOC_JTAG_EMU0",
+                ),
+                "EMU1": (
+                    pin: "EMU1",
+                    net: "SOC_JTAG_EMU1",
+                ),
+                "BOOTMODE00": (
+                    pin: "GPMC0_AD0",
+                    net: "SOC_BOOTMODE0",
+                ),
+                "BOOTMODE01": (
+                    pin: "GPMC0_AD1",
+                    net: "SOC_BOOTMODE1",
+                ),
+                "BOOTMODE02": (
+                    pin: "GPMC0_AD2",
+                    net: "SOC_BOOTMODE2",
+                ),
+                "BOOTMODE03": (
+                    pin: "GPMC0_AD3",
+                    net: "SOC_BOOTMODE3",
+                ),
+                "BOOTMODE04": (
+                    pin: "GPMC0_AD4",
+                    net: "SOC_BOOTMODE4",
+                ),
+                "BOOTMODE05": (
+                    pin: "GPMC0_AD5",
+                    net: "SOC_BOOTMODE5",
+                ),
+                "BOOTMODE06": (
+                    pin: "GPMC0_AD6",
+                    net: "SOC_BOOTMODE6",
+                ),
+                "BOOTMODE07": (
+                    pin: "GPMC0_AD7",
+                    net: "SOC_BOOTMODE7",
+                ),
+                "BOOTMODE08": (
+                    pin: "GPMC0_AD8",
+                    net: "SOC_BOOTMODE8",
+                ),
+                "BOOTMODE09": (
+                    pin: "GPMC0_AD9",
+                    net: "SOC_BOOTMODE9",
+                ),
+                "BOOTMODE10": (
+                    pin: "GPMC0_AD10",
+                    net: "SOC_BOOTMODE10",
+                ),
+                "BOOTMODE11": (
+                    pin: "GPMC0_AD11",
+                    net: "SOC_BOOTMODE11",
+                ),
+                "BOOTMODE12": (
+                    pin: "GPMC0_AD12",
+                    net: "SOC_BOOTMODE12",
+                ),
+                "BOOTMODE13": (
+                    pin: "GPMC0_AD13",
+                    net: "SOC_BOOTMODE13",
+                ),
+                "BOOTMODE14": (
+                    pin: "GPMC0_AD14",
+                    net: "SOC_BOOTMODE14",
+                ),
+                "BOOTMODE15": (
+                    pin: "GPMC0_AD15",
+                    net: "SOC_BOOTMODE15",
+                ),
+            },
+            note: "PORz from the PMIC reset output; RESETz from a button; RESETSTATz resets the eMMC, PHY and Wi-Fi module; EXTINTn is the PMIC interrupt (3.3 V, open drain). JTAG is 1.8 V on a cTI-20 or Tag-Connect header (EVM: on-board XDS110, dropped). BOOTMODE[15:0] are sampled at PORz from pull-up/pull-down resistors on GPMC0_AD[15:0], 3.3 V; primary eMMC with SD backup is 0x344B on the EVM, and a DIP switch or solder jumpers select SD, UART and USB DFU.",
+        ),
+        "WKUP_OSC0": (
+            signals: {
+                "XI": (
+                    pin: "WKUP_OSC0_XI",
+                    net: "SOC_OSC0_XI",
+                ),
+                "XO": (
+                    pin: "WKUP_OSC0_XO",
+                    net: "SOC_OSC0_XO",
+                ),
+            },
+            note: "25 MHz crystal or oscillator. As the EVM (which buffers one oscillator to the SoC and PHYs).",
+        ),
+        "LFOSC0": (
+            signals: {
+                "XI": (
+                    pin: "LFOSC0_XI",
+                    net: "SOC_LFOSC0_XI",
+                ),
+                "XO": (
+                    pin: "LFOSC0_XO",
+                    net: "SOC_LFOSC0_XO",
+                ),
+            },
+            note: "32.768 kHz crystal for the RTC domain. As the EVM.",
+        ),
+        "RTC": (
+            signals: {
+                "PORz": (
+                    pin: "RTC_PORz",
+                    net: "SOC_RTC_PORZ",
+                ),
+            },
+            note: "RTC domain power-on reset, 1.8 V (VDDS_RTC).",
+        ),
+        "PMIC": (
+            signals: {
+                "LPM_EN0": (
+                    pin: "PMIC_LPM_EN0",
+                    net: "PMIC_LPM_EN0",
+                ),
+            },
+            note: "Low-power-mode request to the PMIC, 1.8 V. As the EVM.",
+        ),
+        "EXT": (
+            signals: {
+                "WAKEUP0": (
+                    pin: "EXT_WAKEUP0",
+                    net: "SOC_EXT_WAKEUP0",
+                ),
+                "WAKEUP1": (
+                    pin: "EXT_WAKEUP1",
+                    net: "SOC_EXT_WAKEUP1",
+                ),
+            },
+            note: "RTC-domain wake inputs; pulled to their inactive level if unused (datasheet section 5.4).",
+        ),
+    },
+    pins: {
+        "MMC1_SDWP": (
+            mode: gpio_out,
+            initial: high,
+            net: "SD_PWR_EN",
+            note: "GPIO0_123: microSD 3.3 V load switch enable, so the card can be power-cycled out of 1.8 V signalling. As the EVM.",
+        ),
+        "RGMII2_TD0": (
+            mode: gpio_out,
+            initial: low,
+            net: "N_ETH_RESET",
+            note: "GPIO0_69, 1.8 V: PHY reset, active low. DEVIATION: the EVM uses an I2C port expander.",
+        ),
+        "RGMII2_TD1": (
+            mode: gpio_in,
+            net: "N_ETH_INT",
+            note: "GPIO0_70, 1.8 V: PHY interrupt, active low. DEVIATION: the EVM uses an I2C port expander.",
+        ),
+        "MMC2_SDCD": (
+            mode: gpio_out,
+            initial: low,
+            net: "WLAN_EN",
+            note: "GPIO0_51, 1.8 V: Wi-Fi enable.",
+        ),
+        "MMC2_SDWP": (
+            mode: gpio_out,
+            initial: low,
+            net: "BT_EN",
+            note: "GPIO0_52, 1.8 V: Bluetooth enable.",
+        ),
+        "OSPI0_D4": (
+            mode: gpio_in,
+            net: "WLAN_IRQ",
+            note: "GPIO0_7, 1.8 V: Wi-Fi out-of-band interrupt / host wake.",
+        ),
+        "SPI0_CS0": (
+            mode: gpio_out,
+            initial: low,
+            net: "SOC_LED_STATUS",
+            note: "GPIO0_87, 3.3 V: heartbeat LED.",
+        ),
+        "SPI0_D1": (
+            mode: gpio_in,
+            bias: pull_up,
+            net: "N_SOC_USER_BTN",
+            note: "GPIO0_91, 3.3 V: user button. As the EVM.",
+        ),
+        "RSVD0": (
+            mode: reserved,
+            note: "Reserved: must be left unconnected.",
+        ),
+        "VSS_A1": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_A2": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_A4": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_A10": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_A13": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_A16": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_A19": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_A22": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_A23": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_B1": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_B5": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_B17": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_B20": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_B23": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_C12": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_C18": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_D1": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_E2": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_E6": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_E8": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_E9": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_E10": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_E14": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_E15": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_F5": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_F6": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_F18": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_G7": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_G8": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_G9": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_G12": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_G15": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_G16": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_G17": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_H1": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_H7": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_H14": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_H17": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_K8": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_K9": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_K15": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_L7": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_L9": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_L13": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_L16": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_L18": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_M1": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_M12": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_N7": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_N9": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_N11": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_N13": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_N16": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_P9": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_P15": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_R1": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_R8": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_R13": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_R15": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_T2": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_T7": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_T8": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_T19": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_U7": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_U8": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_U10": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_U13": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_U14": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_U15": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_U17": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_U20": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_V3": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_V18": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_V19": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_W9": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_W10": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_W12": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_W14": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_W15": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_W16": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_W18": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_Y1": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_Y20": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_Y21": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_AA4": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_AA20": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_AB1": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_AB7": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_AB21": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_AB23": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_AC1": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_AC2": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_AC11": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_AC14": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_AC19": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_AC22": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_AC23": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VDD_CORE_J9": (
+            mode: reserved,
+            net: "VDD_CORE_0V75",
+        ),
+        "VDD_CORE_J11": (
+            mode: reserved,
+            net: "VDD_CORE_0V75",
+        ),
+        "VDD_CORE_J13": (
+            mode: reserved,
+            net: "VDD_CORE_0V75",
+        ),
+        "VDD_CORE_J15": (
+            mode: reserved,
+            net: "VDD_CORE_0V75",
+        ),
+        "VDD_CORE_K10": (
+            mode: reserved,
+            net: "VDD_CORE_0V75",
+        ),
+        "VDD_CORE_K14": (
+            mode: reserved,
+            net: "VDD_CORE_0V75",
+        ),
+        "VDD_CORE_L15": (
+            mode: reserved,
+            net: "VDD_CORE_0V75",
+        ),
+        "VDD_CORE_M14": (
+            mode: reserved,
+            net: "VDD_CORE_0V75",
+        ),
+        "VDD_CORE_N15": (
+            mode: reserved,
+            net: "VDD_CORE_0V75",
+        ),
+        "VDD_CORE_P10": (
+            mode: reserved,
+            net: "VDD_CORE_0V75",
+        ),
+        "VDD_CORE_P12": (
+            mode: reserved,
+            net: "VDD_CORE_0V75",
+        ),
+        "VDD_CORE_P14": (
+            mode: reserved,
+            net: "VDD_CORE_0V75",
+        ),
+        "VDD_CORE_R9": (
+            mode: reserved,
+            net: "VDD_CORE_0V75",
+        ),
+        "VDD_CORE_R11": (
+            mode: reserved,
+            net: "VDD_CORE_0V75",
+        ),
+        "VDDA_DDR_PLL0": (
+            mode: reserved,
+            net: "VDD_CORE_0V75",
+        ),
+        "VDDA_CORE_USB": (
+            mode: reserved,
+            net: "VDDA_CORE_0V75",
+        ),
+        "VDDA_CORE_DSI": (
+            mode: reserved,
+            net: "VDDA_CORE_0V75",
+        ),
+        "VDDA_CORE_DSI_CLK": (
+            mode: reserved,
+            net: "VDDA_CORE_0V75",
+        ),
+        "VDDA_1P8_DSI": (
+            mode: reserved,
+            net: "VDDA_1V8",
+        ),
+        "VDDA_1P8_USB": (
+            mode: reserved,
+            net: "VDDA_1V8",
+        ),
+        "VDDA_ADC": (
+            mode: reserved,
+            net: "GND",
+            note: "ADC0 is not used: VDDA_ADC and ADC0_AIN[3:0] connect directly to VSS (datasheet section 5.4).",
+        ),
+        "VDDA_PLL0": (
+            mode: reserved,
+            net: "VDDA_1V8",
+        ),
+        "VDDA_PLL1": (
+            mode: reserved,
+            net: "VDDA_1V8",
+        ),
+        "VDDS_OSC0": (
+            mode: reserved,
+            net: "VDDA_1V8",
+        ),
+        "VDDS0": (
+            mode: reserved,
+            net: "SOC_DVDD_1V8",
+        ),
+        "VDDS1": (
+            mode: reserved,
+            net: "SOC_DVDD_1V8",
+        ),
+        "VDDSHV2": (
+            mode: reserved,
+            net: "SOC_DVDD_1V8",
+            note: "1.8 V: eMMC HS200.",
+        ),
+        "VDDSHV4": (
+            mode: reserved,
+            net: "SOC_DVDD_1V8",
+            note: "1.8 V: Wi-Fi SDIO.",
+        ),
+        "VDDS_WKUP": (
+            mode: reserved,
+            net: "SOC_DVDD_1V8",
+        ),
+        "VDDSHV0_J16": (
+            mode: reserved,
+            net: "SOC_DVDD_3V3",
+            note: "3.3 V: boot-mode straps and spare GPIO.",
+        ),
+        "VDDSHV0_L17": (
+            mode: reserved,
+            net: "SOC_DVDD_3V3",
+        ),
+        "VDDSHV1_G10": (
+            mode: reserved,
+            net: "SOC_DVDD_3V3",
+            note: "3.3 V: console, I2C0/1, CAN, FMU UART.",
+        ),
+        "VDDSHV1_H10": (
+            mode: reserved,
+            net: "SOC_DVDD_3V3",
+        ),
+        "VDDA_3P3_USB": (
+            mode: reserved,
+            net: "SOC_DVDD_3V3",
+        ),
+        "VDDA_3P3_SDIO": (
+            mode: reserved,
+            net: "SOC_DVDD_3V3",
+        ),
+        "VDDSHV3": (
+            mode: reserved,
+            net: "VDDSHV_SD_IO",
+            note: "Fed by the internal SDIO LDO output, CAP_VDDSHV_MMC, with 3.3 uF to GND.",
+        ),
+        "CAP_VDDSHV_MMC": (
+            mode: reserved,
+            net: "VDDSHV_SD_IO",
+        ),
+        "VDDS_DDR_L8": (
+            mode: reserved,
+            net: "VDD_DDR_1V2",
+            note: "1.2 V for DDR4 (the EVM runs 1.1 V for LPDDR4).",
+        ),
+        "VDDS_DDR_M7": (
+            mode: reserved,
+            net: "VDD_DDR_1V2",
+        ),
+        "VDDS_DDR_M8": (
+            mode: reserved,
+            net: "VDD_DDR_1V2",
+        ),
+        "VDDS_DDR_N8": (
+            mode: reserved,
+            net: "VDD_DDR_1V2",
+        ),
+        "VDDS_DDR_P8": (
+            mode: reserved,
+            net: "VDD_DDR_1V2",
+        ),
+        "VDD_RTC": (
+            mode: reserved,
+            net: "SOC_VDD_RTC_0V75",
+        ),
+        "VDDS_RTC": (
+            mode: reserved,
+            net: "SOC_VDDS_RTC_1V8",
+        ),
+        "VPP": (
+            mode: reserved,
+            net: "VPP_1V8",
+            note: "eFuse programming supply: 1.8 V only while programming, otherwise off. As the EVM.",
+        ),
+        "CAP_VDDS_GENERAL1": (
+            mode: reserved,
+            net: "SOC_CAP_VDDS_GENERAL1",
+        ),
+        "CAP_VDDS_GPMC": (
+            mode: reserved,
+            net: "SOC_CAP_VDDS_GPMC",
+        ),
+        "CAP_VDDS_MMC0": (
+            mode: reserved,
+            net: "SOC_CAP_VDDS_MMC0",
+        ),
+        "CAP_VDDS_MMC1": (
+            mode: reserved,
+            net: "SOC_CAP_VDDS_MMC1",
+        ),
+        "CAP_VDDS_MMC2": (
+            mode: reserved,
+            net: "SOC_CAP_VDDS_MMC2",
+        ),
+        "ADC0_AIN0": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "ADC0_AIN1": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "ADC0_AIN2": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "ADC0_AIN3": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "DSI0_TXCLKN": (
+            mode: reserved,
+        ),
+        "DSI0_TXCLKP": (
+            mode: reserved,
+        ),
+        "DSI0_TXN0": (
+            mode: reserved,
+        ),
+        "DSI0_TXP0": (
+            mode: reserved,
+        ),
+        "DSI0_TXN1": (
+            mode: reserved,
+        ),
+        "DSI0_TXP1": (
+            mode: reserved,
+        ),
+        "DSI0_TXN2": (
+            mode: reserved,
+        ),
+        "DSI0_TXP2": (
+            mode: reserved,
+        ),
+        "DSI0_TXN3": (
+            mode: reserved,
+        ),
+        "DSI0_TXP3": (
+            mode: reserved,
+        ),
+        "DSI0_TXRCALIB": (
+            mode: reserved,
+            note: "DSI is not used: all DSI0 signal balls are left unconnected (datasheet section 5.4). The DSI supplies stay powered so boundary scan keeps working.",
+        ),
+    },
+)

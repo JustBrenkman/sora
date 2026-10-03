@@ -333,3 +333,99 @@
   file: ti/sprac76h-sitara-power-distribution-networks.pdf
   url: https://www.ti.com/lit/an/sprac76h/sprac76h.pdf
   sha256: d10921add953c8b8be4c91201d82019afaaf4f1ea230689f14cc59a1618d4fbe
+
+# --- ST open pin data (STMicroelectronics/STM32_open_pin_data @ 7d1f151) ---
+# Ball numbers and every alternate function; the input to specs/tools/gen_stm32_pindef.py.
+
+- id: st-pins-h743vih
+  file: st-pin-data/STM32H743VIHx.xml
+  url: https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32H743V%28G-I%29Hx.xml
+  sha256: 397b0ca880b236d60be5981e12ae54e71f12fe24f25d87808330f69edb1d1882
+
+- id: st-pins-h7-gpio-modes
+  file: st-pin-data/GPIO-STM32H747_gpio_v1_0_Modes.xml
+  url: https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32H747_gpio_v1_0_Modes.xml
+  sha256: 49f51ae2508a11df6b385b86ed21172ea43478c4d314314db465e0f8d278c246
+
+- id: st-pins-f103c8t
+  file: st-pin-data/STM32F103C8Tx.xml
+  url: https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F103C%288-B%29Tx.xml
+  sha256: f3ba50d99567684e1aebcf644e6e9e4e09fcd3e96e8270a3f533d0072ccfbdcd
+
+- id: st-pins-f103-gpio-modes
+  file: st-pin-data/GPIO-STM32F103x8_gpio_v1_0_Modes.xml
+  url: https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32F103x8_gpio_v1_0_Modes.xml
+  sha256: 756d917c0a3a49faa88f768432d98ec9feb1ee81e392a62bf6efaf90ff75a8dd
+
+# --- PX4IO (the FMUv6C IO processor) ---
+
+- id: px4-io-v2-board-config-h
+  file: px4-io-v2/board_config.h
+  url: https://raw.githubusercontent.com/PX4/PX4-Autopilot/v1.17.0/boards/px4/io-v2/src/board_config.h
+  sha256: dc2cb4690d012cc179f56d41ff40e66b7f861d99f23c60a2a344725eef15b190
+
+- id: ardupilot-iomcu-hwdef-inc
+  file: ardupilot-iomcu/hwdef.inc
+  url: https://raw.githubusercontent.com/ArduPilot/ardupilot/Copter-4.7.1/libraries/AP_HAL_ChibiOS/hwdef/iomcu/hwdef.inc
+  sha256: 1d0973f103fa69b8db69f9becd48236e5ec9e4607178a08be84d4b1949d92f69
+
+- id: ardupilot-iomcu-f103-hwdef
+  file: ardupilot-iomcu/iomcu-f103-hwdef.dat
+  url: https://raw.githubusercontent.com/ArduPilot/ardupilot/Copter-4.7.1/libraries/AP_HAL_ChibiOS/hwdef/iomcu-f103/hwdef.dat
+  sha256: b321777339fe6f8a19bbf1a934791c9383de3684fb1cd6192b4dd437c2628dcc
+
+# --- AM62L EVM device tree (torvalds/linux v7.0) ---
+# The EVM's pin multiplexing as built, in machine-readable form.
+
+- id: linux-k3-am62l3-evm-dts
+  file: linux-dts/k3-am62l3-evm.dts
+  url: https://raw.githubusercontent.com/torvalds/linux/v7.0/arch/arm64/boot/dts/ti/k3-am62l3-evm.dts
+  sha256: 8f64724e8d9464bc20bd2bd3ea749fa77f76b74c3d671579fa591b3631e55287
+
+- id: linux-k3-am62l-dtsi
+  file: linux-dts/k3-am62l.dtsi
+  url: https://raw.githubusercontent.com/torvalds/linux/v7.0/arch/arm64/boot/dts/ti/k3-am62l.dtsi
+  sha256: f899bfb0051ae460cf001dad93cc650e46279977acdc779bb678bc41252b4d02
+
+- id: linux-k3-am62l-main-dtsi
+  file: linux-dts/k3-am62l-main.dtsi
+  url: https://raw.githubusercontent.com/torvalds/linux/v7.0/arch/arm64/boot/dts/ti/k3-am62l-main.dtsi
+  sha256: baf685c1be5f3b4a85bc4d3a9d41e727192d4d6a0f024e4761d19c9472f2b118
+
+- id: linux-k3-am62l-wakeup-dtsi
+  file: linux-dts/k3-am62l-wakeup.dtsi
+  url: https://raw.githubusercontent.com/torvalds/linux/v7.0/arch/arm64/boot/dts/ti/k3-am62l-wakeup.dtsi
+  sha256: 3a52c28b98842045d6d432ef5322dc31f5749c661d771b5368fbe5d14ac2d095
+
+- id: linux-k3-am62l3-dtsi
+  file: linux-dts/k3-am62l3.dtsi
+  url: https://raw.githubusercontent.com/torvalds/linux/v7.0/arch/arm64/boot/dts/ti/k3-am62l3.dtsi
+  sha256: c78b85ec34c8b3c054e9cd7e6b2f2cda4dd02fe3b9f0fe343dd620ab35b4487a
+
+- id: linux-k3-pinctrl-h
+  file: linux-dts/k3-pinctrl.h
+  url: https://raw.githubusercontent.com/torvalds/linux/v7.0/arch/arm64/boot/dts/ti/k3-pinctrl.h
+  sha256: 943a42f0310d8a6557ba5396be256d187f12d314ff78101c06bd5d9bd0d3ab58
+
+# --- Datasheets for parts added on pinion ---
+# ti.com symlink URLs serve the latest revision, so these checksums change when TI revises them.
+
+- id: tps65214-datasheet
+  file: parts/tps65214-datasheet.pdf
+  url: https://www.ti.com/lit/ds/symlink/tps65214.pdf
+  sha256: 2573318f1d1c2dabbe4d3893d670cf29a6ada582af2f55cd1a6a4414dfec47c2
+
+- id: dp83867ir-datasheet
+  file: parts/dp83867ir-datasheet.pdf
+  url: https://www.ti.com/lit/ds/symlink/dp83867ir.pdf
+  sha256: f990ea98eb8339bace34f64f4a55cea057502ed1c8728d3f400b9374bd0976c0
+
+- id: tps51200-datasheet
+  file: parts/tps51200-datasheet.pdf
+  url: https://www.ti.com/lit/ds/symlink/tps51200.pdf
+  sha256: aba58b616681c52dfdefd9611c92af68b7904197b58e92226dd14fee402e12b5
+
+- id: tcan1051-datasheet
+  file: parts/tcan1051-q1-datasheet.pdf
+  url: https://www.ti.com/lit/ds/symlink/tcan1051-q1.pdf
+  sha256: a921308ee47a8543223a4c1ce777f2cd1e254525140f3c1149357cf041166d37

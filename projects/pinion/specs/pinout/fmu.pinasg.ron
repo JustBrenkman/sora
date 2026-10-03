@@ -1,0 +1,558 @@
+#![enable(implicit_some)]
+(
+    schema: "pinmap/v1",
+    kind: pinasg,
+    device: "stm32h743vih6",
+    target: (
+        package: "TFBGA100",
+        refdes: "U1",
+    ),
+    peripherals: {
+        "TIM1": (
+            signals: {
+                "CH1": (
+                    pin: "PA8",
+                    net: "FMU_CH1",
+                ),
+                "CH2": (
+                    pin: "PE11",
+                    net: "FMU_CH2",
+                ),
+                "CH3": (
+                    pin: "PE13",
+                    net: "FMU_CH3",
+                ),
+                "CH4": (
+                    pin: "PE14",
+                    net: "FMU_CH4",
+                ),
+            },
+            note: "FMU PWM 1-4 (AUX). FMUv6C.",
+        ),
+        "TIM4": (
+            signals: {
+                "CH3": (
+                    pin: "PD14",
+                    net: "FMU_CH5",
+                ),
+                "CH4": (
+                    pin: "PD15",
+                    net: "FMU_CH6",
+                ),
+            },
+            note: "FMU PWM 5-6. FMUv6C. PD14 doubles as PWM input capture in PX4.",
+        ),
+        "TIM5": (
+            signals: {
+                "CH1": (
+                    pin: "PA0",
+                    net: "FMU_CH7",
+                ),
+                "CH2": (
+                    pin: "PA1",
+                    net: "FMU_CH8",
+                ),
+            },
+            note: "FMU PWM 7-8. FMUv6C.",
+        ),
+        "TIM3": (
+            signals: {
+                "CH3": (
+                    pin: "PB0",
+                    net: "FMU_BUZZER",
+                ),
+            },
+            note: "Tone alarm, to the GPS1 connector buzzer pin. FMUv6C.",
+        ),
+        "TIM17": (
+            signals: {
+                "CH1": (
+                    pin: "PB9",
+                    net: "FMU_HEATER",
+                ),
+            },
+            note: "IMU heater MOSFET gate. FMUv6C; PX4 drives it as a GPIO.",
+        ),
+        "ADC1": (
+            signals: {
+                "INP4": (
+                    pin: "PC4",
+                    net: "FMU_BAT1_I",
+                ),
+                "INP8": (
+                    pin: "PC5",
+                    net: "FMU_BAT1_V",
+                ),
+                "INP18": (
+                    pin: "PA4",
+                    net: "FMU_SCALED_V5",
+                ),
+                "INP14": (
+                    pin: "PA2",
+                    net: "FMU_BAT2_I",
+                ),
+                "INP5": (
+                    pin: "PB1",
+                    net: "FMU_BAT2_V",
+                ),
+            },
+            note: "Power module 1 and 2 current and voltage from the POWER1/POWER2 connectors, and the 5 V rail (divider 2:1). FMUv6C.",
+        ),
+        "ADC3": (
+            signals: {
+                "INP10": (
+                    pin: "PC0",
+                    net: "HW_REV_SENSE",
+                ),
+                "INP11": (
+                    pin: "PC1",
+                    net: "HW_VER_SENSE",
+                ),
+            },
+            note: "Hardware revision and version resistor dividers, driven by HW_VER_REV_DRIVE. FMUv6C.",
+        ),
+        "SPI1": (
+            signals: {
+                "SCK": (
+                    pin: "PA5",
+                    net: "FMU_SPI1_SCK_SENSOR",
+                    speed: very_high,
+                ),
+                "MISO": (
+                    pin: "PA6",
+                    net: "FMU_SPI1_MISO_SENSOR",
+                    speed: very_high,
+                ),
+                "MOSI": (
+                    pin: "PA7",
+                    net: "FMU_SPI1_MOSI_SENSOR",
+                    speed: very_high,
+                ),
+            },
+            note: "IMU bus: BMI088 accel (CS1 PC15, DRDY1 PE4), BMI088 gyro (CS2 PC14, DRDY2 PE5), ICM-42688-P (CS3 PC13, DRDY3 PE6). FMUv6C.",
+        ),
+        "SPI2": (
+            signals: {
+                "SCK": (
+                    pin: "PD3",
+                    net: "FMU_SPI2_SCK_NVM",
+                ),
+                "MISO": (
+                    pin: "PC2",
+                    net: "FMU_SPI2_MISO_NVM",
+                ),
+                "MOSI": (
+                    pin: "PC3",
+                    net: "FMU_SPI2_MOSI_NVM",
+                ),
+            },
+            note: "Parameter storage, CS on PD4. FMUv6C fits an FM25V02A FRAM; the part is undecided on pinion (FRAM or EEPROM). PC2/PC3 are the PC2_C/PC3_C balls on TFBGA100.",
+        ),
+        "I2C4": (
+            signals: {
+                "SCL": (
+                    pin: "PD12",
+                    net: "FMU_I2C4_SCL",
+                    drive: open_drain,
+                ),
+                "SDA": (
+                    pin: "PD13",
+                    net: "FMU_I2C4_SDA",
+                    drive: open_drain,
+                ),
+            },
+            note: "Internal sensor bus: IST8310 mag 0x0C, MS5611 baro 0x77, calibration EEPROM 0x51. FMUv6C.",
+        ),
+        "I2C1": (
+            signals: {
+                "SCL": (
+                    pin: "PB8",
+                    net: "FMU_I2C1_SCL_GPS1",
+                    drive: open_drain,
+                ),
+                "SDA": (
+                    pin: "PB7",
+                    net: "FMU_I2C1_SDA_GPS1",
+                    drive: open_drain,
+                ),
+            },
+            note: "GPS1 connector: external mag and LED. FMUv6C.",
+        ),
+        "I2C2": (
+            signals: {
+                "SCL": (
+                    pin: "PB10",
+                    net: "FMU_I2C2_SCL_GPS2",
+                    drive: open_drain,
+                ),
+                "SDA": (
+                    pin: "PB11",
+                    net: "FMU_I2C2_SDA_GPS2",
+                    drive: open_drain,
+                ),
+            },
+            note: "GPS2 and I2C connectors. FMUv6C.",
+        ),
+        "USART1": (
+            signals: {
+                "TX": (
+                    pin: "PB6",
+                    net: "FMU_USART1_TX_GPS1",
+                ),
+                "RX": (
+                    pin: "PA10",
+                    net: "FMU_USART1_RX_GPS1",
+                ),
+            },
+            note: "GPS1. FMUv6C.",
+        ),
+        "USART2": (
+            signals: {
+                "TX": (
+                    pin: "PD5",
+                    net: "FMU_USART2_TX_TEL3",
+                ),
+                "RX": (
+                    pin: "PA3",
+                    net: "FMU_USART2_RX_TEL3",
+                ),
+            },
+            note: "TELEM3, no flow control. FMUv6C.",
+        ),
+        "USART3": (
+            signals: {
+                "TX": (
+                    pin: "PD8",
+                    net: "FMU_USART3_TX_DEBUG",
+                ),
+                "RX": (
+                    pin: "PD9",
+                    net: "FMU_USART3_RX_DEBUG",
+                ),
+            },
+            note: "NSH console on the FMU debug connector. FMUv6C.",
+        ),
+        "UART5": (
+            signals: {
+                "TX": (
+                    pin: "PC12",
+                    net: "FMU_UART5_TX_SOC",
+                ),
+                "RX": (
+                    pin: "PD2",
+                    net: "FMU_UART5_RX_SOC",
+                ),
+                "RTS": (
+                    pin: "PC8",
+                    net: "FMU_UART5_RTS_SOC",
+                ),
+                "CTS": (
+                    pin: "PC9",
+                    net: "FMU_UART5_CTS_SOC",
+                ),
+            },
+            note: "DEVIATION: TELEM2 on the FMUv6C; on pinion it is the on-board MAVLink / uXRCE-DDS link to the AM62L. No external connector.",
+        ),
+        "USART6": (
+            signals: {
+                "TX": (
+                    pin: "PC6",
+                    net: "FMU_USART6_TX_TO_IO",
+                ),
+                "RX": (
+                    pin: "PC7",
+                    net: "FMU_USART6_RX_FROM_IO",
+                ),
+            },
+            note: "PX4IO link to the STM32F103, 1.5 Mbaud. FMUv6C.",
+        ),
+        "UART7": (
+            signals: {
+                "TX": (
+                    pin: "PE8",
+                    net: "FMU_UART7_TX_TEL1",
+                ),
+                "RX": (
+                    pin: "PE7",
+                    net: "FMU_UART7_RX_TEL1",
+                ),
+                "RTS": (
+                    pin: "PE9",
+                    net: "FMU_UART7_RTS_TEL1",
+                ),
+                "CTS": (
+                    pin: "PE10",
+                    net: "FMU_UART7_CTS_TEL1",
+                ),
+            },
+            note: "TELEM1 with flow control. FMUv6C.",
+        ),
+        "UART8": (
+            signals: {
+                "TX": (
+                    pin: "PE1",
+                    net: "FMU_UART8_TX_GPS2",
+                ),
+                "RX": (
+                    pin: "PE0",
+                    net: "FMU_UART8_RX_GPS2",
+                ),
+            },
+            note: "GPS2. FMUv6C.",
+        ),
+        "FDCAN1": (
+            signals: {
+                "RX": (
+                    pin: "PD0",
+                    net: "FMU_CAN1_RX",
+                ),
+                "TX": (
+                    pin: "PD1",
+                    net: "FMU_CAN1_TX",
+                ),
+            },
+            note: "CAN1 transceiver. DEVIATION: the AM62L MCAN0 transceiver sits on the same CAN1 bus.",
+        ),
+        "FDCAN2": (
+            signals: {
+                "RX": (
+                    pin: "PB5",
+                    net: "FMU_CAN2_RX",
+                ),
+                "TX": (
+                    pin: "PB13",
+                    net: "FMU_CAN2_TX",
+                ),
+            },
+            note: "CAN2 transceiver. FMUv6C.",
+        ),
+        "USB_OTG_FS": (
+            signals: {
+                "DM": (
+                    pin: "PA11",
+                    net: "FMU_USB_DM",
+                ),
+                "DP": (
+                    pin: "PA12",
+                    net: "FMU_USB_DP",
+                ),
+                "VBUS": (
+                    pin: "PA9",
+                    net: "FMU_VBUS_SENSE",
+                ),
+            },
+            note: "DEVIATION: wired on-board to AM62L USB1 (host) for firmware upload and MAVLink; no external FMU USB connector. VBUS sense is fed from the USB1 VBUS switch.",
+        ),
+        "DEBUG": (
+            signals: {
+                "JTMS-SWDIO": (
+                    pin: "PA13",
+                    net: "FMU_SWDIO",
+                ),
+                "JTCK-SWCLK": (
+                    pin: "PA14",
+                    net: "FMU_SWCLK",
+                ),
+            },
+            note: "SWD on the FMU debug connector (JST-SH 10). FMUv6C.",
+        ),
+        "RCC": (
+            signals: {
+                "OSC_IN": (
+                    pin: "PH0",
+                    net: "FMU_OSC_IN",
+                ),
+                "OSC_OUT": (
+                    pin: "PH1",
+                    net: "FMU_OSC_OUT",
+                ),
+            },
+            note: "16 MHz crystal. FMUv6C. No 32.768 kHz crystal: PC14/PC15 are chip selects.",
+        ),
+    },
+    pins: {
+        "PC15": (
+            mode: gpio_out,
+            initial: high,
+            net: "FMU_SPI1_CS1_BMI088_ACC",
+            note: "FMUv6C (BMI055 on early revisions).",
+        ),
+        "PC14": (
+            mode: gpio_out,
+            initial: high,
+            net: "FMU_SPI1_CS2_BMI088_GYRO",
+            note: "FMUv6C.",
+        ),
+        "PC13": (
+            mode: gpio_out,
+            initial: high,
+            net: "FMU_SPI1_CS3_ICM42688",
+            note: "FMUv6C.",
+        ),
+        "PE4": (
+            mode: gpio_in,
+            net: "FMU_SPI1_DRDY1_BMI088_ACC",
+            note: "FMUv6C.",
+        ),
+        "PE5": (
+            mode: gpio_in,
+            net: "FMU_SPI1_DRDY2_BMI088_GYRO",
+            note: "FMUv6C.",
+        ),
+        "PE6": (
+            mode: gpio_in,
+            net: "FMU_SPI1_DRDY3_ICM42688",
+            note: "FMUv6C.",
+        ),
+        "PD4": (
+            mode: gpio_out,
+            initial: high,
+            net: "FMU_SPI2_CS_NVM",
+            note: "Parameter storage chip select. FMUv6C (FRAM).",
+        ),
+        "PB2": (
+            mode: gpio_out,
+            initial: low,
+            net: "VDD_3V3_SENSORS_EN",
+            note: "Sensor rail load switch enable, active high. FMUv6C.",
+        ),
+        "PE2": (
+            mode: gpio_out,
+            initial: high,
+            net: "N_VDD_5V_PERIPH_EN",
+            note: "5 V peripheral switch enable, active low. FMUv6C.",
+        ),
+        "PE3": (
+            mode: gpio_in,
+            net: "N_VDD_5V_PERIPH_OC",
+            note: "5 V peripheral switch overcurrent flag, active low; needs a pull-up. FMUv6C.",
+        ),
+        "PC10": (
+            mode: gpio_out,
+            initial: high,
+            net: "N_VDD_5V_HIPOWER_EN",
+            note: "5 V high-power (TELEM1 + GPS2) switch enable, active low. FMUv6C.",
+        ),
+        "PC11": (
+            mode: gpio_in,
+            net: "N_VDD_5V_HIPOWER_OC",
+            note: "5 V high-power switch overcurrent flag, active low; needs a pull-up. FMUv6C.",
+        ),
+        "PA15": (
+            mode: gpio_in,
+            bias: pull_up,
+            net: "N_BRICK1_VALID",
+            note: "Power selector: POWER1 is the active 5 V source, active low. FMUv6C.",
+        ),
+        "PB12": (
+            mode: gpio_in,
+            bias: pull_up,
+            net: "N_BRICK2_VALID",
+            note: "Power selector: POWER2 is the active 5 V source, active low. FMUv6C.",
+        ),
+        "PE15": (
+            mode: gpio_in,
+            bias: pull_up,
+            net: "N_USB_VBUS_VALID",
+            note: "Power selector: USB VBUS is the active 5 V source, active low. FMUv6C; on pinion the VBUS is the AM62L\'s USB-C port.",
+        ),
+        "PD10": (
+            mode: gpio_out,
+            initial: high,
+            net: "N_FMU_LED_RED",
+            note: "Status LED, active low, open drain. FMUv6C.",
+        ),
+        "PD11": (
+            mode: gpio_out,
+            initial: high,
+            net: "N_FMU_LED_BLUE",
+            note: "Status LED, active low, open drain. FMUv6C.",
+        ),
+        "PE12": (
+            mode: gpio_out,
+            initial: high,
+            net: "HW_VER_REV_DRIVE",
+            note: "Drives the version/revision dividers while they are sampled. FMUv6C.",
+        ),
+        "NRST": (
+            mode: reserved,
+            net: "FMU_NRST",
+            note: "Reset: debug connector and reset supervisor.",
+        ),
+        "BOOT0": (
+            mode: reserved,
+            net: "FMU_BOOT0",
+            note: "Pull-down, with a test pad for ROM DFU recovery.",
+        ),
+        "PDR_ON": (
+            mode: reserved,
+            net: "FMU_VDD_3V3",
+            note: "Tied high: internal power-on reset enabled.",
+        ),
+        "VBAT": (
+            mode: reserved,
+            net: "FMU_VBAT",
+            note: "RTC/backup supply.",
+        ),
+        "VDDA": (
+            mode: reserved,
+            net: "FMU_VDDA_3V3",
+            note: "Analog supply, filtered from FMU_VDD_3V3. VREF+ is bonded to VDDA on TFBGA100.",
+        ),
+        "VSSA": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VDDLDO": (
+            mode: reserved,
+            net: "FMU_VDD_3V3",
+            note: "Internal core LDO input.",
+        ),
+        "VDD33_USB": (
+            mode: reserved,
+            net: "FMU_VDD_3V3",
+        ),
+        "VDD_D2": (
+            mode: reserved,
+            net: "FMU_VDD_3V3",
+        ),
+        "VDD_F5": (
+            mode: reserved,
+            net: "FMU_VDD_3V3",
+        ),
+        "VDD_K1": (
+            mode: reserved,
+            net: "FMU_VDD_3V3",
+        ),
+        "VSS_C2": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_E4": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_E5": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_E6": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_J1": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VCAP_E7": (
+            mode: reserved,
+            net: "FMU_VCAP1",
+            note: "Core regulator capacitor, 2.2 uF to GND.",
+        ),
+        "VCAP_F8": (
+            mode: reserved,
+            net: "FMU_VCAP2",
+            note: "Core regulator capacitor, 2.2 uF to GND.",
+        ),
+    },
+)

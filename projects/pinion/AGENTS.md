@@ -12,9 +12,11 @@ The repo-wide rules in the root `AGENTS.md` apply.
 
 | Path                              | Contents                                                    |
 | --------------------------------- | ----------------------------------------------------------- |
-| `specs/sources.yaml`, `fetch.sh`  | Manifest and downloader for FMUv6C reference documents      |
+| `specs/sources.yaml`, `fetch.sh`  | Manifest and downloader for reference documents             |
 | `specs/reference/`                | Downloaded documents; gitignored, may be empty              |
-| `specs/pinout/`                   | Pin map; the source of truth for firmware and device tree   |
+| `specs/pinout/`                   | pinmap pin maps; the source of truth for firmware, device tree and schematic |
+| `specs/notes/`, `specs/diagrams/` | Decisions, reference inventory, block diagrams              |
+| `hardware/pinion-main/SCHEMATIC_TODO.md` | What is left to draw, per part                       |
 | `hardware/pinion-main/`           | KiCad project for the main board                            |
 | `firmware/px4/boards/sora/pinion/`| PX4 board files, laid out as in the PX4 tree                |
 | `firmware/PX4_VERSION`            | Pinned PX4 tag                                              |
@@ -30,10 +32,17 @@ The repo-wide rules in the root `AGENTS.md` apply.
 - pinion is not pin-identical to the FMUv6C. Check `specs/pinout/` and
   `specs/notes/` for deviations before copying anything from the reference board.
 - Run `specs/fetch.sh` before looking for reference documents.
+- Pin maps are `pinmap` files (`*.pindef.json`, `*.pinasg.ron`). Change them with
+  `pinmap assign`/`unassign`/`note --project specs/pinout/<fmu|io|soc>.pinasg.ron`,
+  not by hand, then regenerate the `.md` pinouts; see `specs/pinout/README.md`.
+  Do not introduce CSV or spreadsheet pin tables.
+- The three processors are U1 (STM32H743, `fmu`), U2 (STM32F103 PX4IO, `io`) and
+  U3 (AM62L, `soc`). Schematic net labels on them match the pinasg nets.
 
 ## Commands
 
 ```sh
 specs/fetch.sh                  # download reference documents
+specs/tools/check_nets.py       # check nets between the three processors
 firmware/scripts/setup-px4.sh   # check out PX4 and link the board in
 ```

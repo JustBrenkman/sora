@@ -7,14 +7,15 @@ A single board computer with an integrated flight controller, on one PCB.
 | Compute           | TI AM62L       | Linux companion computer                             |
 | Flight controller | ST STM32H743   | PX4 autopilot, derived from the Pixhawk FMUv6C       |
 
-**Status:** repository scaffolding only. No schematic, board files or device
-tree exist yet.
+**Status:** pin maps, block diagrams and the schematic TODO list are written
+(`specs/`, `hardware/pinion-main/SCHEMATIC_TODO.md`). No schematic, board files
+or device tree exist yet.
 
 ## Layout
 
 | Folder                  | Contents                                                        |
 | ----------------------- | --------------------------------------------------------------- |
-| [specs/](specs/)        | FMUv6C reference documents, pin maps, diagrams, design notes    |
+| [specs/](specs/)        | Reference documents, pin maps, diagrams, design notes           |
 | [hardware/](hardware/)  | KiCad projects: the main board and accessory boards             |
 | [firmware/](firmware/)  | PX4 board support for the `sora_pinion` target                  |
 | [linux/](linux/)        | Device tree, kernel and U-Boot configuration, Armbian build     |
