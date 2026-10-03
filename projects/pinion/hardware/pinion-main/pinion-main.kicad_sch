@@ -2,9 +2,101 @@
 	(version 20260306)
 	(generator "eeschema")
 	(generator_version "10.0")
-	(uuid 6c7907f5-5439-4f54-a5a2-0a7e85489635)
+	(uuid "6c7907f5-5439-4f54-a5a2-0a7e85489635")
 	(paper "A4")
 	(lib_symbols)
+	(sheet
+		(at 96.52 60.96)
+		(size 39.37 53.34)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "962d2f40-70aa-4550-aaf6-2cf852f16805")
+		(property "Sheetname" "linux"
+			(at 96.52 60.2484 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "linux.kicad_sch"
+			(at 96.52 114.8846 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "pinion-main"
+				(path "/6c7907f5-5439-4f54-a5a2-0a7e85489635"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 198.12 68.58)
+		(size 49.53 35.56)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "e3d61feb-6226-49e9-91f2-6966c39438aa")
+		(property "Sheetname" "fmu"
+			(at 198.12 67.8684 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "fmu.kicad_sch"
+			(at 198.12 104.7246 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "pinion-main"
+				(path "/6c7907f5-5439-4f54-a5a2-0a7e85489635"
+					(page "2")
+				)
+			)
+		)
+	)
 	(sheet_instances
 		(path "/"
 			(page "1")
