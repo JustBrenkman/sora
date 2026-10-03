@@ -244,8 +244,8 @@ All 373 balls are in `specs/pinout/soc.md`; I/O supply per ball is in
 
 ### C2. MCU (U1, STM32H743VIH6)
 
-- [ ] **U1**. All 100 balls are in `specs/pinout/fmu.md`; 6 I/O are free
-      (PB3, PB4, PB14, PB15, PD6, PD7).
+- [ ] **U1**. All 100 balls are in `specs/pinout/fmu.md`; 8 I/O are free
+      (PB3, PB4, PB14, PB15, PC14, PD6, PD7, PE5).
 - [ ] **Decoupling**: per VDD ball plus bulk; `FMU_VCAP1`, `FMU_VCAP2` capacitors
       to GND; `VDDLDO`, `VDD33_USB`, `PDR_ON` to `FMU_VDD_3V3`. Take values from
       the STM32H743 datasheet (DS12110, to be added to `specs/reference/st/` by hand).
@@ -266,15 +266,15 @@ All 373 balls are in `specs/pinout/soc.md`; I/O supply per ball is in
 
 All on `VDD_3V3_SENSORS` (ref: v6C sensor table, DS-018). Decide first whether
 they go on an isolated daughterboard *(open 6)*; if so this sheet becomes a
-board-to-board connector carrying SPI1, I2C4, three CS, three DRDY, the heater
+board-to-board connector carrying SPI1, I2C4, two CS, two DRDY, the heater
 and the rail.
 
 - [ ] **ICM-42688-P** (IMU 2): SPI1 (`FMU_SPI1_SCK_SENSOR`, `_MISO_`, `_MOSI_`),
       CS `FMU_SPI1_CS3_ICM42688`, INT → `FMU_SPI1_DRDY3_ICM42688`.
-- [ ] **BMI088** (IMU 1): SPI1, accel CS `FMU_SPI1_CS1_BMI088_ACC`, gyro CS
-      `FMU_SPI1_CS2_BMI088_GYRO`, accel INT1 → `FMU_SPI1_DRDY1_BMI088_ACC`, gyro
-      INT3 → `FMU_SPI1_DRDY2_BMI088_GYRO` (ref: v6C pinout sheet "Sensor
-      Assignment"; BMI088 datasheet in `reference/parts/`).
+- [ ] **BMI270** (IMU 1, replaces the FMUv6C's BMI088, deviation F9): SPI1, CS
+      `FMU_SPI1_CS1_BMI270`, INT1 → `FMU_SPI1_DRDY1_BMI270`; INT2 and the
+      auxiliary interface pins unconnected; VDD and VDDIO on `VDD_3V3_SENSORS`
+      (ref: BMI270 datasheet section 7 in `reference/parts/`).
 - [ ] **IST8310** magnetometer: I2C4, address 0x0C.
 - [ ] **MS5611** barometer: I2C4, address 0x77. Keep it away from heat and
       shield it from light and airflow.
@@ -282,8 +282,8 @@ and the rail.
 - [ ] **IMU heater**: resistor(s) next to the IMUs, low-side MOSFET driven by
       `FMU_HEATER` (PB9), gate pull-down.
 - [ ] Orientation: note each sensor's axes on the sheet. The FMUv6C rotations
-      (`rc.board_sensors`: BMI088 `-R 4`, ICM-42688-P `-R 6`) only hold if the
-      parts are placed as on the Pixhawk 6C.
+      (`rc.board_sensors`: ICM-42688-P `-R 6`) only hold if the part is placed
+      as on the Pixhawk 6C; the BMI270 has no reference rotation.
 
 ### C4. Parameter storage
 
@@ -293,10 +293,11 @@ and the rail.
 
 ### C5. CAN
 
-- [ ] **CAN1 transceiver** (TJA1051-class): `FMU_CAN1_TX`/`FMU_CAN1_RX` (U1 PD1/PD0)
-      → `CAN1_H`/`CAN1_L`.
-- [ ] **CAN2 transceiver**: `FMU_CAN2_TX`/`FMU_CAN2_RX` (U1 PB13/PB5) →
-      `CAN2_H`/`CAN2_L`.
+- [ ] **CAN1 transceiver** (TCAN1044V, VSON-8 DRB; replaces the FMUv6C's
+      TJA1051): `FMU_CAN1_TX`/`FMU_CAN1_RX` (U1 PD1/PD0) → `CAN1_H`/`CAN1_L`.
+      VCC on `VDD_5V`, VIO on `FMU_VDD_3V3`, STB low for normal mode.
+- [ ] **CAN2 transceiver** (TCAN1044V): `FMU_CAN2_TX`/`FMU_CAN2_RX` (U1 PB13/PB5)
+      → `CAN2_H`/`CAN2_L`.
 - [ ] Termination: decide whether each bus has an on-board 120 Ω (fixed or
       jumpered); ESD protection at both connectors.
 

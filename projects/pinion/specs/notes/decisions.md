@@ -33,7 +33,8 @@ parts are in [`reference-inventory.md`](reference-inventory.md).
 | F4 | Power selector takes POWER1, POWER2 and the FMU's USB VBUS | Same selector; its USB input is the AM62L USB-C port's VBUS | PE15 | The FMU has no external USB (F2). Lets the board run from USB on the bench |
 | F6 | CAN1 bus has one node on board | The AM62L's MCAN0 transceiver joins CAN1 | PD0, PD1 | Linux sees DroneCAN traffic |
 | F7 | FM25V02A FRAM on SPI2 | Part undecided; SPI2 and its chip select stay as on the FMUv6C under neutral `_NVM` net names | PD3, PC2, PC3, PD4 | See open questions |
-| F8 | IMU on a separate, vibration-isolated board with its own calibration EEPROM | Same parts, same buses; whether they sit on a daughterboard is a mechanical decision | SPI1, I2C4 | See open questions |
+| F8 | IMU on a separate, vibration-isolated board with its own calibration EEPROM | Same buses, and the same parts except IMU 1 (F9); whether they sit on a daughterboard is a mechanical decision | SPI1, I2C4 | See open questions |
+| F9 | BMI088 as IMU 1: separate accel and gyro chip selects and interrupts | BMI270: one chip select and one interrupt (INT1) on the accel's pins; the gyro's two pins are free | PC15, PE4; PC14 and PE5 free | The BMI088 is not in stock anywhere |
 
 Everything else on the FMU and the whole IO processor follows the reference:
 `pinmap` notes ending in "FMUv6C." or "PX4 io-v2." mark those pins, and notes
@@ -45,6 +46,9 @@ starting with "DEVIATION:" mark the rows above.
   missions (dataman) need RAM or flash backing. `rc.board_*` cannot rely on
   `/fs/microsd`.
 - The TELEM2 serial device is the on-board companion link.
+- IMU 1 is a BMI270 (F9): `spi.cpp` lists one SPI1 device on PC15 with DRDY on PE4
+  in place of the two BMI088 entries, the board enables PX4's `bmi270` driver, and
+  `rc.board_sensors` starts it with a rotation taken from the layout.
 - pinion needs its own `HW_VER`/`HW_REV` resistor pair and `manifest.c`, since it
   is not one of the V6C00..V6C22 variants.
 
@@ -76,7 +80,7 @@ starting with "DEVIATION:" mark the rows above.
    selector's third input and drives `N_USB_VBUS_VALID`. A USB port cannot
    supply the whole board under load, so decide what stays off when USB is the
    source. The same port also has to source VBUS when it acts as a USB host.
-4. **Spare FMU pins.** The six SDMMC2 pins are free. Candidates: an
+4. **Spare FMU pins.** The six SDMMC2 pins are free, and so are PC14 and PE5 (F9). Candidates: an
    AM62L-driven BOOT0 or reset; a PPS line between the two processors.
 5. **BOOT0.** Pull-down and test pad only, or also drivable from an AM62L GPIO
    so Linux can force the ROM DFU loader if the PX4 bootloader is ever erased.

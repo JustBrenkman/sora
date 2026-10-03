@@ -23,7 +23,7 @@ Sources: `reference/px4-fmu-v6c/`, `reference/pixhawk/DS-018`,
 | STM32H743 (100-pin) | FMU, PX4 | – | keep: STM32H743VIH6, TFBGA100 |
 | STM32F103 (48-pin) | PX4IO | USART2 to FMU USART6, 1.5 Mbaud | keep |
 | ICM-42688-P | IMU 2 | SPI1, CS3 PC13, DRDY3 PE6 | keep |
-| BMI088 (BMI055 before rev 2) | IMU 1, accel + gyro | SPI1, CS1 PC15 / CS2 PC14, DRDY1 PE4 / DRDY2 PE5 | keep: BMI088 |
+| BMI088 (BMI055 before rev 2) | IMU 1, accel + gyro | SPI1, CS1 PC15 / CS2 PC14, DRDY1 PE4 / DRDY2 PE5 | replace: BMI270 on SPI1, CS1 PC15, DRDY1 PE4; PC14 and PE5 free |
 | IST8310 | Magnetometer | I2C4, 0x0C | keep |
 | MS5611 | Barometer | I2C4, 0x77 | keep |
 | 24LC64 EEPROM | IMU calibration | I2C4, 0x51 | keep |
@@ -41,7 +41,7 @@ the main board.
 
 | Part | Function | Connection | pinion |
 |---|---|---|---|
-| TJA1051 x2 | CAN transceivers | FDCAN1 PD0/PD1, FDCAN2 PB5/PB13 | keep (TJA1051-class; TCAN1051 datasheet is in `reference/parts/`) |
+| TJA1051 x2 | CAN transceivers | FDCAN1 PD0/PD1, FDCAN2 PB5/PB13 | replace: TCAN1044V x2, VSON-8 (DRB), 5 V supply with 3.3 V VIO; datasheet in `reference/parts/` |
 | 5 V load switch, 1.5 A limit | `VDD_5V_PERIPH`: all ports except TELEM1 and GPS2 | EN PE2, OC PE3 (both active low) | keep (part not named in the sources) |
 | 5 V load switch, 1.5 A limit | `VDD_5V_HIPOWER`: TELEM1 and GPS2 | EN PC10, OC PC11 (both active low) | keep (part not named) |
 | 3.3 V sensor rail switch | `VDD_3V3_SENSORS` | EN PB2 | keep |

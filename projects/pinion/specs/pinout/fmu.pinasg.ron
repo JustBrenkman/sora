@@ -129,7 +129,7 @@
                     speed: very_high,
                 ),
             },
-            note: "IMU bus: BMI088 accel (CS1 PC15, DRDY1 PE4), BMI088 gyro (CS2 PC14, DRDY2 PE5), ICM-42688-P (CS3 PC13, DRDY3 PE6). FMUv6C.",
+            note: "IMU bus: BMI270 (CS1 PC15, DRDY1 PE4), ICM-42688-P (CS3 PC13, DRDY3 PE6). DEVIATION: the FMUv6C has a BMI088, with a second chip select and interrupt on PC14 and PE5; both are free on pinion.",
         ),
         "SPI2": (
             signals: {
@@ -367,21 +367,15 @@
                     net: "FMU_OSC_OUT",
                 ),
             },
-            note: "16 MHz crystal. FMUv6C. No 32.768 kHz crystal: PC14/PC15 are chip selects.",
+            note: "16 MHz crystal. FMUv6C. No 32.768 kHz crystal: the FMUv6C uses PC14/PC15 as chip selects.",
         ),
     },
     pins: {
         "PC15": (
             mode: gpio_out,
             initial: high,
-            net: "FMU_SPI1_CS1_BMI088_ACC",
-            note: "FMUv6C (BMI055 on early revisions).",
-        ),
-        "PC14": (
-            mode: gpio_out,
-            initial: high,
-            net: "FMU_SPI1_CS2_BMI088_GYRO",
-            note: "FMUv6C.",
+            net: "FMU_SPI1_CS1_BMI270",
+            note: "DEVIATION: BMI270 chip select; the FMUv6C has the BMI088 accel here.",
         ),
         "PC13": (
             mode: gpio_out,
@@ -391,13 +385,8 @@
         ),
         "PE4": (
             mode: gpio_in,
-            net: "FMU_SPI1_DRDY1_BMI088_ACC",
-            note: "FMUv6C.",
-        ),
-        "PE5": (
-            mode: gpio_in,
-            net: "FMU_SPI1_DRDY2_BMI088_GYRO",
-            note: "FMUv6C.",
+            net: "FMU_SPI1_DRDY1_BMI270",
+            note: "DEVIATION: BMI270 INT1; the FMUv6C has the BMI088 accel interrupt here.",
         ),
         "PE6": (
             mode: gpio_in,

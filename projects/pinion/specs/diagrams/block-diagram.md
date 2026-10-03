@@ -63,7 +63,7 @@ flowchart LR
 
     subgraph IMU[Sensors, VDD_3V3_SENSORS]
         ICM[ICM-42688-P]
-        BMI[BMI088 accel + gyro]
+        BMI[BMI270 accel + gyro]
         MAG[IST8310<br/>0x0C]
         CAL[24LC64<br/>0x51]
         HTR[Heater]
@@ -72,7 +72,7 @@ flowchart LR
     NVM[FRAM or EEPROM<br/>undecided]
 
     FMU <-->|SPI1 PA5/PA6/PA7<br/>CS3 PC13, DRDY3 PE6| ICM
-    FMU <-->|SPI1<br/>CS1 PC15, CS2 PC14<br/>DRDY1 PE4, DRDY2 PE5| BMI
+    FMU <-->|SPI1<br/>CS1 PC15<br/>DRDY1 PE4| BMI
     FMU <-->|I2C4 PD12/PD13| MAG
     FMU <-->|I2C4| CAL
     FMU <-->|I2C4| BARO
@@ -191,7 +191,7 @@ flowchart LR
 
 | Bus | Controller pins | Devices | Level |
 |---|---|---|---|
-| FMU SPI1 | PA5 SCK, PA6 MISO, PA7 MOSI | BMI088 accel (CS PC15, DRDY PE4), BMI088 gyro (CS PC14, DRDY PE5), ICM-42688-P (CS PC13, DRDY PE6) | 3.3 V, sensor rail |
+| FMU SPI1 | PA5 SCK, PA6 MISO, PA7 MOSI | BMI270 (CS PC15, DRDY PE4), ICM-42688-P (CS PC13, DRDY PE6) | 3.3 V, sensor rail |
 | FMU SPI2 | PD3 SCK, PC2 MISO, PC3 MOSI | Parameter storage (CS PD4) | 3.3 V |
 | FMU I2C4 | PD12 SCL, PD13 SDA | IST8310 0x0C, MS5611 0x77, calibration EEPROM 0x51 | 3.3 V, sensor rail |
 | FMU I2C1 | PB8 SCL, PB7 SDA | GPS1 connector | 3.3 V |

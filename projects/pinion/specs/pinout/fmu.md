@@ -2,7 +2,7 @@
 
 | Pin | Pad | Function | Mux | Net | Config | Note |
 |---|---|---|---|---|---|---|
-| PC14 | A1 | gpio_out |  | FMU_SPI1_CS2_BMI088_GYRO | initial=high | FMUv6C. |
+| PC14 | A1 |  |  |  |  |  |
 | PC13 | A2 | gpio_out |  | FMU_SPI1_CS3_ICM42688 | initial=high | FMUv6C. |
 | PE2 | A3 | gpio_out |  | N_VDD_5V_PERIPH_EN | initial=high | 5 V peripheral switch enable, active low. FMUv6C. |
 | PB9 | A4 | TIM17.CH1 | AF1 | FMU_HEATER |  |  |
@@ -12,7 +12,7 @@
 | PA15 | A8 | gpio_in |  | N_BRICK1_VALID | bias=pull_up | Power selector: POWER1 is the active 5 V source, active low. FMUv6C. |
 | PA14 | A9 | DEBUG.JTCK-SWCLK | AF0 | FMU_SWCLK |  |  |
 | PA13 | A10 | DEBUG.JTMS-SWDIO | AF0 | FMU_SWDIO |  |  |
-| PC15 | B1 | gpio_out |  | FMU_SPI1_CS1_BMI088_ACC | initial=high | FMUv6C (BMI055 on early revisions). |
+| PC15 | B1 | gpio_out |  | FMU_SPI1_CS1_BMI270 | initial=high | DEVIATION: BMI270 chip select; the FMUv6C has the BMI088 accel here. |
 | VBAT | B2 | reserved |  | FMU_VBAT |  | RTC/backup supply. |
 | PE3 | B3 | gpio_in |  | N_VDD_5V_PERIPH_OC |  | 5 V peripheral switch overcurrent flag, active low; needs a pull-up. FMUv6C. |
 | PB8 | B4 | I2C1.SCL | AF4 | FMU_I2C1_SCL_GPS1 | drive=open_drain |  |
@@ -24,7 +24,7 @@
 | PA12 | B10 | USB_OTG_FS.DP | AF10 | FMU_USB_DP |  |  |
 | PH0 | C1 | RCC.OSC_IN | fixed | FMU_OSC_IN |  |  |
 | VSS_C2 | C2 | reserved |  | GND |  |  |
-| PE4 | C3 | gpio_in |  | FMU_SPI1_DRDY1_BMI088_ACC |  | FMUv6C. |
+| PE4 | C3 | gpio_in |  | FMU_SPI1_DRDY1_BMI270 |  | DEVIATION: BMI270 INT1; the FMUv6C has the BMI088 accel interrupt here. |
 | PE1 | C4 | UART8.TX | AF8 | FMU_UART8_TX_GPS2 |  |  |
 | PB5 | C5 | FDCAN2.RX | AF9 | FMU_CAN2_RX |  |  |
 | PD6 | C6 |  |  |  |  |  |
@@ -34,7 +34,7 @@
 | PA11 | C10 | USB_OTG_FS.DM | AF10 | FMU_USB_DM |  |  |
 | PH1 | D1 | RCC.OSC_OUT | fixed | FMU_OSC_OUT |  |  |
 | VDD_D2 | D2 | reserved |  | FMU_VDD_3V3 |  |  |
-| PE5 | D3 | gpio_in |  | FMU_SPI1_DRDY2_BMI088_GYRO |  | FMUv6C. |
+| PE5 | D3 |  |  |  |  |  |
 | PE0 | D4 | UART8.RX | AF8 | FMU_UART8_RX_GPS2 |  |  |
 | BOOT0 | D5 | reserved |  | FMU_BOOT0 |  | Pull-down, with a test pad for ROM DFU recovery. |
 | PD7 | D6 |  |  |  |  |  |
@@ -171,7 +171,7 @@ Hardware revision and version resistor dividers, driven by HW_VER_REV_DRIVE. FMU
 
 ## SPI1
 
-IMU bus: BMI088 accel (CS1 PC15, DRDY1 PE4), BMI088 gyro (CS2 PC14, DRDY2 PE5), ICM-42688-P (CS3 PC13, DRDY3 PE6). FMUv6C.
+IMU bus: BMI270 (CS1 PC15, DRDY1 PE4), ICM-42688-P (CS3 PC13, DRDY3 PE6). DEVIATION: the FMUv6C has a BMI088, with a second chip select and interrupt on PC14 and PE5; both are free on pinion.
 
 | Signal | Pin | Net |
 |---|---|---|
@@ -322,7 +322,7 @@ SWD on the FMU debug connector (JST-SH 10). FMUv6C.
 
 ## RCC
 
-16 MHz crystal. FMUv6C. No 32.768 kHz crystal: PC14/PC15 are chip selects.
+16 MHz crystal. FMUv6C. No 32.768 kHz crystal: the FMUv6C uses PC14/PC15 as chip selects.
 
 | Signal | Pin | Net |
 |---|---|---|

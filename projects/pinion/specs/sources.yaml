@@ -410,6 +410,11 @@
 # --- Datasheets for parts added on pinion ---
 # ti.com symlink URLs serve the latest revision, so these checksums change when TI revises them.
 
+- id: bmi270-datasheet
+  file: parts/bmi270-datasheet.pdf
+  url: https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmi270-ds000.pdf
+  sha256: f68ce3c74f011a80bbe4b0279c4abe9609a71a5dcda75a951381d77112e005fb
+
 - id: tps65214-datasheet
   file: parts/tps65214-datasheet.pdf
   url: https://www.ti.com/lit/ds/symlink/tps65214.pdf
@@ -424,6 +429,11 @@
   file: parts/tps51200-datasheet.pdf
   url: https://www.ti.com/lit/ds/symlink/tps51200.pdf
   sha256: aba58b616681c52dfdefd9611c92af68b7904197b58e92226dd14fee402e12b5
+
+- id: tcan1044-datasheet
+  file: parts/tcan1044-q1-datasheet.pdf
+  url: https://www.ti.com/lit/ds/symlink/tcan1044-q1.pdf
+  sha256: 380f6b3a37fc859c5c889fc93acd2d14f5c0e320b33f5eb61b400c59c322cd6d
 
 - id: tcan1051-datasheet
   file: parts/tcan1051-q1-datasheet.pdf

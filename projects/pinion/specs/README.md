@@ -40,7 +40,7 @@ Paths are relative to `reference/`.
 | `px4-fmu-v6c/`         | PX4-Autopilot v1.17.0                    | The complete `boards/px4/fmu-v6c` directory: all `.px4board` variants, `nuttx-config/`, `src/`, `init/`, `extras/` |
 | `px4-docs/`            | PX4-Autopilot v1.17.0 and its linked sheet | Pixhawk 6C hardware page, quick start, and the FMUv6C pinout spreadsheet (pinout, sensor assignment, UART assignment, hardware revision IDs) |
 | `ardupilot-pixhawk6c/` | ArduPilot Copter-4.7.1                   | `hwdef.dat`, `hwdef-bl.dat`, `defaults.parm`: a compact second statement of the pin assignments |
-| `parts/`               | Bosch Sensortec, ti.com                  | BMI088, TPS65214 (PMIC), DP83867IR (Ethernet PHY), TPS51200 (DDR termination), TCAN1051 (CAN transceiver) datasheets |
+| `parts/`               | Bosch Sensortec, ti.com                  | BMI088 (FMUv6C IMU 1), BMI270 (pinion IMU 1), TPS65214 (PMIC), DP83867IR (Ethernet PHY), TPS51200 (DDR termination), TCAN1051 (CAN transceiver) datasheets |
 | `ti/`                  | ti.com                                   | AM62L datasheet (SPRSPA1B), technical reference manual (SPRUJB4A), EVM user's guide (SPRUJG8B), DDR board design and layout (SPRAD06C), high-speed interface layout (SPRAAR7J), Sitara power distribution networks (SPRAC76H) |
 | `st-pin-data/`         | STMicroelectronics/STM32_open_pin_data, pinned commit | Pin and alternate-function XML for the STM32H743VIH and STM32F103C8T; input to `tools/gen_stm32_pindef.py` |
 | `px4-io-v2/`, `ardupilot-iomcu/` | PX4-Autopilot v1.17.0, ArduPilot Copter-4.7.1 | PX4IO board configuration and ArduPilot's IO MCU hardware definition |
