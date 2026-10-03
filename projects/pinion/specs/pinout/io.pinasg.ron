@@ -1,0 +1,268 @@
+#![enable(implicit_some)]
+(
+    schema: "pinmap/v1",
+    kind: pinasg,
+    device: "stm32f103c8t6",
+    target: (
+        package: "LQFP48",
+        refdes: "U2",
+    ),
+    peripherals: {
+        "TIM2": (
+            signals: {
+                "CH1": (
+                    pin: "PA0",
+                    net: "IO_CH1",
+                ),
+                "CH2": (
+                    pin: "PA1",
+                    net: "IO_CH2",
+                ),
+            },
+            note: "IO PWM 1-2 (MAIN). PX4 io-v2.",
+        ),
+        "TIM4": (
+            signals: {
+                "CH3": (
+                    pin: "PB8",
+                    net: "IO_CH3",
+                ),
+                "CH4": (
+                    pin: "PB9",
+                    net: "IO_CH4",
+                ),
+            },
+            note: "IO PWM 3-4 (MAIN). PX4 io-v2.",
+        ),
+        "TIM3": (
+            signals: {
+                "CH1": (
+                    pin: "PA6",
+                    net: "IO_CH5",
+                ),
+                "CH2": (
+                    pin: "PA7",
+                    net: "IO_CH6",
+                ),
+                "CH3": (
+                    pin: "PB0",
+                    net: "IO_CH7",
+                ),
+                "CH4": (
+                    pin: "PB1",
+                    net: "IO_CH8",
+                ),
+            },
+            note: "IO PWM 5-8 (MAIN). PX4 io-v2.",
+        ),
+        "TIM1": (
+            signals: {
+                "CH1": (
+                    pin: "PA8",
+                    net: "IO_PPM_IN",
+                ),
+            },
+            note: "PPM input capture, shared with the inverted S.BUS input path at the RC IN connector. PX4 io-v2 (HRT timer 1).",
+        ),
+        "USART2": (
+            signals: {
+                "TX": (
+                    pin: "PA2",
+                    net: "FMU_USART6_RX_FROM_IO",
+                ),
+                "RX": (
+                    pin: "PA3",
+                    net: "FMU_USART6_TX_TO_IO",
+                ),
+            },
+            note: "PX4IO link to the FMU (USART6), 1.5 Mbaud. PX4 io-v2.",
+        ),
+        "USART1": (
+            signals: {
+                "TX": (
+                    pin: "PA9",
+                    net: "IO_USART1_TX_DEBUG",
+                ),
+                "RX": (
+                    pin: "PA10",
+                    net: "IO_USART1_RX_DSM",
+                ),
+            },
+            note: "TX is the IO debug console; RX is the DSM/Spektrum input and is driven as a GPIO during satellite binding. PX4 io-v2.",
+        ),
+        "USART3": (
+            signals: {
+                "TX": (
+                    pin: "PB10",
+                    net: "IO_USART3_TX_SBUS_OUT",
+                ),
+                "RX": (
+                    pin: "PB11",
+                    net: "IO_USART3_RX_SBUS_IN",
+                ),
+            },
+            note: "S.BUS output (gated by IO_SBUS_OUT_EN) and S.BUS input, both through external inverters. PX4 io-v2.",
+        ),
+        "ADC1": (
+            signals: {
+                "IN4": (
+                    pin: "PA4",
+                    net: "IO_VSERVO_SENSE",
+                ),
+                "IN5": (
+                    pin: "PA5",
+                    net: "IO_RSSI_ADC",
+                ),
+            },
+            note: "Servo rail voltage (divider) and analog RSSI. PX4 io-v2.",
+        ),
+        "SYS": (
+            signals: {
+                "JTMS-SWDIO": (
+                    pin: "PA13",
+                    net: "IO_SWDIO",
+                ),
+                "JTCK-SWCLK": (
+                    pin: "PA14",
+                    net: "IO_SWCLK",
+                ),
+                "JTDO-TRACESWO": (
+                    pin: "PB3",
+                    net: "IO_SWO",
+                ),
+            },
+            note: "SWD and SWO on the IO debug connector.",
+        ),
+        "RCC": (
+            signals: {
+                "OSC_IN": (
+                    pin: "PD0",
+                    net: "IO_OSC_IN",
+                ),
+                "OSC_OUT": (
+                    pin: "PD1",
+                    net: "IO_OSC_OUT",
+                ),
+            },
+            note: "24 MHz crystal, as px4_io-v2 expects.",
+        ),
+    },
+    pins: {
+        "PA12": (
+            mode: gpio_in,
+            net: "IO_RSSI_PWM",
+            note: "PWM RSSI input. PX4 io-v2 (GPIO_TIM_RSSI).",
+        ),
+        "PA11": (
+            mode: gpio_out,
+            initial: low,
+            net: "IO_LED_GREEN",
+            note: "IO power/breathing LED. PX4 io-v2.",
+        ),
+        "PB14": (
+            mode: gpio_out,
+            initial: high,
+            net: "N_IO_LED_BLUE",
+            note: "IO status LED, active low, open drain. PX4 io-v2.",
+        ),
+        "PB15": (
+            mode: gpio_out,
+            initial: high,
+            net: "N_IO_LED_AMBER",
+            note: "IO status LED, active low, open drain. PX4 io-v2.",
+        ),
+        "PB13": (
+            mode: gpio_out,
+            initial: high,
+            net: "N_IO_LED_SAFETY",
+            note: "Safety switch LED on the GPS1 connector, active low, open drain. PX4 io-v2.",
+        ),
+        "PB5": (
+            mode: gpio_in,
+            net: "IO_SAFETY_SWITCH",
+            note: "Safety switch on the GPS1 connector; external pull-down. PX4 io-v2.",
+        ),
+        "PB4": (
+            mode: gpio_out,
+            initial: high,
+            net: "N_IO_SBUS_OUT_EN",
+            note: "S.BUS output driver enable, active low. PX4 io-v2.",
+        ),
+        "PC13": (
+            mode: gpio_out,
+            initial: high,
+            net: "IO_SPEKTRUM_PWR_EN",
+            note: "3.3 V switch for the DSM satellite receiver. PX4 io-v2.",
+        ),
+        "PA15": (
+            mode: gpio_in,
+            bias: pull_up,
+            net: "N_IO_SERVO_FAULT",
+            note: "Servo rail fault detect, active low. PX4 io-v2.",
+        ),
+        "PC14": (
+            mode: gpio_in,
+            bias: pull_down,
+            net: "IO_HW_DETECT1",
+            note: "Board-type sense, left floating (reads low). PX4 io-v2.",
+        ),
+        "PC15": (
+            mode: gpio_in,
+            bias: pull_up,
+            net: "IO_HW_DETECT2",
+            note: "Board-type sense, left floating (reads high). PX4 io-v2.",
+        ),
+        "PB2": (
+            mode: reserved,
+            net: "GND",
+            note: "BOOT1, tied low through a resistor.",
+        ),
+        "NRST": (
+            mode: reserved,
+            net: "IO_NRST",
+            note: "IO debug connector; FMU does not control it.",
+        ),
+        "BOOT0": (
+            mode: reserved,
+            net: "GND",
+            note: "Tied low through a resistor: PX4IO is updated over USART2 by its own bootloader.",
+        ),
+        "VBAT": (
+            mode: reserved,
+            net: "IO_VDD_3V3",
+        ),
+        "VDDA": (
+            mode: reserved,
+            net: "IO_VDD_3V3",
+            note: "Through a ferrite bead.",
+        ),
+        "VSSA": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VDD_24": (
+            mode: reserved,
+            net: "IO_VDD_3V3",
+        ),
+        "VDD_36": (
+            mode: reserved,
+            net: "IO_VDD_3V3",
+        ),
+        "VDD_48": (
+            mode: reserved,
+            net: "IO_VDD_3V3",
+        ),
+        "VSS_23": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_35": (
+            mode: reserved,
+            net: "GND",
+        ),
+        "VSS_47": (
+            mode: reserved,
+            net: "GND",
+        ),
+    },
+)

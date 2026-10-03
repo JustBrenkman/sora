@@ -1,0 +1,8589 @@
+{
+  "schema": "pinmap/v1",
+  "kind": "pindef",
+  "meta": {
+    "generated": true
+  },
+  "device": {
+    "name": "AM62L32",
+    "vendor": "ti",
+    "family": "am62l"
+  },
+  "packages": {
+    "ANB": {
+      "VSS_A1": "A1",
+      "VSS_A2": "A2",
+      "MMC0_DAT6": "A3",
+      "VSS_A4": "A4",
+      "USB1_DRVVBUS": "A5",
+      "I2C1_SDA": "A6",
+      "I2C0_SDA": "A7",
+      "MCASP0_AXR3": "A8",
+      "MCASP0_AXR1": "A9",
+      "VSS_A10": "A10",
+      "MCASP0_ACLKX": "A11",
+      "MCASP0_ACLKR": "A12",
+      "VSS_A13": "A13",
+      "DSI0_TXCLKP": "A14",
+      "DSI0_TXCLKN": "A15",
+      "VSS_A16": "A16",
+      "DSI0_TXP1": "A17",
+      "DSI0_TXN1": "A18",
+      "VSS_A19": "A19",
+      "DSI0_TXN2": "A20",
+      "DSI0_TXP2": "A21",
+      "VSS_A22": "A22",
+      "VSS_A23": "A23",
+      "VSS_B1": "B1",
+      "MMC0_CLK": "B2",
+      "MMC0_DAT5": "B3",
+      "MMC0_DAT7": "B4",
+      "VSS_B5": "B5",
+      "MMC1_SDCD": "B6",
+      "I2C0_SCL": "B7",
+      "I2C2_SCL": "B8",
+      "MCASP0_AXR0": "B9",
+      "MCASP0_AXR2": "B10",
+      "MCASP0_AFSX": "B11",
+      "SPI0_D1": "B12",
+      "UART0_RTSn": "B13",
+      "UART0_CTSn": "B14",
+      "MCAN0_RX": "B15",
+      "MCAN0_TX": "B16",
+      "VSS_B17": "B17",
+      "DSI0_TXP0": "B18",
+      "DSI0_TXN0": "B19",
+      "VSS_B20": "B20",
+      "DSI0_TXP3": "B21",
+      "DSI0_TXN3": "B22",
+      "VSS_B23": "B23",
+      "MMC0_DAT2": "C1",
+      "MMC0_DAT3": "C2",
+      "MMC0_DAT4": "C4",
+      "USB0_DRVVBUS": "C6",
+      "EXTINTn": "C8",
+      "MCASP0_AFSR": "C11",
+      "VSS_C12": "C12",
+      "UART0_TXD": "C13",
+      "RESETSTATz": "C16",
+      "VSS_C18": "C18",
+      "OSPI0_CSn0": "C20",
+      "OSPI0_D0": "C22",
+      "OSPI0_CSn3": "C23",
+      "VSS_D1": "D1",
+      "MMC0_CMD": "D2",
+      "MMC0_DAT0": "D3",
+      "MMC0_DAT1": "D4",
+      "MMC1_SDWP": "D6",
+      "I2C1_SCL": "D7",
+      "I2C2_SDA": "D8",
+      "SPI0_CS1": "D11",
+      "UART0_RXD": "D13",
+      "EXT_REFCLK1": "D16",
+      "DSI0_TXRCALIB": "D17",
+      "OSPI0_CSn2": "D18",
+      "OSPI0_CSn1": "D20",
+      "OSPI0_D1": "D21",
+      "OSPI0_CLK": "D22",
+      "OSPI0_D3": "D23",
+      "DDR0_DQ3": "E1",
+      "VSS_E2": "E2",
+      "VSS_E6": "E6",
+      "VSS_E8": "E8",
+      "VSS_E9": "E9",
+      "VSS_E10": "E10",
+      "SPI0_CS0": "E11",
+      "SPI0_D0": "E12",
+      "SPI0_CLK": "E13",
+      "VSS_E14": "E14",
+      "VSS_E15": "E15",
+      "RESETz": "E16",
+      "OSPI0_LBCLKO": "E18",
+      "OSPI0_DQS": "E22",
+      "OSPI0_D2": "E23",
+      "DDR0_DQ2": "F1",
+      "DDR0_DM0": "F2",
+      "DDR0_DQ1": "F3",
+      "DDR0_DQ0": "F4",
+      "VSS_F5": "F5",
+      "VSS_F6": "F6",
+      "VSS_F18": "F18",
+      "OSPI0_D5": "F19",
+      "OSPI0_D7": "F20",
+      "OSPI0_D4": "F21",
+      "GPMC0_AD14": "F22",
+      "GPMC0_AD15": "F23",
+      "DDR0_DQS0": "G1",
+      "DDR0_DQS0_n": "G2",
+      "DDR0_DQ4": "G4",
+      "VSS_G7": "G7",
+      "VSS_G8": "G8",
+      "VSS_G9": "G9",
+      "VDDSHV1_G10": "G10",
+      "CAP_VDDS_GENERAL1": "G11",
+      "VSS_G12": "G12",
+      "VDDA_CORE_DSI": "G13",
+      "VDDA_1P8_DSI": "G14",
+      "VSS_G15": "G15",
+      "VSS_G16": "G16",
+      "VSS_G17": "G17",
+      "OSPI0_D6": "G20",
+      "GPMC0_AD13": "G22",
+      "GPMC0_AD12": "G23",
+      "VSS_H1": "H1",
+      "DDR0_DQ6": "H2",
+      "DDR0_DQ7": "H3",
+      "DDR0_DQ5": "H4",
+      "DDR0_A5": "H5",
+      "DDR0_A1": "H6",
+      "VSS_H7": "H7",
+      "VDDSHV2": "H8",
+      "VDDSHV1_H10": "H10",
+      "VDDA_CORE_DSI_CLK": "H12",
+      "VSS_H14": "H14",
+      "VDDS1": "H16",
+      "VSS_H17": "H17",
+      "GPMC0_AD11": "H18",
+      "GPMC0_AD8": "H19",
+      "GPMC0_AD9": "H20",
+      "GPMC0_AD10": "H21",
+      "GPMC0_AD5": "H22",
+      "GPMC0_AD6": "H23",
+      "DDR0_A4": "J1",
+      "DDR0_RESET0_n": "J2",
+      "CAP_VDDS_MMC0": "J8",
+      "VDD_CORE_J9": "J9",
+      "VDD_CORE_J11": "J11",
+      "VDD_CORE_J13": "J13",
+      "VDD_CORE_J15": "J15",
+      "VDDSHV0_J16": "J16",
+      "GPMC0_AD7": "J22",
+      "GPMC0_AD3": "J23",
+      "DDR0_CKE0": "K1",
+      "DDR0_A3": "K2",
+      "VSS_K8": "K8",
+      "VSS_K9": "K9",
+      "VDD_CORE_K10": "K10",
+      "VDDA_PLL1": "K12",
+      "VDD_CORE_K14": "K14",
+      "VSS_K15": "K15",
+      "CAP_VDDS_GPMC": "K16",
+      "GPMC0_AD2": "K22",
+      "GPMC0_AD4": "K23",
+      "DDR0_CAS_n": "L1",
+      "DDR0_WE_n": "L2",
+      "DDR0_CS0_n": "L3",
+      "DDR0_ODT0": "L4",
+      "DDR0_A0": "L5",
+      "DDR0_A2": "L6",
+      "VSS_L7": "L7",
+      "VDDS_DDR_L8": "L8",
+      "VSS_L9": "L9",
+      "VDDA_PLL0": "L11",
+      "VSS_L13": "L13",
+      "VDD_CORE_L15": "L15",
+      "VSS_L16": "L16",
+      "VDDSHV0_L17": "L17",
+      "VSS_L18": "L18",
+      "GPMC0_CSn1": "L19",
+      "GPMC0_CSn0": "L20",
+      "GPMC0_CLK": "L21",
+      "GPMC0_AD0": "L22",
+      "GPMC0_AD1": "L23",
+      "VSS_M1": "M1",
+      "DDR0_ACT_n": "M2",
+      "DDR0_CAL0": "M3",
+      "DDR0_RAS_n": "M5",
+      "VDDS_DDR_M7": "M7",
+      "VDDS_DDR_M8": "M8",
+      "VDDA_DDR_PLL0": "M10",
+      "VSS_M12": "M12",
+      "VDD_CORE_M14": "M14",
+      "CAP_VDDS_MMC2": "M16",
+      "VDDSHV4": "M17",
+      "GPMC0_WEn": "M19",
+      "GPMC0_DIR": "M21",
+      "GPMC0_CSn3": "M22",
+      "GPMC0_CSn2": "M23",
+      "DDR0_A9": "N1",
+      "DDR0_BA1": "N2",
+      "DDR0_BA0": "N3",
+      "DDR0_BG1": "N4",
+      "DDR0_BG0": "N5",
+      "DDR0_A7": "N6",
+      "VSS_N7": "N7",
+      "VDDS_DDR_N8": "N8",
+      "VSS_N9": "N9",
+      "VSS_N11": "N11",
+      "VSS_N13": "N13",
+      "VDD_CORE_N15": "N15",
+      "VSS_N16": "N16",
+      "VDDA_ADC": "N17",
+      "VPP": "N18",
+      "GPMC0_ADVn_ALE": "N19",
+      "GPMC0_OEn_REn": "N20",
+      "GPMC0_WPn": "N21",
+      "GPMC0_WAIT1": "N22",
+      "GPMC0_WAIT0": "N23",
+      "DDR0_CK0": "P1",
+      "DDR0_CK0_n": "P2",
+      "VDDS_DDR_P8": "P8",
+      "VSS_P9": "P9",
+      "VDD_CORE_P10": "P10",
+      "VDD_CORE_P12": "P12",
+      "VDD_CORE_P14": "P14",
+      "VSS_P15": "P15",
+      "VDDS_WKUP": "P16",
+      "GPMC0_BE1n": "P22",
+      "GPMC0_BE0n_CLE": "P23",
+      "VSS_R1": "R1",
+      "DDR0_A6": "R2",
+      "VSS_R8": "R8",
+      "VDD_CORE_R9": "R9",
+      "VDD_CORE_R11": "R11",
+      "VSS_R13": "R13",
+      "VSS_R15": "R15",
+      "VDDS_OSC0": "R16",
+      "MMC2_DAT3": "R22",
+      "MMC2_CLK": "R23",
+      "DDR0_DQ10": "T1",
+      "VSS_T2": "T2",
+      "DDR0_DQ9": "T3",
+      "DDR0_A8": "T4",
+      "DDR0_A10": "T5",
+      "DDR0_A11": "T6",
+      "VSS_T7": "T7",
+      "VSS_T8": "T8",
+      "VDDSHV3": "T10",
+      "VDDA_1P8_USB": "T12",
+      "VDDS0": "T14",
+      "CAP_VDDSHV_MMC": "T16",
+      "VDD_RTC": "T17",
+      "VDDS_RTC": "T18",
+      "VSS_T19": "T19",
+      "MMC2_SDCD": "T20",
+      "MMC2_SDWP": "T21",
+      "MMC2_DAT1": "T22",
+      "MMC2_DAT2": "T23",
+      "DDR0_DQ11": "U1",
+      "DDR0_DQ14": "U2",
+      "DDR0_DQ12": "U4",
+      "VSS_U7": "U7",
+      "VSS_U8": "U8",
+      "CAP_VDDS_MMC1": "U9",
+      "VSS_U10": "U10",
+      "VDDA_CORE_USB": "U11",
+      "VDDA_3P3_USB": "U12",
+      "VSS_U13": "U13",
+      "VSS_U14": "U14",
+      "VSS_U15": "U15",
+      "VDDA_3P3_SDIO": "U16",
+      "VSS_U17": "U17",
+      "VSS_U20": "U20",
+      "MMC2_DAT0": "U22",
+      "MMC2_CMD": "U23",
+      "DDR0_DQS1": "V1",
+      "DDR0_DQS1_n": "V2",
+      "VSS_V3": "V3",
+      "DDR0_DQ8": "V4",
+      "DDR0_DQ13": "V5",
+      "DDR0_A13": "V6",
+      "VSS_V18": "V18",
+      "VSS_V19": "V19",
+      "ADC0_AIN0": "V20",
+      "ADC0_AIN3": "V21",
+      "ADC0_AIN1": "V22",
+      "ADC0_AIN2": "V23",
+      "DDR0_DQ15": "W1",
+      "DDR0_DM1": "W2",
+      "DDR0_A12": "W6",
+      "RGMII1_RD3": "W8",
+      "VSS_W9": "W9",
+      "VSS_W10": "W10",
+      "RGMII1_TXC": "W11",
+      "VSS_W12": "W12",
+      "RGMII1_TD1": "W13",
+      "VSS_W14": "W14",
+      "VSS_W15": "W15",
+      "VSS_W16": "W16",
+      "VSS_W18": "W18",
+      "WKUP_UART0_RTSn": "W22",
+      "WKUP_UART0_CTSn": "W23",
+      "VSS_Y1": "Y1",
+      "MMC1_CLK": "Y2",
+      "MMC1_CMD": "Y3",
+      "MMC1_DAT1": "Y4",
+      "RGMII1_RX_CTL": "Y6",
+      "RGMII1_RXC": "Y7",
+      "RGMII1_RD0": "Y8",
+      "RGMII1_TD2": "Y11",
+      "RGMII2_TXC": "Y13",
+      "EMU0": "Y16",
+      "TMS": "Y17",
+      "RTC_PORz": "Y18",
+      "VSS_Y20": "Y20",
+      "VSS_Y21": "Y21",
+      "WKUP_UART0_RXD": "Y22",
+      "WKUP_CLKOUT0": "Y23",
+      "MMC1_DAT0": "AA1",
+      "MMC1_DAT2": "AA2",
+      "VSS_AA4": "AA4",
+      "RGMII1_RD1": "AA6",
+      "RGMII1_RD2": "AA8",
+      "RGMII1_TD3": "AA11",
+      "RGMII2_TD2": "AA12",
+      "RGMII2_TD3": "AA13",
+      "EMU1": "AA16",
+      "PMIC_LPM_EN0": "AA18",
+      "VSS_AA20": "AA20",
+      "WKUP_I2C0_SDA": "AA22",
+      "WKUP_UART0_TXD": "AA23",
+      "VSS_AB1": "AB1",
+      "MMC1_DAT3": "AB2",
+      "USB0_RCALIB": "AB3",
+      "USB0_DP": "AB4",
+      "USB1_DP": "AB5",
+      "USB1_VBUS": "AB6",
+      "VSS_AB7": "AB7",
+      "RGMII2_RD3": "AB8",
+      "RGMII2_RD0": "AB9",
+      "RGMII2_RD2": "AB10",
+      "RGMII1_TX_CTL": "AB11",
+      "RGMII2_TX_CTL": "AB12",
+      "RGMII2_TD1": "AB13",
+      "TCK": "AB14",
+      "TDO": "AB15",
+      "TRSTn": "AB16",
+      "RSVD0": "AB17",
+      "PORz": "AB18",
+      "EXT_WAKEUP0": "AB19",
+      "EXT_WAKEUP1": "AB20",
+      "VSS_AB21": "AB21",
+      "WKUP_I2C0_SCL": "AB22",
+      "VSS_AB23": "AB23",
+      "VSS_AC1": "AC1",
+      "VSS_AC2": "AC2",
+      "USB0_VBUS": "AC3",
+      "USB0_DM": "AC4",
+      "USB1_DM": "AC5",
+      "USB1_RCALIB": "AC6",
+      "RGMII2_RXC": "AC7",
+      "RGMII2_RX_CTL": "AC8",
+      "RGMII2_RD1": "AC9",
+      "RGMII1_TD0": "AC10",
+      "VSS_AC11": "AC11",
+      "RGMII2_TD0": "AC12",
+      "MDIO0_MDIO": "AC13",
+      "VSS_AC14": "AC14",
+      "MDIO0_MDC": "AC15",
+      "TDI": "AC16",
+      "WKUP_OSC0_XO": "AC17",
+      "WKUP_OSC0_XI": "AC18",
+      "VSS_AC19": "AC19",
+      "LFOSC0_XO": "AC20",
+      "LFOSC0_XI": "AC21",
+      "VSS_AC22": "AC22",
+      "VSS_AC23": "AC23"
+    }
+  },
+  "pins": {
+    "VSS_A1": {},
+    "VSS_A2": {},
+    "MMC0_DAT6": {
+      "functions": [
+        {
+          "periph": "MMC0",
+          "name": "DAT6",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "UART2",
+          "name": "TXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM0",
+          "name": "SYNCO",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "MCAN1",
+          "name": "TX",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "CLK",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "SPI1",
+          "name": "D1",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "CS3",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "107",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "VSS_A4": {},
+    "USB1_DRVVBUS": {
+      "functions": [
+        {
+          "periph": "USB1",
+          "name": "DRVVBUS",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "125",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "I2C1_SDA": {
+      "functions": [
+        {
+          "periph": "I2C1",
+          "name": "SDA",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "UART1",
+          "name": "TXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "TIMER",
+          "name": "IO1",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "CLK",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM0",
+          "name": "SYNCO",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "101",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM2",
+          "name": "B",
+          "mux": {
+            "vendor": {
+              "muxmode": 8
+            }
+          }
+        },
+        {
+          "periph": "MMC2",
+          "name": "SDWP",
+          "mux": {
+            "vendor": {
+              "muxmode": 9
+            }
+          }
+        }
+      ]
+    },
+    "I2C0_SDA": {
+      "functions": [
+        {
+          "periph": "I2C0",
+          "name": "SDA",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "CS2",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "TIMER",
+          "name": "IO1",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "UART1",
+          "name": "DSRn",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "EQEP2",
+          "name": "B",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM",
+          "name": "SOCB",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "99",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "ECAP2",
+          "name": "IN_APWM_OUT",
+          "mux": {
+            "vendor": {
+              "muxmode": 8
+            }
+          }
+        }
+      ]
+    },
+    "MCASP0_AXR3": {
+      "functions": [
+        {
+          "periph": "MCASP0",
+          "name": "AXR3",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "D0",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "UART1",
+          "name": "CTSn",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "UART6",
+          "name": "RXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "ECAP1",
+          "name": "IN_APWM_OUT",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "MCAN1",
+          "name": "RX",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "79",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "EQEP0",
+          "name": "A",
+          "mux": {
+            "vendor": {
+              "muxmode": 8
+            }
+          }
+        }
+      ]
+    },
+    "MCASP0_AXR1": {
+      "functions": [
+        {
+          "periph": "MCASP0",
+          "name": "AXR1",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "CS2",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "ECAP1",
+          "name": "IN_APWM_OUT",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM1",
+          "name": "A",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "81",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "EQEP0",
+          "name": "S",
+          "mux": {
+            "vendor": {
+              "muxmode": 8
+            }
+          }
+        }
+      ]
+    },
+    "VSS_A10": {},
+    "MCASP0_ACLKX": {
+      "functions": [
+        {
+          "periph": "MCASP0",
+          "name": "ACLKX",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "CS1",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "ECAP2",
+          "name": "IN_APWM_OUT",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "83",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "EQEP1",
+          "name": "A",
+          "mux": {
+            "vendor": {
+              "muxmode": 8
+            }
+          }
+        }
+      ]
+    },
+    "MCASP0_ACLKR": {
+      "functions": [
+        {
+          "periph": "MCASP0",
+          "name": "ACLKR",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "CLK",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "UART1",
+          "name": "TXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "ADC",
+          "name": "EXT_TRIGGER1",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM0",
+          "name": "B",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "86",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "EQEP1",
+          "name": "I",
+          "mux": {
+            "vendor": {
+              "muxmode": 8
+            }
+          }
+        }
+      ]
+    },
+    "VSS_A13": {},
+    "DSI0_TXCLKP": {
+      "functions": [
+        {
+          "periph": "DSI0",
+          "name": "TXCLKP",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DSI0_TXCLKN": {
+      "functions": [
+        {
+          "periph": "DSI0",
+          "name": "TXCLKN",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "VSS_A16": {},
+    "DSI0_TXP1": {
+      "functions": [
+        {
+          "periph": "DSI0",
+          "name": "TXP1",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DSI0_TXN1": {
+      "functions": [
+        {
+          "periph": "DSI0",
+          "name": "TXN1",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "VSS_A19": {},
+    "DSI0_TXN2": {
+      "functions": [
+        {
+          "periph": "DSI0",
+          "name": "TXN2",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DSI0_TXP2": {
+      "functions": [
+        {
+          "periph": "DSI0",
+          "name": "TXP2",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "VSS_A22": {},
+    "VSS_A23": {},
+    "VSS_B1": {},
+    "MMC0_CLK": {
+      "functions": [
+        {
+          "periph": "MMC0",
+          "name": "CLK",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "I2C3",
+          "name": "SCL",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM2",
+          "name": "A",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "SPI1",
+          "name": "CS1",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "TIMER",
+          "name": "IO0",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "114",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "MMC0_DAT5": {
+      "functions": [
+        {
+          "periph": "MMC0",
+          "name": "DAT5",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "UART2",
+          "name": "RTSn",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM",
+          "name": "TZn_IN2",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "SPI1",
+          "name": "CS0",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "D0",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "108",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "MMC0_DAT7": {
+      "functions": [
+        {
+          "periph": "MMC0",
+          "name": "DAT7",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "UART2",
+          "name": "RXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM0",
+          "name": "SYNCI",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "MCAN1",
+          "name": "RX",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "SPI1",
+          "name": "D0",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "CS1",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "106",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "VSS_B5": {},
+    "MMC1_SDCD": {
+      "functions": [
+        {
+          "periph": "MMC1",
+          "name": "SDCD",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "UART6",
+          "name": "RXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "TIMER",
+          "name": "IO2",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "UART3",
+          "name": "RTSn",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "MCAN2",
+          "name": "RX",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "SPI3",
+          "name": "CS3",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "CLK",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "122",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "I2C0_SCL": {
+      "functions": [
+        {
+          "periph": "I2C0",
+          "name": "SCL",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "SYNC0",
+          "name": "OUT",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "SYS",
+          "name": "OBSCLK1",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "UART1",
+          "name": "DCDn",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "EQEP2",
+          "name": "A",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM",
+          "name": "SOCA",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "98",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "ECAP1",
+          "name": "IN_APWM_OUT",
+          "mux": {
+            "vendor": {
+              "muxmode": 8
+            }
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "CS0",
+          "mux": {
+            "vendor": {
+              "muxmode": 9
+            }
+          }
+        }
+      ]
+    },
+    "I2C2_SCL": {
+      "functions": [
+        {
+          "periph": "I2C2",
+          "name": "SCL",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "102",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "MCASP0_AXR0": {
+      "functions": [
+        {
+          "periph": "MCASP0",
+          "name": "AXR0",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "AUDIO",
+          "name": "EXT_REFCLK0",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM1",
+          "name": "B",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "82",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "EQEP0",
+          "name": "I",
+          "mux": {
+            "vendor": {
+              "muxmode": 8
+            }
+          }
+        }
+      ]
+    },
+    "MCASP0_AXR2": {
+      "functions": [
+        {
+          "periph": "MCASP0",
+          "name": "AXR2",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "D1",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "UART1",
+          "name": "RTSn",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "UART6",
+          "name": "TXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "ECAP2",
+          "name": "IN_APWM_OUT",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "MCAN1",
+          "name": "TX",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "80",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "EQEP0",
+          "name": "B",
+          "mux": {
+            "vendor": {
+              "muxmode": 8
+            }
+          }
+        }
+      ]
+    },
+    "MCASP0_AFSX": {
+      "functions": [
+        {
+          "periph": "MCASP0",
+          "name": "AFSX",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "CS3",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "AUDIO",
+          "name": "EXT_REFCLK1",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "84",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "EQEP1",
+          "name": "B",
+          "mux": {
+            "vendor": {
+              "muxmode": 8
+            }
+          }
+        }
+      ]
+    },
+    "SPI0_D1": {
+      "functions": [
+        {
+          "periph": "SPI0",
+          "name": "D1",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "CP_GEMAC_CPTS0",
+          "name": "HW2TSPUSH",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM",
+          "name": "TZn_IN0",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "91",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "UART0_RTSn": {
+      "functions": [
+        {
+          "periph": "UART0",
+          "name": "RTSn",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "SPI0",
+          "name": "CS3",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "I2C3",
+          "name": "SDA",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "UART2",
+          "name": "TXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "TIMER",
+          "name": "IO3",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "AUDIO",
+          "name": "EXT_REFCLK1",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "MCAN2",
+          "name": "TX",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "95",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "MCASP2",
+          "name": "ACLKX",
+          "mux": {
+            "vendor": {
+              "muxmode": 8
+            }
+          }
+        },
+        {
+          "periph": "MMC2",
+          "name": "SDWP",
+          "mux": {
+            "vendor": {
+              "muxmode": 9
+            }
+          }
+        }
+      ]
+    },
+    "UART0_CTSn": {
+      "functions": [
+        {
+          "periph": "UART0",
+          "name": "CTSn",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "SPI0",
+          "name": "CS2",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "I2C3",
+          "name": "SCL",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "UART2",
+          "name": "RXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "TIMER",
+          "name": "IO2",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "AUDIO",
+          "name": "EXT_REFCLK0",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "MCAN2",
+          "name": "RX",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "94",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "MCASP2",
+          "name": "AFSX",
+          "mux": {
+            "vendor": {
+              "muxmode": 8
+            }
+          }
+        },
+        {
+          "periph": "MMC2",
+          "name": "SDCD",
+          "mux": {
+            "vendor": {
+              "muxmode": 9
+            }
+          }
+        }
+      ]
+    },
+    "MCAN0_RX": {
+      "functions": [
+        {
+          "periph": "MCAN0",
+          "name": "RX",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "UART5",
+          "name": "TXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "TIMER",
+          "name": "IO3",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "SYNC3",
+          "name": "OUT",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "UART1",
+          "name": "RIn",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "EQEP2",
+          "name": "S",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "97",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "MCASP2",
+          "name": "AXR1",
+          "mux": {
+            "vendor": {
+              "muxmode": 8
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM",
+          "name": "TZn_IN4",
+          "mux": {
+            "vendor": {
+              "muxmode": 9
+            }
+          }
+        }
+      ]
+    },
+    "MCAN0_TX": {
+      "functions": [
+        {
+          "periph": "MCAN0",
+          "name": "TX",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "UART5",
+          "name": "RXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "TIMER",
+          "name": "IO2",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "SYNC2",
+          "name": "OUT",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "UART1",
+          "name": "DTRn",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "EQEP2",
+          "name": "I",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "96",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "MCASP2",
+          "name": "AXR0",
+          "mux": {
+            "vendor": {
+              "muxmode": 8
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM",
+          "name": "TZn_IN3",
+          "mux": {
+            "vendor": {
+              "muxmode": 9
+            }
+          }
+        }
+      ]
+    },
+    "VSS_B17": {},
+    "DSI0_TXP0": {
+      "functions": [
+        {
+          "periph": "DSI0",
+          "name": "TXP0",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DSI0_TXN0": {
+      "functions": [
+        {
+          "periph": "DSI0",
+          "name": "TXN0",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "VSS_B20": {},
+    "DSI0_TXP3": {
+      "functions": [
+        {
+          "periph": "DSI0",
+          "name": "TXP3",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DSI0_TXN3": {
+      "functions": [
+        {
+          "periph": "DSI0",
+          "name": "TXN3",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "VSS_B23": {},
+    "MMC0_DAT2": {
+      "functions": [
+        {
+          "periph": "MMC0",
+          "name": "DAT2",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "UART3",
+          "name": "TXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM1",
+          "name": "A",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "MCAN2",
+          "name": "TX",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "SPI1",
+          "name": "CLK",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "TIMER",
+          "name": "IO0",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "111",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "MMC0_DAT3": {
+      "functions": [
+        {
+          "periph": "MMC0",
+          "name": "DAT3",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "UART3",
+          "name": "RXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM0",
+          "name": "B",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "MCAN2",
+          "name": "RX",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "SPI1",
+          "name": "CS0",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "CS2",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "110",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "MMC0_DAT4": {
+      "functions": [
+        {
+          "periph": "MMC0",
+          "name": "DAT4",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "UART2",
+          "name": "CTSn",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM0",
+          "name": "A",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "SPI1",
+          "name": "CLK",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "D1",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "109",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "USB0_DRVVBUS": {
+      "functions": [
+        {
+          "periph": "USB0",
+          "name": "DRVVBUS",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "124",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "EXTINTn": {
+      "functions": [
+        {
+          "periph": "SYS",
+          "name": "EXTINTn",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "105",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "MCASP0_AFSR": {
+      "functions": [
+        {
+          "periph": "MCASP0",
+          "name": "AFSR",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "CS0",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "UART1",
+          "name": "RXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "ADC",
+          "name": "EXT_TRIGGER0",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM0",
+          "name": "A",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "85",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "EQEP1",
+          "name": "S",
+          "mux": {
+            "vendor": {
+              "muxmode": 8
+            }
+          }
+        }
+      ]
+    },
+    "VSS_C12": {},
+    "UART0_TXD": {
+      "functions": [
+        {
+          "periph": "UART0",
+          "name": "TXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "ECAP2",
+          "name": "IN_APWM_OUT",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "D1",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM2",
+          "name": "B",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "93",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "RESETSTATz": {
+      "functions": [
+        {
+          "periph": "SYS",
+          "name": "RESETSTATz",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        }
+      ]
+    },
+    "VSS_C18": {},
+    "OSPI0_CSn0": {
+      "functions": [
+        {
+          "periph": "OSPI0",
+          "name": "CSn0",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "11",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "OSPI0_D0": {
+      "functions": [
+        {
+          "periph": "OSPI0",
+          "name": "D0",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "3",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "OSPI0_CSn3": {
+      "functions": [
+        {
+          "periph": "OSPI0",
+          "name": "CSn3",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "OSPI0",
+          "name": "RESET_OUT0",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "OSPI0",
+          "name": "ECC_FAIL",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "MCASP1",
+          "name": "ACLKR",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "MCASP1",
+          "name": "AXR3",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "UART5",
+          "name": "TXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "ADC",
+          "name": "EXT_TRIGGER1",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "14",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "VSS_D1": {},
+    "MMC0_CMD": {
+      "functions": [
+        {
+          "periph": "MMC0",
+          "name": "CMD",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "I2C3",
+          "name": "SDA",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM2",
+          "name": "B",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "SPI1",
+          "name": "CS2",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "TIMER",
+          "name": "IO1",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "115",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "MMC0_DAT0": {
+      "functions": [
+        {
+          "periph": "MMC0",
+          "name": "DAT0",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "UART3",
+          "name": "CTSn",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM",
+          "name": "TZn_IN1",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "CLK",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "113",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "MMC0_DAT1": {
+      "functions": [
+        {
+          "periph": "MMC0",
+          "name": "DAT1",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "UART3",
+          "name": "RTSn",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM1",
+          "name": "B",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "SPI1",
+          "name": "CS3",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "CS0",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "112",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "MMC1_SDWP": {
+      "functions": [
+        {
+          "periph": "MMC1",
+          "name": "SDWP",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "UART6",
+          "name": "TXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "TIMER",
+          "name": "IO3",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "UART3",
+          "name": "CTSn",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "MCAN2",
+          "name": "TX",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "SPI3",
+          "name": "CS1",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "123",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "I2C1_SCL": {
+      "functions": [
+        {
+          "periph": "I2C1",
+          "name": "SCL",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "UART1",
+          "name": "RXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "TIMER",
+          "name": "IO0",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "CS1",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM0",
+          "name": "SYNCI",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "100",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM2",
+          "name": "A",
+          "mux": {
+            "vendor": {
+              "muxmode": 8
+            }
+          }
+        },
+        {
+          "periph": "MMC2",
+          "name": "SDCD",
+          "mux": {
+            "vendor": {
+              "muxmode": 9
+            }
+          }
+        }
+      ]
+    },
+    "I2C2_SDA": {
+      "functions": [
+        {
+          "periph": "I2C2",
+          "name": "SDA",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "103",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "SPI0_CS1": {
+      "functions": [
+        {
+          "periph": "SPI0",
+          "name": "CS1",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "CP_GEMAC_CPTS0",
+          "name": "TS_COMP",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM0",
+          "name": "B",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "ECAP0",
+          "name": "IN_APWM_OUT",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "AUDIO",
+          "name": "EXT_REFCLK1",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "88",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM",
+          "name": "TZn_IN5",
+          "mux": {
+            "vendor": {
+              "muxmode": 9
+            }
+          }
+        }
+      ]
+    },
+    "UART0_RXD": {
+      "functions": [
+        {
+          "periph": "UART0",
+          "name": "RXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "ECAP1",
+          "name": "IN_APWM_OUT",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "D0",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM2",
+          "name": "A",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "92",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "EXT_REFCLK1": {
+      "functions": [
+        {
+          "periph": "EXT",
+          "name": "REFCLK1",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "SYNC1",
+          "name": "OUT",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "CS3",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "TIMER",
+          "name": "IO0",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "SYS",
+          "name": "CLKOUT0",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "CP_GEMAC_CPTS0",
+          "name": "RFT_CLK",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "104",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "ECAP0",
+          "name": "IN_APWM_OUT",
+          "mux": {
+            "vendor": {
+              "muxmode": 8
+            }
+          }
+        },
+        {
+          "periph": "ADC",
+          "name": "EXT_TRIGGER0",
+          "mux": {
+            "vendor": {
+              "muxmode": 9
+            }
+          }
+        }
+      ]
+    },
+    "DSI0_TXRCALIB": {
+      "functions": [
+        {
+          "periph": "DSI0",
+          "name": "TXRCALIB",
+          "mux": "analog"
+        }
+      ]
+    },
+    "OSPI0_CSn2": {
+      "functions": [
+        {
+          "periph": "OSPI0",
+          "name": "CSn2",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "SPI1",
+          "name": "CS1",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "OSPI0",
+          "name": "RESET_OUT1",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "MCASP1",
+          "name": "AFSR",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "MCASP1",
+          "name": "AXR2",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "UART5",
+          "name": "RXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "ADC",
+          "name": "EXT_TRIGGER0",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "13",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "OSPI0_CSn1": {
+      "functions": [
+        {
+          "periph": "OSPI0",
+          "name": "CSn1",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "12",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "OSPI0_D1": {
+      "functions": [
+        {
+          "periph": "OSPI0",
+          "name": "D1",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "4",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "OSPI0_CLK": {
+      "functions": [
+        {
+          "periph": "OSPI0",
+          "name": "CLK",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "0",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "OSPI0_D3": {
+      "functions": [
+        {
+          "periph": "OSPI0",
+          "name": "D3",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "6",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "DDR0_DQ3": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "DQ3",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "VSS_E2": {},
+    "VSS_E6": {},
+    "VSS_E8": {},
+    "VSS_E9": {},
+    "VSS_E10": {},
+    "SPI0_CS0": {
+      "functions": [
+        {
+          "periph": "SPI0",
+          "name": "CS0",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM0",
+          "name": "A",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "87",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "SPI0_D0": {
+      "functions": [
+        {
+          "periph": "SPI0",
+          "name": "D0",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "CP_GEMAC_CPTS0",
+          "name": "HW1TSPUSH",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM1",
+          "name": "B",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "90",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "SPI0_CLK": {
+      "functions": [
+        {
+          "periph": "SPI0",
+          "name": "CLK",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "CP_GEMAC_CPTS0",
+          "name": "TS_SYNC",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM1",
+          "name": "A",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "89",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "VSS_E14": {},
+    "VSS_E15": {},
+    "RESETz": {
+      "functions": [
+        {
+          "periph": "SYS",
+          "name": "RESETz",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        }
+      ]
+    },
+    "OSPI0_LBCLKO": {
+      "functions": [
+        {
+          "periph": "OSPI0",
+          "name": "LBCLKO",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "UART5",
+          "name": "RTSn",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "1",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "OSPI0_DQS": {
+      "functions": [
+        {
+          "periph": "OSPI0",
+          "name": "DQS",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "UART5",
+          "name": "CTSn",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "2",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "OSPI0_D2": {
+      "functions": [
+        {
+          "periph": "OSPI0",
+          "name": "D2",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "5",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "DDR0_DQ2": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "DQ2",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DDR0_DM0": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "DM0",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DDR0_DQ1": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "DQ1",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DDR0_DQ0": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "DQ0",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "VSS_F5": {},
+    "VSS_F6": {},
+    "VSS_F18": {},
+    "OSPI0_D5": {
+      "functions": [
+        {
+          "periph": "OSPI0",
+          "name": "D5",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "SPI1",
+          "name": "CLK",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "MCASP1",
+          "name": "AXR0",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "UART6",
+          "name": "TXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "8",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "OSPI0_D7": {
+      "functions": [
+        {
+          "periph": "OSPI0",
+          "name": "D7",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "SPI1",
+          "name": "D1",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "MCASP1",
+          "name": "AFSX",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "UART6",
+          "name": "CTSn",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "I2C3",
+          "name": "SDA",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "UART4",
+          "name": "TXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "10",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "OSPI0_D4": {
+      "functions": [
+        {
+          "periph": "OSPI0",
+          "name": "D4",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "SPI1",
+          "name": "CS0",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "MCASP1",
+          "name": "AXR1",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "UART6",
+          "name": "RXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "7",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "GPMC0_AD14": {
+      "functions": [
+        {
+          "periph": "GPMC0",
+          "name": "AD14",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "VOUT0",
+          "name": "DATA14",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "UART5",
+          "name": "RXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "MCASP2",
+          "name": "AFSR",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM0",
+          "name": "B",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "TRC",
+          "name": "DATA20",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "29",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "UART2",
+          "name": "CTSn",
+          "mux": {
+            "vendor": {
+              "muxmode": 8
+            }
+          }
+        },
+        {
+          "periph": "SYS",
+          "name": "BOOTMODE14",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "GPMC0_AD15": {
+      "functions": [
+        {
+          "periph": "GPMC0",
+          "name": "AD15",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "VOUT0",
+          "name": "DATA15",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "UART5",
+          "name": "TXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "MCASP2",
+          "name": "ACLKR",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM1",
+          "name": "A",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "TRC",
+          "name": "DATA19",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "30",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "UART2",
+          "name": "RTSn",
+          "mux": {
+            "vendor": {
+              "muxmode": 8
+            }
+          }
+        },
+        {
+          "periph": "SYS",
+          "name": "BOOTMODE15",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DDR0_DQS0": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "DQS0",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DDR0_DQS0_n": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "DQS0_n",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DDR0_DQ4": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "DQ4",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "VSS_G7": {},
+    "VSS_G8": {},
+    "VSS_G9": {},
+    "VDDSHV1_G10": {},
+    "CAP_VDDS_GENERAL1": {},
+    "VSS_G12": {},
+    "VDDA_CORE_DSI": {},
+    "VDDA_1P8_DSI": {},
+    "VSS_G15": {},
+    "VSS_G16": {},
+    "VSS_G17": {},
+    "OSPI0_D6": {
+      "functions": [
+        {
+          "periph": "OSPI0",
+          "name": "D6",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "SPI1",
+          "name": "D0",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "MCASP1",
+          "name": "ACLKX",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "UART6",
+          "name": "RTSn",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "I2C3",
+          "name": "SCL",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "UART4",
+          "name": "RXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "9",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "GPMC0_AD13": {
+      "functions": [
+        {
+          "periph": "GPMC0",
+          "name": "AD13",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "VOUT0",
+          "name": "DATA13",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "UART4",
+          "name": "TXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "MCASP2",
+          "name": "ACLKX",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM0",
+          "name": "A",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "TRC",
+          "name": "DATA21",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "28",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "SYS",
+          "name": "BOOTMODE13",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "GPMC0_AD12": {
+      "functions": [
+        {
+          "periph": "GPMC0",
+          "name": "AD12",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "VOUT0",
+          "name": "DATA12",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "UART4",
+          "name": "RXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "MCASP2",
+          "name": "AFSX",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM",
+          "name": "TZn_IN2",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "TRC",
+          "name": "DATA22",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "27",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "SYS",
+          "name": "BOOTMODE12",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "VSS_H1": {},
+    "DDR0_DQ6": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "DQ6",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DDR0_DQ7": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "DQ7",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DDR0_DQ5": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "DQ5",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DDR0_A5": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "A5",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DDR0_A1": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "A1",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "VSS_H7": {},
+    "VDDSHV2": {},
+    "VDDSHV1_H10": {},
+    "VDDA_CORE_DSI_CLK": {},
+    "VSS_H14": {},
+    "VDDS1": {},
+    "VSS_H17": {},
+    "GPMC0_AD11": {
+      "functions": [
+        {
+          "periph": "GPMC0",
+          "name": "AD11",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "VOUT0",
+          "name": "DATA11",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "UART3",
+          "name": "TXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "MCASP2",
+          "name": "AXR3",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM0",
+          "name": "SYNCO",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "TRC",
+          "name": "DATA23",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "26",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "SYS",
+          "name": "BOOTMODE11",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "GPMC0_AD8": {
+      "functions": [
+        {
+          "periph": "GPMC0",
+          "name": "AD8",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "VOUT0",
+          "name": "DATA8",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "UART2",
+          "name": "RXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "MCASP2",
+          "name": "AXR0",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "SPI1",
+          "name": "CS2",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "MCASP1",
+          "name": "AXR4",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "23",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "SYS",
+          "name": "BOOTMODE08",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "GPMC0_AD9": {
+      "functions": [
+        {
+          "periph": "GPMC0",
+          "name": "AD9",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "VOUT0",
+          "name": "DATA9",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "UART2",
+          "name": "TXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "MCASP2",
+          "name": "AXR1",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "TIMER",
+          "name": "IO2",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "ECAP2",
+          "name": "IN_APWM_OUT",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "24",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "SYS",
+          "name": "BOOTMODE09",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "GPMC0_AD10": {
+      "functions": [
+        {
+          "periph": "GPMC0",
+          "name": "AD10",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "VOUT0",
+          "name": "DATA10",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "UART3",
+          "name": "RXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "MCASP2",
+          "name": "AXR2",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM0",
+          "name": "SYNCI",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "25",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "SYS",
+          "name": "OBSCLK0",
+          "mux": {
+            "vendor": {
+              "muxmode": 8
+            }
+          }
+        },
+        {
+          "periph": "SYS",
+          "name": "BOOTMODE10",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "GPMC0_AD5": {
+      "functions": [
+        {
+          "periph": "GPMC0",
+          "name": "AD5",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "VOUT0",
+          "name": "DATA5",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "UART5",
+          "name": "CTSn",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "MCASP2",
+          "name": "AXR9",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "SPI1",
+          "name": "CLK",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "TRC",
+          "name": "DATA3",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "20",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "SYS",
+          "name": "BOOTMODE05",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "GPMC0_AD6": {
+      "functions": [
+        {
+          "periph": "GPMC0",
+          "name": "AD6",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "VOUT0",
+          "name": "DATA6",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "UART4",
+          "name": "RTSn",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "MCASP2",
+          "name": "AXR10",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "SPI1",
+          "name": "CS3",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "TRC",
+          "name": "DATA4",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "21",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "SYS",
+          "name": "BOOTMODE06",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DDR0_A4": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "A4",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DDR0_RESET0_n": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "RESET0_n",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "CAP_VDDS_MMC0": {},
+    "VDD_CORE_J9": {},
+    "VDD_CORE_J11": {},
+    "VDD_CORE_J13": {},
+    "VDD_CORE_J15": {},
+    "VDDSHV0_J16": {},
+    "GPMC0_AD7": {
+      "functions": [
+        {
+          "periph": "GPMC0",
+          "name": "AD7",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "VOUT0",
+          "name": "DATA7",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "UART4",
+          "name": "CTSn",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "MCASP2",
+          "name": "AXR11",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "SPI1",
+          "name": "CS1",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "MCASP1",
+          "name": "AXR5",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "TRC",
+          "name": "DATA5",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "22",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "SYS",
+          "name": "BOOTMODE07",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "GPMC0_AD3": {
+      "functions": [
+        {
+          "periph": "GPMC0",
+          "name": "AD3",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "VOUT0",
+          "name": "DATA3",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "UART6",
+          "name": "CTSn",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "MCASP2",
+          "name": "AXR7",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "SPI1",
+          "name": "D1",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "TRC",
+          "name": "DATA1",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "18",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "SYS",
+          "name": "BOOTMODE03",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DDR0_CKE0": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "CKE0",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DDR0_A3": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "A3",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "VSS_K8": {},
+    "VSS_K9": {},
+    "VDD_CORE_K10": {},
+    "VDDA_PLL1": {},
+    "VDD_CORE_K14": {},
+    "VSS_K15": {},
+    "CAP_VDDS_GPMC": {},
+    "GPMC0_AD2": {
+      "functions": [
+        {
+          "periph": "GPMC0",
+          "name": "AD2",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "VOUT0",
+          "name": "DATA2",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "UART6",
+          "name": "RTSn",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "MCASP2",
+          "name": "AXR6",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "SPI1",
+          "name": "D0",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "TRC",
+          "name": "DATA0",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "17",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "SYS",
+          "name": "BOOTMODE02",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "GPMC0_AD4": {
+      "functions": [
+        {
+          "periph": "GPMC0",
+          "name": "AD4",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "VOUT0",
+          "name": "DATA4",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "UART5",
+          "name": "RTSn",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "MCASP2",
+          "name": "AXR8",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "SPI1",
+          "name": "CS0",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "TRC",
+          "name": "DATA2",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "19",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "SYS",
+          "name": "BOOTMODE04",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DDR0_CAS_n": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "CAS_n",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DDR0_WE_n": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "WE_n",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DDR0_CS0_n": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "CS0_n",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DDR0_ODT0": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "ODT0",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DDR0_A0": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "A0",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DDR0_A2": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "A2",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "VSS_L7": {},
+    "VDDS_DDR_L8": {},
+    "VSS_L9": {},
+    "VDDA_PLL0": {},
+    "VSS_L13": {},
+    "VDD_CORE_L15": {},
+    "VSS_L16": {},
+    "VDDSHV0_L17": {},
+    "VSS_L18": {},
+    "GPMC0_CSn1": {
+      "functions": [
+        {
+          "periph": "GPMC0",
+          "name": "CSn1",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "VOUT0",
+          "name": "PCLK",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "CS0",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "MCASP2",
+          "name": "AXR15",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "EQEP1",
+          "name": "I",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "TRC",
+          "name": "DATA16",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "42",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "GPMC0_CSn0": {
+      "functions": [
+        {
+          "periph": "GPMC0",
+          "name": "CSn0",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "VOUT0",
+          "name": "VSYNC",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "D1",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "MCASP2",
+          "name": "AXR14",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "EQEP1",
+          "name": "S",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "TRC",
+          "name": "DATA15",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "41",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "GPMC0_CLK": {
+      "functions": [
+        {
+          "periph": "GPMC0",
+          "name": "CLK",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "VOUT0",
+          "name": "DATA16",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "MCASP1",
+          "name": "AXR3",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "GPMC0",
+          "name": "FCLK_MUX",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM1",
+          "name": "B",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "TRC",
+          "name": "DATA6",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "31",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "GPMC0_AD0": {
+      "functions": [
+        {
+          "periph": "GPMC0",
+          "name": "AD0",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "VOUT0",
+          "name": "DATA0",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "UART6",
+          "name": "RXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "MCASP2",
+          "name": "AXR4",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "I2C3",
+          "name": "SCL",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "ECAP0",
+          "name": "IN_APWM_OUT",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "TRC",
+          "name": "CLK",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "15",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "SYS",
+          "name": "BOOTMODE00",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "GPMC0_AD1": {
+      "functions": [
+        {
+          "periph": "GPMC0",
+          "name": "AD1",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "VOUT0",
+          "name": "DATA1",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "UART6",
+          "name": "TXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "MCASP2",
+          "name": "AXR5",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "I2C3",
+          "name": "SDA",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "ECAP1",
+          "name": "IN_APWM_OUT",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "TRC",
+          "name": "CTL",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "16",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "SYS",
+          "name": "BOOTMODE01",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "VSS_M1": {},
+    "DDR0_ACT_n": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "ACT_n",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DDR0_CAL0": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "CAL0",
+          "mux": "analog"
+        }
+      ]
+    },
+    "DDR0_RAS_n": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "RAS_n",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "VDDS_DDR_M7": {},
+    "VDDS_DDR_M8": {},
+    "VDDA_DDR_PLL0": {},
+    "VSS_M12": {},
+    "VDD_CORE_M14": {},
+    "CAP_VDDS_MMC2": {},
+    "VDDSHV4": {},
+    "GPMC0_WEn": {
+      "functions": [
+        {
+          "periph": "GPMC0",
+          "name": "WEn",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "VOUT0",
+          "name": "DATA19",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "MCASP1",
+          "name": "AXR0",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM2",
+          "name": "B",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "SPI3",
+          "name": "CS1",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "TRC",
+          "name": "DATA9",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "34",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "GPMC0_DIR": {
+      "functions": [
+        {
+          "periph": "GPMC0",
+          "name": "DIR",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "VOUT0",
+          "name": "DE",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "D0",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "MCASP2",
+          "name": "AXR13",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "EQEP1",
+          "name": "B",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "TRC",
+          "name": "DATA14",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "40",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "EQEP2",
+          "name": "S",
+          "mux": {
+            "vendor": {
+              "muxmode": 8
+            }
+          }
+        },
+        {
+          "periph": "MCAN1",
+          "name": "TX",
+          "mux": {
+            "vendor": {
+              "muxmode": 9
+            }
+          }
+        }
+      ]
+    },
+    "GPMC0_CSn3": {
+      "functions": [
+        {
+          "periph": "GPMC0",
+          "name": "CSn3",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "I2C2",
+          "name": "SDA",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "WKUP",
+          "name": "CLKOUT0",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "UART4",
+          "name": "TXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "MCASP1",
+          "name": "AXR5",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "ADC",
+          "name": "EXT_TRIGGER1",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "TRC",
+          "name": "DATA18",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "44",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "MCASP1",
+          "name": "ACLKR",
+          "mux": {
+            "vendor": {
+              "muxmode": 8
+            }
+          }
+        }
+      ]
+    },
+    "GPMC0_CSn2": {
+      "functions": [
+        {
+          "periph": "GPMC0",
+          "name": "CSn2",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "I2C2",
+          "name": "SCL",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "MCASP1",
+          "name": "AXR4",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "UART4",
+          "name": "RXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "ADC",
+          "name": "EXT_TRIGGER0",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "VOUT0",
+          "name": "EXTPCLKIN",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "TRC",
+          "name": "DATA17",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "43",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "MCASP1",
+          "name": "AFSR",
+          "mux": {
+            "vendor": {
+              "muxmode": 8
+            }
+          }
+        }
+      ]
+    },
+    "DDR0_A9": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "A9",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DDR0_BA1": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "BA1",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DDR0_BA0": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "BA0",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DDR0_BG1": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "BG1",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DDR0_BG0": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "BG0",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DDR0_A7": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "A7",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "VSS_N7": {},
+    "VDDS_DDR_N8": {},
+    "VSS_N9": {},
+    "VSS_N11": {},
+    "VSS_N13": {},
+    "VDD_CORE_N15": {},
+    "VSS_N16": {},
+    "VDDA_ADC": {},
+    "VPP": {},
+    "GPMC0_ADVn_ALE": {
+      "functions": [
+        {
+          "periph": "GPMC0",
+          "name": "ADVn_ALE",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "VOUT0",
+          "name": "DATA17",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "MCASP1",
+          "name": "AXR2",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM",
+          "name": "TZn_IN1",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "SPI3",
+          "name": "CS3",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "TRC",
+          "name": "DATA7",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "32",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "GPMC0_OEn_REn": {
+      "functions": [
+        {
+          "periph": "GPMC0",
+          "name": "OEn_REn",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "VOUT0",
+          "name": "DATA18",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "MCASP1",
+          "name": "AXR1",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "EHRPWM2",
+          "name": "A",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "SPI3",
+          "name": "CS2",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "TRC",
+          "name": "DATA8",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "33",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "GPMC0_WPn": {
+      "functions": [
+        {
+          "periph": "GPMC0",
+          "name": "WPn",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "VOUT0",
+          "name": "HSYNC",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "CLK",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "UART6",
+          "name": "TXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "EQEP1",
+          "name": "A",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "AUDIO",
+          "name": "EXT_REFCLK1",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "TRC",
+          "name": "DATA13",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "39",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "GPMC0_WAIT1": {
+      "functions": [
+        {
+          "periph": "GPMC0",
+          "name": "WAIT1",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "VOUT0",
+          "name": "DATA23",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "CS1",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "UART6",
+          "name": "RXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "EQEP0",
+          "name": "I",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "SPI3",
+          "name": "D1",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "38",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "EQEP2",
+          "name": "I",
+          "mux": {
+            "vendor": {
+              "muxmode": 8
+            }
+          }
+        },
+        {
+          "periph": "MCAN1",
+          "name": "RX",
+          "mux": {
+            "vendor": {
+              "muxmode": 9
+            }
+          }
+        }
+      ]
+    },
+    "GPMC0_WAIT0": {
+      "functions": [
+        {
+          "periph": "GPMC0",
+          "name": "WAIT0",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "VOUT0",
+          "name": "DATA22",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "MCASP1",
+          "name": "AFSX",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "EQEP0",
+          "name": "S",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "SPI3",
+          "name": "D0",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "TRC",
+          "name": "DATA12",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "37",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "DDR0_CK0": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "CK0",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DDR0_CK0_n": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "CK0_n",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "VDDS_DDR_P8": {},
+    "VSS_P9": {},
+    "VDD_CORE_P10": {},
+    "VDD_CORE_P12": {},
+    "VDD_CORE_P14": {},
+    "VSS_P15": {},
+    "VDDS_WKUP": {},
+    "GPMC0_BE1n": {
+      "functions": [
+        {
+          "periph": "GPMC0",
+          "name": "BE1n",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "VOUT0",
+          "name": "DATA21",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "MCASP2",
+          "name": "AXR12",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "EQEP0",
+          "name": "B",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "SPI3",
+          "name": "CLK",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "TRC",
+          "name": "DATA11",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "36",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "GPMC0_BE0n_CLE": {
+      "functions": [
+        {
+          "periph": "GPMC0",
+          "name": "BE0n_CLE",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "VOUT0",
+          "name": "DATA20",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "MCASP1",
+          "name": "ACLKX",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "EQEP0",
+          "name": "A",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "SPI3",
+          "name": "CS0",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "TRC",
+          "name": "DATA10",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "35",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "VSS_R1": {},
+    "DDR0_A6": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "A6",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "VSS_R8": {},
+    "VDD_CORE_R9": {},
+    "VDD_CORE_R11": {},
+    "VSS_R13": {},
+    "VSS_R15": {},
+    "VDDS_OSC0": {},
+    "MMC2_DAT3": {
+      "functions": [
+        {
+          "periph": "MMC2",
+          "name": "DAT3",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "MCASP1",
+          "name": "AXR3",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "UART5",
+          "name": "RXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "45",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "MMC2_CLK": {
+      "functions": [
+        {
+          "periph": "MMC2",
+          "name": "CLK",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "MCASP1",
+          "name": "ACLKR",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "MCASP1",
+          "name": "AXR5",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "UART6",
+          "name": "RXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "49",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "DDR0_DQ10": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "DQ10",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "VSS_T2": {},
+    "DDR0_DQ9": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "DQ9",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DDR0_A8": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "A8",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DDR0_A10": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "A10",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DDR0_A11": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "A11",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "VSS_T7": {},
+    "VSS_T8": {},
+    "VDDSHV3": {},
+    "VDDA_1P8_USB": {},
+    "VDDS0": {},
+    "CAP_VDDSHV_MMC": {},
+    "VDD_RTC": {},
+    "VDDS_RTC": {},
+    "VSS_T19": {},
+    "MMC2_SDCD": {
+      "functions": [
+        {
+          "periph": "MMC2",
+          "name": "SDCD",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "MCASP1",
+          "name": "ACLKX",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "UART4",
+          "name": "RXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "51",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "MMC2_SDWP": {
+      "functions": [
+        {
+          "periph": "MMC2",
+          "name": "SDWP",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "MCASP1",
+          "name": "AFSX",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "UART4",
+          "name": "TXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "52",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "MMC2_DAT1": {
+      "functions": [
+        {
+          "periph": "MMC2",
+          "name": "DAT1",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "MCASP1",
+          "name": "AXR1",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "47",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "MMC2_DAT2": {
+      "functions": [
+        {
+          "periph": "MMC2",
+          "name": "DAT2",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "MCASP1",
+          "name": "AXR2",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "UART5",
+          "name": "TXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "46",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "DDR0_DQ11": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "DQ11",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DDR0_DQ14": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "DQ14",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DDR0_DQ12": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "DQ12",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "VSS_U7": {},
+    "VSS_U8": {},
+    "CAP_VDDS_MMC1": {},
+    "VSS_U10": {},
+    "VDDA_CORE_USB": {},
+    "VDDA_3P3_USB": {},
+    "VSS_U13": {},
+    "VSS_U14": {},
+    "VSS_U15": {},
+    "VDDA_3P3_SDIO": {},
+    "VSS_U17": {},
+    "VSS_U20": {},
+    "MMC2_DAT0": {
+      "functions": [
+        {
+          "periph": "MMC2",
+          "name": "DAT0",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "MCASP1",
+          "name": "AXR0",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "48",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "MMC2_CMD": {
+      "functions": [
+        {
+          "periph": "MMC2",
+          "name": "CMD",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "MCASP1",
+          "name": "AFSR",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "MCASP1",
+          "name": "AXR4",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "UART6",
+          "name": "TXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "50",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "DDR0_DQS1": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "DQS1",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DDR0_DQS1_n": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "DQS1_n",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "VSS_V3": {},
+    "DDR0_DQ8": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "DQ8",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DDR0_DQ13": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "DQ13",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DDR0_A13": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "A13",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "VSS_V18": {},
+    "VSS_V19": {},
+    "ADC0_AIN0": {
+      "functions": [
+        {
+          "periph": "ADC0",
+          "name": "AIN0",
+          "mux": "analog"
+        }
+      ]
+    },
+    "ADC0_AIN3": {
+      "functions": [
+        {
+          "periph": "ADC0",
+          "name": "AIN3",
+          "mux": "analog"
+        }
+      ]
+    },
+    "ADC0_AIN1": {
+      "functions": [
+        {
+          "periph": "ADC0",
+          "name": "AIN1",
+          "mux": "analog"
+        }
+      ]
+    },
+    "ADC0_AIN2": {
+      "functions": [
+        {
+          "periph": "ADC0",
+          "name": "AIN2",
+          "mux": "analog"
+        }
+      ]
+    },
+    "DDR0_DQ15": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "DQ15",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DDR0_DM1": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "DM1",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "DDR0_A12": {
+      "functions": [
+        {
+          "periph": "DDR0",
+          "name": "A12",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "RGMII1_RD3": {
+      "functions": [
+        {
+          "periph": "RGMII1",
+          "name": "RD3",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "I2C2",
+          "name": "SDA",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "GPMC0",
+          "name": "A6",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "64",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "VSS_W9": {},
+    "VSS_W10": {},
+    "RGMII1_TXC": {
+      "functions": [
+        {
+          "periph": "RGMII1",
+          "name": "TXC",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "RMII1",
+          "name": "CRS_DV",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "54",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "VSS_W12": {},
+    "RGMII1_TD1": {
+      "functions": [
+        {
+          "periph": "RGMII1",
+          "name": "TD1",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "RMII1",
+          "name": "TXD1",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "56",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "VSS_W14": {},
+    "VSS_W15": {},
+    "VSS_W16": {},
+    "VSS_W18": {},
+    "WKUP_UART0_RTSn": {
+      "functions": [
+        {
+          "periph": "WKUP_UART0",
+          "name": "RTSn",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "WKUP",
+          "name": "TIMER_IO1",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "WKUP",
+          "name": "EXT_REFCLK0",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "WKUP_GPIO0",
+          "name": "3",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "WKUP_UART0_CTSn": {
+      "functions": [
+        {
+          "periph": "WKUP_UART0",
+          "name": "CTSn",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "WKUP",
+          "name": "TIMER_IO0",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "WKUP",
+          "name": "OBSCLK0",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "WKUP",
+          "name": "SYSCLKOUT0",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "WKUP_GPIO0",
+          "name": "2",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "VSS_Y1": {},
+    "MMC1_CLK": {
+      "functions": [
+        {
+          "periph": "MMC1",
+          "name": "CLK",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "TIMER",
+          "name": "IO0",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "UART3",
+          "name": "RXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "SPI3",
+          "name": "CS0",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "CS2",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "120",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "MMC1_CMD": {
+      "functions": [
+        {
+          "periph": "MMC1",
+          "name": "CMD",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "TIMER",
+          "name": "IO1",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "UART3",
+          "name": "TXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "SPI3",
+          "name": "CLK",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "CS0",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "121",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "MMC1_DAT1": {
+      "functions": [
+        {
+          "periph": "MMC1",
+          "name": "DAT1",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "CP_GEMAC_CPTS0",
+          "name": "HW1TSPUSH",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "TIMER",
+          "name": "IO2",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "UART2",
+          "name": "RTSn",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "ECAP1",
+          "name": "IN_APWM_OUT",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "SPI3",
+          "name": "CS2",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "D0",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "118",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "RGMII1_RX_CTL": {
+      "functions": [
+        {
+          "periph": "RGMII1",
+          "name": "RX_CTL",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "RMII1",
+          "name": "RX_ER",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "59",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "RGMII1_RXC": {
+      "functions": [
+        {
+          "periph": "RGMII1",
+          "name": "RXC",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "RMII1",
+          "name": "REF_CLK",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "60",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "RGMII1_RD0": {
+      "functions": [
+        {
+          "periph": "RGMII1",
+          "name": "RD0",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "RMII1",
+          "name": "RXD0",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "61",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "RGMII1_TD2": {
+      "functions": [
+        {
+          "periph": "RGMII1",
+          "name": "TD2",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "GPMC0",
+          "name": "A0",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "57",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "RGMII2_TXC": {
+      "functions": [
+        {
+          "periph": "RGMII2",
+          "name": "TXC",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "RMII2",
+          "name": "CRS_DV",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "MCASP2",
+          "name": "AXR5",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "68",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "EMU0": {
+      "functions": [
+        {
+          "periph": "SYS",
+          "name": "EMU0",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        }
+      ]
+    },
+    "TMS": {
+      "functions": [
+        {
+          "periph": "SYS",
+          "name": "TMS",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        }
+      ]
+    },
+    "RTC_PORz": {
+      "functions": [
+        {
+          "periph": "RTC",
+          "name": "PORz",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "VSS_Y20": {},
+    "VSS_Y21": {},
+    "WKUP_UART0_RXD": {
+      "functions": [
+        {
+          "periph": "WKUP_UART0",
+          "name": "RXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "WKUP_GPIO0",
+          "name": "0",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "WKUP_CLKOUT0": {
+      "functions": [
+        {
+          "periph": "WKUP",
+          "name": "CLKOUT0",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "WKUP_GPIO0",
+          "name": "6",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "MMC1_DAT0": {
+      "functions": [
+        {
+          "periph": "MMC1",
+          "name": "DAT0",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "CP_GEMAC_CPTS0",
+          "name": "HW2TSPUSH",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "TIMER",
+          "name": "IO3",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "UART2",
+          "name": "CTSn",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "ECAP2",
+          "name": "IN_APWM_OUT",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "D1",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "119",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "MMC1_DAT2": {
+      "functions": [
+        {
+          "periph": "MMC1",
+          "name": "DAT2",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "CP_GEMAC_CPTS0",
+          "name": "TS_SYNC",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "TIMER",
+          "name": "IO1",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "UART2",
+          "name": "TXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "MCAN1",
+          "name": "TX",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "SPI3",
+          "name": "D1",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "CS3",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "117",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "VSS_AA4": {},
+    "RGMII1_RD1": {
+      "functions": [
+        {
+          "periph": "RGMII1",
+          "name": "RD1",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "RMII1",
+          "name": "RXD1",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "62",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "RGMII1_RD2": {
+      "functions": [
+        {
+          "periph": "RGMII1",
+          "name": "RD2",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "I2C2",
+          "name": "SCL",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "GPMC0",
+          "name": "A5",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "63",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "RGMII1_TD3": {
+      "functions": [
+        {
+          "periph": "RGMII1",
+          "name": "TD3",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "SYS",
+          "name": "CLKOUT0",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "58",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "RGMII2_TD2": {
+      "functions": [
+        {
+          "periph": "RGMII2",
+          "name": "TD2",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "GPMC0",
+          "name": "A1",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "MCASP2",
+          "name": "AFSX",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "SPI3",
+          "name": "D0",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "71",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "EQEP2",
+          "name": "I",
+          "mux": {
+            "vendor": {
+              "muxmode": 8
+            }
+          }
+        }
+      ]
+    },
+    "RGMII2_TD3": {
+      "functions": [
+        {
+          "periph": "RGMII2",
+          "name": "TD3",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "GPMC0",
+          "name": "A2",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "MCASP2",
+          "name": "ACLKX",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "SPI3",
+          "name": "D1",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "72",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "EQEP2",
+          "name": "S",
+          "mux": {
+            "vendor": {
+              "muxmode": 8
+            }
+          }
+        }
+      ]
+    },
+    "EMU1": {
+      "functions": [
+        {
+          "periph": "SYS",
+          "name": "EMU1",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        }
+      ]
+    },
+    "PMIC_LPM_EN0": {
+      "functions": [
+        {
+          "periph": "PMIC",
+          "name": "LPM_EN0",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "VSS_AA20": {},
+    "WKUP_I2C0_SDA": {
+      "functions": [
+        {
+          "periph": "WKUP_I2C0",
+          "name": "SDA",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "WKUP_GPIO0",
+          "name": "5",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "WKUP_UART0_TXD": {
+      "functions": [
+        {
+          "periph": "WKUP_UART0",
+          "name": "TXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "WKUP_GPIO0",
+          "name": "1",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "VSS_AB1": {},
+    "MMC1_DAT3": {
+      "functions": [
+        {
+          "periph": "MMC1",
+          "name": "DAT3",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "CP_GEMAC_CPTS0",
+          "name": "TS_COMP",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "TIMER",
+          "name": "IO0",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "UART2",
+          "name": "RXD",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "MCAN1",
+          "name": "RX",
+          "mux": {
+            "vendor": {
+              "muxmode": 4
+            }
+          }
+        },
+        {
+          "periph": "SPI3",
+          "name": "D0",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "CS1",
+          "mux": {
+            "vendor": {
+              "muxmode": 6
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "116",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "USB0_RCALIB": {
+      "functions": [
+        {
+          "periph": "USB0",
+          "name": "RCALIB",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "USB0_DP": {
+      "functions": [
+        {
+          "periph": "USB0",
+          "name": "DP",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "USB1_DP": {
+      "functions": [
+        {
+          "periph": "USB1",
+          "name": "DP",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "USB1_VBUS": {
+      "functions": [
+        {
+          "periph": "USB1",
+          "name": "VBUS",
+          "mux": "analog"
+        }
+      ]
+    },
+    "VSS_AB7": {},
+    "RGMII2_RD3": {
+      "functions": [
+        {
+          "periph": "RGMII2",
+          "name": "RD3",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "GPMC0",
+          "name": "A4",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "AUDIO",
+          "name": "EXT_REFCLK0",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "SPI3",
+          "name": "CS0",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "78",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "EQEP2",
+          "name": "B",
+          "mux": {
+            "vendor": {
+              "muxmode": 8
+            }
+          }
+        }
+      ]
+    },
+    "RGMII2_RD0": {
+      "functions": [
+        {
+          "periph": "RGMII2",
+          "name": "RD0",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "RMII2",
+          "name": "RXD0",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "MCASP2",
+          "name": "AXR2",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "75",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "RGMII2_RD2": {
+      "functions": [
+        {
+          "periph": "RGMII2",
+          "name": "RD2",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "GPMC0",
+          "name": "A3",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "MCASP2",
+          "name": "AXR0",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "SPI3",
+          "name": "CLK",
+          "mux": {
+            "vendor": {
+              "muxmode": 3
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "77",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        },
+        {
+          "periph": "EQEP2",
+          "name": "A",
+          "mux": {
+            "vendor": {
+              "muxmode": 8
+            }
+          }
+        }
+      ]
+    },
+    "RGMII1_TX_CTL": {
+      "functions": [
+        {
+          "periph": "RGMII1",
+          "name": "TX_CTL",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "RMII1",
+          "name": "TX_EN",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "53",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "RGMII2_TX_CTL": {
+      "functions": [
+        {
+          "periph": "RGMII2",
+          "name": "TX_CTL",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "RMII2",
+          "name": "TX_EN",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "MCASP2",
+          "name": "AXR4",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "67",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "RGMII2_TD1": {
+      "functions": [
+        {
+          "periph": "RGMII2",
+          "name": "TD1",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "RMII2",
+          "name": "TXD1",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "MCASP2",
+          "name": "ACLKR",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "MCASP2",
+          "name": "AXR8",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "70",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "TCK": {
+      "functions": [
+        {
+          "periph": "SYS",
+          "name": "TCK",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        }
+      ]
+    },
+    "TDO": {
+      "functions": [
+        {
+          "periph": "SYS",
+          "name": "TDO",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        }
+      ]
+    },
+    "TRSTn": {
+      "functions": [
+        {
+          "periph": "SYS",
+          "name": "TRSTn",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        }
+      ]
+    },
+    "RSVD0": {},
+    "PORz": {
+      "functions": [
+        {
+          "periph": "SYS",
+          "name": "PORz",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        }
+      ]
+    },
+    "EXT_WAKEUP0": {
+      "functions": [
+        {
+          "periph": "EXT",
+          "name": "WAKEUP0",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "EXT_WAKEUP1": {
+      "functions": [
+        {
+          "periph": "EXT",
+          "name": "WAKEUP1",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "VSS_AB21": {},
+    "WKUP_I2C0_SCL": {
+      "functions": [
+        {
+          "periph": "WKUP_I2C0",
+          "name": "SCL",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "WKUP_GPIO0",
+          "name": "4",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "VSS_AB23": {},
+    "VSS_AC1": {},
+    "VSS_AC2": {},
+    "USB0_VBUS": {
+      "functions": [
+        {
+          "periph": "USB0",
+          "name": "VBUS",
+          "mux": "analog"
+        }
+      ]
+    },
+    "USB0_DM": {
+      "functions": [
+        {
+          "periph": "USB0",
+          "name": "DM",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "USB1_DM": {
+      "functions": [
+        {
+          "periph": "USB1",
+          "name": "DM",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "USB1_RCALIB": {
+      "functions": [
+        {
+          "periph": "USB1",
+          "name": "RCALIB",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "RGMII2_RXC": {
+      "functions": [
+        {
+          "periph": "RGMII2",
+          "name": "RXC",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "RMII2",
+          "name": "REF_CLK",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "MCASP2",
+          "name": "AXR1",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "74",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "RGMII2_RX_CTL": {
+      "functions": [
+        {
+          "periph": "RGMII2",
+          "name": "RX_CTL",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "RMII2",
+          "name": "RX_ER",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "MCASP2",
+          "name": "AXR3",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "73",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "RGMII2_RD1": {
+      "functions": [
+        {
+          "periph": "RGMII2",
+          "name": "RD1",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "RMII2",
+          "name": "RXD1",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "MCASP2",
+          "name": "AFSR",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "MCASP2",
+          "name": "AXR7",
+          "mux": {
+            "vendor": {
+              "muxmode": 5
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "76",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "RGMII1_TD0": {
+      "functions": [
+        {
+          "periph": "RGMII1",
+          "name": "TD0",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "RMII1",
+          "name": "TXD0",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "55",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "VSS_AC11": {},
+    "RGMII2_TD0": {
+      "functions": [
+        {
+          "periph": "RGMII2",
+          "name": "TD0",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "RMII2",
+          "name": "TXD0",
+          "mux": {
+            "vendor": {
+              "muxmode": 1
+            }
+          }
+        },
+        {
+          "periph": "MCASP2",
+          "name": "AXR6",
+          "mux": {
+            "vendor": {
+              "muxmode": 2
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "69",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "MDIO0_MDIO": {
+      "functions": [
+        {
+          "periph": "MDIO0",
+          "name": "MDIO",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "65",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "VSS_AC14": {},
+    "MDIO0_MDC": {
+      "functions": [
+        {
+          "periph": "MDIO0",
+          "name": "MDC",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        },
+        {
+          "periph": "GPIO0",
+          "name": "66",
+          "mux": {
+            "vendor": {
+              "muxmode": 7
+            }
+          }
+        }
+      ]
+    },
+    "TDI": {
+      "functions": [
+        {
+          "periph": "SYS",
+          "name": "TDI",
+          "mux": {
+            "vendor": {
+              "muxmode": 0
+            }
+          }
+        }
+      ]
+    },
+    "WKUP_OSC0_XO": {
+      "functions": [
+        {
+          "periph": "WKUP_OSC0",
+          "name": "XO",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "WKUP_OSC0_XI": {
+      "functions": [
+        {
+          "periph": "WKUP_OSC0",
+          "name": "XI",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "VSS_AC19": {},
+    "LFOSC0_XO": {
+      "functions": [
+        {
+          "periph": "LFOSC0",
+          "name": "XO",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "LFOSC0_XI": {
+      "functions": [
+        {
+          "periph": "LFOSC0",
+          "name": "XI",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "VSS_AC22": {},
+    "VSS_AC23": {}
+  }
+}

@@ -1,0 +1,6220 @@
+{
+  "schema": "pinmap/v1",
+  "kind": "pindef",
+  "meta": {
+    "generated": true
+  },
+  "device": {
+    "name": "STM32H743VIH6",
+    "vendor": "st",
+    "family": "stm32h7"
+  },
+  "packages": {
+    "TFBGA100": {
+      "PC14": "A1",
+      "PC13": "A2",
+      "PE2": "A3",
+      "PB9": "A4",
+      "PB7": "A5",
+      "PB4": "A6",
+      "PB3": "A7",
+      "PA15": "A8",
+      "PA14": "A9",
+      "PA13": "A10",
+      "PC15": "B1",
+      "VBAT": "B2",
+      "PE3": "B3",
+      "PB8": "B4",
+      "PB6": "B5",
+      "PD5": "B6",
+      "PD2": "B7",
+      "PC11": "B8",
+      "PC10": "B9",
+      "PA12": "B10",
+      "PH0": "C1",
+      "VSS_C2": "C2",
+      "PE4": "C3",
+      "PE1": "C4",
+      "PB5": "C5",
+      "PD6": "C6",
+      "PD3": "C7",
+      "PC12": "C8",
+      "PA9": "C9",
+      "PA11": "C10",
+      "PH1": "D1",
+      "VDD_D2": "D2",
+      "PE5": "D3",
+      "PE0": "D4",
+      "BOOT0": "D5",
+      "PD7": "D6",
+      "PD4": "D7",
+      "PD0": "D8",
+      "PA8": "D9",
+      "PA10": "D10",
+      "NRST": "E1",
+      "PC2": "E2",
+      "PE6": "E3",
+      "VSS_E4": "E4",
+      "VSS_E5": "E5",
+      "VSS_E6": "E6",
+      "VCAP_E7": "E7",
+      "PD1": "E8",
+      "PC9": "E9",
+      "PC7": "E10",
+      "PC0": "F1",
+      "PC1": "F2",
+      "PC3": "F3",
+      "VDDLDO": "F4",
+      "VDD_F5": "F5",
+      "VDD33_USB": "F6",
+      "PDR_ON": "F7",
+      "VCAP_F8": "F8",
+      "PC8": "F9",
+      "PC6": "F10",
+      "VSSA": "G1",
+      "PA0": "G2",
+      "PA4": "G3",
+      "PC4": "G4",
+      "PB2": "G5",
+      "PE10": "G6",
+      "PE14": "G7",
+      "PD15": "G8",
+      "PD11": "G9",
+      "PB15": "G10",
+      "VDDA": "H1",
+      "PA1": "H2",
+      "PA5": "H3",
+      "PC5": "H4",
+      "PE7": "H5",
+      "PE11": "H6",
+      "PE15": "H7",
+      "PD14": "H8",
+      "PD10": "H9",
+      "PB14": "H10",
+      "VSS_J1": "J1",
+      "PA2": "J2",
+      "PA6": "J3",
+      "PB0": "J4",
+      "PE8": "J5",
+      "PE12": "J6",
+      "PB10": "J7",
+      "PB13": "J8",
+      "PD9": "J9",
+      "PD13": "J10",
+      "VDD_K1": "K1",
+      "PA3": "K2",
+      "PA7": "K3",
+      "PB1": "K4",
+      "PE9": "K5",
+      "PE13": "K6",
+      "PB11": "K7",
+      "PB12": "K8",
+      "PD8": "K9",
+      "PD12": "K10"
+    }
+  },
+  "pins": {
+    "PC14": {
+      "port": {
+        "bank": "C",
+        "index": 14
+      },
+      "functions": [
+        {
+          "periph": "RCC",
+          "name": "OSC32_IN",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "PC13": {
+      "port": {
+        "bank": "C",
+        "index": 13
+      },
+      "functions": [
+        {
+          "periph": "PWR",
+          "name": "WKUP4",
+          "mux": "fixed"
+        },
+        {
+          "periph": "RTC",
+          "name": "OUT_ALARM",
+          "mux": "fixed"
+        },
+        {
+          "periph": "RTC",
+          "name": "OUT_CALIB",
+          "mux": "fixed"
+        },
+        {
+          "periph": "RTC",
+          "name": "TAMP1",
+          "mux": "fixed"
+        },
+        {
+          "periph": "RTC",
+          "name": "TS",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "PE2": {
+      "port": {
+        "bank": "E",
+        "index": 2
+      },
+      "functions": [
+        {
+          "periph": "DEBUG",
+          "name": "TRACECLK",
+          "mux": {
+            "af": 0
+          }
+        },
+        {
+          "periph": "ETH",
+          "name": "TXD3",
+          "mux": {
+            "af": 11
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "A23",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "QUADSPI",
+          "name": "BK1_IO2",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "SAI1",
+          "name": "CK1",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "SAI1",
+          "name": "MCLK_A",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "SAI4",
+          "name": "CK1",
+          "mux": {
+            "af": 10
+          }
+        },
+        {
+          "periph": "SAI4",
+          "name": "MCLK_A",
+          "mux": {
+            "af": 8
+          }
+        },
+        {
+          "periph": "SPI4",
+          "name": "SCK",
+          "mux": {
+            "af": 5
+          }
+        }
+      ]
+    },
+    "PB9": {
+      "port": {
+        "bank": "B",
+        "index": 9
+      },
+      "functions": [
+        {
+          "periph": "DAC1",
+          "name": "EXTI9",
+          "mux": "analog"
+        },
+        {
+          "periph": "DCMI",
+          "name": "D7",
+          "mux": {
+            "af": 13
+          }
+        },
+        {
+          "periph": "DFSDM1",
+          "name": "DATIN7",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "FDCAN1",
+          "name": "TX",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "I2C1",
+          "name": "SDA",
+          "mux": {
+            "af": 4
+          }
+        },
+        {
+          "periph": "I2C4",
+          "name": "SDA",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "I2C4",
+          "name": "SMBA",
+          "mux": {
+            "af": 11
+          }
+        },
+        {
+          "periph": "I2S2",
+          "name": "WS",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "B7",
+          "mux": {
+            "af": 14
+          }
+        },
+        {
+          "periph": "SDMMC1",
+          "name": "CDIR",
+          "mux": {
+            "af": 7
+          }
+        },
+        {
+          "periph": "SDMMC1",
+          "name": "D5",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "SDMMC2",
+          "name": "D5",
+          "mux": {
+            "af": 10
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "NSS",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "TIM17",
+          "name": "CH1",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "TIM4",
+          "name": "CH4",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "UART4",
+          "name": "TX",
+          "mux": {
+            "af": 8
+          }
+        }
+      ]
+    },
+    "PB7": {
+      "port": {
+        "bank": "B",
+        "index": 7
+      },
+      "functions": [
+        {
+          "periph": "DCMI",
+          "name": "VSYNC",
+          "mux": {
+            "af": 13
+          }
+        },
+        {
+          "periph": "DFSDM1",
+          "name": "CKIN5",
+          "mux": {
+            "af": 11
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "NL",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "HRTIM",
+          "name": "EEV9",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "I2C1",
+          "name": "SDA",
+          "mux": {
+            "af": 4
+          }
+        },
+        {
+          "periph": "I2C4",
+          "name": "SDA",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "LPUART1",
+          "name": "RX",
+          "mux": {
+            "af": 8
+          }
+        },
+        {
+          "periph": "PWR",
+          "name": "PVD_IN",
+          "mux": "fixed"
+        },
+        {
+          "periph": "TIM17",
+          "name": "CH1N",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "TIM4",
+          "name": "CH2",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "USART1",
+          "name": "RX",
+          "mux": {
+            "af": 7
+          }
+        }
+      ]
+    },
+    "PB4": {
+      "port": {
+        "bank": "B",
+        "index": 4
+      },
+      "functions": [
+        {
+          "periph": "DEBUG",
+          "name": "JTRST",
+          "mux": "fixed"
+        },
+        {
+          "periph": "HRTIM",
+          "name": "EEV6",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "I2S1",
+          "name": "SDI",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "I2S2",
+          "name": "WS",
+          "mux": {
+            "af": 7
+          }
+        },
+        {
+          "periph": "I2S3",
+          "name": "SDI",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "SDMMC2",
+          "name": "D3",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "SPI1",
+          "name": "MISO",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "NSS",
+          "mux": {
+            "af": 7
+          }
+        },
+        {
+          "periph": "SPI3",
+          "name": "MISO",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "SPI6",
+          "name": "MISO",
+          "mux": {
+            "af": 8
+          }
+        },
+        {
+          "periph": "TIM16",
+          "name": "BKIN",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "TIM3",
+          "name": "CH1",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "UART7",
+          "name": "TX",
+          "mux": {
+            "af": 11
+          }
+        }
+      ]
+    },
+    "PB3": {
+      "port": {
+        "bank": "B",
+        "index": 3
+      },
+      "functions": [
+        {
+          "periph": "CRS",
+          "name": "SYNC",
+          "mux": {
+            "af": 10
+          }
+        },
+        {
+          "periph": "DEBUG",
+          "name": "JTDO-SWO",
+          "mux": {
+            "af": 0
+          }
+        },
+        {
+          "periph": "HRTIM",
+          "name": "FLT4",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "I2S1",
+          "name": "CK",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "I2S3",
+          "name": "CK",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "SDMMC2",
+          "name": "D2",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "SPI1",
+          "name": "SCK",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "SPI3",
+          "name": "SCK",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "SPI6",
+          "name": "SCK",
+          "mux": {
+            "af": 8
+          }
+        },
+        {
+          "periph": "TIM2",
+          "name": "CH2",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "UART7",
+          "name": "RX",
+          "mux": {
+            "af": 11
+          }
+        }
+      ]
+    },
+    "PA15": {
+      "port": {
+        "bank": "A",
+        "index": 15
+      },
+      "functions": [
+        {
+          "periph": "ADC1",
+          "name": "EXTI15",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC2",
+          "name": "EXTI15",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC3",
+          "name": "EXTI15",
+          "mux": "analog"
+        },
+        {
+          "periph": "SYS",
+          "name": "CEC",
+          "mux": {
+            "af": 4
+          }
+        },
+        {
+          "periph": "DEBUG",
+          "name": "JTDI",
+          "mux": {
+            "af": 0
+          }
+        },
+        {
+          "periph": "HRTIM",
+          "name": "FLT1",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "I2S1",
+          "name": "WS",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "I2S3",
+          "name": "WS",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "SPI1",
+          "name": "NSS",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "SPI3",
+          "name": "NSS",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "SPI6",
+          "name": "NSS",
+          "mux": {
+            "af": 7
+          }
+        },
+        {
+          "periph": "TIM2",
+          "name": "CH1",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "TIM2",
+          "name": "ETR",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "UART4",
+          "name": "DE",
+          "mux": {
+            "af": 8
+          }
+        },
+        {
+          "periph": "UART4",
+          "name": "RTS",
+          "mux": {
+            "af": 8
+          }
+        },
+        {
+          "periph": "UART7",
+          "name": "TX",
+          "mux": {
+            "af": 11
+          }
+        }
+      ]
+    },
+    "PA14": {
+      "port": {
+        "bank": "A",
+        "index": 14
+      },
+      "functions": [
+        {
+          "periph": "DEBUG",
+          "name": "JTCK-SWCLK",
+          "mux": {
+            "af": 0
+          }
+        }
+      ]
+    },
+    "PA13": {
+      "port": {
+        "bank": "A",
+        "index": 13
+      },
+      "functions": [
+        {
+          "periph": "DEBUG",
+          "name": "JTMS-SWDIO",
+          "mux": {
+            "af": 0
+          }
+        }
+      ]
+    },
+    "PC15": {
+      "port": {
+        "bank": "C",
+        "index": 15
+      },
+      "functions": [
+        {
+          "periph": "ADC1",
+          "name": "EXTI15",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC2",
+          "name": "EXTI15",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC3",
+          "name": "EXTI15",
+          "mux": "analog"
+        },
+        {
+          "periph": "RCC",
+          "name": "OSC32_OUT",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "VBAT": {},
+    "PE3": {
+      "port": {
+        "bank": "E",
+        "index": 3
+      },
+      "functions": [
+        {
+          "periph": "DEBUG",
+          "name": "TRACED0",
+          "mux": {
+            "af": 0
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "A19",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "SAI1",
+          "name": "SD_B",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "SAI4",
+          "name": "SD_B",
+          "mux": {
+            "af": 8
+          }
+        },
+        {
+          "periph": "TIM15",
+          "name": "BKIN",
+          "mux": {
+            "af": 4
+          }
+        }
+      ]
+    },
+    "PB8": {
+      "port": {
+        "bank": "B",
+        "index": 8
+      },
+      "functions": [
+        {
+          "periph": "DCMI",
+          "name": "D6",
+          "mux": {
+            "af": 13
+          }
+        },
+        {
+          "periph": "DFSDM1",
+          "name": "CKIN7",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "ETH",
+          "name": "TXD3",
+          "mux": {
+            "af": 11
+          }
+        },
+        {
+          "periph": "FDCAN1",
+          "name": "RX",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "I2C1",
+          "name": "SCL",
+          "mux": {
+            "af": 4
+          }
+        },
+        {
+          "periph": "I2C4",
+          "name": "SCL",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "B6",
+          "mux": {
+            "af": 14
+          }
+        },
+        {
+          "periph": "SDMMC1",
+          "name": "CKIN",
+          "mux": {
+            "af": 7
+          }
+        },
+        {
+          "periph": "SDMMC1",
+          "name": "D4",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "SDMMC2",
+          "name": "D4",
+          "mux": {
+            "af": 10
+          }
+        },
+        {
+          "periph": "TIM16",
+          "name": "CH1",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "TIM4",
+          "name": "CH3",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "UART4",
+          "name": "RX",
+          "mux": {
+            "af": 8
+          }
+        }
+      ]
+    },
+    "PB6": {
+      "port": {
+        "bank": "B",
+        "index": 6
+      },
+      "functions": [
+        {
+          "periph": "SYS",
+          "name": "CEC",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "DCMI",
+          "name": "D5",
+          "mux": {
+            "af": 13
+          }
+        },
+        {
+          "periph": "DFSDM1",
+          "name": "DATIN5",
+          "mux": {
+            "af": 11
+          }
+        },
+        {
+          "periph": "FDCAN2",
+          "name": "TX",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "SDNE1",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "HRTIM",
+          "name": "EEV8",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "I2C1",
+          "name": "SCL",
+          "mux": {
+            "af": 4
+          }
+        },
+        {
+          "periph": "I2C4",
+          "name": "SCL",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "LPUART1",
+          "name": "TX",
+          "mux": {
+            "af": 8
+          }
+        },
+        {
+          "periph": "QUADSPI",
+          "name": "BK1_NCS",
+          "mux": {
+            "af": 10
+          }
+        },
+        {
+          "periph": "TIM16",
+          "name": "CH1N",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "TIM4",
+          "name": "CH1",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "UART5",
+          "name": "TX",
+          "mux": {
+            "af": 14
+          }
+        },
+        {
+          "periph": "USART1",
+          "name": "TX",
+          "mux": {
+            "af": 7
+          }
+        }
+      ]
+    },
+    "PD5": {
+      "port": {
+        "bank": "D",
+        "index": 5
+      },
+      "functions": [
+        {
+          "periph": "FMC",
+          "name": "NWE",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "HRTIM",
+          "name": "EEV3",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "USART2",
+          "name": "TX",
+          "mux": {
+            "af": 7
+          }
+        }
+      ]
+    },
+    "PD2": {
+      "port": {
+        "bank": "D",
+        "index": 2
+      },
+      "functions": [
+        {
+          "periph": "DCMI",
+          "name": "D11",
+          "mux": {
+            "af": 13
+          }
+        },
+        {
+          "periph": "DEBUG",
+          "name": "TRACED2",
+          "mux": {
+            "af": 0
+          }
+        },
+        {
+          "periph": "SDMMC1",
+          "name": "CMD",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "TIM3",
+          "name": "ETR",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "UART5",
+          "name": "RX",
+          "mux": {
+            "af": 8
+          }
+        }
+      ]
+    },
+    "PC11": {
+      "port": {
+        "bank": "C",
+        "index": 11
+      },
+      "functions": [
+        {
+          "periph": "ADC1",
+          "name": "EXTI11",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC2",
+          "name": "EXTI11",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC3",
+          "name": "EXTI11",
+          "mux": "analog"
+        },
+        {
+          "periph": "DCMI",
+          "name": "D4",
+          "mux": {
+            "af": 13
+          }
+        },
+        {
+          "periph": "DFSDM1",
+          "name": "DATIN5",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "HRTIM",
+          "name": "FLT2",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "I2S3",
+          "name": "SDI",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "QUADSPI",
+          "name": "BK2_NCS",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "SDMMC1",
+          "name": "D3",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "SPI3",
+          "name": "MISO",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "UART4",
+          "name": "RX",
+          "mux": {
+            "af": 8
+          }
+        },
+        {
+          "periph": "USART3",
+          "name": "RX",
+          "mux": {
+            "af": 7
+          }
+        }
+      ]
+    },
+    "PC10": {
+      "port": {
+        "bank": "C",
+        "index": 10
+      },
+      "functions": [
+        {
+          "periph": "DCMI",
+          "name": "D8",
+          "mux": {
+            "af": 13
+          }
+        },
+        {
+          "periph": "DFSDM1",
+          "name": "CKIN5",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "HRTIM",
+          "name": "EEV1",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "I2S3",
+          "name": "CK",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "R2",
+          "mux": {
+            "af": 14
+          }
+        },
+        {
+          "periph": "QUADSPI",
+          "name": "BK1_IO1",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "SDMMC1",
+          "name": "D2",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "SPI3",
+          "name": "SCK",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "UART4",
+          "name": "TX",
+          "mux": {
+            "af": 8
+          }
+        },
+        {
+          "periph": "USART3",
+          "name": "TX",
+          "mux": {
+            "af": 7
+          }
+        }
+      ]
+    },
+    "PA12": {
+      "port": {
+        "bank": "A",
+        "index": 12
+      },
+      "functions": [
+        {
+          "periph": "FDCAN1",
+          "name": "TX",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "HRTIM",
+          "name": "CHD2",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "I2S2",
+          "name": "CK",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "LPUART1",
+          "name": "DE",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "LPUART1",
+          "name": "RTS",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "R5",
+          "mux": {
+            "af": 14
+          }
+        },
+        {
+          "periph": "SAI2",
+          "name": "FS_B",
+          "mux": {
+            "af": 8
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "SCK",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "TIM1",
+          "name": "ETR",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "UART4",
+          "name": "TX",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "USART1",
+          "name": "DE",
+          "mux": {
+            "af": 7
+          }
+        },
+        {
+          "periph": "USART1",
+          "name": "RTS",
+          "mux": {
+            "af": 7
+          }
+        },
+        {
+          "periph": "USB_OTG_FS",
+          "name": "DP",
+          "mux": {
+            "af": 10
+          }
+        }
+      ]
+    },
+    "PH0": {
+      "port": {
+        "bank": "H",
+        "index": 0
+      },
+      "functions": [
+        {
+          "periph": "RCC",
+          "name": "OSC_IN",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "VSS_C2": {},
+    "PE4": {
+      "port": {
+        "bank": "E",
+        "index": 4
+      },
+      "functions": [
+        {
+          "periph": "DCMI",
+          "name": "D4",
+          "mux": {
+            "af": 13
+          }
+        },
+        {
+          "periph": "DEBUG",
+          "name": "TRACED1",
+          "mux": {
+            "af": 0
+          }
+        },
+        {
+          "periph": "DFSDM1",
+          "name": "DATIN3",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "A20",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "B0",
+          "mux": {
+            "af": 14
+          }
+        },
+        {
+          "periph": "SAI1",
+          "name": "D2",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "SAI1",
+          "name": "FS_A",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "SAI4",
+          "name": "D2",
+          "mux": {
+            "af": 10
+          }
+        },
+        {
+          "periph": "SAI4",
+          "name": "FS_A",
+          "mux": {
+            "af": 8
+          }
+        },
+        {
+          "periph": "SPI4",
+          "name": "NSS",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "TIM15",
+          "name": "CH1N",
+          "mux": {
+            "af": 4
+          }
+        }
+      ]
+    },
+    "PE1": {
+      "port": {
+        "bank": "E",
+        "index": 1
+      },
+      "functions": [
+        {
+          "periph": "DCMI",
+          "name": "D3",
+          "mux": {
+            "af": 13
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "NBL1",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "HRTIM",
+          "name": "SCOUT",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "LPTIM1",
+          "name": "IN2",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "UART8",
+          "name": "TX",
+          "mux": {
+            "af": 8
+          }
+        }
+      ]
+    },
+    "PB5": {
+      "port": {
+        "bank": "B",
+        "index": 5
+      },
+      "functions": [
+        {
+          "periph": "DCMI",
+          "name": "D10",
+          "mux": {
+            "af": 13
+          }
+        },
+        {
+          "periph": "ETH",
+          "name": "PPS_OUT",
+          "mux": {
+            "af": 11
+          }
+        },
+        {
+          "periph": "FDCAN2",
+          "name": "RX",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "SDCKE1",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "HRTIM",
+          "name": "EEV7",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "I2C1",
+          "name": "SMBA",
+          "mux": {
+            "af": 4
+          }
+        },
+        {
+          "periph": "I2C4",
+          "name": "SMBA",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "I2S1",
+          "name": "SDO",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "I2S3",
+          "name": "SDO",
+          "mux": {
+            "af": 7
+          }
+        },
+        {
+          "periph": "SPI1",
+          "name": "MOSI",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "SPI3",
+          "name": "MOSI",
+          "mux": {
+            "af": 7
+          }
+        },
+        {
+          "periph": "SPI6",
+          "name": "MOSI",
+          "mux": {
+            "af": 8
+          }
+        },
+        {
+          "periph": "TIM17",
+          "name": "BKIN",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "TIM3",
+          "name": "CH2",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "UART5",
+          "name": "RX",
+          "mux": {
+            "af": 14
+          }
+        },
+        {
+          "periph": "USB_OTG_HS",
+          "name": "ULPI_D7",
+          "mux": {
+            "af": 10
+          }
+        }
+      ]
+    },
+    "PD6": {
+      "port": {
+        "bank": "D",
+        "index": 6
+      },
+      "functions": [
+        {
+          "periph": "DCMI",
+          "name": "D10",
+          "mux": {
+            "af": 13
+          }
+        },
+        {
+          "periph": "DFSDM1",
+          "name": "CKIN4",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "DFSDM1",
+          "name": "DATIN1",
+          "mux": {
+            "af": 4
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "NWAIT",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "I2S3",
+          "name": "SDO",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "B2",
+          "mux": {
+            "af": 14
+          }
+        },
+        {
+          "periph": "SAI1",
+          "name": "D1",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "SAI1",
+          "name": "SD_A",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "SAI4",
+          "name": "D1",
+          "mux": {
+            "af": 10
+          }
+        },
+        {
+          "periph": "SAI4",
+          "name": "SD_A",
+          "mux": {
+            "af": 8
+          }
+        },
+        {
+          "periph": "SDMMC2",
+          "name": "CK",
+          "mux": {
+            "af": 11
+          }
+        },
+        {
+          "periph": "SPI3",
+          "name": "MOSI",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "USART2",
+          "name": "RX",
+          "mux": {
+            "af": 7
+          }
+        }
+      ]
+    },
+    "PD3": {
+      "port": {
+        "bank": "D",
+        "index": 3
+      },
+      "functions": [
+        {
+          "periph": "DCMI",
+          "name": "D5",
+          "mux": {
+            "af": 13
+          }
+        },
+        {
+          "periph": "DFSDM1",
+          "name": "CKOUT",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "CLK",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "I2S2",
+          "name": "CK",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "G7",
+          "mux": {
+            "af": 14
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "SCK",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "USART2",
+          "name": "CTS",
+          "mux": {
+            "af": 7
+          }
+        },
+        {
+          "periph": "USART2",
+          "name": "NSS",
+          "mux": {
+            "af": 7
+          }
+        }
+      ]
+    },
+    "PC12": {
+      "port": {
+        "bank": "C",
+        "index": 12
+      },
+      "functions": [
+        {
+          "periph": "DCMI",
+          "name": "D9",
+          "mux": {
+            "af": 13
+          }
+        },
+        {
+          "periph": "DEBUG",
+          "name": "TRACED3",
+          "mux": {
+            "af": 0
+          }
+        },
+        {
+          "periph": "HRTIM",
+          "name": "EEV2",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "I2S3",
+          "name": "SDO",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "SDMMC1",
+          "name": "CK",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "SPI3",
+          "name": "MOSI",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "UART5",
+          "name": "TX",
+          "mux": {
+            "af": 8
+          }
+        },
+        {
+          "periph": "USART3",
+          "name": "CK",
+          "mux": {
+            "af": 7
+          }
+        }
+      ]
+    },
+    "PA9": {
+      "port": {
+        "bank": "A",
+        "index": 9
+      },
+      "functions": [
+        {
+          "periph": "DAC1",
+          "name": "EXTI9",
+          "mux": "analog"
+        },
+        {
+          "periph": "DCMI",
+          "name": "D0",
+          "mux": {
+            "af": 13
+          }
+        },
+        {
+          "periph": "ETH",
+          "name": "TX_ER",
+          "mux": {
+            "af": 11
+          }
+        },
+        {
+          "periph": "HRTIM",
+          "name": "CHC1",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "I2C3",
+          "name": "SMBA",
+          "mux": {
+            "af": 4
+          }
+        },
+        {
+          "periph": "I2S2",
+          "name": "CK",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "LPUART1",
+          "name": "TX",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "R5",
+          "mux": {
+            "af": 14
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "SCK",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "TIM1",
+          "name": "CH2",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "USART1",
+          "name": "TX",
+          "mux": {
+            "af": 7
+          }
+        },
+        {
+          "periph": "USB_OTG_FS",
+          "name": "VBUS",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "PA11": {
+      "port": {
+        "bank": "A",
+        "index": 11
+      },
+      "functions": [
+        {
+          "periph": "ADC1",
+          "name": "EXTI11",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC2",
+          "name": "EXTI11",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC3",
+          "name": "EXTI11",
+          "mux": "analog"
+        },
+        {
+          "periph": "FDCAN1",
+          "name": "RX",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "HRTIM",
+          "name": "CHD1",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "I2S2",
+          "name": "WS",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "LPUART1",
+          "name": "CTS",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "R4",
+          "mux": {
+            "af": 14
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "NSS",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "TIM1",
+          "name": "CH4",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "UART4",
+          "name": "RX",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "USART1",
+          "name": "CTS",
+          "mux": {
+            "af": 7
+          }
+        },
+        {
+          "periph": "USART1",
+          "name": "NSS",
+          "mux": {
+            "af": 7
+          }
+        },
+        {
+          "periph": "USB_OTG_FS",
+          "name": "DM",
+          "mux": {
+            "af": 10
+          }
+        }
+      ]
+    },
+    "PH1": {
+      "port": {
+        "bank": "H",
+        "index": 1
+      },
+      "functions": [
+        {
+          "periph": "RCC",
+          "name": "OSC_OUT",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "VDD_D2": {},
+    "PE5": {
+      "port": {
+        "bank": "E",
+        "index": 5
+      },
+      "functions": [
+        {
+          "periph": "DCMI",
+          "name": "D6",
+          "mux": {
+            "af": 13
+          }
+        },
+        {
+          "periph": "DEBUG",
+          "name": "TRACED2",
+          "mux": {
+            "af": 0
+          }
+        },
+        {
+          "periph": "DFSDM1",
+          "name": "CKIN3",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "A21",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "G0",
+          "mux": {
+            "af": 14
+          }
+        },
+        {
+          "periph": "SAI1",
+          "name": "CK2",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "SAI1",
+          "name": "SCK_A",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "SAI4",
+          "name": "CK2",
+          "mux": {
+            "af": 10
+          }
+        },
+        {
+          "periph": "SAI4",
+          "name": "SCK_A",
+          "mux": {
+            "af": 8
+          }
+        },
+        {
+          "periph": "SPI4",
+          "name": "MISO",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "TIM15",
+          "name": "CH1",
+          "mux": {
+            "af": 4
+          }
+        }
+      ]
+    },
+    "PE0": {
+      "port": {
+        "bank": "E",
+        "index": 0
+      },
+      "functions": [
+        {
+          "periph": "DCMI",
+          "name": "D2",
+          "mux": {
+            "af": 13
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "NBL0",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "HRTIM",
+          "name": "SCIN",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "LPTIM1",
+          "name": "ETR",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "LPTIM2",
+          "name": "ETR",
+          "mux": {
+            "af": 4
+          }
+        },
+        {
+          "periph": "SAI2",
+          "name": "MCLK_A",
+          "mux": {
+            "af": 10
+          }
+        },
+        {
+          "periph": "TIM4",
+          "name": "ETR",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "UART8",
+          "name": "RX",
+          "mux": {
+            "af": 8
+          }
+        }
+      ]
+    },
+    "BOOT0": {},
+    "PD7": {
+      "port": {
+        "bank": "D",
+        "index": 7
+      },
+      "functions": [
+        {
+          "periph": "DFSDM1",
+          "name": "CKIN1",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "DFSDM1",
+          "name": "DATIN4",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "NE1",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "I2S1",
+          "name": "SDO",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "SDMMC2",
+          "name": "CMD",
+          "mux": {
+            "af": 11
+          }
+        },
+        {
+          "periph": "SPDIFRX1",
+          "name": "IN0",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "SPI1",
+          "name": "MOSI",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "USART2",
+          "name": "CK",
+          "mux": {
+            "af": 7
+          }
+        }
+      ]
+    },
+    "PD4": {
+      "port": {
+        "bank": "D",
+        "index": 4
+      },
+      "functions": [
+        {
+          "periph": "FMC",
+          "name": "NOE",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "HRTIM",
+          "name": "FLT3",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "SAI3",
+          "name": "FS_A",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "USART2",
+          "name": "DE",
+          "mux": {
+            "af": 7
+          }
+        },
+        {
+          "periph": "USART2",
+          "name": "RTS",
+          "mux": {
+            "af": 7
+          }
+        }
+      ]
+    },
+    "PD0": {
+      "port": {
+        "bank": "D",
+        "index": 0
+      },
+      "functions": [
+        {
+          "periph": "DFSDM1",
+          "name": "CKIN6",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "FDCAN1",
+          "name": "RX",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "D2",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "DA2",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "SAI3",
+          "name": "SCK_A",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "UART4",
+          "name": "RX",
+          "mux": {
+            "af": 8
+          }
+        }
+      ]
+    },
+    "PA8": {
+      "port": {
+        "bank": "A",
+        "index": 8
+      },
+      "functions": [
+        {
+          "periph": "HRTIM",
+          "name": "CHB2",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "I2C3",
+          "name": "SCL",
+          "mux": {
+            "af": 4
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "B3",
+          "mux": {
+            "af": 13
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "R6",
+          "mux": {
+            "af": 14
+          }
+        },
+        {
+          "periph": "RCC",
+          "name": "MCO_1",
+          "mux": {
+            "af": 0
+          }
+        },
+        {
+          "periph": "TIM1",
+          "name": "CH1",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "TIM8",
+          "name": "BKIN2",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "TIM8",
+          "name": "BKIN2_COMP1",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "TIM8",
+          "name": "BKIN2_COMP2",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "UART7",
+          "name": "RX",
+          "mux": {
+            "af": 11
+          }
+        },
+        {
+          "periph": "USART1",
+          "name": "CK",
+          "mux": {
+            "af": 7
+          }
+        },
+        {
+          "periph": "USB_OTG_FS",
+          "name": "SOF",
+          "mux": {
+            "af": 10
+          }
+        }
+      ]
+    },
+    "PA10": {
+      "port": {
+        "bank": "A",
+        "index": 10
+      },
+      "functions": [
+        {
+          "periph": "DCMI",
+          "name": "D1",
+          "mux": {
+            "af": 13
+          }
+        },
+        {
+          "periph": "HRTIM",
+          "name": "CHC2",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "LPUART1",
+          "name": "RX",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "B1",
+          "mux": {
+            "af": 14
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "B4",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "MDIOS",
+          "name": "MDIO",
+          "mux": {
+            "af": 11
+          }
+        },
+        {
+          "periph": "TIM1",
+          "name": "CH3",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "USART1",
+          "name": "RX",
+          "mux": {
+            "af": 7
+          }
+        },
+        {
+          "periph": "USB_OTG_FS",
+          "name": "ID",
+          "mux": {
+            "af": 10
+          }
+        }
+      ]
+    },
+    "NRST": {},
+    "PC2": {
+      "port": {
+        "bank": "C",
+        "index": 2
+      },
+      "functions": [
+        {
+          "periph": "ADC3",
+          "name": "INN1",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC3",
+          "name": "INP0",
+          "mux": "analog"
+        },
+        {
+          "periph": "DFSDM1",
+          "name": "CKIN1",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "DFSDM1",
+          "name": "CKOUT",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "ETH",
+          "name": "TXD2",
+          "mux": {
+            "af": 11
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "SDNE0",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "I2S2",
+          "name": "SDI",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "PWR",
+          "name": "CSTOP",
+          "mux": "fixed"
+        },
+        {
+          "periph": "SPI2",
+          "name": "MISO",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "USB_OTG_HS",
+          "name": "ULPI_DIR",
+          "mux": {
+            "af": 10
+          }
+        }
+      ]
+    },
+    "PE6": {
+      "port": {
+        "bank": "E",
+        "index": 6
+      },
+      "functions": [
+        {
+          "periph": "DCMI",
+          "name": "D7",
+          "mux": {
+            "af": 13
+          }
+        },
+        {
+          "periph": "DEBUG",
+          "name": "TRACED3",
+          "mux": {
+            "af": 0
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "A22",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "G1",
+          "mux": {
+            "af": 14
+          }
+        },
+        {
+          "periph": "SAI1",
+          "name": "D1",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "SAI1",
+          "name": "SD_A",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "SAI2",
+          "name": "MCLK_B",
+          "mux": {
+            "af": 10
+          }
+        },
+        {
+          "periph": "SAI4",
+          "name": "D1",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "SAI4",
+          "name": "SD_A",
+          "mux": {
+            "af": 8
+          }
+        },
+        {
+          "periph": "SPI4",
+          "name": "MOSI",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "TIM15",
+          "name": "CH2",
+          "mux": {
+            "af": 4
+          }
+        },
+        {
+          "periph": "TIM1",
+          "name": "BKIN2",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "TIM1",
+          "name": "BKIN2_COMP1",
+          "mux": {
+            "af": 11
+          }
+        },
+        {
+          "periph": "TIM1",
+          "name": "BKIN2_COMP2",
+          "mux": {
+            "af": 11
+          }
+        }
+      ]
+    },
+    "VSS_E4": {},
+    "VSS_E5": {},
+    "VSS_E6": {},
+    "VCAP_E7": {},
+    "PD1": {
+      "port": {
+        "bank": "D",
+        "index": 1
+      },
+      "functions": [
+        {
+          "periph": "DFSDM1",
+          "name": "DATIN6",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "FDCAN1",
+          "name": "TX",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "D3",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "DA3",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "SAI3",
+          "name": "SD_A",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "UART4",
+          "name": "TX",
+          "mux": {
+            "af": 8
+          }
+        }
+      ]
+    },
+    "PC9": {
+      "port": {
+        "bank": "C",
+        "index": 9
+      },
+      "functions": [
+        {
+          "periph": "DAC1",
+          "name": "EXTI9",
+          "mux": "analog"
+        },
+        {
+          "periph": "DCMI",
+          "name": "D3",
+          "mux": {
+            "af": 13
+          }
+        },
+        {
+          "periph": "I2C3",
+          "name": "SDA",
+          "mux": {
+            "af": 4
+          }
+        },
+        {
+          "periph": "I2S",
+          "name": "CKIN",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "B2",
+          "mux": {
+            "af": 14
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "G3",
+          "mux": {
+            "af": 10
+          }
+        },
+        {
+          "periph": "QUADSPI",
+          "name": "BK1_IO0",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "RCC",
+          "name": "MCO_2",
+          "mux": {
+            "af": 0
+          }
+        },
+        {
+          "periph": "SDMMC1",
+          "name": "D1",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "SWPMI1",
+          "name": "SUSPEND",
+          "mux": {
+            "af": 11
+          }
+        },
+        {
+          "periph": "TIM3",
+          "name": "CH4",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "TIM8",
+          "name": "CH4",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "UART5",
+          "name": "CTS",
+          "mux": {
+            "af": 8
+          }
+        }
+      ]
+    },
+    "PC7": {
+      "port": {
+        "bank": "C",
+        "index": 7
+      },
+      "functions": [
+        {
+          "periph": "DCMI",
+          "name": "D1",
+          "mux": {
+            "af": 13
+          }
+        },
+        {
+          "periph": "DEBUG",
+          "name": "TRGIO",
+          "mux": {
+            "af": 0
+          }
+        },
+        {
+          "periph": "DFSDM1",
+          "name": "DATIN3",
+          "mux": {
+            "af": 4
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "NE1",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "HRTIM",
+          "name": "CHA2",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "I2S3",
+          "name": "MCK",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "G6",
+          "mux": {
+            "af": 14
+          }
+        },
+        {
+          "periph": "SDMMC1",
+          "name": "D123DIR",
+          "mux": {
+            "af": 8
+          }
+        },
+        {
+          "periph": "SDMMC1",
+          "name": "D7",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "SDMMC2",
+          "name": "D7",
+          "mux": {
+            "af": 10
+          }
+        },
+        {
+          "periph": "SWPMI1",
+          "name": "TX",
+          "mux": {
+            "af": 11
+          }
+        },
+        {
+          "periph": "TIM3",
+          "name": "CH2",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "TIM8",
+          "name": "CH2",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "USART6",
+          "name": "RX",
+          "mux": {
+            "af": 7
+          }
+        }
+      ]
+    },
+    "PC0": {
+      "port": {
+        "bank": "C",
+        "index": 0
+      },
+      "functions": [
+        {
+          "periph": "ADC1",
+          "name": "INP10",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC2",
+          "name": "INP10",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC3",
+          "name": "INP10",
+          "mux": "analog"
+        },
+        {
+          "periph": "DFSDM1",
+          "name": "CKIN0",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "DFSDM1",
+          "name": "DATIN4",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "SDNWE",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "R5",
+          "mux": {
+            "af": 14
+          }
+        },
+        {
+          "periph": "SAI2",
+          "name": "FS_B",
+          "mux": {
+            "af": 8
+          }
+        },
+        {
+          "periph": "USB_OTG_HS",
+          "name": "ULPI_STP",
+          "mux": {
+            "af": 10
+          }
+        }
+      ]
+    },
+    "PC1": {
+      "port": {
+        "bank": "C",
+        "index": 1
+      },
+      "functions": [
+        {
+          "periph": "ADC1",
+          "name": "INN10",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC1",
+          "name": "INP11",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC2",
+          "name": "INN10",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC2",
+          "name": "INP11",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC3",
+          "name": "INN10",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC3",
+          "name": "INP11",
+          "mux": "analog"
+        },
+        {
+          "periph": "DEBUG",
+          "name": "TRACED0",
+          "mux": {
+            "af": 0
+          }
+        },
+        {
+          "periph": "DFSDM1",
+          "name": "CKIN4",
+          "mux": {
+            "af": 4
+          }
+        },
+        {
+          "periph": "DFSDM1",
+          "name": "DATIN0",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "ETH",
+          "name": "MDC",
+          "mux": {
+            "af": 11
+          }
+        },
+        {
+          "periph": "I2S2",
+          "name": "SDO",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "MDIOS",
+          "name": "MDC",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "PWR",
+          "name": "WKUP6",
+          "mux": "fixed"
+        },
+        {
+          "periph": "RTC",
+          "name": "TAMP3",
+          "mux": "fixed"
+        },
+        {
+          "periph": "SAI1",
+          "name": "D1",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "SAI1",
+          "name": "SD_A",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "SAI4",
+          "name": "D1",
+          "mux": {
+            "af": 10
+          }
+        },
+        {
+          "periph": "SAI4",
+          "name": "SD_A",
+          "mux": {
+            "af": 8
+          }
+        },
+        {
+          "periph": "SDMMC2",
+          "name": "CK",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "MOSI",
+          "mux": {
+            "af": 5
+          }
+        }
+      ]
+    },
+    "PC3": {
+      "port": {
+        "bank": "C",
+        "index": 3
+      },
+      "functions": [
+        {
+          "periph": "ADC3",
+          "name": "INP1",
+          "mux": "analog"
+        },
+        {
+          "periph": "DFSDM1",
+          "name": "DATIN1",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "ETH",
+          "name": "TX_CLK",
+          "mux": {
+            "af": 11
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "SDCKE0",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "I2S2",
+          "name": "SDO",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "PWR",
+          "name": "CSLEEP",
+          "mux": "fixed"
+        },
+        {
+          "periph": "SPI2",
+          "name": "MOSI",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "USB_OTG_HS",
+          "name": "ULPI_NXT",
+          "mux": {
+            "af": 10
+          }
+        }
+      ]
+    },
+    "VDDLDO": {},
+    "VDD_F5": {},
+    "VDD33_USB": {},
+    "PDR_ON": {},
+    "VCAP_F8": {},
+    "PC8": {
+      "port": {
+        "bank": "C",
+        "index": 8
+      },
+      "functions": [
+        {
+          "periph": "DCMI",
+          "name": "D2",
+          "mux": {
+            "af": 13
+          }
+        },
+        {
+          "periph": "DEBUG",
+          "name": "TRACED1",
+          "mux": {
+            "af": 0
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "NCE",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "NE2",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "HRTIM",
+          "name": "CHB1",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "SDMMC1",
+          "name": "D0",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "SWPMI1",
+          "name": "RX",
+          "mux": {
+            "af": 11
+          }
+        },
+        {
+          "periph": "TIM3",
+          "name": "CH3",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "TIM8",
+          "name": "CH3",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "UART5",
+          "name": "DE",
+          "mux": {
+            "af": 8
+          }
+        },
+        {
+          "periph": "UART5",
+          "name": "RTS",
+          "mux": {
+            "af": 8
+          }
+        },
+        {
+          "periph": "USART6",
+          "name": "CK",
+          "mux": {
+            "af": 7
+          }
+        }
+      ]
+    },
+    "PC6": {
+      "port": {
+        "bank": "C",
+        "index": 6
+      },
+      "functions": [
+        {
+          "periph": "DCMI",
+          "name": "D0",
+          "mux": {
+            "af": 13
+          }
+        },
+        {
+          "periph": "DFSDM1",
+          "name": "CKIN3",
+          "mux": {
+            "af": 4
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "NWAIT",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "HRTIM",
+          "name": "CHA1",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "I2S2",
+          "name": "MCK",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "HSYNC",
+          "mux": {
+            "af": 14
+          }
+        },
+        {
+          "periph": "SDMMC1",
+          "name": "D0DIR",
+          "mux": {
+            "af": 8
+          }
+        },
+        {
+          "periph": "SDMMC1",
+          "name": "D6",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "SDMMC2",
+          "name": "D6",
+          "mux": {
+            "af": 10
+          }
+        },
+        {
+          "periph": "SWPMI1",
+          "name": "IO",
+          "mux": "fixed"
+        },
+        {
+          "periph": "TIM3",
+          "name": "CH1",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "TIM8",
+          "name": "CH1",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "USART6",
+          "name": "TX",
+          "mux": {
+            "af": 7
+          }
+        }
+      ]
+    },
+    "VSSA": {},
+    "PA0": {
+      "port": {
+        "bank": "A",
+        "index": 0
+      },
+      "functions": [
+        {
+          "periph": "ADC1",
+          "name": "INP16",
+          "mux": "analog"
+        },
+        {
+          "periph": "ETH",
+          "name": "CRS",
+          "mux": {
+            "af": 11
+          }
+        },
+        {
+          "periph": "PWR",
+          "name": "WKUP1",
+          "mux": "fixed"
+        },
+        {
+          "periph": "SAI2",
+          "name": "SD_B",
+          "mux": {
+            "af": 10
+          }
+        },
+        {
+          "periph": "SDMMC2",
+          "name": "CMD",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "TIM15",
+          "name": "BKIN",
+          "mux": {
+            "af": 4
+          }
+        },
+        {
+          "periph": "TIM2",
+          "name": "CH1",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "TIM2",
+          "name": "ETR",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "TIM5",
+          "name": "CH1",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "TIM8",
+          "name": "ETR",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "UART4",
+          "name": "TX",
+          "mux": {
+            "af": 8
+          }
+        },
+        {
+          "periph": "USART2",
+          "name": "CTS",
+          "mux": {
+            "af": 7
+          }
+        },
+        {
+          "periph": "USART2",
+          "name": "NSS",
+          "mux": {
+            "af": 7
+          }
+        }
+      ]
+    },
+    "PA4": {
+      "port": {
+        "bank": "A",
+        "index": 4
+      },
+      "functions": [
+        {
+          "periph": "ADC1",
+          "name": "INP18",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC2",
+          "name": "INP18",
+          "mux": "analog"
+        },
+        {
+          "periph": "DAC1",
+          "name": "OUT1",
+          "mux": "analog"
+        },
+        {
+          "periph": "DCMI",
+          "name": "HSYNC",
+          "mux": {
+            "af": 13
+          }
+        },
+        {
+          "periph": "I2S1",
+          "name": "WS",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "I2S3",
+          "name": "WS",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "VSYNC",
+          "mux": {
+            "af": 14
+          }
+        },
+        {
+          "periph": "SPI1",
+          "name": "NSS",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "SPI3",
+          "name": "NSS",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "SPI6",
+          "name": "NSS",
+          "mux": {
+            "af": 8
+          }
+        },
+        {
+          "periph": "TIM5",
+          "name": "ETR",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "USART2",
+          "name": "CK",
+          "mux": {
+            "af": 7
+          }
+        },
+        {
+          "periph": "USB_OTG_HS",
+          "name": "SOF",
+          "mux": {
+            "af": 12
+          }
+        }
+      ]
+    },
+    "PC4": {
+      "port": {
+        "bank": "C",
+        "index": 4
+      },
+      "functions": [
+        {
+          "periph": "ADC1",
+          "name": "INP4",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC2",
+          "name": "INP4",
+          "mux": "analog"
+        },
+        {
+          "periph": "COMP1",
+          "name": "INM",
+          "mux": "analog"
+        },
+        {
+          "periph": "DFSDM1",
+          "name": "CKIN2",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "ETH",
+          "name": "RXD0",
+          "mux": {
+            "af": 11
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "SDNE0",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "I2S1",
+          "name": "MCK",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "OPAMP1",
+          "name": "VOUT",
+          "mux": "analog"
+        },
+        {
+          "periph": "SPDIFRX1",
+          "name": "IN2",
+          "mux": {
+            "af": 9
+          }
+        }
+      ]
+    },
+    "PB2": {
+      "port": {
+        "bank": "B",
+        "index": 2
+      },
+      "functions": [
+        {
+          "periph": "COMP1",
+          "name": "INP",
+          "mux": "analog"
+        },
+        {
+          "periph": "DFSDM1",
+          "name": "CKIN1",
+          "mux": {
+            "af": 4
+          }
+        },
+        {
+          "periph": "ETH",
+          "name": "TX_ER",
+          "mux": {
+            "af": 11
+          }
+        },
+        {
+          "periph": "I2S3",
+          "name": "SDO",
+          "mux": {
+            "af": 7
+          }
+        },
+        {
+          "periph": "QUADSPI",
+          "name": "CLK",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "RTC",
+          "name": "OUT_ALARM",
+          "mux": {
+            "af": 0
+          }
+        },
+        {
+          "periph": "RTC",
+          "name": "OUT_CALIB",
+          "mux": {
+            "af": 0
+          }
+        },
+        {
+          "periph": "SAI1",
+          "name": "D1",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "SAI1",
+          "name": "SD_A",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "SAI4",
+          "name": "D1",
+          "mux": {
+            "af": 10
+          }
+        },
+        {
+          "periph": "SAI4",
+          "name": "SD_A",
+          "mux": {
+            "af": 8
+          }
+        },
+        {
+          "periph": "SPI3",
+          "name": "MOSI",
+          "mux": {
+            "af": 7
+          }
+        }
+      ]
+    },
+    "PE10": {
+      "port": {
+        "bank": "E",
+        "index": 10
+      },
+      "functions": [
+        {
+          "periph": "COMP2",
+          "name": "INM",
+          "mux": "analog"
+        },
+        {
+          "periph": "DFSDM1",
+          "name": "DATIN4",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "D7",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "DA7",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "QUADSPI",
+          "name": "BK2_IO3",
+          "mux": {
+            "af": 10
+          }
+        },
+        {
+          "periph": "TIM1",
+          "name": "CH2N",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "UART7",
+          "name": "CTS",
+          "mux": {
+            "af": 7
+          }
+        }
+      ]
+    },
+    "PE14": {
+      "port": {
+        "bank": "E",
+        "index": 14
+      },
+      "functions": [
+        {
+          "periph": "FMC",
+          "name": "D11",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "DA11",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "CLK",
+          "mux": {
+            "af": 14
+          }
+        },
+        {
+          "periph": "SAI2",
+          "name": "MCLK_B",
+          "mux": {
+            "af": 10
+          }
+        },
+        {
+          "periph": "SPI4",
+          "name": "MOSI",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "TIM1",
+          "name": "CH4",
+          "mux": {
+            "af": 1
+          }
+        }
+      ]
+    },
+    "PD15": {
+      "port": {
+        "bank": "D",
+        "index": 15
+      },
+      "functions": [
+        {
+          "periph": "ADC1",
+          "name": "EXTI15",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC2",
+          "name": "EXTI15",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC3",
+          "name": "EXTI15",
+          "mux": "analog"
+        },
+        {
+          "periph": "FMC",
+          "name": "D1",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "DA1",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "SAI3",
+          "name": "MCLK_A",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "TIM4",
+          "name": "CH4",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "UART8",
+          "name": "DE",
+          "mux": {
+            "af": 8
+          }
+        },
+        {
+          "periph": "UART8",
+          "name": "RTS",
+          "mux": {
+            "af": 8
+          }
+        }
+      ]
+    },
+    "PD11": {
+      "port": {
+        "bank": "D",
+        "index": 11
+      },
+      "functions": [
+        {
+          "periph": "ADC1",
+          "name": "EXTI11",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC2",
+          "name": "EXTI11",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC3",
+          "name": "EXTI11",
+          "mux": "analog"
+        },
+        {
+          "periph": "FMC",
+          "name": "A16",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "CLE",
+          "mux": "fixed"
+        },
+        {
+          "periph": "I2C4",
+          "name": "SMBA",
+          "mux": {
+            "af": 4
+          }
+        },
+        {
+          "periph": "LPTIM2",
+          "name": "IN2",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "QUADSPI",
+          "name": "BK1_IO0",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "SAI2",
+          "name": "SD_A",
+          "mux": {
+            "af": 10
+          }
+        },
+        {
+          "periph": "USART3",
+          "name": "CTS",
+          "mux": {
+            "af": 7
+          }
+        },
+        {
+          "periph": "USART3",
+          "name": "NSS",
+          "mux": {
+            "af": 7
+          }
+        }
+      ]
+    },
+    "PB15": {
+      "port": {
+        "bank": "B",
+        "index": 15
+      },
+      "functions": [
+        {
+          "periph": "ADC1",
+          "name": "EXTI15",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC2",
+          "name": "EXTI15",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC3",
+          "name": "EXTI15",
+          "mux": "analog"
+        },
+        {
+          "periph": "DFSDM1",
+          "name": "CKIN2",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "I2S2",
+          "name": "SDO",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "RTC",
+          "name": "REFIN",
+          "mux": {
+            "af": 0
+          }
+        },
+        {
+          "periph": "SDMMC2",
+          "name": "D1",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "MOSI",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "TIM12",
+          "name": "CH2",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "TIM1",
+          "name": "CH3N",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "TIM8",
+          "name": "CH3N",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "UART4",
+          "name": "CTS",
+          "mux": {
+            "af": 8
+          }
+        },
+        {
+          "periph": "USART1",
+          "name": "RX",
+          "mux": {
+            "af": 4
+          }
+        },
+        {
+          "periph": "USB_OTG_HS",
+          "name": "DP",
+          "mux": {
+            "af": 12
+          }
+        }
+      ]
+    },
+    "VDDA": {},
+    "PA1": {
+      "port": {
+        "bank": "A",
+        "index": 1
+      },
+      "functions": [
+        {
+          "periph": "ADC1",
+          "name": "INN16",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC1",
+          "name": "INP17",
+          "mux": "analog"
+        },
+        {
+          "periph": "ETH",
+          "name": "REF_CLK",
+          "mux": {
+            "af": 11
+          }
+        },
+        {
+          "periph": "ETH",
+          "name": "RX_CLK",
+          "mux": {
+            "af": 11
+          }
+        },
+        {
+          "periph": "LPTIM3",
+          "name": "OUT",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "R2",
+          "mux": {
+            "af": 14
+          }
+        },
+        {
+          "periph": "QUADSPI",
+          "name": "BK1_IO3",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "SAI2",
+          "name": "MCLK_B",
+          "mux": {
+            "af": 10
+          }
+        },
+        {
+          "periph": "TIM15",
+          "name": "CH1N",
+          "mux": {
+            "af": 4
+          }
+        },
+        {
+          "periph": "TIM2",
+          "name": "CH2",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "TIM5",
+          "name": "CH2",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "UART4",
+          "name": "RX",
+          "mux": {
+            "af": 8
+          }
+        },
+        {
+          "periph": "USART2",
+          "name": "DE",
+          "mux": {
+            "af": 7
+          }
+        },
+        {
+          "periph": "USART2",
+          "name": "RTS",
+          "mux": {
+            "af": 7
+          }
+        }
+      ]
+    },
+    "PA5": {
+      "port": {
+        "bank": "A",
+        "index": 5
+      },
+      "functions": [
+        {
+          "periph": "ADC1",
+          "name": "INN18",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC1",
+          "name": "INP19",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC2",
+          "name": "INN18",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC2",
+          "name": "INP19",
+          "mux": "analog"
+        },
+        {
+          "periph": "DAC1",
+          "name": "OUT2",
+          "mux": "analog"
+        },
+        {
+          "periph": "I2S1",
+          "name": "CK",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "R4",
+          "mux": {
+            "af": 14
+          }
+        },
+        {
+          "periph": "PWR",
+          "name": "NDSTOP2",
+          "mux": "fixed"
+        },
+        {
+          "periph": "SPI1",
+          "name": "SCK",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "SPI6",
+          "name": "SCK",
+          "mux": {
+            "af": 8
+          }
+        },
+        {
+          "periph": "TIM2",
+          "name": "CH1",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "TIM2",
+          "name": "ETR",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "TIM8",
+          "name": "CH1N",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "USB_OTG_HS",
+          "name": "ULPI_CK",
+          "mux": {
+            "af": 10
+          }
+        }
+      ]
+    },
+    "PC5": {
+      "port": {
+        "bank": "C",
+        "index": 5
+      },
+      "functions": [
+        {
+          "periph": "ADC1",
+          "name": "INN4",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC1",
+          "name": "INP8",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC2",
+          "name": "INN4",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC2",
+          "name": "INP8",
+          "mux": "analog"
+        },
+        {
+          "periph": "COMP1",
+          "name": "OUT",
+          "mux": {
+            "af": 13
+          }
+        },
+        {
+          "periph": "DFSDM1",
+          "name": "DATIN2",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "ETH",
+          "name": "RXD1",
+          "mux": {
+            "af": 11
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "SDCKE0",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "OPAMP1",
+          "name": "VINM",
+          "mux": "analog"
+        },
+        {
+          "periph": "OPAMP1",
+          "name": "VINM0",
+          "mux": "analog"
+        },
+        {
+          "periph": "SAI1",
+          "name": "D3",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "SAI4",
+          "name": "D3",
+          "mux": {
+            "af": 10
+          }
+        },
+        {
+          "periph": "SPDIFRX1",
+          "name": "IN3",
+          "mux": {
+            "af": 9
+          }
+        }
+      ]
+    },
+    "PE7": {
+      "port": {
+        "bank": "E",
+        "index": 7
+      },
+      "functions": [
+        {
+          "periph": "COMP2",
+          "name": "INM",
+          "mux": "analog"
+        },
+        {
+          "periph": "DFSDM1",
+          "name": "DATIN2",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "D4",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "DA4",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "OPAMP2",
+          "name": "VOUT",
+          "mux": "analog"
+        },
+        {
+          "periph": "QUADSPI",
+          "name": "BK2_IO0",
+          "mux": {
+            "af": 10
+          }
+        },
+        {
+          "periph": "TIM1",
+          "name": "ETR",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "UART7",
+          "name": "RX",
+          "mux": {
+            "af": 7
+          }
+        }
+      ]
+    },
+    "PE11": {
+      "port": {
+        "bank": "E",
+        "index": 11
+      },
+      "functions": [
+        {
+          "periph": "ADC1",
+          "name": "EXTI11",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC2",
+          "name": "EXTI11",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC3",
+          "name": "EXTI11",
+          "mux": "analog"
+        },
+        {
+          "periph": "COMP2",
+          "name": "INP",
+          "mux": "analog"
+        },
+        {
+          "periph": "DFSDM1",
+          "name": "CKIN4",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "D8",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "DA8",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "G3",
+          "mux": {
+            "af": 14
+          }
+        },
+        {
+          "periph": "SAI2",
+          "name": "SD_B",
+          "mux": {
+            "af": 10
+          }
+        },
+        {
+          "periph": "SPI4",
+          "name": "NSS",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "TIM1",
+          "name": "CH2",
+          "mux": {
+            "af": 1
+          }
+        }
+      ]
+    },
+    "PE15": {
+      "port": {
+        "bank": "E",
+        "index": 15
+      },
+      "functions": [
+        {
+          "periph": "ADC1",
+          "name": "EXTI15",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC2",
+          "name": "EXTI15",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC3",
+          "name": "EXTI15",
+          "mux": "analog"
+        },
+        {
+          "periph": "FMC",
+          "name": "D12",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "DA12",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "R7",
+          "mux": {
+            "af": 14
+          }
+        },
+        {
+          "periph": "TIM1",
+          "name": "BKIN",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "TIM1",
+          "name": "BKIN_COMP1",
+          "mux": {
+            "af": 13
+          }
+        },
+        {
+          "periph": "TIM1",
+          "name": "BKIN_COMP2",
+          "mux": {
+            "af": 13
+          }
+        }
+      ]
+    },
+    "PD14": {
+      "port": {
+        "bank": "D",
+        "index": 14
+      },
+      "functions": [
+        {
+          "periph": "FMC",
+          "name": "D0",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "DA0",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "SAI3",
+          "name": "MCLK_B",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "TIM4",
+          "name": "CH3",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "UART8",
+          "name": "CTS",
+          "mux": {
+            "af": 8
+          }
+        }
+      ]
+    },
+    "PD10": {
+      "port": {
+        "bank": "D",
+        "index": 10
+      },
+      "functions": [
+        {
+          "periph": "DFSDM1",
+          "name": "CKOUT",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "D15",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "DA15",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "B3",
+          "mux": {
+            "af": 14
+          }
+        },
+        {
+          "periph": "SAI3",
+          "name": "FS_B",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "USART3",
+          "name": "CK",
+          "mux": {
+            "af": 7
+          }
+        }
+      ]
+    },
+    "PB14": {
+      "port": {
+        "bank": "B",
+        "index": 14
+      },
+      "functions": [
+        {
+          "periph": "DFSDM1",
+          "name": "DATIN2",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "I2S2",
+          "name": "SDI",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "SDMMC2",
+          "name": "D0",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "MISO",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "TIM12",
+          "name": "CH1",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "TIM1",
+          "name": "CH2N",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "TIM8",
+          "name": "CH2N",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "UART4",
+          "name": "DE",
+          "mux": {
+            "af": 8
+          }
+        },
+        {
+          "periph": "UART4",
+          "name": "RTS",
+          "mux": {
+            "af": 8
+          }
+        },
+        {
+          "periph": "USART1",
+          "name": "TX",
+          "mux": {
+            "af": 4
+          }
+        },
+        {
+          "periph": "USART3",
+          "name": "DE",
+          "mux": {
+            "af": 7
+          }
+        },
+        {
+          "periph": "USART3",
+          "name": "RTS",
+          "mux": {
+            "af": 7
+          }
+        },
+        {
+          "periph": "USB_OTG_HS",
+          "name": "DM",
+          "mux": {
+            "af": 12
+          }
+        }
+      ]
+    },
+    "VSS_J1": {},
+    "PA2": {
+      "port": {
+        "bank": "A",
+        "index": 2
+      },
+      "functions": [
+        {
+          "periph": "ADC1",
+          "name": "INP14",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC2",
+          "name": "INP14",
+          "mux": "analog"
+        },
+        {
+          "periph": "ETH",
+          "name": "MDIO",
+          "mux": {
+            "af": 11
+          }
+        },
+        {
+          "periph": "LPTIM4",
+          "name": "OUT",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "R1",
+          "mux": {
+            "af": 14
+          }
+        },
+        {
+          "periph": "MDIOS",
+          "name": "MDIO",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "PWR",
+          "name": "WKUP2",
+          "mux": "fixed"
+        },
+        {
+          "periph": "SAI2",
+          "name": "SCK_B",
+          "mux": {
+            "af": 8
+          }
+        },
+        {
+          "periph": "TIM15",
+          "name": "CH1",
+          "mux": {
+            "af": 4
+          }
+        },
+        {
+          "periph": "TIM2",
+          "name": "CH3",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "TIM5",
+          "name": "CH3",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "USART2",
+          "name": "TX",
+          "mux": {
+            "af": 7
+          }
+        }
+      ]
+    },
+    "PA6": {
+      "port": {
+        "bank": "A",
+        "index": 6
+      },
+      "functions": [
+        {
+          "periph": "ADC1",
+          "name": "INP3",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC2",
+          "name": "INP3",
+          "mux": "analog"
+        },
+        {
+          "periph": "DCMI",
+          "name": "PIXCLK",
+          "mux": {
+            "af": 13
+          }
+        },
+        {
+          "periph": "I2S1",
+          "name": "SDI",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "G2",
+          "mux": {
+            "af": 14
+          }
+        },
+        {
+          "periph": "MDIOS",
+          "name": "MDC",
+          "mux": {
+            "af": 11
+          }
+        },
+        {
+          "periph": "SPI1",
+          "name": "MISO",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "SPI6",
+          "name": "MISO",
+          "mux": {
+            "af": 8
+          }
+        },
+        {
+          "periph": "TIM13",
+          "name": "CH1",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "TIM1",
+          "name": "BKIN",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "TIM1",
+          "name": "BKIN_COMP1",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "TIM1",
+          "name": "BKIN_COMP2",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "TIM3",
+          "name": "CH1",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "TIM8",
+          "name": "BKIN",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "TIM8",
+          "name": "BKIN_COMP1",
+          "mux": {
+            "af": 10
+          }
+        },
+        {
+          "periph": "TIM8",
+          "name": "BKIN_COMP2",
+          "mux": {
+            "af": 10
+          }
+        }
+      ]
+    },
+    "PB0": {
+      "port": {
+        "bank": "B",
+        "index": 0
+      },
+      "functions": [
+        {
+          "periph": "ADC1",
+          "name": "INN5",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC1",
+          "name": "INP9",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC2",
+          "name": "INN5",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC2",
+          "name": "INP9",
+          "mux": "analog"
+        },
+        {
+          "periph": "COMP1",
+          "name": "INP",
+          "mux": "analog"
+        },
+        {
+          "periph": "DFSDM1",
+          "name": "CKOUT",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "ETH",
+          "name": "RXD2",
+          "mux": {
+            "af": 11
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "G1",
+          "mux": {
+            "af": 14
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "R3",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "OPAMP1",
+          "name": "VINP",
+          "mux": "analog"
+        },
+        {
+          "periph": "TIM1",
+          "name": "CH2N",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "TIM3",
+          "name": "CH3",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "TIM8",
+          "name": "CH2N",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "UART4",
+          "name": "CTS",
+          "mux": {
+            "af": 8
+          }
+        },
+        {
+          "periph": "USB_OTG_HS",
+          "name": "ULPI_D1",
+          "mux": {
+            "af": 10
+          }
+        }
+      ]
+    },
+    "PE8": {
+      "port": {
+        "bank": "E",
+        "index": 8
+      },
+      "functions": [
+        {
+          "periph": "COMP2",
+          "name": "OUT",
+          "mux": {
+            "af": 13
+          }
+        },
+        {
+          "periph": "DFSDM1",
+          "name": "CKIN2",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "D5",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "DA5",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "OPAMP2",
+          "name": "VINM",
+          "mux": "analog"
+        },
+        {
+          "periph": "OPAMP2",
+          "name": "VINM0",
+          "mux": "analog"
+        },
+        {
+          "periph": "QUADSPI",
+          "name": "BK2_IO1",
+          "mux": {
+            "af": 10
+          }
+        },
+        {
+          "periph": "TIM1",
+          "name": "CH1N",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "UART7",
+          "name": "TX",
+          "mux": {
+            "af": 7
+          }
+        }
+      ]
+    },
+    "PE12": {
+      "port": {
+        "bank": "E",
+        "index": 12
+      },
+      "functions": [
+        {
+          "periph": "COMP1",
+          "name": "OUT",
+          "mux": {
+            "af": 13
+          }
+        },
+        {
+          "periph": "DFSDM1",
+          "name": "DATIN5",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "D9",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "DA9",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "B4",
+          "mux": {
+            "af": 14
+          }
+        },
+        {
+          "periph": "SAI2",
+          "name": "SCK_B",
+          "mux": {
+            "af": 10
+          }
+        },
+        {
+          "periph": "SPI4",
+          "name": "SCK",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "TIM1",
+          "name": "CH3N",
+          "mux": {
+            "af": 1
+          }
+        }
+      ]
+    },
+    "PB10": {
+      "port": {
+        "bank": "B",
+        "index": 10
+      },
+      "functions": [
+        {
+          "periph": "DFSDM1",
+          "name": "DATIN7",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "ETH",
+          "name": "RX_ER",
+          "mux": {
+            "af": 11
+          }
+        },
+        {
+          "periph": "HRTIM",
+          "name": "SCOUT",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "I2C2",
+          "name": "SCL",
+          "mux": {
+            "af": 4
+          }
+        },
+        {
+          "periph": "I2S2",
+          "name": "CK",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "LPTIM2",
+          "name": "IN1",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "G4",
+          "mux": {
+            "af": 14
+          }
+        },
+        {
+          "periph": "QUADSPI",
+          "name": "BK1_NCS",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "SCK",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "TIM2",
+          "name": "CH3",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "USART3",
+          "name": "TX",
+          "mux": {
+            "af": 7
+          }
+        },
+        {
+          "periph": "USB_OTG_HS",
+          "name": "ULPI_D3",
+          "mux": {
+            "af": 10
+          }
+        }
+      ]
+    },
+    "PB13": {
+      "port": {
+        "bank": "B",
+        "index": 13
+      },
+      "functions": [
+        {
+          "periph": "DFSDM1",
+          "name": "CKIN1",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "ETH",
+          "name": "TXD1",
+          "mux": {
+            "af": 11
+          }
+        },
+        {
+          "periph": "FDCAN2",
+          "name": "TX",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "I2S2",
+          "name": "CK",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "LPTIM2",
+          "name": "OUT",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "SCK",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "TIM1",
+          "name": "CH1N",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "UART5",
+          "name": "TX",
+          "mux": {
+            "af": 14
+          }
+        },
+        {
+          "periph": "USART3",
+          "name": "CTS",
+          "mux": {
+            "af": 7
+          }
+        },
+        {
+          "periph": "USART3",
+          "name": "NSS",
+          "mux": {
+            "af": 7
+          }
+        },
+        {
+          "periph": "USB_OTG_HS",
+          "name": "ULPI_D6",
+          "mux": {
+            "af": 10
+          }
+        },
+        {
+          "periph": "USB_OTG_HS",
+          "name": "VBUS",
+          "mux": "fixed"
+        }
+      ]
+    },
+    "PD9": {
+      "port": {
+        "bank": "D",
+        "index": 9
+      },
+      "functions": [
+        {
+          "periph": "DAC1",
+          "name": "EXTI9",
+          "mux": "analog"
+        },
+        {
+          "periph": "DFSDM1",
+          "name": "DATIN3",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "D14",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "DA14",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "SAI3",
+          "name": "SD_B",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "USART3",
+          "name": "RX",
+          "mux": {
+            "af": 7
+          }
+        }
+      ]
+    },
+    "PD13": {
+      "port": {
+        "bank": "D",
+        "index": 13
+      },
+      "functions": [
+        {
+          "periph": "FMC",
+          "name": "A18",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "I2C4",
+          "name": "SDA",
+          "mux": {
+            "af": 4
+          }
+        },
+        {
+          "periph": "LPTIM1",
+          "name": "OUT",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "QUADSPI",
+          "name": "BK1_IO3",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "SAI2",
+          "name": "SCK_A",
+          "mux": {
+            "af": 10
+          }
+        },
+        {
+          "periph": "TIM4",
+          "name": "CH2",
+          "mux": {
+            "af": 2
+          }
+        }
+      ]
+    },
+    "VDD_K1": {},
+    "PA3": {
+      "port": {
+        "bank": "A",
+        "index": 3
+      },
+      "functions": [
+        {
+          "periph": "ADC1",
+          "name": "INP15",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC2",
+          "name": "INP15",
+          "mux": "analog"
+        },
+        {
+          "periph": "ETH",
+          "name": "COL",
+          "mux": {
+            "af": 11
+          }
+        },
+        {
+          "periph": "LPTIM5",
+          "name": "OUT",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "B2",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "B5",
+          "mux": {
+            "af": 14
+          }
+        },
+        {
+          "periph": "TIM15",
+          "name": "CH2",
+          "mux": {
+            "af": 4
+          }
+        },
+        {
+          "periph": "TIM2",
+          "name": "CH4",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "TIM5",
+          "name": "CH4",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "USART2",
+          "name": "RX",
+          "mux": {
+            "af": 7
+          }
+        },
+        {
+          "periph": "USB_OTG_HS",
+          "name": "ULPI_D0",
+          "mux": {
+            "af": 10
+          }
+        }
+      ]
+    },
+    "PA7": {
+      "port": {
+        "bank": "A",
+        "index": 7
+      },
+      "functions": [
+        {
+          "periph": "ADC1",
+          "name": "INN3",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC1",
+          "name": "INP7",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC2",
+          "name": "INN3",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC2",
+          "name": "INP7",
+          "mux": "analog"
+        },
+        {
+          "periph": "ETH",
+          "name": "CRS_DV",
+          "mux": {
+            "af": 11
+          }
+        },
+        {
+          "periph": "ETH",
+          "name": "RX_DV",
+          "mux": {
+            "af": 11
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "SDNWE",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "I2S1",
+          "name": "SDO",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "OPAMP1",
+          "name": "VINM",
+          "mux": "analog"
+        },
+        {
+          "periph": "OPAMP1",
+          "name": "VINM1",
+          "mux": "analog"
+        },
+        {
+          "periph": "SPI1",
+          "name": "MOSI",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "SPI6",
+          "name": "MOSI",
+          "mux": {
+            "af": 8
+          }
+        },
+        {
+          "periph": "TIM14",
+          "name": "CH1",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "TIM1",
+          "name": "CH1N",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "TIM3",
+          "name": "CH2",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "TIM8",
+          "name": "CH1N",
+          "mux": {
+            "af": 3
+          }
+        }
+      ]
+    },
+    "PB1": {
+      "port": {
+        "bank": "B",
+        "index": 1
+      },
+      "functions": [
+        {
+          "periph": "ADC1",
+          "name": "INP5",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC2",
+          "name": "INP5",
+          "mux": "analog"
+        },
+        {
+          "periph": "COMP1",
+          "name": "INM",
+          "mux": "analog"
+        },
+        {
+          "periph": "DFSDM1",
+          "name": "DATIN1",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "ETH",
+          "name": "RXD3",
+          "mux": {
+            "af": 11
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "G0",
+          "mux": {
+            "af": 14
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "R6",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "TIM1",
+          "name": "CH3N",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "TIM3",
+          "name": "CH4",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "TIM8",
+          "name": "CH3N",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "USB_OTG_HS",
+          "name": "ULPI_D2",
+          "mux": {
+            "af": 10
+          }
+        }
+      ]
+    },
+    "PE9": {
+      "port": {
+        "bank": "E",
+        "index": 9
+      },
+      "functions": [
+        {
+          "periph": "COMP2",
+          "name": "INP",
+          "mux": "analog"
+        },
+        {
+          "periph": "DAC1",
+          "name": "EXTI9",
+          "mux": "analog"
+        },
+        {
+          "periph": "DFSDM1",
+          "name": "CKOUT",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "D6",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "DA6",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "OPAMP2",
+          "name": "VINP",
+          "mux": "analog"
+        },
+        {
+          "periph": "QUADSPI",
+          "name": "BK2_IO2",
+          "mux": {
+            "af": 10
+          }
+        },
+        {
+          "periph": "TIM1",
+          "name": "CH1",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "UART7",
+          "name": "DE",
+          "mux": {
+            "af": 7
+          }
+        },
+        {
+          "periph": "UART7",
+          "name": "RTS",
+          "mux": {
+            "af": 7
+          }
+        }
+      ]
+    },
+    "PE13": {
+      "port": {
+        "bank": "E",
+        "index": 13
+      },
+      "functions": [
+        {
+          "periph": "COMP2",
+          "name": "OUT",
+          "mux": {
+            "af": 13
+          }
+        },
+        {
+          "periph": "DFSDM1",
+          "name": "CKIN5",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "D10",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "DA10",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "DE",
+          "mux": {
+            "af": 14
+          }
+        },
+        {
+          "periph": "SAI2",
+          "name": "FS_B",
+          "mux": {
+            "af": 10
+          }
+        },
+        {
+          "periph": "SPI4",
+          "name": "MISO",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "TIM1",
+          "name": "CH3",
+          "mux": {
+            "af": 1
+          }
+        }
+      ]
+    },
+    "PB11": {
+      "port": {
+        "bank": "B",
+        "index": 11
+      },
+      "functions": [
+        {
+          "periph": "ADC1",
+          "name": "EXTI11",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC2",
+          "name": "EXTI11",
+          "mux": "analog"
+        },
+        {
+          "periph": "ADC3",
+          "name": "EXTI11",
+          "mux": "analog"
+        },
+        {
+          "periph": "DFSDM1",
+          "name": "CKIN7",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "ETH",
+          "name": "TX_EN",
+          "mux": {
+            "af": 11
+          }
+        },
+        {
+          "periph": "HRTIM",
+          "name": "SCIN",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "I2C2",
+          "name": "SDA",
+          "mux": {
+            "af": 4
+          }
+        },
+        {
+          "periph": "LPTIM2",
+          "name": "ETR",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "LTDC",
+          "name": "G5",
+          "mux": {
+            "af": 14
+          }
+        },
+        {
+          "periph": "TIM2",
+          "name": "CH4",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "USART3",
+          "name": "RX",
+          "mux": {
+            "af": 7
+          }
+        },
+        {
+          "periph": "USB_OTG_HS",
+          "name": "ULPI_D4",
+          "mux": {
+            "af": 10
+          }
+        }
+      ]
+    },
+    "PB12": {
+      "port": {
+        "bank": "B",
+        "index": 12
+      },
+      "functions": [
+        {
+          "periph": "DFSDM1",
+          "name": "DATIN1",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "ETH",
+          "name": "TXD0",
+          "mux": {
+            "af": 11
+          }
+        },
+        {
+          "periph": "FDCAN2",
+          "name": "RX",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "I2C2",
+          "name": "SMBA",
+          "mux": {
+            "af": 4
+          }
+        },
+        {
+          "periph": "I2S2",
+          "name": "WS",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "SPI2",
+          "name": "NSS",
+          "mux": {
+            "af": 5
+          }
+        },
+        {
+          "periph": "TIM1",
+          "name": "BKIN",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "TIM1",
+          "name": "BKIN_COMP1",
+          "mux": {
+            "af": 13
+          }
+        },
+        {
+          "periph": "TIM1",
+          "name": "BKIN_COMP2",
+          "mux": {
+            "af": 13
+          }
+        },
+        {
+          "periph": "UART5",
+          "name": "RX",
+          "mux": {
+            "af": 14
+          }
+        },
+        {
+          "periph": "USART3",
+          "name": "CK",
+          "mux": {
+            "af": 7
+          }
+        },
+        {
+          "periph": "USB_OTG_HS",
+          "name": "ID",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "USB_OTG_HS",
+          "name": "ULPI_D5",
+          "mux": {
+            "af": 10
+          }
+        }
+      ]
+    },
+    "PD8": {
+      "port": {
+        "bank": "D",
+        "index": 8
+      },
+      "functions": [
+        {
+          "periph": "DFSDM1",
+          "name": "CKIN3",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "D13",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "DA13",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "SAI3",
+          "name": "SCK_B",
+          "mux": {
+            "af": 6
+          }
+        },
+        {
+          "periph": "SPDIFRX1",
+          "name": "IN1",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "USART3",
+          "name": "TX",
+          "mux": {
+            "af": 7
+          }
+        }
+      ]
+    },
+    "PD12": {
+      "port": {
+        "bank": "D",
+        "index": 12
+      },
+      "functions": [
+        {
+          "periph": "FMC",
+          "name": "A17",
+          "mux": {
+            "af": 12
+          }
+        },
+        {
+          "periph": "FMC",
+          "name": "ALE",
+          "mux": "fixed"
+        },
+        {
+          "periph": "I2C4",
+          "name": "SCL",
+          "mux": {
+            "af": 4
+          }
+        },
+        {
+          "periph": "LPTIM1",
+          "name": "IN1",
+          "mux": {
+            "af": 1
+          }
+        },
+        {
+          "periph": "LPTIM2",
+          "name": "IN1",
+          "mux": {
+            "af": 3
+          }
+        },
+        {
+          "periph": "QUADSPI",
+          "name": "BK1_IO1",
+          "mux": {
+            "af": 9
+          }
+        },
+        {
+          "periph": "SAI2",
+          "name": "FS_A",
+          "mux": {
+            "af": 10
+          }
+        },
+        {
+          "periph": "TIM4",
+          "name": "CH1",
+          "mux": {
+            "af": 2
+          }
+        },
+        {
+          "periph": "USART3",
+          "name": "DE",
+          "mux": {
+            "af": 7
+          }
+        },
+        {
+          "periph": "USART3",
+          "name": "RTS",
+          "mux": {
+            "af": 7
+          }
+        }
+      ]
+    }
+  }
+}
