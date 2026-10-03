@@ -20,10 +20,10 @@ the library.
 
 ## 0. Project and library
 
-- [ ] Create `pinion-main.kicad_pro` in this folder, in KiCad, with the sheet
+- [x] Create `pinion-main.kicad_pro` in this folder, in KiCad, with the sheet
       hierarchy below: the root sheet holds the shared parts and two sheets,
       `linux` and `fmu`, and each of those holds its own sub-sheets.
-- [ ] Reference designators: STM32H743 = **U1**, STM32F103 = **U2**, AM62L = **U3**
+- [x] Reference designators: STM32H743 = **U1**, STM32F103 = **U2**, AM62L = **U3**
       (the pinasg files name them).
 - [ ] Add symbols and footprints to `lib/kicad` (JustBrenkman/kicad-lib) and bump
       the submodule. The library holds none of pinion's parts today, so every
