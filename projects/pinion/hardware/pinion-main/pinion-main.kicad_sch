@@ -6,7 +6,7 @@
 	(paper "A4")
 	(lib_symbols)
 	(sheet
-		(at 96.52 60.96)
+		(at 123.19 110.49)
 		(size 39.37 53.34)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -22,7 +22,7 @@
 		)
 		(uuid "962d2f40-70aa-4550-aaf6-2cf852f16805")
 		(property "Sheetname" "linux"
-			(at 96.52 60.2484 0)
+			(at 123.19 109.7784 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -33,7 +33,7 @@
 			)
 		)
 		(property "Sheetfile" "linux.kicad_sch"
-			(at 96.52 114.8846 0)
+			(at 123.19 164.4146 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -93,6 +93,112 @@
 			(project "pinion-main"
 				(path "/6c7907f5-5439-4f54-a5a2-0a7e85489635"
 					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 55.88 90.17)
+		(size 21.59 29.21)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "fdbcfb1e-8a47-41fe-ac5a-16d28a91dfe6")
+		(property "Sheetname" "power"
+			(at 55.88 89.4584 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power.kicad_sch"
+			(at 55.88 119.9646 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "PWR1_VALID" output
+			(at 77.47 93.98 0)
+			(uuid "e65214c5-eeb9-4c7f-967f-92e328ad140e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "PWR1_VOLTAGE" output
+			(at 77.47 97.79 0)
+			(uuid "7dd99708-254c-4e26-a766-2dc0fde21041")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "PWR1_CURRENT" output
+			(at 77.47 100.33 0)
+			(uuid "136621d6-f59d-4ee5-a6de-c90686d7ddae")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "PWR2_CURRENT" output
+			(at 77.47 113.03 0)
+			(uuid "dae4eac9-e842-4984-98ce-603365b08f0b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "PWR2_VALID" output
+			(at 77.47 109.22 0)
+			(uuid "45b8497f-f65b-4084-9629-5856d2c96127")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "PWR2_VOLTAGE" output
+			(at 77.47 115.57 0)
+			(uuid "75e1c612-6e08-4ac8-85d2-d21ac7f3b403")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "pinion-main"
+				(path "/6c7907f5-5439-4f54-a5a2-0a7e85489635"
+					(page "19")
 				)
 			)
 		)

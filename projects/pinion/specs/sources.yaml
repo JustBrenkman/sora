@@ -430,6 +430,11 @@
   url: https://www.ti.com/lit/ds/symlink/tps51200.pdf
   sha256: aba58b616681c52dfdefd9611c92af68b7904197b58e92226dd14fee402e12b5
 
+- id: lm73100-datasheet
+  file: parts/lm73100-datasheet.pdf
+  url: https://www.ti.com/lit/ds/symlink/lm7310.pdf
+  sha256: ebb2f673f8cf94c426618d00222b697fb7d2b1c1f2f1449ad4ca11388f10333d
+
 - id: tcan1044-datasheet
   file: parts/tcan1044-q1-datasheet.pdf
   url: https://www.ti.com/lit/ds/symlink/tcan1044-q1.pdf

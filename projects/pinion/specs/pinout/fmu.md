@@ -9,7 +9,7 @@
 | PB7 | A5 | I2C1.SDA | AF4 | FMU_I2C1_SDA_GPS1 | drive=open_drain |  |
 | PB4 | A6 |  |  |  |  |  |
 | PB3 | A7 |  |  |  |  |  |
-| PA15 | A8 | gpio_in |  | N_BRICK1_VALID | bias=pull_up | Power selector: POWER1 is the active 5 V source, active low. FMUv6C. |
+| PA15 | A8 | gpio_in |  | PWR1_VALID | bias=pull_up | POWER1 is the active 5 V source, active low: an N-FET inverts the LM73100 PG, pulled up to 3.3 V. DEVIATION: N_BRICK1_VALID from the power selector on the FMUv6C. |
 | PA14 | A9 | DEBUG.JTCK-SWCLK | AF0 | FMU_SWCLK |  |  |
 | PA13 | A10 | DEBUG.JTMS-SWDIO | AF0 | FMU_SWDIO |  |  |
 | PC15 | B1 | gpio_out |  | FMU_SPI1_CS1_BMI270 | initial=high | DEVIATION: BMI270 chip select; the FMUv6C has the BMI088 accel here. |
@@ -99,7 +99,7 @@
 | PE9 | K5 | UART7.RTS | AF7 | FMU_UART7_RTS_TEL1 |  |  |
 | PE13 | K6 | TIM1.CH3 | AF1 | FMU_CH3 |  |  |
 | PB11 | K7 | I2C2.SDA | AF4 | FMU_I2C2_SDA_GPS2 | drive=open_drain |  |
-| PB12 | K8 | gpio_in |  | N_BRICK2_VALID | bias=pull_up | Power selector: POWER2 is the active 5 V source, active low. FMUv6C. |
+| PB12 | K8 | gpio_in |  | PWR2_VALID | bias=pull_up | POWER2 is the active 5 V source, active low: an N-FET inverts the LM73100 PG, pulled up to 3.3 V. DEVIATION: N_BRICK2_VALID from the power selector on the FMUv6C. |
 | PD8 | K9 | USART3.TX | AF7 | FMU_USART3_TX_DEBUG |  |  |
 | PD12 | K10 | I2C4.SCL | AF4 | FMU_I2C4_SCL | drive=open_drain |  |
 

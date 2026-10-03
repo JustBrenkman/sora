@@ -25,14 +25,14 @@ the library.
       `linux` and `fmu`, and each of those holds its own sub-sheets.
 - [x] Reference designators: STM32H743 = **U1**, STM32F103 = **U2**, AM62L = **U3**
       (the pinasg files name them).
-- [ ] Add symbols and footprints to `lib/kicad` (JustBrenkman/kicad-lib) and bump
+- [x] Add symbols and footprints to `lib/kicad` (JustBrenkman/kicad-lib) and bump
       the submodule. The library holds none of pinion's parts today, so every
       entry below needs one unless KiCad's stock libraries cover it (passives,
       JST-GH/SH/ZH, USB-C, crystals, STM32F103C8T6).
-  - [ ] AM62L32 ANB 373-ball, 0.5 mm pitch, 11.9 x 11.9 mm. Pin names and balls
+  - [x] AM62L32 ANB 373-ball, 0.5 mm pitch, 11.9 x 11.9 mm. Pin names and balls
         from `specs/pinout/am62l32.pindef.json`; split the symbol into units
         (DDR, MMC, RGMII, GPMC/boot, general, system, power, ground).
-  - [ ] STM32H743VIH6 TFBGA100, from `specs/pinout/stm32h743vih6.pindef.json`.
+  - [x] STM32H743VIH6 TFBGA100, from `specs/pinout/stm32h743vih6.pindef.json`.
   - [ ] DDR4 x16 FBGA-96, eMMC FBGA-153, PMIC, PHY, sensors, FRAM/EEPROM, CAN
         transceiver, load switches, regulators, Wi-Fi module as they are selected.
 
@@ -40,7 +40,7 @@ the library.
 
 ```
 pinion-main (root)        R   shared parts, drawn on the root sheet itself
-│                         R1  POWER1/POWER2, power selector, VDD_5V
+│                         R1  POWER1/POWER2, power selector, +5V
 │                         R2  UART, USB and CAN between the processors
 │                         R3  mounting holes
 ├── linux                 B   AM62L computer
@@ -63,7 +63,7 @@ pinion-main (root)        R   shared parts, drawn on the root sheet itself
 ```
 
 Nets that cross between `linux` and `fmu` do so only through the root sheet, as
-hierarchical pins on the two sheet symbols: `VDD_5V`, `GND`, the four `FMU_UART5_*_SOC` nets,
+hierarchical pins on the two sheet symbols: `+5V`, `GND`, the four `FMU_UART5_*_SOC` nets,
 `FMU_USB_DP`/`FMU_USB_DM`, `FMU_VBUS_SENSE`, `FMU_USB_VBUS_EN`, `CAN1_H`/`CAN1_L`,
 and `USBC_VBUS` to the power selector.
 
@@ -82,9 +82,12 @@ The parts both halves share are placed directly on the root sheet, next to the
       `FMU_BAT1_V` (U1 PC5), `FMU_BAT1_I` (PC4), `FMU_BAT2_V` (PB1), `FMU_BAT2_I`
       (PA2). Default scales 18.18 V/V and 36.36 A/V (ref: v6C `hwdef.dat`).
 - [ ] **Power selector** (ideal diodes, one source at a time) →
-      `VDD_5V`. Reports `N_BRICK1_VALID` (U1 PA15), `N_BRICK2_VALID` (PB12),
+      `+5V`. Reports `PWR1_VALID` (U1 PA15), `PWR2_VALID` (PB12),
       `N_USB_VBUS_VALID` (PE15), active low, pulled up to `FMU_VDD_3V3` (ref: v6C
-      `board_config.h`). The FMUv6C part is not named in the sources *(select)*.
+      `board_config.h`). Parts: an LM73100 on each of POWER1 and POWER2 (5.5 A,
+      overvoltage cutoff on OVLO) and an LM66100 on the USB input. The LM73100's
+      PG is open-drain and high when valid, so the active-low valid signals
+      need an inversion.
       Its USB input is `USBC_VBUS` from the AM62L's USB-C port *(open 3)*.
 - [ ] **Input protection**: TVS and overvoltage protection on each 5 V input
       (FMUv6C maximum input is 6 V).
@@ -121,7 +124,7 @@ The parts both halves share are placed directly on the root sheet, next to the
 Follow TI's "AM62L Power Supply Implementation" note (to be added to
 `specs/reference/ti/` by hand) and the sequencing in DS section 6.11.2.
 
-- [ ] **3.3 V buck** from `VDD_5V` → `VCC_3V3_SYS` *(select)*.
+- [ ] **3.3 V buck** from `+5V` → `VCC_3V3_SYS` *(select)*.
 - [ ] **PMIC TPS6521402** (the AM62L variant listed for DDR4; the EVM's
       TPS6521401 is LPDDR4 only): Buck1 → `VDD_CORE_0V75`; Buck2 → `SOC_DVDD_1V8`;
       Buck3 → `VDD_DDR_1V2`; LDO1 → `VDDA_1V8`; LDO2 → `SOC_DVDD_3V3`. I2C
@@ -224,7 +227,7 @@ All 373 balls are in `specs/pinout/soc.md`; I/O supply per ball is in
 
 ### C1. Power
 
-- [ ] **3.3 V regulator** from `VDD_5V` → `FMU_VDD_3V3`. Supplies U1, U2's
+- [ ] **3.3 V regulator** from `+5V` → `FMU_VDD_3V3`. Supplies U1, U2's
       rail, the sensor switch, CAN transceivers, parameter storage.
 - [ ] **Analog filter** (ferrite + capacitors) → `FMU_VDDA_3V3` (U1 VDDA; VREF+ is
       bonded to VDDA in this package).
@@ -295,7 +298,7 @@ and the rail.
 
 - [ ] **CAN1 transceiver** (TCAN1044V, VSON-8 DRB; replaces the FMUv6C's
       TJA1051): `FMU_CAN1_TX`/`FMU_CAN1_RX` (U1 PD1/PD0) → `CAN1_H`/`CAN1_L`.
-      VCC on `VDD_5V`, VIO on `FMU_VDD_3V3`, STB low for normal mode.
+      VCC on `+5V`, VIO on `FMU_VDD_3V3`, STB low for normal mode.
 - [ ] **CAN2 transceiver** (TCAN1044V): `FMU_CAN2_TX`/`FMU_CAN2_RX` (U1 PB13/PB5)
       → `CAN2_H`/`CAN2_L`.
 - [ ] Termination: decide whether each bus has an on-board 120 Ω (fixed or

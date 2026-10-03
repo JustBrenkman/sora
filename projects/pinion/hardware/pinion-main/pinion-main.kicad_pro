@@ -28,7 +28,12 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [],
+    "erc_exclusions": [
+      [
+        "pin_to_pin|1651000|546100|2860a7f2-0f6c-4354-831f-669e2dda7baf|80820dcd-f6ea-4ef2-baf6-989beb6c27bb|/6c7907f5-5439-4f54-a5a2-0a7e85489635/fdbcfb1e-8a47-41fe-ac5a-16d28a91dfe6|/6c7907f5-5439-4f54-a5a2-0a7e85489635/fdbcfb1e-8a47-41fe-ac5a-16d28a91dfe6|/6c7907f5-5439-4f54-a5a2-0a7e85489635/fdbcfb1e-8a47-41fe-ac5a-16d28a91dfe6",
+        "U11 and U12 are ideal diodes OR-ed onto +5V"
+      ]
+    ],
     "meta": {
       "version": 0
     },
@@ -416,7 +421,7 @@
         "uuid": "6c7907f5-5439-4f54-a5a2-0a7e85489635"
       }
     ],
-    "used_designators": "U1-10",
+    "used_designators": "#FLG1-4,U11-12,J1-2,D1-8,#PWR1-42,Q1-4,C1-14,R1-22",
     "variants": []
   },
   "sheets": [
@@ -491,6 +496,10 @@
     [
       "d3b7593b-9134-4037-af01-034078941ea7",
       "pwm"
+    ],
+    [
+      "fdbcfb1e-8a47-41fe-ac5a-16d28a91dfe6",
+      "power"
     ]
   ],
   "text_variables": {},

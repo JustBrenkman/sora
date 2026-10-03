@@ -156,8 +156,8 @@ flowchart LR
     PM1([POWER1<br/>5 V, FMU_BAT1_V, FMU_BAT1_I]) --> SEL[Power selector<br/>ideal diodes]
     PM2([POWER2<br/>5 V, FMU_BAT2_V, FMU_BAT2_I]) --> SEL
     USBV([USB-C VBUS]) --> SEL
-    SEL --> BUCK5[VDD_5V]
-    SEL -.->|N_BRICK1_VALID, N_BRICK2_VALID,<br/>N_USB_VBUS_VALID| VAL[FMU]
+    SEL --> BUCK5[+5V]
+    SEL -.->|PWR1_VALID, PWR2_VALID,<br/>N_USB_VBUS_VALID| VAL[FMU]
 
     BUCK5 --> P5[Switch, 1.5 A<br/>VDD_5V_PERIPH]
     BUCK5 --> H5[Switch, 1.5 A<br/>VDD_5V_HIPOWER]
