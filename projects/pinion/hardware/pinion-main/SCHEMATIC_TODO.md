@@ -74,11 +74,11 @@ The parts both halves share are placed directly on the root sheet, next to the
 
 ### R1. Power input
 
-- [ ] **POWER1**, **POWER2** JST-GH 6 (ref: Holybro port table): 5 V, 5 V,
+- [x] **POWER1**, **POWER2** JST-GH 6 (ref: Holybro port table): 5 V, 5 V,
       CURRENT, VOLTAGE, GND, GND. A purchased power module supplies regulated
       5 V and the two analog signals; there is no battery connector or battery
       regulator on the board.
-- [ ] **Sense inputs**: RC filter and clamp on each, 3.3 V full scale →
+- [x] **Sense inputs**: RC filter and clamp on each, 3.3 V full scale →
       `FMU_BAT1_V` (U1 PC5), `FMU_BAT1_I` (PC4), `FMU_BAT2_V` (PB1), `FMU_BAT2_I`
       (PA2). Default scales 18.18 V/V and 36.36 A/V (ref: v6C `hwdef.dat`).
 - [ ] **Power selector** (ideal diodes, one source at a time) →
@@ -89,10 +89,10 @@ The parts both halves share are placed directly on the root sheet, next to the
       PG is open-drain and high when valid, so the active-low valid signals
       need an inversion.
       Its USB input is `USBC_VBUS` from the AM62L's USB-C port *(open 3)*.
-- [ ] **Input protection**: TVS and overvoltage protection on each 5 V input
+- [x] **Input protection**: TVS and overvoltage protection on each 5 V input
       (FMUv6C maximum input is 6 V).
 - [ ] **5 V monitor divider** 2:1 → `FMU_SCALED_V5` (U1 PA4) (ref: v6C, `SCALE(2)`).
-- [ ] **5 V budget** *(open 2)*: confirm the power module covers the AM62L
+- [x] **5 V budget** *(open 2)*: confirm the power module covers the AM62L
       section, the FMU and both 1.5 A port rails.
 
 ### R2. Processor interconnect
@@ -111,7 +111,7 @@ The parts both halves share are placed directly on the root sheet, next to the
 
 ### R3. Mechanical
 
-- [ ] **Stack mounting holes** (ref: `specs/notes/mechanical.md`): four
+- [x] **Stack mounting holes** (ref: `specs/notes/mechanical.md`): four
       non-plated Ø3.2 mm holes on a 30.5 x 30.5 mm square centred on the board.
       Place them as
       mounting-hole symbols so they reach the PCB with their keep-outs.
