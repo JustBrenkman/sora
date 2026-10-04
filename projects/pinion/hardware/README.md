@@ -4,7 +4,8 @@ KiCad projects, one folder per board.
 
 | Board                        | Description                                  | Status      |
 | ---------------------------- | -------------------------------------------- | ----------- |
-| [pinion-main](pinion-main/)  | Main board: AM62L and STM32H743              | Pin maps and schematic TODO ready; schematic not started |
+| [pinion-main](pinion-main/)  | Main board: AM62L and STM32H743              | Schematic in progress |
+| [pinion-imu](pinion-imu/)    | Isolated IMU board: two IMUs, calibration EEPROM, heater | Schematic drawn; no layout |
 
 Accessory boards (debug adapter, breakouts, power modules) get their own folder
 next to `pinion-main/` and a row in this table.

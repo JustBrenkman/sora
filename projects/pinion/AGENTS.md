@@ -18,6 +18,7 @@ The repo-wide rules in the root `AGENTS.md` apply.
 | `specs/notes/`, `specs/diagrams/` | Decisions, reference inventory, block diagrams              |
 | `hardware/pinion-main/SCHEMATIC_TODO.md` | What is left to draw, per part                       |
 | `hardware/pinion-main/`           | KiCad project for the main board                            |
+| `hardware/pinion-imu/`            | KiCad project for the isolated IMU board (FFC to the main board) |
 | `firmware/px4/boards/sora/pinion/`| PX4 board files, laid out as in the PX4 tree                |
 | `firmware/PX4_VERSION`            | Pinned PX4 tag                                              |
 | `linux/dts/`, `kernel/`, `u-boot/`| Distro-independent board support                            |

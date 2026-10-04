@@ -33,7 +33,7 @@ parts are in [`reference-inventory.md`](reference-inventory.md).
 | F4 | Power selector takes POWER1, POWER2 and the FMU's USB VBUS | Same selector; its USB input is the AM62L USB-C port's VBUS | PE15 | The FMU has no external USB (F2). Lets the board run from USB on the bench |
 | F6 | CAN1 bus has one node on board | The AM62L's MCAN0 transceiver joins CAN1 | PD0, PD1 | Linux sees DroneCAN traffic |
 | F7 | FM25V02A FRAM on SPI2 | Part undecided; SPI2 and its chip select stay as on the FMUv6C under neutral `_NVM` net names | PD3, PC2, PC3, PD4 | See open questions |
-| F8 | IMU on a separate, vibration-isolated board with its own calibration EEPROM | Same buses, and the same parts except IMU 1 (F9); whether they sit on a daughterboard is a mechanical decision | SPI1, I2C4 | See open questions |
+| F8 | IMU on a separate, vibration-isolated board with its own calibration EEPROM | Same: the two IMUs, the calibration EEPROM and the heater sit on `hardware/pinion-imu`, joined to the main board by a 22-way 0.5 mm FFC. The barometer and magnetometer stay on the main board | SPI1, I2C4, PB9 | Vibration isolation, as on the Pixhawk 6C |
 | F9 | BMI088 as IMU 1: separate accel and gyro chip selects and interrupts | BMI270: one chip select and one interrupt (INT1) on the accel's pins; the gyro's two pins are free | PC15, PE4; PC14 and PE5 free | The BMI088 is not in stock anywhere |
 
 Everything else on the FMU and the whole IO processor follows the reference:
@@ -88,8 +88,7 @@ starting with "DEVIATION:" mark the rows above.
    AM62L-driven BOOT0 or reset; a PPS line between the two processors.
 5. **BOOT0.** Pull-down and test pad only, or also drivable from an AM62L GPIO
    so Linux can force the ROM DFU loader if the PX4 bootloader is ever erased.
-6. **IMU isolation (F8).** Daughterboard with foam, as Holybro does, or on the
-   main board.
+6. *(closed)* **IMU isolation (F8).** Decided: a separate IMU board, `hardware/pinion-imu`.
 7. **VTT termination.** SPRAD06 makes VTT optional on address/control for a
    single DDR4 package; without it VREFCA comes from a divider. Decide before
    the DDR sheet.

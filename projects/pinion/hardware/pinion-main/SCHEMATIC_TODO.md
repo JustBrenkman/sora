@@ -273,36 +273,52 @@ All 373 balls are in `specs/pinout/soc.md`; I/O supply per ball is in
       `FMU_USART3_TX_DEBUG` (TP15), `FMU_USART3_RX_DEBUG` (TP16), `FMU_NRST` (TP17),
       GND (TP18); `FMU_BOOT0` already has TP12.
 - [x] **`FMU_BOOT0`**: pull-down and test pad *(open 5)*.
-- [ ] **Hardware version/revision dividers**: `HW_VER_REV_DRIVE` (PE12) feeds two
+- [x] **Hardware version/revision dividers**: `HW_VER_REV_DRIVE` (PE12) feeds two
       resistor pairs sensed on `HW_VER_SENSE` (PC1) and `HW_REV_SENSE` (PC0).
       Resistor pairs per ID are in the "HW REV and VER ID" sheet of
       `specs/reference/px4-docs/fmuv6c-pinout.xlsx`. pinion is version 1,
       revision 0: 174k over 32.4k on `HW_VER_SENSE`, 442k over 24.9k on
       `HW_REV_SENSE` (recorded in `specs/notes/decisions.md`).
-- [ ] **Status LEDs**: red `N_FMU_LED_RED` (PD10, D9 with 1k), blue
+- [x] **Status LEDs**: red `N_FMU_LED_RED` (PD10, D9 with 1k), blue
       `N_FMU_LED_BLUE` (PD11, D10 with 330R), active low, to `FMU_VDD_3V3`.
-- [ ] **Pull-ups** on I2C1, I2C2 (2.2k to `FMU_VDD_3V3`) and I2C4 (4.7k to
+- [x] **Pull-ups** on I2C1, I2C2 (2.2k to `FMU_VDD_3V3`) and I2C4 (4.7k to
       `FMU_VDD_3V3_SENSORS`).
 
 ### C3. Sensors
 
-All on `FMU_VDD_3V3_SENSORS` (ref: v6C sensor table, DS-018). Decide first whether
-they go on an isolated daughterboard *(open 6)*; if so this sheet becomes a
-board-to-board connector carrying SPI1, I2C4, two CS, two DRDY, the heater
-and the rail.
+The two IMUs, the calibration EEPROM and the heater are on the isolated IMU
+board, `hardware/pinion-imu` (deviation F8), joined by a 22-way 0.5 mm FFC. The
+barometer and magnetometer stay on this board. Everything runs from
+`FMU_VDD_3V3_SENSORS` (ref: v6C sensor table, DS-018).
 
-- [ ] **ICM-42688-P** (IMU 2): SPI1 (`FMU_SPI1_SCK_SENSOR`, `_MISO_`, `_MOSI_`),
-      CS `FMU_SPI1_CS3_ICM42688`, INT → `FMU_SPI1_DRDY3_ICM42688`.
-- [ ] **BMI270** (IMU 1, replaces the FMUv6C's BMI088, deviation F9): SPI1, CS
-      `FMU_SPI1_CS1_BMI270`, INT1 → `FMU_SPI1_DRDY1_BMI270`; INT2 and the
-      auxiliary interface pins unconnected; VDD and VDDIO on `FMU_VDD_3V3_SENSORS`
-      (ref: BMI270 datasheet section 7 in `reference/parts/`).
-- [ ] **IST8310** magnetometer: I2C4, address 0x0C.
-- [ ] **MS5611** barometer: I2C4, address 0x77. Keep it away from heat and
+Main board, sensors sheet:
+
+- [x] **IMU board connector** (J4, FFC 22): SPI1 (`FMU_SPI1_SCK_SENSOR`, `_MOSI_`,
+      `_MISO_`), `FMU_SPI1_CS1_BMI270`, `FMU_SPI1_CS3_ICM42688`,
+      `FMU_SPI1_DRDY1_BMI270`, `FMU_SPI1_DRDY3_ICM42688`, I2C4, `FMU_HEATER`,
+      `FMU_VDD_3V3_SENSORS`, `+5V` for the heater. Pin order is in
+      `specs/diagrams/block-diagram.md` section 6 and `hardware/pinion-imu/README.md`.
+- [x] **IST8310** magnetometer: I2C4, address 0x0C.
+- [x] **MS5611** barometer: I2C4, address 0x77. Keep it away from heat and
       shield it from light and airflow.
-- [ ] **24LC64** calibration EEPROM: I2C4, address 0x51.
-- [ ] **IMU heater**: resistor(s) next to the IMUs, low-side MOSFET driven by
-      `FMU_HEATER` (PB9), gate pull-down.
+
+IMU board (`hardware/pinion-imu`):
+
+- [x] **ICM-42688-P** (IMU 2): SPI1, CS `FMU_SPI1_CS3_ICM42688`, INT →
+      `FMU_SPI1_DRDY3_ICM42688`. Pins 7, 9 and 11 to GND; 10 nF on VDDIO (ref: TDK
+      datasheet section 4, `reference/parts/`).
+- [x] **BMI270** (IMU 1, replaces the FMUv6C's BMI088, deviation F9): SPI1, CS
+      `FMU_SPI1_CS1_BMI270`, INT1 → `FMU_SPI1_DRDY1_BMI270`; INT2 and the
+      auxiliary interface pins unconnected (ref: BMI270 datasheet section 7).
+- [x] **24LC64** calibration EEPROM: I2C4, address 0x51.
+- [x] **IMU heater**: a PCB trace under the IMUs (R1, about 10R, drawn in layout
+      and needing a footprint) from `+5V` to a constant-current sink on the same
+      board, enabled by `FMU_HEATER` (PB9). The GPIO biases an LM4040-2.5 (U4)
+      through 1.5k; 47k/3k sets 0.15 V at the TLV9001 (U5), which drives an
+      AO3400A (Q1) so that 0.15 V appears across the 0.5R sense resistor:
+      0.30 A. Trace and Q1 together dissipate about 1.5 W whatever the trace
+      resistance. 100k pull-down on `FMU_HEATER`; 1k and 1 nF around the op-amp.
+      Place Q1 away from, or centred between, the two IMUs.
 - [ ] Orientation: note each sensor's axes on the sheet. The FMUv6C rotations
       (`rc.board_sensors`: ICM-42688-P `-R 6`) only hold if the part is placed
       as on the Pixhawk 6C; the BMI270 has no reference rotation.

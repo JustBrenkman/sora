@@ -430,6 +430,12 @@
   url: https://www.ti.com/lit/ds/symlink/tps51200.pdf
   sha256: aba58b616681c52dfdefd9611c92af68b7904197b58e92226dd14fee402e12b5
 
+# The TDK site does not serve this file to fetch.sh; download it by hand.
+- id: icm-42688-p-datasheet
+  file: parts/icm-42688-p-datasheet.pdf
+  url: https://invensense.tdk.com/wp-content/uploads/2020/04/ds-000347_icm-42688-p-datasheet.pdf
+  sha256: 9c6b57b0a2e45cf0251dd2423878573bd4da46e0cc2faa93dc558c28af51300a
+
 - id: lm73100-datasheet
   file: parts/lm73100-datasheet.pdf
   url: https://www.ti.com/lit/ds/symlink/lm7310.pdf

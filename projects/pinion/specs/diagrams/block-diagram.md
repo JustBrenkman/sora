@@ -225,6 +225,7 @@ flowchart LR
 | PPM/SBUS RC | JST-GH 5 | 5 V, PPM/S.BUS in, RSSI in, NC, GND |
 | SBUS OUT | JST-GH 3 | NC, S.BUS out, GND |
 | FMU debug | JST-SH 10 | 3V3, USART3 TX, RX, SWDIO, SWCLK, NC, NC, NC, NRST, GND |
+| IMU board | FFC 22, 0.5 mm | 1 GND, 2-3 FMU_VDD_3V3_SENSORS, 4 GND, 5 SPI1 SCK, 6 GND, 7 MOSI, 8 MISO, 9 GND, 10 CS BMI270, 11 CS ICM-42688-P, 12 DRDY BMI270, 13 DRDY ICM-42688-P, 14 GND, 15 I2C4 SCL, 16 I2C4 SDA, 17 GND, 18 FMU_HEATER, 19 spare, 20-21 +5V (heater), 22 GND; same numbering on both boards |
 | IO debug | JST-SH 10 | 3V3, USART1 TX, NC, SWDIO, SWCLK, SWO, NC, NC, NRST, GND |
 | USB-C | USB 2.0 Type-C | AM62L USB0 |
 | Ethernet | *(select)* | 4 pairs from the PHY magnetics |
