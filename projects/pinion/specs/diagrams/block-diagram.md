@@ -61,7 +61,7 @@ flowchart LR
 flowchart LR
     FMU[STM32H743VIH6]
 
-    subgraph IMU[Sensors, VDD_3V3_SENSORS]
+    subgraph IMU[Sensors, FMU_VDD_3V3_SENSORS]
         ICM[ICM-42688-P]
         BMI[BMI270 accel + gyro]
         MAG[IST8310<br/>0x0C]
@@ -159,17 +159,17 @@ flowchart LR
     SEL --> BUCK5[+5V]
     SEL -.->|PWR1_VALID, PWR2_VALID,<br/>N_USB_VBUS_VALID| VAL[FMU]
 
-    BUCK5 --> P5[Switch, 1.5 A<br/>VDD_5V_PERIPH]
-    BUCK5 --> H5[Switch, 1.5 A<br/>VDD_5V_HIPOWER]
+    BUCK5 --> P5[Switch, 1.5 A<br/>FMU_VDD_5V_PERIPH]
+    BUCK5 --> H5[Switch, 1.5 A<br/>FMU_VDD_5V_HIPWR]
     BUCK5 --> U5[Switch<br/>USB-C VBUS out]
     BUCK5 --> F5[Switch<br/>FMU_VBUS_SENSE]
     BUCK5 --> SCAL[Divider<br/>FMU_SCALED_V5]
 
     BUCK5 --> F33[3.3 V regulator<br/>FMU_VDD_3V3]
     F33 --> FA[Filter<br/>FMU_VDDA_3V3]
-    F33 --> S33[Switch<br/>VDD_3V3_SENSORS]
+    F33 --> S33[Switch<br/>FMU_VDD_3V3_SENSORS]
     F33 --> I33[IO processor U2]
-    I33 --> SPK[Switch<br/>VDD_3V3_SPEKTRUM]
+    I33 --> SPK[Switch<br/>IO_VDD_3V3_SPEKTRUM]
 
     BUCK5 --> B33[3.3 V buck<br/>+3V3]
     BUCK5 --> PMIC[TPS6521402]
@@ -213,15 +213,15 @@ flowchart LR
 | Connector | Type | Signals |
 |---|---|---|
 | POWER1, POWER2 | JST-GH 6 | 5 V, 5 V, CURRENT, VOLTAGE, GND, GND |
-| TELEM1 | JST-GH 6 | VDD_5V_HIPOWER, UART7 TX, RX, CTS, RTS, GND |
-| TELEM3 | JST-GH 6 | VDD_5V_PERIPH, USART2 TX, RX, NC, NC, GND |
-| GPS1 | JST-GH 10 | VDD_5V_PERIPH, USART1 TX, RX, I2C1 SCL, SDA, safety switch, safety LED, 3V3, buzzer, GND |
-| GPS2 | JST-GH 6 | VDD_5V_HIPOWER, UART8 TX, RX, I2C2 SCL, SDA, GND |
-| I2C | JST-GH 4 | VDD_5V_PERIPH, I2C2 SCL, SDA, GND |
-| CAN1, CAN2 | JST-GH 4 | VDD_5V_PERIPH, CAN_H, CAN_L, GND |
+| TELEM1 | JST-GH 6 | FMU_VDD_5V_HIPWR, UART7 TX, RX, CTS, RTS, GND |
+| TELEM3 | JST-GH 6 | FMU_VDD_5V_PERIPH, USART2 TX, RX, NC, NC, GND |
+| GPS1 | JST-GH 10 | FMU_VDD_5V_PERIPH, USART1 TX, RX, I2C1 SCL, SDA, safety switch, safety LED, 3V3, buzzer, GND |
+| GPS2 | JST-GH 6 | FMU_VDD_5V_HIPWR, UART8 TX, RX, I2C2 SCL, SDA, GND |
+| I2C | JST-GH 4 | FMU_VDD_5V_PERIPH, I2C2 SCL, SDA, GND |
+| CAN1, CAN2 | JST-GH 4 | FMU_VDD_5V_PERIPH, CAN_H, CAN_L, GND |
 | FMU PWM | JST-GH 10 | VDD_SERVO, FMU_CH1..8, GND |
 | IO PWM | JST-GH 10 | VDD_SERVO, IO_CH1..8, GND |
-| DSM | JST-ZH 3 | VDD_3V3_SPEKTRUM, GND, DSM in |
+| DSM | JST-ZH 3 | IO_VDD_3V3_SPEKTRUM, GND, DSM in |
 | PPM/SBUS RC | JST-GH 5 | 5 V, PPM/S.BUS in, RSSI in, NC, GND |
 | SBUS OUT | JST-GH 3 | NC, S.BUS out, GND |
 | FMU debug | JST-SH 10 | 3V3, USART3 TX, RX, SWDIO, SWCLK, NC, NC, NC, NRST, GND |

@@ -191,7 +191,7 @@
         "PC13": (
             mode: gpio_out,
             initial: high,
-            net: "IO_SPEKTRUM_PWR_EN",
+            net: "IO_VDD_3V3_SPEKTRUM_EN",
             note: "3.3 V switch for the DSM satellite receiver. PX4 io-v2.",
         ),
         "PA15": (

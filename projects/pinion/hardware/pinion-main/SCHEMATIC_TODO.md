@@ -228,37 +228,48 @@ All 373 balls are in `specs/pinout/soc.md`; I/O supply per ball is in
 
 ### C1. Power
 
-- [ ] **3.3 V regulator** (SY8120IABC buck, SOT-23-6, 2 A, LCSC C479076) from
+- [x] **3.3 V regulator** (SY8120IABC buck, SOT-23-6, 2 A, LCSC C479076) from
       `+5V` → `FMU_VDD_3V3`. Supplies U1, U2's
       rail, the sensor switch, CAN transceivers, parameter storage.
-- [ ] **Analog filter** (ferrite + capacitors) → `FMU_VDDA_3V3` (U1 VDDA; VREF+ is
+- [x] **Analog filter** (ferrite + capacitors) → `FMU_VDDA_3V3` (U1 VDDA; VREF+ is
       bonded to VDDA in this package).
-- [ ] **Sensor rail switch** → `VDD_3V3_SENSORS`, enable `VDD_3V3_SENSORS_EN`
-      (U1 PB2, active high, default off). PX4 power-cycles the sensors with it (ref: v6C).
-- [ ] **`VDD_5V_PERIPH` switch**, 1.5 A current limit: enable
-      `N_VDD_5V_PERIPH_EN` (U1 PE2), fault `N_VDD_5V_PERIPH_OC` (U1 PE3, pull-up to
+- [x] **Sensor rail switch** (SY6288AAAC, 0.6 A, LCSC C111829) → `FMU_VDD_3V3_SENSORS`,
+      enable `FMU_VDD_3V3_SENSORS_EN` (U1 PB2, active high, pull-down so it is off by
+      default). PX4 power-cycles the sensors with it (ref: v6C). The switch's fault
+      flag is pulled up and leaves the sheet as `FMU_VDD_3V3_SENSORS_FLT` (active low),
+      but is not connected to the FMU: the FMUv6C has no sensor-rail overcurrent input.
+- [x] **`FMU_VDD_5V_PERIPH` switch** (SY6288CAAC, 2 A, LCSC C111830; limits between
+      2.1 A and 3.7 A): enable `FMU_VDD_5V_PERIPH_EN` (U1 PE2, active high, pull-down;
+      active low on the FMUv6C), fault `FMU_VDD_5V_PERIPH_FLT` (U1 PE3, pull-up to
       `FMU_VDD_3V3`). Feeds TELEM3, GPS1, I2C, CAN1, CAN2, RC (ref: v6C, Holybro spec).
-- [ ] **`VDD_5V_HIPOWER` switch**, 1.5 A current limit: enable
-      `N_VDD_5V_HIPOWER_EN` (U1 PC10), fault `N_VDD_5V_HIPOWER_OC` (U1 PC11,
+- [x] **`FMU_VDD_5V_HIPWR` switch** (SY6288CAAC): enable `FMU_VDD_5V_HIPWR_EN`
+      (U1 PC10, active high, pull-down), fault `FMU_VDD_5V_HIPWR_FLT` (U1 PC11,
       pull-up). Feeds TELEM1 and GPS2 (ref: v6C, Holybro spec).
-- [ ] **IO rail**: U2 and the GPS1 connector pin 8 run from `FMU_VDD_3V3`; there
+- [x] **IO rail**: U2 and the GPS1 connector pin 8 run from `FMU_VDD_3V3`; there
       is no separate IO rail.
-- [ ] **Spektrum switch** → `VDD_3V3_SPEKTRUM`, enable `IO_SPEKTRUM_PWR_EN` (U2 PC13).
+- [x] **Spektrum switch** (SY6288AAAC) → `IO_VDD_3V3_SPEKTRUM`, enable
+      `IO_VDD_3V3_SPEKTRUM_EN` (U2 PC13, active high).
 - [ ] **`FMU_VBAT`** (U1 VBAT): backup supply; tie to `FMU_VDD_3V3` or a backup
       cell. DS-018 lists a battery-backed RTC, but the FMUv6C pinout has no LSE
       crystal (PC14/PC15 are chip selects).
 
 ### C2. MCU (U1, STM32H743VIH6)
 
-- [ ] **U1**. All 100 balls are in `specs/pinout/fmu.md`; 8 I/O are free
+- [x] **U1**. All 100 balls are in `specs/pinout/fmu.md`; 8 I/O are free
       (PB3, PB4, PB14, PB15, PC14, PD6, PD7, PE5).
-- [ ] **Decoupling**: per VDD ball plus bulk; `FMU_VCAP1`, `FMU_VCAP2` capacitors
+- [x] **Decoupling**: per VDD ball plus bulk; `FMU_VCAP1`, `FMU_VCAP2` capacitors
       to GND; `VDDLDO`, `VDD33_USB`, `PDR_ON` to `FMU_VDD_3V3`. Take values from
       the STM32H743 datasheet (DS12110, to be added to `specs/reference/st/` by hand).
-- [ ] **16 MHz crystal** + load capacitors on `FMU_OSC_IN`/`FMU_OSC_OUT`
+- [x] **16 MHz crystal** + load capacitors on `FMU_OSC_IN`/`FMU_OSC_OUT`
       (PH0/PH1) (ref: v6C `board.h`, `STM32_BOARD_XTAL`).
-- [ ] **Reset**: `FMU_NRST` with capacitor, to the debug connector.
-- [ ] **`FMU_BOOT0`**: pull-down and test pad *(open 5)*.
+- [x] **Reset**: `FMU_NRST` with capacitor and push button (SW1), to the debug
+      connector.
+- [x] **FMU debug** JST-SH 10 (J3, on the MCU sheet; the connectors sheet holds
+      only the Pixhawk-standard external connectors): `FMU_VDD_3V3`,
+      `FMU_USART3_TX_DEBUG`, `FMU_USART3_RX_DEBUG`, `FMU_SWDIO`, `FMU_SWCLK`, NC, NC,
+      NC, `FMU_NRST`, GND. The 10-pin connector is kept over the 6-pin Debug Mini
+      because the Mini has no reset pin.
+- [x] **`FMU_BOOT0`**: pull-down and test pad *(open 5)*.
 - [ ] **Hardware version/revision dividers**: `HW_VER_REV_DRIVE` (PE12) feeds two
       resistor pairs sensed on `HW_VER_SENSE` (PC1) and `HW_REV_SENSE` (PC0).
       Resistor pairs per ID are in the "HW REV and VER ID" sheet of
@@ -266,11 +277,11 @@ All 373 balls are in `specs/pinout/soc.md`; I/O supply per ball is in
       V6C variant and record them in `specs/notes/decisions.md`.
 - [ ] **Status LEDs**: red `N_FMU_LED_RED` (PD10), blue `N_FMU_LED_BLUE` (PD11),
       active low, to `FMU_VDD_3V3`.
-- [ ] **Pull-ups** on I2C1, I2C2 (to `FMU_VDD_3V3`) and I2C4 (to `VDD_3V3_SENSORS`).
+- [ ] **Pull-ups** on I2C1, I2C2 (to `FMU_VDD_3V3`) and I2C4 (to `FMU_VDD_3V3_SENSORS`).
 
 ### C3. Sensors
 
-All on `VDD_3V3_SENSORS` (ref: v6C sensor table, DS-018). Decide first whether
+All on `FMU_VDD_3V3_SENSORS` (ref: v6C sensor table, DS-018). Decide first whether
 they go on an isolated daughterboard *(open 6)*; if so this sheet becomes a
 board-to-board connector carrying SPI1, I2C4, two CS, two DRDY, the heater
 and the rail.
@@ -279,7 +290,7 @@ and the rail.
       CS `FMU_SPI1_CS3_ICM42688`, INT → `FMU_SPI1_DRDY3_ICM42688`.
 - [ ] **BMI270** (IMU 1, replaces the FMUv6C's BMI088, deviation F9): SPI1, CS
       `FMU_SPI1_CS1_BMI270`, INT1 → `FMU_SPI1_DRDY1_BMI270`; INT2 and the
-      auxiliary interface pins unconnected; VDD and VDDIO on `VDD_3V3_SENSORS`
+      auxiliary interface pins unconnected; VDD and VDDIO on `FMU_VDD_3V3_SENSORS`
       (ref: BMI270 datasheet section 7 in `reference/parts/`).
 - [ ] **IST8310** magnetometer: I2C4, address 0x0C.
 - [ ] **MS5611** barometer: I2C4, address 0x77. Keep it away from heat and
@@ -312,15 +323,13 @@ and the rail.
 Pin order as in `specs/diagrams/block-diagram.md` section 6 (ref: Holybro port
 tables, DS-009). ESD protection and series resistors on every external signal.
 
-- [ ] **TELEM1** JST-GH 6: `VDD_5V_HIPOWER`, UART7 `FMU_UART7_*_TEL1`.
-- [ ] **TELEM3** JST-GH 6: `VDD_5V_PERIPH`, USART2 `FMU_USART2_*_TEL3`.
-- [ ] **GPS1** JST-GH 10: `VDD_5V_PERIPH`, USART1, I2C1, `IO_SAFETY_SWITCH`,
+- [ ] **TELEM1** JST-GH 6: `FMU_VDD_5V_HIPWR`, UART7 `FMU_UART7_*_TEL1`.
+- [ ] **TELEM3** JST-GH 6: `FMU_VDD_5V_PERIPH`, USART2 `FMU_USART2_*_TEL3`.
+- [ ] **GPS1** JST-GH 10: `FMU_VDD_5V_PERIPH`, USART1, I2C1, `IO_SAFETY_SWITCH`,
       `N_IO_LED_SAFETY`, `FMU_VDD_3V3`, buzzer (driver from `FMU_BUZZER`, PB0), GND.
-- [ ] **GPS2** JST-GH 6: `VDD_5V_HIPOWER`, UART8, I2C2.
-- [ ] **I2C** JST-GH 4: `VDD_5V_PERIPH`, I2C2.
+- [ ] **GPS2** JST-GH 6: `FMU_VDD_5V_HIPWR`, UART8, I2C2.
+- [ ] **I2C** JST-GH 4: `FMU_VDD_5V_PERIPH`, I2C2.
 - [ ] **CAN1**, **CAN2** JST-GH 4 each.
-- [ ] **FMU debug** JST-SH 10: `FMU_VDD_3V3`, `FMU_USART3_TX_DEBUG`,
-      `FMU_USART3_RX_DEBUG`, `FMU_SWDIO`, `FMU_SWCLK`, NC, NC, NC, `FMU_NRST`, GND.
 
 ### C7. IO processor and RC (U2, STM32F103C8T6)
 
@@ -337,7 +346,7 @@ All pins in `specs/pinout/io.md` (ref: PX4 `boards/px4/io-v2`).
 - [ ] **RSSI input**: connector pin → `IO_RSSI_ADC` (PA5) and `IO_RSSI_PWM` (PA12),
       with protection for 3.3 V.
 - [ ] **DSM**: `IO_USART1_RX_DSM` (PA10) to the JST-ZH connector, powered from
-      `VDD_3V3_SPEKTRUM`.
+      `IO_VDD_3V3_SPEKTRUM`.
 - [ ] **Servo rail sense**: divider from `VDD_SERVO` (0 to 36 V) → `IO_VSERVO_SENSE`
       (PA4); `N_IO_SERVO_FAULT` (PA15) pull-up.
 - [ ] **Safety switch**: `IO_SAFETY_SWITCH` (PB5) pull-down; `N_IO_LED_SAFETY` (PB13).

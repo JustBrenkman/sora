@@ -354,7 +354,7 @@
                     net: "FMU_SWCLK",
                 ),
             },
-            note: "SWD on the FMU debug connector (JST-SH 10). FMUv6C.",
+            note: "SWD on the FMU debug connector (JST-SH 10, on the MCU sheet). FMUv6C.",
         ),
         "RCC": (
             signals: {
@@ -402,29 +402,29 @@
         "PB2": (
             mode: gpio_out,
             initial: low,
-            net: "VDD_3V3_SENSORS_EN",
+            net: "FMU_VDD_3V3_SENSORS_EN",
             note: "Sensor rail load switch enable, active high. FMUv6C.",
         ),
         "PE2": (
             mode: gpio_out,
-            initial: high,
-            net: "N_VDD_5V_PERIPH_EN",
-            note: "5 V peripheral switch enable, active low. FMUv6C.",
+            initial: low,
+            net: "FMU_VDD_5V_PERIPH_EN",
+            note: "5 V peripheral switch enable, active high (SY6288C). DEVIATION: active low N_VDD_5V_PERIPH_EN on the FMUv6C.",
         ),
         "PE3": (
             mode: gpio_in,
-            net: "N_VDD_5V_PERIPH_OC",
+            net: "FMU_VDD_5V_PERIPH_FLT",
             note: "5 V peripheral switch overcurrent flag, active low; needs a pull-up. FMUv6C.",
         ),
         "PC10": (
             mode: gpio_out,
-            initial: high,
-            net: "N_VDD_5V_HIPOWER_EN",
-            note: "5 V high-power (TELEM1 + GPS2) switch enable, active low. FMUv6C.",
+            initial: low,
+            net: "FMU_VDD_5V_HIPWR_EN",
+            note: "5 V high-power (TELEM1 + GPS2) switch enable, active high (SY6288C). DEVIATION: active low N_VDD_5V_HIPOWER_EN on the FMUv6C.",
         ),
         "PC11": (
             mode: gpio_in,
-            net: "N_VDD_5V_HIPOWER_OC",
+            net: "FMU_VDD_5V_HIPWR_FLT",
             note: "5 V high-power switch overcurrent flag, active low; needs a pull-up. FMUv6C.",
         ),
         "PA15": (
@@ -466,7 +466,7 @@
         "NRST": (
             mode: reserved,
             net: "FMU_NRST",
-            note: "Reset: debug connector and reset supervisor.",
+            note: "Reset: push button and capacitor, and pin 9 of the debug connector.",
         ),
         "BOOT0": (
             mode: reserved,

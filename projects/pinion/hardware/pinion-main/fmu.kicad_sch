@@ -5,6 +5,14 @@
 	(uuid "213895c3-31c8-4d7b-a708-4c261aba9bd6")
 	(paper "A4")
 	(lib_symbols)
+	(no_connect
+		(at 93.98 50.8)
+		(uuid "5b71d68b-2b80-48d7-8283-659674c56d7b")
+	)
+	(no_connect
+		(at 93.98 57.15)
+		(uuid "795e24c5-bca4-4f7f-9048-8755316cb2b9")
+	)
 	(sheet
 		(at 104.14 101.6)
 		(size 31.75 25.4)
@@ -191,7 +199,7 @@
 	)
 	(sheet
 		(at 59.69 44.45)
-		(size 39.37 26.67)
+		(size 34.29 29.21)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -217,7 +225,7 @@
 			)
 		)
 		(property "Sheetfile" "fmu-power.kicad_sch"
-			(at 59.69 71.7046 0)
+			(at 59.69 74.2446 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -225,6 +233,86 @@
 					(size 1.27 1.27)
 				)
 				(justify left top)
+			)
+		)
+		(pin "IO_VDD_3V3_SPEKTRUM_EN" input
+			(at 93.98 48.26 0)
+			(uuid "a78e45d1-d848-48ae-ad90-67019c428e21")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "FMU_VDD_3V3_SENSORS_FLT" output
+			(at 93.98 57.15 0)
+			(uuid "3e5cd2a7-c8a8-4542-961b-8efd78364fbc")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "FMU_VDD_5V_HIPWR_EN" input
+			(at 93.98 60.96 0)
+			(uuid "85bf1f1d-262e-4947-a3a7-309eb74a4b94")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "IO_VDD_3V3_SPEKTRUM_FLT" output
+			(at 93.98 50.8 0)
+			(uuid "5fe9f3c0-f7b7-405f-9855-bdfa4debee2f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "FMU_VDD_5V_HIPWR_FLT" output
+			(at 93.98 63.5 0)
+			(uuid "5f8fede4-584b-4efa-b351-d054f07697c7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "FMU_VDD_5V_PERIPH_EN" input
+			(at 93.98 67.31 0)
+			(uuid "1fb49659-2454-4409-aa73-eb1dc32f2e8e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "FMU_VDD_5V_PERIPH_FLT" output
+			(at 93.98 69.85 0)
+			(uuid "3d91e4eb-cd71-479c-b8ed-bc39ebcef6ae")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "FMU_VDD_3V3_SENSORS_EN" input
+			(at 93.98 54.61 0)
+			(uuid "ede8b390-977a-43f0-ab1c-fe72c6c1313e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 		(instances

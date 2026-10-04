@@ -42,9 +42,9 @@ the main board.
 | Part | Function | Connection | pinion |
 |---|---|---|---|
 | TJA1051 x2 | CAN transceivers | FDCAN1 PD0/PD1, FDCAN2 PB5/PB13 | replace: TCAN1044V x2, VSON-8 (DRB), 5 V supply with 3.3 V VIO; datasheet in `reference/parts/` |
-| 5 V load switch, 1.5 A limit | `VDD_5V_PERIPH`: all ports except TELEM1 and GPS2 | EN PE2, OC PE3 (both active low) | keep (part not named in the sources) |
-| 5 V load switch, 1.5 A limit | `VDD_5V_HIPOWER`: TELEM1 and GPS2 | EN PC10, OC PC11 (both active low) | keep (part not named) |
-| 3.3 V sensor rail switch | `VDD_3V3_SENSORS` | EN PB2 | keep |
+| 5 V load switch, 1.5 A limit | `FMU_VDD_5V_PERIPH`: all ports except TELEM1 and GPS2 | EN PE2, OC PE3 (both active low) | keep (part not named in the sources) |
+| 5 V load switch, 1.5 A limit | `FMU_VDD_5V_HIPWR`: TELEM1 and GPS2 | EN PC10, OC PC11 (both active low) | keep (part not named) |
+| 3.3 V sensor rail switch | `FMU_VDD_3V3_SENSORS` | EN PB2 | keep |
 | 3.3 V Spektrum switch | Satellite receiver power and bind | EN PC13 of the F103 | keep |
 | Power selector (2 bricks + USB) | Picks the 5 V source, reports `N_BRICKx_VALID`, `N_USB_VBUS_VALID` | PA15, PB12, PE15 | keep; the USB input is the AM62L USB-C port's VBUS |
 | 5 V rail divider | `FMU_SCALED_V5` | PA4 | keep |

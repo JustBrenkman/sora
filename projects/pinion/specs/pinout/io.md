@@ -3,7 +3,7 @@
 | Pin | Pad | Function | Mux | Net | Config | Note |
 |---|---|---|---|---|---|---|
 | VBAT | 1 | reserved |  | FMU_VDD_3V3 |  |  |
-| PC13 | 2 | gpio_out |  | IO_SPEKTRUM_PWR_EN | initial=high | 3.3 V switch for the DSM satellite receiver. PX4 io-v2. |
+| PC13 | 2 | gpio_out |  | IO_VDD_3V3_SPEKTRUM_EN | initial=high | 3.3 V switch for the DSM satellite receiver. PX4 io-v2. |
 | PC14 | 3 | gpio_in |  | IO_HW_DETECT1 | bias=pull_down | Board-type sense, left floating (reads low). PX4 io-v2. |
 | PC15 | 4 | gpio_in |  | IO_HW_DETECT2 | bias=pull_up | Board-type sense, left floating (reads high). PX4 io-v2. |
 | PD0 | 5 | RCC.OSC_IN | fixed | IO_OSC_IN |  |  |

@@ -4,7 +4,7 @@
 |---|---|---|---|---|---|---|
 | PC14 | A1 |  |  |  |  |  |
 | PC13 | A2 | gpio_out |  | FMU_SPI1_CS3_ICM42688 | initial=high | FMUv6C. |
-| PE2 | A3 | gpio_out |  | N_VDD_5V_PERIPH_EN | initial=high | 5 V peripheral switch enable, active low. FMUv6C. |
+| PE2 | A3 | gpio_out |  | FMU_VDD_5V_PERIPH_EN | initial=low | 5 V peripheral switch enable, active high (SY6288C). DEVIATION: active low N_VDD_5V_PERIPH_EN on the FMUv6C. |
 | PB9 | A4 | TIM17.CH1 | AF1 | FMU_HEATER |  |  |
 | PB7 | A5 | I2C1.SDA | AF4 | FMU_I2C1_SDA_GPS1 | drive=open_drain |  |
 | PB4 | A6 |  |  |  |  |  |
@@ -14,13 +14,13 @@
 | PA13 | A10 | DEBUG.JTMS-SWDIO | AF0 | FMU_SWDIO |  |  |
 | PC15 | B1 | gpio_out |  | FMU_SPI1_CS1_BMI270 | initial=high | DEVIATION: BMI270 chip select; the FMUv6C has the BMI088 accel here. |
 | VBAT | B2 | reserved |  | FMU_VBAT |  | RTC/backup supply. |
-| PE3 | B3 | gpio_in |  | N_VDD_5V_PERIPH_OC |  | 5 V peripheral switch overcurrent flag, active low; needs a pull-up. FMUv6C. |
+| PE3 | B3 | gpio_in |  | FMU_VDD_5V_PERIPH_FLT |  | 5 V peripheral switch overcurrent flag, active low; needs a pull-up. FMUv6C. |
 | PB8 | B4 | I2C1.SCL | AF4 | FMU_I2C1_SCL_GPS1 | drive=open_drain |  |
 | PB6 | B5 | USART1.TX | AF7 | FMU_USART1_TX_GPS1 |  |  |
 | PD5 | B6 | USART2.TX | AF7 | FMU_USART2_TX_TEL3 |  |  |
 | PD2 | B7 | UART5.RX | AF8 | FMU_UART5_RX_SOC |  |  |
-| PC11 | B8 | gpio_in |  | N_VDD_5V_HIPOWER_OC |  | 5 V high-power switch overcurrent flag, active low; needs a pull-up. FMUv6C. |
-| PC10 | B9 | gpio_out |  | N_VDD_5V_HIPOWER_EN | initial=high | 5 V high-power (TELEM1 + GPS2) switch enable, active low. FMUv6C. |
+| PC11 | B8 | gpio_in |  | FMU_VDD_5V_HIPWR_FLT |  | 5 V high-power switch overcurrent flag, active low; needs a pull-up. FMUv6C. |
+| PC10 | B9 | gpio_out |  | FMU_VDD_5V_HIPWR_EN | initial=low | 5 V high-power (TELEM1 + GPS2) switch enable, active high (SY6288C). DEVIATION: active low N_VDD_5V_HIPOWER_EN on the FMUv6C. |
 | PA12 | B10 | USB_OTG_FS.DP | AF10 | FMU_USB_DP |  |  |
 | PH0 | C1 | RCC.OSC_IN | fixed | FMU_OSC_IN |  |  |
 | VSS_C2 | C2 | reserved |  | GND |  |  |
@@ -42,7 +42,7 @@
 | PD0 | D8 | FDCAN1.RX | AF9 | FMU_CAN1_RX |  |  |
 | PA8 | D9 | TIM1.CH1 | AF1 | FMU_CH1 |  |  |
 | PA10 | D10 | USART1.RX | AF7 | FMU_USART1_RX_GPS1 |  |  |
-| NRST | E1 | reserved |  | FMU_NRST |  | Reset: debug connector and reset supervisor. |
+| NRST | E1 | reserved |  | FMU_NRST |  | Reset: push button and capacitor, and pin 9 of the debug connector. |
 | PC2 | E2 | SPI2.MISO | AF5 | FMU_SPI2_MISO_NVM |  |  |
 | PE6 | E3 | gpio_in |  | FMU_SPI1_DRDY3_ICM42688 |  | FMUv6C. |
 | VSS_E4 | E4 | reserved |  | GND |  |  |
@@ -66,7 +66,7 @@
 | PA0 | G2 | TIM5.CH1 | AF2 | FMU_CH7 |  |  |
 | PA4 | G3 | ADC1.INP18 | analog | FMU_SCALED_V5 |  |  |
 | PC4 | G4 | ADC1.INP4 | analog | FMU_PWR1_CURRENT |  |  |
-| PB2 | G5 | gpio_out |  | VDD_3V3_SENSORS_EN | initial=low | Sensor rail load switch enable, active high. FMUv6C. |
+| PB2 | G5 | gpio_out |  | FMU_VDD_3V3_SENSORS_EN | initial=low | Sensor rail load switch enable, active high. FMUv6C. |
 | PE10 | G6 | UART7.CTS | AF7 | FMU_UART7_CTS_TEL1 |  |  |
 | PE14 | G7 | TIM1.CH4 | AF1 | FMU_CH4 |  |  |
 | PD15 | G8 | TIM4.CH4 | AF2 | FMU_CH6 |  |  |
@@ -313,7 +313,7 @@ DEVIATION: wired on-board to AM62L USB1 (host) for firmware upload and MAVLink; 
 
 ## DEBUG
 
-SWD on the FMU debug connector (JST-SH 10). FMUv6C.
+SWD on the FMU debug connector (JST-SH 10, on the MCU sheet). FMUv6C.
 
 | Signal | Pin | Net |
 |---|---|---|
