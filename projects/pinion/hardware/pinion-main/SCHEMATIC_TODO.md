@@ -269,15 +269,20 @@ All 373 balls are in `specs/pinout/soc.md`; I/O supply per ball is in
       `FMU_USART3_TX_DEBUG`, `FMU_USART3_RX_DEBUG`, `FMU_SWDIO`, `FMU_SWCLK`, NC, NC,
       NC, `FMU_NRST`, GND. The 10-pin connector is kept over the 6-pin Debug Mini
       because the Mini has no reset pin.
+- [ ] **Jig test points** (1.5 mm pads): SWDIO (TP13), SWCLK (TP14),
+      `FMU_USART3_TX_DEBUG` (TP15), `FMU_USART3_RX_DEBUG` (TP16), `FMU_NRST` (TP17),
+      GND (TP18); `FMU_BOOT0` already has TP12.
 - [x] **`FMU_BOOT0`**: pull-down and test pad *(open 5)*.
 - [ ] **Hardware version/revision dividers**: `HW_VER_REV_DRIVE` (PE12) feeds two
       resistor pairs sensed on `HW_VER_SENSE` (PC1) and `HW_REV_SENSE` (PC0).
       Resistor pairs per ID are in the "HW REV and VER ID" sheet of
-      `specs/reference/px4-docs/fmuv6c-pinout.xlsx`. Choose IDs that are not a
-      V6C variant and record them in `specs/notes/decisions.md`.
-- [ ] **Status LEDs**: red `N_FMU_LED_RED` (PD10), blue `N_FMU_LED_BLUE` (PD11),
-      active low, to `FMU_VDD_3V3`.
-- [ ] **Pull-ups** on I2C1, I2C2 (to `FMU_VDD_3V3`) and I2C4 (to `FMU_VDD_3V3_SENSORS`).
+      `specs/reference/px4-docs/fmuv6c-pinout.xlsx`. pinion is version 1,
+      revision 0: 174k over 32.4k on `HW_VER_SENSE`, 442k over 24.9k on
+      `HW_REV_SENSE` (recorded in `specs/notes/decisions.md`).
+- [ ] **Status LEDs**: red `N_FMU_LED_RED` (PD10, D9 with 1k), blue
+      `N_FMU_LED_BLUE` (PD11, D10 with 330R), active low, to `FMU_VDD_3V3`.
+- [ ] **Pull-ups** on I2C1, I2C2 (2.2k to `FMU_VDD_3V3`) and I2C4 (4.7k to
+      `FMU_VDD_3V3_SENSORS`).
 
 ### C3. Sensors
 

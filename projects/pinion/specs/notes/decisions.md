@@ -49,8 +49,12 @@ starting with "DEVIATION:" mark the rows above.
 - IMU 1 is a BMI270 (F9): `spi.cpp` lists one SPI1 device on PC15 with DRDY on PE4
   in place of the two BMI088 entries, the board enables PX4's `bmi270` driver, and
   `rc.board_sensors` starts it with a rotation taken from the layout.
-- pinion needs its own `HW_VER`/`HW_REV` resistor pair and `manifest.c`, since it
-  is not one of the V6C00..V6C22 variants.
+- pinion is hardware version 1, revision 0, counted in its own PX4 target and
+  with its own `manifest.c` entry. The numbers are not FMUv6C IDs: stock
+  `px4_fmu-v6c` firmware would read version 1 as its "no PX4IO" variant.
+  Dividers from `HW_VER_REV_DRIVE`, top over bottom: version 174k / 32.4k,
+  revision 442k / 24.9k (configurations 2 and 1 of the "HW REV and VER ID" sheet
+  in `specs/reference/px4-docs/fmuv6c-pinout.xlsx`).
 
 ## Deviations from the AM62L EVM
 
