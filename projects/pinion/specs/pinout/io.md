@@ -2,7 +2,7 @@
 
 | Pin | Pad | Function | Mux | Net | Config | Note |
 |---|---|---|---|---|---|---|
-| VBAT | 1 | reserved |  | IO_VDD_3V3 |  |  |
+| VBAT | 1 | reserved |  | FMU_VDD_3V3 |  |  |
 | PC13 | 2 | gpio_out |  | IO_SPEKTRUM_PWR_EN | initial=high | 3.3 V switch for the DSM satellite receiver. PX4 io-v2. |
 | PC14 | 3 | gpio_in |  | IO_HW_DETECT1 | bias=pull_down | Board-type sense, left floating (reads low). PX4 io-v2. |
 | PC15 | 4 | gpio_in |  | IO_HW_DETECT2 | bias=pull_up | Board-type sense, left floating (reads high). PX4 io-v2. |
@@ -10,7 +10,7 @@
 | PD1 | 6 | RCC.OSC_OUT | fixed | IO_OSC_OUT |  |  |
 | NRST | 7 | reserved |  | IO_NRST |  | IO debug connector; FMU does not control it. |
 | VSSA | 8 | reserved |  | GND |  |  |
-| VDDA | 9 | reserved |  | IO_VDD_3V3 |  | Through a ferrite bead. |
+| VDDA | 9 | reserved |  | FMU_VDD_3V3 |  | Through a ferrite bead. |
 | PA0 | 10 | TIM2.CH1 | vendor(remap=0) | IO_CH1 |  |  |
 | PA1 | 11 | TIM2.CH2 | vendor(remap=0) | IO_CH2 |  |  |
 | PA2 | 12 | USART2.TX | vendor(remap=0) | FMU_USART6_RX_FROM_IO |  |  |
@@ -25,7 +25,7 @@
 | PB10 | 21 | USART3.TX | vendor(remap=0) | IO_USART3_TX_SBUS_OUT |  |  |
 | PB11 | 22 | USART3.RX | vendor(remap=0) | IO_USART3_RX_SBUS_IN |  |  |
 | VSS_23 | 23 | reserved |  | GND |  |  |
-| VDD_24 | 24 | reserved |  | IO_VDD_3V3 |  |  |
+| VDD_24 | 24 | reserved |  | FMU_VDD_3V3 |  |  |
 | PB12 | 25 |  |  |  |  |  |
 | PB13 | 26 | gpio_out |  | N_IO_LED_SAFETY | initial=high | Safety switch LED on the GPS1 connector, active low, open drain. PX4 io-v2. |
 | PB14 | 27 | gpio_out |  | N_IO_LED_BLUE | initial=high | IO status LED, active low, open drain. PX4 io-v2. |
@@ -37,7 +37,7 @@
 | PA12 | 33 | gpio_in |  | IO_RSSI_PWM |  | PWM RSSI input. PX4 io-v2 (GPIO_TIM_RSSI). |
 | PA13 | 34 | SYS.JTMS-SWDIO | fixed | IO_SWDIO |  |  |
 | VSS_35 | 35 | reserved |  | GND |  |  |
-| VDD_36 | 36 | reserved |  | IO_VDD_3V3 |  |  |
+| VDD_36 | 36 | reserved |  | FMU_VDD_3V3 |  |  |
 | PA14 | 37 | SYS.JTCK-SWCLK | fixed | IO_SWCLK |  |  |
 | PA15 | 38 | gpio_in |  | N_IO_SERVO_FAULT | bias=pull_up | Servo rail fault detect, active low. PX4 io-v2. |
 | PB3 | 39 | SYS.JTDO-TRACESWO | fixed | IO_SWO |  |  |
@@ -49,7 +49,7 @@
 | PB8 | 45 | TIM4.CH3 | vendor(remap=0) | IO_CH3 |  |  |
 | PB9 | 46 | TIM4.CH4 | vendor(remap=0) | IO_CH4 |  |  |
 | VSS_47 | 47 | reserved |  | GND |  |  |
-| VDD_48 | 48 | reserved |  | IO_VDD_3V3 |  |  |
+| VDD_48 | 48 | reserved |  | FMU_VDD_3V3 |  |  |
 
 ## TIM2
 

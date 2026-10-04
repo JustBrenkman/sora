@@ -229,11 +229,11 @@
         ),
         "VBAT": (
             mode: reserved,
-            net: "IO_VDD_3V3",
+            net: "FMU_VDD_3V3",
         ),
         "VDDA": (
             mode: reserved,
-            net: "IO_VDD_3V3",
+            net: "FMU_VDD_3V3",
             note: "Through a ferrite bead.",
         ),
         "VSSA": (
@@ -242,15 +242,15 @@
         ),
         "VDD_24": (
             mode: reserved,
-            net: "IO_VDD_3V3",
+            net: "FMU_VDD_3V3",
         ),
         "VDD_36": (
             mode: reserved,
-            net: "IO_VDD_3V3",
+            net: "FMU_VDD_3V3",
         ),
         "VDD_48": (
             mode: reserved,
-            net: "IO_VDD_3V3",
+            net: "FMU_VDD_3V3",
         ),
         "VSS_23": (
             mode: reserved,

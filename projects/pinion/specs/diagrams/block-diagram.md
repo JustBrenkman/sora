@@ -153,8 +153,8 @@ is open (see the decisions note).
 ```mermaid
 %%{init: {"flowchart": {"curve": "step"}}}%%
 flowchart LR
-    PM1([POWER1<br/>5 V, FMU_BAT1_V, FMU_BAT1_I]) --> SEL[Power selector<br/>ideal diodes]
-    PM2([POWER2<br/>5 V, FMU_BAT2_V, FMU_BAT2_I]) --> SEL
+    PM1([POWER1<br/>5 V, FMU_PWR1_VOLTAGE, FMU_PWR1_CURRENT]) --> SEL[Power selector<br/>ideal diodes]
+    PM2([POWER2<br/>5 V, FMU_PWR2_VOLTAGE, FMU_PWR2_CURRENT]) --> SEL
     USBV([USB-C VBUS]) --> SEL
     SEL --> BUCK5[+5V]
     SEL -.->|PWR1_VALID, PWR2_VALID,<br/>N_USB_VBUS_VALID| VAL[FMU]
@@ -168,11 +168,11 @@ flowchart LR
     BUCK5 --> F33[3.3 V regulator<br/>FMU_VDD_3V3]
     F33 --> FA[Filter<br/>FMU_VDDA_3V3]
     F33 --> S33[Switch<br/>VDD_3V3_SENSORS]
-    F33 --> I33[IO_VDD_3V3]
+    F33 --> I33[IO processor U2]
     I33 --> SPK[Switch<br/>VDD_3V3_SPEKTRUM]
 
-    BUCK5 --> B33[3.3 V buck<br/>VCC_3V3_SYS]
-    B33 --> PMIC[TPS6521402]
+    BUCK5 --> B33[3.3 V buck<br/>+3V3]
+    BUCK5 --> PMIC[TPS6521402]
     PMIC --> C[Buck1 0.75 V<br/>VDD_CORE_0V75, VDDA_CORE_0V75]
     PMIC --> D18[Buck2 1.8 V<br/>SOC_DVDD_1V8]
     PMIC --> DDR[Buck3 1.2 V<br/>VDD_DDR_1V2]

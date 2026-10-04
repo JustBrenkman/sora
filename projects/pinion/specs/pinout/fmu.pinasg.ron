@@ -77,11 +77,11 @@
             signals: {
                 "INP4": (
                     pin: "PC4",
-                    net: "FMU_BAT1_I",
+                    net: "FMU_PWR1_CURRENT",
                 ),
                 "INP8": (
                     pin: "PC5",
-                    net: "FMU_BAT1_V",
+                    net: "FMU_PWR1_VOLTAGE",
                 ),
                 "INP18": (
                     pin: "PA4",
@@ -89,14 +89,14 @@
                 ),
                 "INP14": (
                     pin: "PA2",
-                    net: "FMU_BAT2_I",
+                    net: "FMU_PWR2_CURRENT",
                 ),
                 "INP5": (
                     pin: "PB1",
-                    net: "FMU_BAT2_V",
+                    net: "FMU_PWR2_VOLTAGE",
                 ),
             },
-            note: "Power module 1 and 2 current and voltage from the POWER1/POWER2 connectors, and the 5 V rail (divider 2:1). FMUv6C.",
+            note: "Power module 1 and 2 current and voltage from the POWER1/POWER2 connectors, and the 5 V rail (divider 2:1). FMUv6C pins; DEVIATION: the nets are FMU_PWRn_VOLTAGE/CURRENT, FMU_BATn_V/I on the FMUv6C.",
         ),
         "ADC3": (
             signals: {

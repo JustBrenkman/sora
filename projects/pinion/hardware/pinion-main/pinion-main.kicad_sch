@@ -425,7 +425,7 @@
 		)
 	)
 	(sheet
-		(at 123.19 110.49)
+		(at 156.21 27.94)
 		(size 39.37 53.34)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -441,7 +441,7 @@
 		)
 		(uuid "962d2f40-70aa-4550-aaf6-2cf852f16805")
 		(property "Sheetname" "linux"
-			(at 123.19 109.7784 0)
+			(at 156.21 27.2284 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -452,7 +452,7 @@
 			)
 		)
 		(property "Sheetfile" "linux.kicad_sch"
-			(at 123.19 164.4146 0)
+			(at 156.21 81.8646 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -471,7 +471,7 @@
 		)
 	)
 	(sheet
-		(at 198.12 68.58)
+		(at 154.94 109.22)
 		(size 49.53 35.56)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -487,7 +487,7 @@
 		)
 		(uuid "e3d61feb-6226-49e9-91f2-6966c39438aa")
 		(property "Sheetname" "fmu"
-			(at 198.12 67.8684 0)
+			(at 154.94 108.5084 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -498,7 +498,7 @@
 			)
 		)
 		(property "Sheetfile" "fmu.kicad_sch"
-			(at 198.12 104.7246 0)
+			(at 154.94 145.3646 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -517,8 +517,8 @@
 		)
 	)
 	(sheet
-		(at 55.88 90.17)
-		(size 21.59 29.21)
+		(at 67.31 114.3)
+		(size 25.4 29.21)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -533,7 +533,7 @@
 		)
 		(uuid "fdbcfb1e-8a47-41fe-ac5a-16d28a91dfe6")
 		(property "Sheetname" "power"
-			(at 55.88 89.4584 0)
+			(at 67.31 113.5884 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -544,7 +544,7 @@
 			)
 		)
 		(property "Sheetfile" "power.kicad_sch"
-			(at 55.88 119.9646 0)
+			(at 67.31 144.0946 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -555,7 +555,7 @@
 			)
 		)
 		(pin "PWR1_VALID" output
-			(at 77.47 93.98 0)
+			(at 92.71 118.11 0)
 			(uuid "e65214c5-eeb9-4c7f-967f-92e328ad140e")
 			(effects
 				(font
@@ -564,38 +564,8 @@
 				(justify right)
 			)
 		)
-		(pin "PWR1_VOLTAGE" output
-			(at 77.47 97.79 0)
-			(uuid "7dd99708-254c-4e26-a766-2dc0fde21041")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "PWR1_CURRENT" output
-			(at 77.47 100.33 0)
-			(uuid "136621d6-f59d-4ee5-a6de-c90686d7ddae")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "PWR2_CURRENT" output
-			(at 77.47 113.03 0)
-			(uuid "dae4eac9-e842-4984-98ce-603365b08f0b")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
 		(pin "PWR2_VALID" output
-			(at 77.47 109.22 0)
+			(at 92.71 133.35 0)
 			(uuid "45b8497f-f65b-4084-9629-5856d2c96127")
 			(effects
 				(font
@@ -604,9 +574,39 @@
 				(justify right)
 			)
 		)
-		(pin "PWR2_VOLTAGE" output
-			(at 77.47 115.57 0)
-			(uuid "75e1c612-6e08-4ac8-85d2-d21ac7f3b403")
+		(pin "FMU_PWR2_CURRENT" output
+			(at 92.71 137.16 0)
+			(uuid "822d1921-5947-44ec-add4-901eeeb09785")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "FMU_PWR2_VOLTAGE" output
+			(at 92.71 139.7 0)
+			(uuid "57c7596b-0e42-4f85-8c3a-b660052b0836")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "FMU_PWR1_VOLTAGE" output
+			(at 92.71 124.46 0)
+			(uuid "421e7f2f-9051-4e9d-b011-5aee5b7ec960")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "FMU_PWR1_CURRENT" output
+			(at 92.71 121.92 0)
+			(uuid "74dbc074-9df8-401d-af3c-46b614d8842c")
 			(effects
 				(font
 					(size 1.27 1.27)

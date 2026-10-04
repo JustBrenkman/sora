@@ -65,7 +65,7 @@
 | VSSA | G1 | reserved |  | GND |  |  |
 | PA0 | G2 | TIM5.CH1 | AF2 | FMU_CH7 |  |  |
 | PA4 | G3 | ADC1.INP18 | analog | FMU_SCALED_V5 |  |  |
-| PC4 | G4 | ADC1.INP4 | analog | FMU_BAT1_I |  |  |
+| PC4 | G4 | ADC1.INP4 | analog | FMU_PWR1_CURRENT |  |  |
 | PB2 | G5 | gpio_out |  | VDD_3V3_SENSORS_EN | initial=low | Sensor rail load switch enable, active high. FMUv6C. |
 | PE10 | G6 | UART7.CTS | AF7 | FMU_UART7_CTS_TEL1 |  |  |
 | PE14 | G7 | TIM1.CH4 | AF1 | FMU_CH4 |  |  |
@@ -75,7 +75,7 @@
 | VDDA | H1 | reserved |  | FMU_VDDA_3V3 |  | Analog supply, filtered from FMU_VDD_3V3. VREF+ is bonded to VDDA on TFBGA100. |
 | PA1 | H2 | TIM5.CH2 | AF2 | FMU_CH8 |  |  |
 | PA5 | H3 | SPI1.SCK | AF5 | FMU_SPI1_SCK_SENSOR | speed=very_high |  |
-| PC5 | H4 | ADC1.INP8 | analog | FMU_BAT1_V |  |  |
+| PC5 | H4 | ADC1.INP8 | analog | FMU_PWR1_VOLTAGE |  |  |
 | PE7 | H5 | UART7.RX | AF7 | FMU_UART7_RX_TEL1 |  |  |
 | PE11 | H6 | TIM1.CH2 | AF1 | FMU_CH2 |  |  |
 | PE15 | H7 | gpio_in |  | N_USB_VBUS_VALID | bias=pull_up | Power selector: USB VBUS is the active 5 V source, active low. FMUv6C; on pinion the VBUS is the AM62L's USB-C port. |
@@ -83,7 +83,7 @@
 | PD10 | H9 | gpio_out |  | N_FMU_LED_RED | initial=high | Status LED, active low, open drain. FMUv6C. |
 | PB14 | H10 |  |  |  |  |  |
 | VSS_J1 | J1 | reserved |  | GND |  |  |
-| PA2 | J2 | ADC1.INP14 | analog | FMU_BAT2_I |  |  |
+| PA2 | J2 | ADC1.INP14 | analog | FMU_PWR2_CURRENT |  |  |
 | PA6 | J3 | SPI1.MISO | AF5 | FMU_SPI1_MISO_SENSOR | speed=very_high |  |
 | PB0 | J4 | TIM3.CH3 | AF2 | FMU_BUZZER |  |  |
 | PE8 | J5 | UART7.TX | AF7 | FMU_UART7_TX_TEL1 |  |  |
@@ -95,7 +95,7 @@
 | VDD_K1 | K1 | reserved |  | FMU_VDD_3V3 |  |  |
 | PA3 | K2 | USART2.RX | AF7 | FMU_USART2_RX_TEL3 |  |  |
 | PA7 | K3 | SPI1.MOSI | AF5 | FMU_SPI1_MOSI_SENSOR | speed=very_high |  |
-| PB1 | K4 | ADC1.INP5 | analog | FMU_BAT2_V |  |  |
+| PB1 | K4 | ADC1.INP5 | analog | FMU_PWR2_VOLTAGE |  |  |
 | PE9 | K5 | UART7.RTS | AF7 | FMU_UART7_RTS_TEL1 |  |  |
 | PE13 | K6 | TIM1.CH3 | AF1 | FMU_CH3 |  |  |
 | PB11 | K7 | I2C2.SDA | AF4 | FMU_I2C2_SDA_GPS2 | drive=open_drain |  |
@@ -150,15 +150,15 @@ IMU heater MOSFET gate. FMUv6C; PX4 drives it as a GPIO.
 
 ## ADC1
 
-Power module 1 and 2 current and voltage from the POWER1/POWER2 connectors, and the 5 V rail (divider 2:1). FMUv6C.
+Power module 1 and 2 current and voltage from the POWER1/POWER2 connectors, and the 5 V rail (divider 2:1). FMUv6C pins; DEVIATION: the nets are FMU_PWRn_VOLTAGE/CURRENT, FMU_BATn_V/I on the FMUv6C.
 
 | Signal | Pin | Net |
 |---|---|---|
-| INP4 | PC4 | FMU_BAT1_I |
-| INP8 | PC5 | FMU_BAT1_V |
+| INP4 | PC4 | FMU_PWR1_CURRENT |
+| INP8 | PC5 | FMU_PWR1_VOLTAGE |
 | INP18 | PA4 | FMU_SCALED_V5 |
-| INP14 | PA2 | FMU_BAT2_I |
-| INP5 | PB1 | FMU_BAT2_V |
+| INP14 | PA2 | FMU_PWR2_CURRENT |
+| INP5 | PB1 | FMU_PWR2_VOLTAGE |
 
 ## ADC3
 

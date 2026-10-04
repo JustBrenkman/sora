@@ -79,8 +79,8 @@ The parts both halves share are placed directly on the root sheet, next to the
       5 V and the two analog signals; there is no battery connector or battery
       regulator on the board.
 - [x] **Sense inputs**: RC filter and clamp on each, 3.3 V full scale →
-      `FMU_BAT1_V` (U1 PC5), `FMU_BAT1_I` (PC4), `FMU_BAT2_V` (PB1), `FMU_BAT2_I`
-      (PA2). Default scales 18.18 V/V and 36.36 A/V (ref: v6C `hwdef.dat`).
+      `FMU_PWR1_VOLTAGE` (U1 PC5), `FMU_PWR1_CURRENT` (PC4), `FMU_PWR2_VOLTAGE`
+      (PB1), `FMU_PWR2_CURRENT` (PA2). Default scales 18.18 V/V and 36.36 A/V (ref: v6C `hwdef.dat`).
 - [ ] **Power selector** (ideal diodes, one source at a time) →
       `+5V`. Reports `PWR1_VALID` (U1 PA15), `PWR2_VALID` (PB12),
       `N_USB_VBUS_VALID` (PE15), active low, pulled up to `FMU_VDD_3V3` (ref: v6C
@@ -124,9 +124,10 @@ The parts both halves share are placed directly on the root sheet, next to the
 Follow TI's "AM62L Power Supply Implementation" note (to be added to
 `specs/reference/ti/` by hand) and the sequencing in DS section 6.11.2.
 
-- [ ] **3.3 V buck** from `+5V` → `VCC_3V3_SYS` *(select)*.
+- [ ] **3.3 V buck** (SY8120IABC, as on the FMU side) from `+5V` → `+3V3`, the
+      Linux side's general 3.3 V rail.
 - [ ] **PMIC TPS6521402** (the AM62L variant listed for DDR4; the EVM's
-      TPS6521401 is LPDDR4 only): Buck1 → `VDD_CORE_0V75`; Buck2 → `SOC_DVDD_1V8`;
+      TPS6521401 is LPDDR4 only), input from `+5V`: Buck1 → `VDD_CORE_0V75`; Buck2 → `SOC_DVDD_1V8`;
       Buck3 → `VDD_DDR_1V2`; LDO1 → `VDDA_1V8`; LDO2 → `SOC_DVDD_3V3`. I2C
       `PMIC_I2C_SCL`/`PMIC_I2C_SDA` (address 0x30), interrupt → `N_PMIC_INT`, reset
       output → `SOC_PORZ`, `PMIC_LPM_EN0` from the SoC. Confirm the rail order and
@@ -227,7 +228,8 @@ All 373 balls are in `specs/pinout/soc.md`; I/O supply per ball is in
 
 ### C1. Power
 
-- [ ] **3.3 V regulator** from `+5V` → `FMU_VDD_3V3`. Supplies U1, U2's
+- [ ] **3.3 V regulator** (SY8120IABC buck, SOT-23-6, 2 A, LCSC C479076) from
+      `+5V` → `FMU_VDD_3V3`. Supplies U1, U2's
       rail, the sensor switch, CAN transceivers, parameter storage.
 - [ ] **Analog filter** (ferrite + capacitors) → `FMU_VDDA_3V3` (U1 VDDA; VREF+ is
       bonded to VDDA in this package).
@@ -239,7 +241,8 @@ All 373 balls are in `specs/pinout/soc.md`; I/O supply per ball is in
 - [ ] **`VDD_5V_HIPOWER` switch**, 1.5 A current limit: enable
       `N_VDD_5V_HIPOWER_EN` (U1 PC10), fault `N_VDD_5V_HIPOWER_OC` (U1 PC11,
       pull-up). Feeds TELEM1 and GPS2 (ref: v6C, Holybro spec).
-- [ ] **IO rail** `IO_VDD_3V3` for U2 and the GPS1 connector pin 8.
+- [ ] **IO rail**: U2 and the GPS1 connector pin 8 run from `FMU_VDD_3V3`; there
+      is no separate IO rail.
 - [ ] **Spektrum switch** → `VDD_3V3_SPEKTRUM`, enable `IO_SPEKTRUM_PWR_EN` (U2 PC13).
 - [ ] **`FMU_VBAT`** (U1 VBAT): backup supply; tie to `FMU_VDD_3V3` or a backup
       cell. DS-018 lists a battery-backed RTC, but the FMUv6C pinout has no LSE
@@ -312,7 +315,7 @@ tables, DS-009). ESD protection and series resistors on every external signal.
 - [ ] **TELEM1** JST-GH 6: `VDD_5V_HIPOWER`, UART7 `FMU_UART7_*_TEL1`.
 - [ ] **TELEM3** JST-GH 6: `VDD_5V_PERIPH`, USART2 `FMU_USART2_*_TEL3`.
 - [ ] **GPS1** JST-GH 10: `VDD_5V_PERIPH`, USART1, I2C1, `IO_SAFETY_SWITCH`,
-      `N_IO_LED_SAFETY`, `IO_VDD_3V3`, buzzer (driver from `FMU_BUZZER`, PB0), GND.
+      `N_IO_LED_SAFETY`, `FMU_VDD_3V3`, buzzer (driver from `FMU_BUZZER`, PB0), GND.
 - [ ] **GPS2** JST-GH 6: `VDD_5V_HIPOWER`, UART8, I2C2.
 - [ ] **I2C** JST-GH 4: `VDD_5V_PERIPH`, I2C2.
 - [ ] **CAN1**, **CAN2** JST-GH 4 each.
@@ -323,7 +326,7 @@ tables, DS-009). ESD protection and series resistors on every external signal.
 
 All pins in `specs/pinout/io.md` (ref: PX4 `boards/px4/io-v2`).
 
-- [ ] **U2** with decoupling; `IO_VDD_3V3`; VDDA through a ferrite.
+- [ ] **U2** with decoupling; `FMU_VDD_3V3`; VDDA through a ferrite.
 - [ ] **24 MHz crystal** on `IO_OSC_IN`/`IO_OSC_OUT`.
 - [ ] **BOOT0** and **BOOT1** (PB2) pulled low; `IO_NRST` to the IO debug connector.
 - [ ] **FMU link**: `FMU_USART6_TX_TO_IO`, `FMU_USART6_RX_FROM_IO`, direct.
@@ -341,7 +344,7 @@ All pins in `specs/pinout/io.md` (ref: PX4 `boards/px4/io-v2`).
 - [ ] **LEDs**: `N_IO_LED_BLUE` (PB14), `N_IO_LED_AMBER` (PB15), `IO_LED_GREEN` (PA11).
 - [ ] **Board sense**: `IO_HW_DETECT1` (PC14) and `IO_HW_DETECT2` (PC15) left open.
 - [ ] **Connectors**: DSM (JST-ZH 3), PPM/SBUS RC (JST-GH 5), SBUS OUT (JST-GH 3),
-      IO debug (JST-SH 10: `IO_VDD_3V3`, `IO_USART1_TX_DEBUG`, NC, `IO_SWDIO`,
+      IO debug (JST-SH 10: `FMU_VDD_3V3`, `IO_USART1_TX_DEBUG`, NC, `IO_SWDIO`,
       `IO_SWCLK`, `IO_SWO`, NC, NC, `IO_NRST`, GND).
 
 ### C8. PWM outputs
