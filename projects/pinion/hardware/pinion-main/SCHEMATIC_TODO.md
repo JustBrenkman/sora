@@ -319,9 +319,16 @@ IMU board (`hardware/pinion-imu`):
       0.30 A. Trace and Q1 together dissipate about 1.5 W whatever the trace
       resistance. 100k pull-down on `FMU_HEATER`; 1k and 1 nF around the op-amp.
       Place Q1 away from, or centred between, the two IMUs.
-- [ ] Orientation: note each sensor's axes on the sheet. The FMUv6C rotations
-      (`rc.board_sensors`: ICM-42688-P `-R 6`) only hold if the part is placed
-      as on the Pixhawk 6C; the BMI270 has no reference rotation.
+- [ ] Orientation, noted on both sheets and kept as on the FMUv6C so its
+      `rc.board_sensors` rotations carry over. All parts on the top side; seen from
+      above:
+      - ICM-42688-P: +X to port, +Y aft, pin 1 at the aft-starboard corner
+        (`icm42688p -R 6`).
+      - BMI270: +X aft, +Y to starboard, pin 1 at the aft-starboard corner
+        (`bmi270 -R 4`, the rotation the FMUv6C gives its BMI088).
+      - IST8310: +X forward, +Y to starboard (no rotation). Its pin 1 corner is
+        not in the brief datasheet; take it from the full one before layout.
+      Check each against the PX4 driver's own axis convention before layout.
 
 ### C4. Parameter storage
 
@@ -344,13 +351,65 @@ IMU board (`hardware/pinion-imu`):
 Pin order as in `specs/diagrams/block-diagram.md` section 6 (ref: Holybro port
 tables, DS-009). ESD protection and series resistors on every external signal.
 
-- [ ] **TELEM1** JST-GH 6: `FMU_VDD_5V_HIPWR`, UART7 `FMU_UART7_*_TEL1`.
-- [ ] **TELEM3** JST-GH 6: `FMU_VDD_5V_PERIPH`, USART2 `FMU_USART2_*_TEL3`.
-- [ ] **GPS1** JST-GH 10: `FMU_VDD_5V_PERIPH`, USART1, I2C1, `IO_SAFETY_SWITCH`,
-      `N_IO_LED_SAFETY`, `FMU_VDD_3V3`, buzzer (driver from `FMU_BUZZER`, PB0), GND.
-- [ ] **GPS2** JST-GH 6: `FMU_VDD_5V_HIPWR`, UART8, I2C2.
-- [ ] **I2C** JST-GH 4: `FMU_VDD_5V_PERIPH`, I2C2.
-- [ ] **CAN1**, **CAN2** JST-GH 4 each.
+Drawn on the sheet: the seven connectors (J5 TELEM1, J6 TELEM3, J7 GPS1, J8 GPS2,
+J9 I2C, J10 CAN1, J11 CAN2) and their protection. Each entry stays open until
+the `fmu` sheet has the matching sheet pins and the source sheets export the
+nets: `mcu` (UART7, USART2, USART1, UART8, `FMU_BUZZER`; it has the I2C labels
+already), `io-mcu` (`IO_SAFETY_SWITCH`, `N_IO_LED_SAFETY`) and `can` (the two
+bus pairs).
+
+Common to the sheet:
+
+- **Connectors**: JST-GH side entry, `SM04B-GHS-TB`, `SM06B-GHS-TB`,
+  `SM10B-GHS-TB`; symbol `Connector_Generic_MountingPin:Conn_01xNN_MountingPin`
+  as J4, mounting pin to GND. Top entry is `BMxxB-GHS-TBT` (`..._Vertical`
+  footprints) if the layout wants it; POWER1/POWER2 (J1, J2) still have no
+  footprint and take the same choice.
+- **Rails** are the renamed power symbols already used on `fmu-power`.
+- **Signal path**: connector pin, ESD array line, series resistor, processor.
+  The net between connector and resistor carries the port's name (`TELEM1_TX`,
+  `GPS1_SCL`, ...). Resistors are 0402: 100R on UART lines, 22R on I2C lines
+  (the 2.2k pull-ups stay on the `mcu` sheet, processor side).
+- **ESD**: TPD4E05U06DQA (TI, USON-10 2.5 x 1 mm, four lines, 0.5 pF, LCSC
+  C138714), U19 to U23. It has no supply pin, which matters here: PX4 switches
+  the port rails off, and an array with a rail pin (SRV05-4 with VP on the
+  rail) would feed the dead rail from any signal driven high. CAN pairs use
+  NUP2105L (SOT-23, LCSC C14486), D11 and D12.
+- **Rail clamps**: one SMF6.0A (SOD-123FL, LCSC C2857264) and 1 µF on each
+  switched 5 V rail, D14/C56 on `FMU_VDD_5V_PERIPH` and D15/C57 on
+  `FMU_VDD_5V_HIPWR`. 6 V stand-off as on the POWER inputs, because DS-009
+  allows a 5.3 V supply.
+
+- [x] **TELEM1** (J5): 1 `FMU_VDD_5V_HIPWR`, 2 `FMU_UART7_TX_TEL1`,
+      3 `FMU_UART7_RX_TEL1`, 4 `FMU_UART7_CTS_TEL1`, 5 `FMU_UART7_RTS_TEL1`, 6 GND.
+      R50 to R53, U19.
+- [x] **TELEM3** (J6): 1 `FMU_VDD_5V_PERIPH`, 2 `FMU_USART2_TX_TEL3`,
+      3 `FMU_USART2_RX_TEL3`, 4 NC, 5 NC, 6 GND. R54, R55, half of U20.
+- [x] **GPS1** (J7): 1 `FMU_VDD_5V_PERIPH`, 2 `FMU_USART1_TX_GPS1`,
+      3 `FMU_USART1_RX_GPS1`, 4 `FMU_I2C1_SCL_GPS1`, 5 `FMU_I2C1_SDA_GPS1`,
+      6 `IO_SAFETY_SWITCH`, 7 `N_IO_LED_SAFETY`, 8 `FMU_VDD_3V3`, 9 buzzer, 10 GND.
+      R56 to R59; 1k (R60) in series with the switch input (its pull-down is on
+      the IO sheet, C7) and 220R (R61) with the LED; U21 and U22, one line spare.
+  - [x] **Pin 8 supply**: 0603 polyfuse, 100 mA hold (F1, part to select), and
+        100 nF (C55), since pinion feeds this pin from the processors' own
+        `FMU_VDD_3V3` and a shorted cable would otherwise take U1 and U2 down.
+        On the FMUv6C the pin is on the separate `IO_VDD_3V3`.
+  - [x] **Buzzer driver**: pin 9 (`GPS1_BUZZER`) is the buzzer's low side
+        (Holybro: "BUZZER-", 0 to 5 V; DS-009: 5 to 24 V); the buzzer's other
+        terminal is the 5 V on pin 1, inside the GPS module. AO3400A (Q5, LCSC
+        C20917), gate from `FMU_BUZZER` through 100R (R68) with 100k to GND
+        (R69); 1N5819WS (D13, LCSC C191023) from the drain to
+        `FMU_VDD_5V_PERIPH` as the flyback path for a magnetic buzzer.
+- [x] **GPS2** (J8): 1 `FMU_VDD_5V_HIPWR`, 2 `FMU_UART8_TX_GPS2`,
+      3 `FMU_UART8_RX_GPS2`, 4 `FMU_I2C2_SCL_GPS2`, 5 `FMU_I2C2_SDA_GPS2`, 6 GND.
+      R62 to R65, U23.
+- [x] **I2C** (J9): 1 `FMU_VDD_5V_PERIPH`, 2 `FMU_I2C2_SCL_GPS2`,
+      3 `FMU_I2C2_SDA_GPS2`, 4 GND. Its own pair of 22R (R66, R67), so a fault on
+      one I2C2 connector is not hard across the other; ESD on the other half of
+      U20, which puts J6 and J9 side by side in layout.
+- [x] **CAN1** (J10), **CAN2** (J11): 1 `FMU_VDD_5V_PERIPH`, 2 `CANx_H`,
+      3 `CANx_L`, 4 GND. D11, D12; no series resistors. This is the connector
+      ESD that C5 asks for.
 
 ### C7. IO processor and RC (U2, STM32F103C8T6)
 

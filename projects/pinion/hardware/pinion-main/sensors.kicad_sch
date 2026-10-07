@@ -2699,6 +2699,17 @@
 		)
 		(uuid "e3554993-2242-4693-b6f2-3ab08669dd35")
 	)
+	(text "ORIENTATION, as on the FMUv6C (top side, seen from above)\nU5 IST8310: +X forward, +Y to starboard, +Z up. PX4: ist8310, no rotation\nU6 MS5611: no orientation; keep it away from heat, light and airflow"
+		(exclude_from_sim no)
+		(at 116.84 127 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "ec415f2e-d2f2-4733-b60e-2b90c1ec59c0")
+	)
 	(junction
 		(at 60.96 113.03)
 		(diameter 0)

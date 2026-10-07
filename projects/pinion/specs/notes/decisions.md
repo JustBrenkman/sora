@@ -46,6 +46,9 @@ starting with "DEVIATION:" mark the rows above.
   missions (dataman) need RAM or flash backing. `rc.board_*` cannot rely on
   `/fs/microsd`.
 - The TELEM2 serial device is the on-board companion link.
+- Sensor rotations follow the FMUv6C's `rc.board_sensors`, and the parts are
+  placed to suit: `icm42688p -R 6`, `bmi270 -R 4` (as its BMI088), `ist8310`
+  with no rotation. The placements are noted on the sensor sheets.
 - IMU 1 is a BMI270 (F9): `spi.cpp` lists one SPI1 device on PC15 with DRDY on PE4
   in place of the two BMI088 entries, the board enables PX4's `bmi270` driver, and
   `rc.board_sensors` starts it with a rotation taken from the layout.

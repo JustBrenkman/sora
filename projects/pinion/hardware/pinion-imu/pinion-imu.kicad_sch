@@ -9543,6 +9543,17 @@
 			)
 		)
 	)
+	(text "ORIENTATION, as on the FMUv6C (parts on the top side, seen from above)\nU2 ICM-42688-P: +X to port, +Y aft, +Z up; pin 1 at the aft-starboard corner. PX4: icm42688p -R 6\nU1 BMI270: +X aft, +Y to starboard, +Z up; pin 1 at the aft-starboard corner. PX4: bmi270 -R 4\nForward is the airframe's forward once this board is mounted."
+		(exclude_from_sim no)
+		(at 30.48 86.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "6b0deea5-56f5-45c4-8601-27b03ac4901e")
+	)
 	(sheet_instances
 		(path "/"
 			(page "1")
