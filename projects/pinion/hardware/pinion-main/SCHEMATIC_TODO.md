@@ -338,13 +338,21 @@ IMU board (`hardware/pinion-imu`):
 
 ### C5. CAN
 
-- [ ] **CAN1 transceiver** (TCAN1044V, VSON-8 DRB; replaces the FMUv6C's
+Drawn on the sheet: both transceivers with decoupling and termination. The
+entries stay open until the `fmu` sheet has the sheet pins and `mcu` exports
+the four `FMU_CANx_TX`/`_RX` nets.
+
+- [x] **CAN1 transceiver** (U10, TCAN1044V, VSON-8 DRB; replaces the FMUv6C's
       TJA1051): `FMU_CAN1_TX`/`FMU_CAN1_RX` (U1 PD1/PD0) → `CAN1_H`/`CAN1_L`.
-      VCC on `+5V`, VIO on `FMU_VDD_3V3`, STB low for normal mode.
-- [ ] **CAN2 transceiver** (TCAN1044V): `FMU_CAN2_TX`/`FMU_CAN2_RX` (U1 PB13/PB5)
-      → `CAN2_H`/`CAN2_L`.
-- [ ] Termination: decide whether each bus has an on-board 120 Ω (fixed or
-      jumpered); ESD protection at both connectors.
+      VCC on `+5V`, VIO on `FMU_VDD_3V3`, 100 nF on each (C58, C59; ref:
+      datasheet section 9.4). STB tied to GND: always in normal mode.
+- [x] **CAN2 transceiver** (U24, TCAN1044V): `FMU_CAN2_TX`/`FMU_CAN2_RX` (U1
+      PB13/PB5) → `CAN2_H`/`CAN2_L`. C60, C61.
+- [x] **Termination**: 120R 0603 across each pair through a solder jumper that
+      is bridged by default (R70/JP1, R71/JP2), so the board terminates its end
+      of the bus unless the jumper is cut. Confirm this default; the alternative
+      is an open jumper and a terminator on the cable. ESD protection is at the
+      connectors (D11, D12 on `fmu-connectors`).
 
 ### C6. Connectors
 

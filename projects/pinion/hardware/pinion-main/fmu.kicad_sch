@@ -6,16 +6,16 @@
 	(paper "A4")
 	(lib_symbols)
 	(no_connect
-		(at 93.98 50.8)
+		(at 104.14 31.75)
 		(uuid "5b71d68b-2b80-48d7-8283-659674c56d7b")
 	)
 	(no_connect
-		(at 93.98 57.15)
+		(at 104.14 38.1)
 		(uuid "795e24c5-bca4-4f7f-9048-8755316cb2b9")
 	)
 	(sheet
-		(at 104.14 101.6)
-		(size 31.75 25.4)
+		(at 110.49 62.23)
+		(size 77.47 45.72)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -30,7 +30,7 @@
 		)
 		(uuid "01fc15c7-167a-4d13-9841-bcca6cd2d303")
 		(property "Sheetname" "mcu"
-			(at 104.14 100.8884 0)
+			(at 110.49 61.5184 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -41,7 +41,7 @@
 			)
 		)
 		(property "Sheetfile" "mcu.kicad_sch"
-			(at 104.14 127.5846 0)
+			(at 110.49 108.5346 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -60,7 +60,7 @@
 		)
 	)
 	(sheet
-		(at 237.49 39.37)
+		(at 193.04 104.14)
 		(size 30.48 35.56)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -76,7 +76,7 @@
 		)
 		(uuid "2e8c24c6-430a-4c2a-bf9a-526269dfdd68")
 		(property "Sheetname" "io-mcu"
-			(at 237.49 38.6584 0)
+			(at 193.04 103.4284 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -87,7 +87,7 @@
 			)
 		)
 		(property "Sheetfile" "io-mcu.kicad_sch"
-			(at 237.49 75.5146 0)
+			(at 193.04 140.2846 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -106,8 +106,8 @@
 		)
 	)
 	(sheet
-		(at 48.26 113.03)
-		(size 31.75 24.13)
+		(at 59.69 60.96)
+		(size 44.45 69.85)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -122,7 +122,7 @@
 		)
 		(uuid "485a27bd-00c6-44a6-ab38-eecf782525b5")
 		(property "Sheetname" "fmu-connectors"
-			(at 48.26 112.3184 0)
+			(at 59.69 60.2484 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -133,7 +133,7 @@
 			)
 		)
 		(property "Sheetfile" "fmu-connectors.kicad_sch"
-			(at 48.26 137.7446 0)
+			(at 59.69 131.3946 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -141,6 +141,216 @@
 					(size 1.27 1.27)
 				)
 				(justify left top)
+			)
+		)
+		(pin "FMU_I2C2_SDA_GPS2" bidirectional
+			(at 104.14 101.6 0)
+			(uuid "bc3decfe-ca68-44d0-987a-7d9ce7cdb507")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "FMU_USART2_RX_TEL3" output
+			(at 104.14 78.74 0)
+			(uuid "a1ec8398-3d2a-4611-b512-bf24597491db")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "FMU_I2C1_SDA_GPS1" bidirectional
+			(at 104.14 90.17 0)
+			(uuid "caad89ae-41fb-4199-a7aa-8b968456a2e4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "N_IO_LED_SAFETY" input
+			(at 104.14 111.76 0)
+			(uuid "e325fcd6-d208-4581-be6e-8a59342a6a36")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "FMU_UART7_RTS_TEL1" input
+			(at 104.14 69.85 0)
+			(uuid "8fb4e71f-6ba9-4513-ac73-3d2e6be800a2")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "FMU_USART2_TX_TEL3" input
+			(at 104.14 76.2 0)
+			(uuid "843207d3-4223-4dc3-bc54-e123afba2add")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "FMU_UART7_TX_TEL1" input
+			(at 104.14 64.77 0)
+			(uuid "48c30ce4-9d07-4080-ae0d-d6402525fd6c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "FMU_BUZZER" input
+			(at 104.14 105.41 0)
+			(uuid "2c9e7356-65e4-457d-b429-40bc0be4e3f9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "FMU_USART1_TX_GPS1" input
+			(at 104.14 82.55 0)
+			(uuid "67a0d809-2ac2-4f97-bd1a-70c5d2afa17d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "FMU_UART8_RX_GPS2" output
+			(at 104.14 96.52 0)
+			(uuid "fadb9bc7-9929-48f6-a42a-64ae5e0f5607")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "FMU_USART1_RX_GPS1" output
+			(at 104.14 85.09 0)
+			(uuid "ec5d8555-fd1b-4da0-a417-e1fa0dae7833")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "IO_SAFETY_SWITCH" output
+			(at 104.14 109.22 0)
+			(uuid "992e7835-9daf-46d4-bb69-638230a712e0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "CAN1_L" bidirectional
+			(at 104.14 127 0)
+			(uuid "b268a650-4e31-4bdc-aafb-e2cb899e292b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "FMU_UART8_TX_GPS2" input
+			(at 104.14 93.98 0)
+			(uuid "8fad8c45-d594-4132-acfa-db66adf65c9f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "FMU_I2C2_SCL_GPS2" bidirectional
+			(at 104.14 99.06 0)
+			(uuid "c0b496b3-bd96-4ef3-af9b-c70618ab1e85")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "FMU_UART7_RX_TEL1" output
+			(at 104.14 67.31 0)
+			(uuid "12f5454e-1bc9-499b-aba2-f3e580e5e65b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "FMU_UART7_CTS_TEL1" output
+			(at 104.14 72.39 0)
+			(uuid "6d1147f1-825e-49dd-af4c-f55a251bacd1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "CAN2_L" bidirectional
+			(at 104.14 120.65 0)
+			(uuid "5be57ae2-64c8-44f0-8734-be09aa97d681")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "CAN2_H" bidirectional
+			(at 104.14 118.11 0)
+			(uuid "7e2d5b3c-ecc4-49c2-b1ff-bc2cf980a127")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "FMU_I2C1_SCL_GPS1" bidirectional
+			(at 104.14 87.63 0)
+			(uuid "adf6e659-0f0c-4557-88cc-783ae267ff99")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "CAN1_H" bidirectional
+			(at 104.14 124.46 0)
+			(uuid "477eb36e-4a0c-4e08-8ba3-2816332c82f1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 		(instances
@@ -152,7 +362,7 @@
 		)
 	)
 	(sheet
-		(at 167.64 125.73)
+		(at 138.43 29.21)
 		(size 24.13 26.67)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -168,7 +378,7 @@
 		)
 		(uuid "78ed0b74-be4e-4418-b3d8-b9954f210579")
 		(property "Sheetname" "nvm"
-			(at 167.64 125.0184 0)
+			(at 138.43 28.4984 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -179,7 +389,7 @@
 			)
 		)
 		(property "Sheetfile" "nvm.kicad_sch"
-			(at 167.64 152.9846 0)
+			(at 138.43 56.4646 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -198,8 +408,8 @@
 		)
 	)
 	(sheet
-		(at 59.69 44.45)
-		(size 34.29 29.21)
+		(at 59.69 25.4)
+		(size 44.45 29.21)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -214,7 +424,7 @@
 		)
 		(uuid "afd8fb75-3633-4399-b6c7-05bb1c3b552f")
 		(property "Sheetname" "fmu-power"
-			(at 59.69 43.7384 0)
+			(at 59.69 24.6884 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -225,7 +435,7 @@
 			)
 		)
 		(property "Sheetfile" "fmu-power.kicad_sch"
-			(at 59.69 74.2446 0)
+			(at 59.69 55.1946 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -236,7 +446,7 @@
 			)
 		)
 		(pin "IO_VDD_3V3_SPEKTRUM_EN" input
-			(at 93.98 48.26 0)
+			(at 104.14 29.21 0)
 			(uuid "a78e45d1-d848-48ae-ad90-67019c428e21")
 			(effects
 				(font
@@ -246,7 +456,7 @@
 			)
 		)
 		(pin "FMU_VDD_3V3_SENSORS_FLT" output
-			(at 93.98 57.15 0)
+			(at 104.14 38.1 0)
 			(uuid "3e5cd2a7-c8a8-4542-961b-8efd78364fbc")
 			(effects
 				(font
@@ -256,7 +466,7 @@
 			)
 		)
 		(pin "FMU_VDD_5V_HIPWR_EN" input
-			(at 93.98 60.96 0)
+			(at 104.14 41.91 0)
 			(uuid "85bf1f1d-262e-4947-a3a7-309eb74a4b94")
 			(effects
 				(font
@@ -266,7 +476,7 @@
 			)
 		)
 		(pin "IO_VDD_3V3_SPEKTRUM_FLT" output
-			(at 93.98 50.8 0)
+			(at 104.14 31.75 0)
 			(uuid "5fe9f3c0-f7b7-405f-9855-bdfa4debee2f")
 			(effects
 				(font
@@ -276,7 +486,7 @@
 			)
 		)
 		(pin "FMU_VDD_5V_HIPWR_FLT" output
-			(at 93.98 63.5 0)
+			(at 104.14 44.45 0)
 			(uuid "5f8fede4-584b-4efa-b351-d054f07697c7")
 			(effects
 				(font
@@ -286,7 +496,7 @@
 			)
 		)
 		(pin "FMU_VDD_5V_PERIPH_EN" input
-			(at 93.98 67.31 0)
+			(at 104.14 48.26 0)
 			(uuid "1fb49659-2454-4409-aa73-eb1dc32f2e8e")
 			(effects
 				(font
@@ -296,7 +506,7 @@
 			)
 		)
 		(pin "FMU_VDD_5V_PERIPH_FLT" output
-			(at 93.98 69.85 0)
+			(at 104.14 50.8 0)
 			(uuid "3d91e4eb-cd71-479c-b8ed-bc39ebcef6ae")
 			(effects
 				(font
@@ -306,7 +516,7 @@
 			)
 		)
 		(pin "FMU_VDD_3V3_SENSORS_EN" input
-			(at 93.98 54.61 0)
+			(at 104.14 35.56 0)
 			(uuid "ede8b390-977a-43f0-ab1c-fe72c6c1313e")
 			(effects
 				(font
@@ -324,8 +534,8 @@
 		)
 	)
 	(sheet
-		(at 152.4 55.88)
-		(size 46.99 40.64)
+		(at 193.04 60.96)
+		(size 36.83 35.56)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -340,7 +550,7 @@
 		)
 		(uuid "b84ede45-084b-4c53-b556-ab39d161443c")
 		(property "Sheetname" "sensors"
-			(at 152.4 55.1684 0)
+			(at 193.04 60.2484 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -351,7 +561,7 @@
 			)
 		)
 		(property "Sheetfile" "sensors.kicad_sch"
-			(at 152.4 97.1046 0)
+			(at 193.04 97.1046 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -359,6 +569,106 @@
 					(size 1.27 1.27)
 				)
 				(justify left top)
+			)
+		)
+		(pin "FMU_SPI1_DRDY3_ICM42688" output
+			(at 193.04 64.77 180)
+			(uuid "89407bf0-bcee-4634-a005-183112aebae7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "FMU_SPI1_CS1_BMI270" input
+			(at 193.04 73.66 180)
+			(uuid "9ea34213-993d-4070-8d52-ab589f951b42")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "FMU_SPI1_MOSI_SENSOR" input
+			(at 193.04 80.01 180)
+			(uuid "d728a288-ce49-4599-b5fb-7c7e4f240ca6")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "FMU_SPI1_SCK_SENSOR" input
+			(at 193.04 82.55 180)
+			(uuid "49a9d4d4-854f-45d6-9501-745706dcc02f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "FMU_HEATER" input
+			(at 193.04 92.71 180)
+			(uuid "005a1286-7675-4826-bac9-d09db69f018b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "FMU_SPI1_CS3_ICM42688" input
+			(at 193.04 71.12 180)
+			(uuid "601d8626-22d1-43ae-afaa-aa98265ccf6f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "FMU_SPI1_DRDY1_BMI270" output
+			(at 193.04 67.31 180)
+			(uuid "a968100b-cc3c-404f-8648-01d4d3a04e39")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "FMU_I2C4_SDA" bidirectional
+			(at 193.04 86.36 180)
+			(uuid "7a3bb06d-b380-4d37-b8b3-267a95a03703")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "FMU_SPI1_MISO_SENSOR" output
+			(at 193.04 77.47 180)
+			(uuid "e2c3b369-5455-4c87-8842-b548198097b9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "FMU_I2C4_SCL" bidirectional
+			(at 193.04 88.9 180)
+			(uuid "5cef9c57-e207-4f80-a2c6-c5e861dd8245")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(instances
@@ -370,8 +680,8 @@
 		)
 	)
 	(sheet
-		(at 91.44 157.48)
-		(size 40.64 19.05)
+		(at 110.49 115.57)
+		(size 35.56 15.24)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -386,7 +696,7 @@
 		)
 		(uuid "be458081-d9d6-4cd1-9869-19004ca767b1")
 		(property "Sheetname" "can"
-			(at 91.44 156.7684 0)
+			(at 110.49 114.8584 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -397,7 +707,7 @@
 			)
 		)
 		(property "Sheetfile" "ucan.kicad_sch"
-			(at 91.44 177.1146 0)
+			(at 110.49 131.3946 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -416,7 +726,7 @@
 		)
 	)
 	(sheet
-		(at 232.41 102.87)
+		(at 167.64 114.3)
 		(size 19.05 26.67)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -432,7 +742,7 @@
 		)
 		(uuid "d3b7593b-9134-4037-af01-034078941ea7")
 		(property "Sheetname" "pwm"
-			(at 232.41 102.1584 0)
+			(at 167.64 113.5884 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -443,7 +753,7 @@
 			)
 		)
 		(property "Sheetfile" "pwm.kicad_sch"
-			(at 232.41 130.1246 0)
+			(at 167.64 141.5546 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
